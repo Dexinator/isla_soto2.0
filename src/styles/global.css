@@ -148,9 +148,9 @@
 
 /* Focus visible mejorado */
 .focus-visible:focus {
-  outline: 2px solid #1E40AF;
+  outline: 2px solid var(--color-SM-blue);
   outline-offset: 2px;
-  box-shadow: 0 0 0 4px rgba(30, 64, 175, 0.1);
+  box-shadow: 0 0 0 4px rgba(0, 114, 192, 0.1);
 }
 
 /* Skip links */
@@ -160,7 +160,7 @@
   top: 0;
   z-index: 999;
   padding: 8px 16px;
-  background: #1E40AF;
+  background: var(--color-SM-blue);
   color: white;
   text-decoration: none;
   font-weight: 600;

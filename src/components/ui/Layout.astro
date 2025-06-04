@@ -1,14 +1,16 @@
 ---
 // Layout principal para todas las páginas
 // Audioguías Murales Santa Marta
+import '../../styles/global.css';
+
 export interface Props {
   title: string;
   description?: string;
   lang?: string;
 }
 
-const { 
-  title, 
+const {
+  title,
   description = "Audioguías interactivas de los murales de Santa Marta. Descubre el arte urbano con audio accesible.",
   lang = "es"
 } = Astro.props;
@@ -44,7 +46,7 @@ const {
   <meta name="color-scheme" content="light dark">
 </head>
 
-<body class="font-nunito bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<body class="font-sans bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
   <!-- Skip Link para accesibilidad -->
   <a href="#main-content" class="skip-link">
     {lang === "es" ? "Saltar al contenido principal" : "Skip to main content"}
@@ -88,7 +90,7 @@ const {
 
     // Configuración de tamaño de fuente
     let currentFontSize = 1;
-    function adjustFontSize(delta) {
+    function adjustFontSize(delta: number) {
       currentFontSize = Math.max(0.8, Math.min(1.4, currentFontSize + (delta * 0.1)));
       document.documentElement.style.fontSize = `${currentFontSize}rem`;
       localStorage.setItem('font-size', currentFontSize.toString());
@@ -132,9 +134,11 @@ const {
     });
 
     // Hacer funciones globales para uso en componentes
-    window.toggleDarkMode = toggleDarkMode;
-    window.toggleHighContrast = toggleHighContrast;
-    window.adjustFontSize = adjustFontSize;
+    // Declarar las funciones en el objeto window
+    (window as any).toggleDarkMode = toggleDarkMode;
+    (window as any).toggleHighContrast = toggleHighContrast;
+    (window as any).adjustFontSize = adjustFontSize;
   </script>
 </body>
 </html>
+
