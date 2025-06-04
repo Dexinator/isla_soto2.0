@@ -1,6 +1,6 @@
 ---
 // Página principal - Audioguías Murales Santa Marta
-// Layout de cards según planificación: selector idioma, audioguía fácil destacada, grid 2x2, mapa
+// Navegación directa con tarjetas - Mobile First
 
 import Layout from '../components/ui/Layout.astro';
 import Header from '../components/ui/Header.astro';
@@ -8,100 +8,64 @@ import Footer from '../components/ui/Footer.astro';
 import Card from '../components/ui/Card.astro';
 import '../styles/global.css';
 
-// Importar datos estáticos
-import muralsData from '../data/murals.json';
-import contentEs from '../data/content-es.json';
-
-const { murals, route } = muralsData;
-const content = contentEs;
+// Importar datos estáticos (para futuras funcionalidades)
+// import muralsData from '../data/murals.json';
+// import contentEs from '../data/content-es.json';
 ---
 
-<Layout 
+<Layout
   title="Audioguías Murales Santa Marta | Descubre el arte urbano accesible"
   description="Explora los murales de Santa Marta con audioguías accesibles. Versiones normativa, descriptiva, fácil y signoguía disponibles."
   lang="es"
 >
   <Header currentPage="home" lang="es" />
-  
-  <main id="main-content" class="flex-1">
-    
-    <!-- Hero Section -->
-    <section class="bg-gradient-to-br from-SM-blue via-blue-600 to-SM-yellow py-12 md:py-16 lg:py-20">
-      <div class="container mx-auto px-4 text-center">
-        <div class="max-w-4xl mx-auto">
-          <h1 class="text-fluid-xl font-bold text-white mb-6 leading-tight">
-            Descubre los <span class="text-SM-yellow">Murales</span> de Santa Marta
-          </h1>
-          <p class="text-fluid-base text-blue-100 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Explora el arte urbano de Santa Marta con nuestras audioguías accesibles. 
-            Disponibles en múltiples formatos para que todos puedan disfrutar del patrimonio cultural.
-          </p>
-          
-          <!-- Estadísticas rápidas -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
-            <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-              <div class="text-2xl font-bold text-white">{murals.length}</div>
-              <div class="text-sm text-blue-100">Murales incluidos</div>
-            </div>
-            <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-              <div class="text-2xl font-bold text-white">4</div>
-              <div class="text-sm text-blue-100">Tipos de audioguía</div>
-            </div>
-            <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-              <div class="text-2xl font-bold text-white">{route.estimatedTime}</div>
-              <div class="text-sm text-blue-100">Duración estimada</div>
-            </div>
+
+  <main id="main-content" class="flex-1 bg-slate-50 dark:bg-slate-900">
+
+    <!-- Selector de idioma flotante -->
+    <div class="container mx-auto px-4 pt-6">
+      <div class="flex justify-center">
+        <div class="bg-white dark:bg-slate-800 rounded-full shadow-lg border border-slate-200 dark:border-slate-700 p-2 flex items-center space-x-2">
+          <!-- Español seleccionado -->
+          <div class="flex items-center bg-SM-blue text-white px-3 py-2 rounded-full text-sm font-medium">
+            <span class="mr-2">🇪🇸</span>
+            <span>ES</span>
           </div>
+          <!-- Inglés disponible -->
+          <a
+            href="/english"
+            class="flex items-center text-slate-600 dark:text-slate-300 hover:text-SM-blue dark:hover:text-SM-blue px-3 py-2 rounded-full text-sm font-medium transition-colors focus-visible"
+            aria-label="Switch to English"
+          >
+            <span class="mr-2">🇬🇧</span>
+            <span>EN</span>
+          </a>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- Grid de Cards Principal -->
-    <section class="py-8 md:py-12 bg-slate-50 dark:bg-slate-900">
+    <section class="py-6 md:py-8">
       <div class="container mx-auto px-4">
-        
-        <!-- Título de sección -->
-        <div class="text-center mb-8">
-          <h2 class="text-fluid-lg font-bold text-slate-900 dark:text-slate-100 mb-4">
-            Elige tu experiencia
-          </h2>
-          <p class="text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-            Selecciona el tipo de audioguía que mejor se adapte a tus necesidades. 
-            Todas nuestras opciones están diseñadas para ser completamente accesibles.
-          </p>
-        </div>
 
-        <!-- Grid de Cards según planificación -->
+        <!-- Grid de audioguías - Mobile First -->
         <div class="grid grid-cols-2 gap-4 md:gap-6 max-w-4xl mx-auto">
-          
-          <!-- Selector de idioma (tarjeta ancha) -->
+
+          <!-- Audioguía Fácil (primera opción, mismo tamaño) -->
           <Card
-            variant="wide"
-            title="English Version"
-            description="Switch to English audio guides"
-            href="/english"
-            icon="🌍"
-            badge="Available"
-            badgeColor="blue"
-            gradient="from-slate-600 to-slate-800"
-            className="order-1"
-          />
-          
-          <!-- Audioguía Fácil (tarjeta ancha destacada) -->
-          <Card
-            variant="wide"
+            variant="square"
             title="Audioguía Fácil"
-            description="Audio adaptado para discapacidad intelectual con descripciones simples y claras"
+            description="Audio adaptado para discapacidad intelectual"
             href="/audioguia-facil"
             icon="♿"
             badge="Recomendada"
             badgeColor="yellow"
             gradient="from-SM-blue to-blue-700"
             priority={true}
-            className="order-2"
+            className="order-1"
           />
-          
-          <!-- Audioguía Normativa (tarjeta cuadrada) -->
+
+          <!-- Audioguía Normativa -->
           <Card
             variant="square"
             title="Audioguía Normativa"
@@ -111,10 +75,10 @@ const content = contentEs;
             badge="Estándar"
             badgeColor="blue"
             gradient="from-SM-yellow to-yellow-600"
-            className="order-3"
+            className="order-2"
           />
-          
-          <!-- Audioguía Descriptiva (tarjeta cuadrada) -->
+
+          <!-- Audioguía Descriptiva -->
           <Card
             variant="square"
             title="Audioguía Descriptiva"
@@ -124,10 +88,10 @@ const content = contentEs;
             badge="Detallada"
             badgeColor="gray"
             gradient="from-SM-gray to-gray-600"
-            className="order-4"
+            className="order-3"
           />
-          
-          <!-- Signoguía (tarjeta cuadrada) -->
+
+          <!-- Signoguía -->
           <Card
             variant="square"
             title="Signoguía"
@@ -137,126 +101,21 @@ const content = contentEs;
             badge="LSE"
             badgeColor="black"
             gradient="from-SM-black to-gray-800"
-            className="order-5"
+            className="order-4"
           />
-          
-          <!-- Mapa de ruta (tarjeta ancha) -->
+
+          <!-- Mapa de la Ruta (tarjeta ancha) -->
           <Card
             variant="wide"
             title="Mapa de la Ruta"
-            description={`Recorrido completo: ${route.totalDistance} • ${route.estimatedTime}`}
+            description="Recorrido completo por los murales de Santa Marta"
             href="#mapa"
             icon="🗺️"
             badge="Interactivo"
             badgeColor="blue"
             gradient="from-green-600 to-green-800"
-            className="order-6"
+            className="order-5"
           />
-        </div>
-      </div>
-    </section>
-
-    <!-- Sección de Mapa -->
-    <section id="mapa" class="py-8 md:py-12 bg-white dark:bg-slate-800">
-      <div class="container mx-auto px-4">
-        <div class="max-w-4xl mx-auto">
-          
-          <!-- Título de sección -->
-          <div class="text-center mb-8">
-            <h2 class="text-fluid-lg font-bold text-slate-900 dark:text-slate-100 mb-4">
-              Ruta de los Murales
-            </h2>
-            <p class="text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-              Descubre la ubicación de cada mural y planifica tu recorrido. 
-              La ruta está diseñada para ser accesible y fácil de seguir.
-            </p>
-          </div>
-
-          <!-- Placeholder del mapa -->
-          <div class="bg-slate-100 dark:bg-slate-700 rounded-xl p-8 md:p-12 text-center border border-slate-200 dark:border-slate-600">
-            <div class="max-w-md mx-auto">
-              <div class="text-4xl mb-4">🗺️</div>
-              <h3 class="text-xl font-semibold text-slate-900 dark:text-slate-100 mb-4">
-                Mapa Interactivo
-              </h3>
-              <p class="text-slate-600 dark:text-slate-300 mb-6">
-                El mapa interactivo se cargará aquí con la ubicación de todos los murales 
-                y la ruta recomendada para el recorrido.
-              </p>
-              
-              <!-- Información de la ruta -->
-              <div class="bg-white dark:bg-slate-800 rounded-lg p-4 border border-slate-200 dark:border-slate-600">
-                <div class="grid grid-cols-2 gap-4 text-sm">
-                  <div>
-                    <div class="font-semibold text-SM-blue">Distancia total</div>
-                    <div class="text-slate-600 dark:text-slate-300">{route.totalDistance}</div>
-                  </div>
-                  <div>
-                    <div class="font-semibold text-SM-blue">Tiempo estimado</div>
-                    <div class="text-slate-600 dark:text-slate-300">{route.estimatedTime}</div>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- Botón para abrir en Google Maps -->
-              <div class="mt-6">
-                <a 
-                  href={`https://maps.google.com/maps?daddr=${route.waypoints[0][0]},${route.waypoints[0][1]}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="inline-flex items-center px-4 py-2 bg-SM-blue text-white rounded-lg hover:bg-blue-700 transition-colors focus-visible"
-                >
-                  <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                  </svg>
-                  Abrir en Google Maps
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Sección de información adicional -->
-    <section class="py-8 md:py-12 bg-slate-50 dark:bg-slate-900">
-      <div class="container mx-auto px-4">
-        <div class="max-w-4xl mx-auto text-center">
-          <h2 class="text-fluid-lg font-bold text-slate-900 dark:text-slate-100 mb-6">
-            Una experiencia completamente accesible
-          </h2>
-          
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
-              <div class="text-3xl mb-4">♿</div>
-              <h3 class="font-semibold text-lg mb-2 text-slate-900 dark:text-slate-100">
-                Totalmente Accesible
-              </h3>
-              <p class="text-slate-600 dark:text-slate-300 text-sm">
-                Cumple con las pautas WCAG 2.1 AA para garantizar el acceso a todos los usuarios.
-              </p>
-            </div>
-            
-            <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
-              <div class="text-3xl mb-4">📱</div>
-              <h3 class="font-semibold text-lg mb-2 text-slate-900 dark:text-slate-100">
-                Optimizado para Móvil
-              </h3>
-              <p class="text-slate-600 dark:text-slate-300 text-sm">
-                Diseñado especialmente para dispositivos móviles con interfaz intuitiva.
-              </p>
-            </div>
-            
-            <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
-              <div class="text-3xl mb-4">🎨</div>
-              <h3 class="font-semibold text-lg mb-2 text-slate-900 dark:text-slate-100">
-                Arte y Cultura
-              </h3>
-              <p class="text-slate-600 dark:text-slate-300 text-sm">
-                Descubre la historia y el significado detrás de cada mural de Santa Marta.
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -264,3 +123,5 @@ const content = contentEs;
 
   <Footer lang="es" />
 </Layout>
+
+
