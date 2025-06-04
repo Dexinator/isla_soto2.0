@@ -1,0 +1,771 @@
+---
+import "../styles/global.css";
+// Showroom - Demostración del Manual de Identidad
+// Audioguías Murales Santa Marta
+---
+
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Showroom - Manual de Identidad | Audioguías Murales Santa Marta</title>
+  <meta name="description" content="Demostración visual del manual de identidad del proyecto Audioguías Murales Santa Marta">
+</head>
+
+<body class="font-nunito bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100">
+  <!-- Skip Link -->
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+  <!-- Header con controles de accesibilidad -->
+  <header class="bg-white dark:bg-slate-900 shadow-md border-b border-slate-200 dark:border-slate-700 sticky top-0 z-50">
+    <nav class="container mx-auto px-4 py-3">
+      <div class="flex justify-between items-center">
+        <!-- Logo usando colores personalizados -->
+        <div class="flex-shrink-0">
+          <h1 class="text-2xl font-bold">
+            <span class="text-SM-blue">AUDIOGUÍAS</span>
+            <span class="text-SM-yellow">MURALES</span>
+            <span class="block text-sm font-normal text-SM-gray">Santa Marta</span>
+          </h1>
+        </div>
+
+        <!-- Controles de accesibilidad -->
+        <div class="flex space-x-2">
+          <button 
+            onclick="toggleDarkMode()" 
+            class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 focus-visible"
+            aria-label="Cambiar modo oscuro/claro">
+            <span class="sun-icon">🔆</span>
+            <span class="moon-icon">🌙</span>
+          </button>
+          <button 
+            onclick="toggleHighContrast()" 
+            class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 focus-visible"
+            aria-label="Activar/desactivar alto contraste">
+            <span>👁️</span>
+          </button>
+          <button 
+            onclick="adjustFontSize(1)" 
+            class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 focus-visible"
+            aria-label="Aumentar tamaño de texto">
+            <span>A+</span>
+          </button>
+          <button 
+            onclick="adjustFontSize(-1)" 
+            class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 focus-visible"
+            aria-label="Disminuir tamaño de texto">
+            <span>A-</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" class="container mx-auto px-4 py-8 animate-fade-in">
+    <h1 class="text-fluid-xl font-bold mb-6 text-SM-blue">Manual de Identidad Visual</h1>
+    <p class="text-fluid-base mb-8 max-w-3xl">
+      Esta página muestra los elementos visuales del proyecto Audioguías Murales Santa Marta, 
+      incluyendo colores, tipografía, componentes y consideraciones de accesibilidad.
+    </p>
+
+    <!-- Sección de Colores -->
+    <section class="mb-12">
+      <h2 class="text-fluid-lg font-bold mb-4 text-SM-blue">Paleta de Colores</h2>
+      <p class="mb-6 max-w-3xl">
+        Nuestra paleta de colores refleja la identidad del proyecto, con colores que representan 
+        la ciudad de Santa Marta y sus murales.
+      </p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <!-- Azul SM -->
+        <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
+          <div class="bg-SM-blue h-20 rounded-lg mb-4 flex items-center justify-center">
+            <span class="text-white font-semibold">Azul SM</span>
+          </div>
+          <h3 class="font-semibold text-lg mb-2">Azul SM</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400 mb-2">Color principal</p>
+          <div class="text-xs space-y-1">
+            <div><strong>HEX:</strong> #0072c0</div>
+            <div><strong>Variable:</strong> SM-blue</div>
+            <div><strong>Clase:</strong> bg-SM-blue, text-SM-blue</div>
+          </div>
+        </div>
+
+        <!-- Amarillo SM -->
+        <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
+          <div class="bg-SM-yellow h-20 rounded-lg mb-4 flex items-center justify-center">
+            <span class="text-SM-black font-semibold">Amarillo SM</span>
+          </div>
+          <h3 class="font-semibold text-lg mb-2">Amarillo SM</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400 mb-2">Acentos vibrantes</p>
+          <div class="text-xs space-y-1">
+            <div><strong>HEX:</strong> #f8c200</div>
+            <div><strong>Variable:</strong> SM-yellow</div>
+            <div><strong>Clase:</strong> bg-SM-yellow, text-SM-yellow</div>
+          </div>
+        </div>
+
+        <!-- Gris SM -->
+        <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
+          <div class="bg-SM-gray h-20 rounded-lg mb-4 flex items-center justify-center">
+            <span class="text-white font-semibold">Gris SM</span>
+          </div>
+          <h3 class="font-semibold text-lg mb-2">Gris SM</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400 mb-2">Elementos neutros</p>
+          <div class="text-xs space-y-1">
+            <div><strong>HEX:</strong> #c3c5c5</div>
+            <div><strong>Variable:</strong> SM-gray</div>
+            <div><strong>Clase:</strong> bg-SM-gray, text-SM-gray</div>
+          </div>
+        </div>
+
+        <!-- Negro SM -->
+        <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
+          <div class="bg-SM-black h-20 rounded-lg mb-4 flex items-center justify-center">
+            <span class="text-white font-semibold">Negro SM</span>
+          </div>
+          <h3 class="font-semibold text-lg mb-2">Negro SM</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400 mb-2">Contraste fuerte</p>
+          <div class="text-xs space-y-1">
+            <div><strong>HEX:</strong> #282828</div>
+            <div><strong>Variable:</strong> SM-black</div>
+            <div><strong>Clase:</strong> bg-SM-black, text-SM-black</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Ejemplos de uso de colores -->
+      <h3 class="font-semibold text-lg mb-4">Ejemplos de uso de colores</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <!-- Botones con colores -->
+        <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
+          <h4 class="font-semibold mb-4">Botones</h4>
+          <div class="space-y-4">
+            <button class="bg-SM-blue text-white px-4 py-2 rounded-lg hover:opacity-90 transition">Botón Primario</button>
+            <button class="bg-SM-yellow text-SM-black px-4 py-2 rounded-lg hover:opacity-90 transition">Botón Secundario</button>
+            <button class="bg-SM-gray text-white px-4 py-2 rounded-lg hover:opacity-90 transition">Botón Neutro</button>
+            <button class="bg-white text-SM-blue border border-SM-blue px-4 py-2 rounded-lg hover:bg-slate-50 transition">Botón Outline</button>
+          </div>
+        </div>
+
+        <!-- Textos con colores -->
+        <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
+          <h4 class="font-semibold mb-4">Textos</h4>
+          <div class="space-y-2">
+            <p class="text-SM-blue font-bold">Título en Azul SM</p>
+            <p class="text-SM-yellow font-bold">Subtítulo en Amarillo SM</p>
+            <p class="text-SM-black font-bold">Texto en Negro SM</p>
+            <p class="text-SM-gray">Texto secundario en Gris SM</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Componentes -->
+    <section class="mb-12">
+      <h2 class="text-fluid-lg font-bold mb-4 text-SM-blue">Componentes</h2>
+      <p class="mb-6 max-w-3xl">
+        Componentes de interfaz de usuario que utilizan nuestra paleta de colores y estilo visual.
+      </p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <!-- Tarjetas -->
+        <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
+          <h3 class="font-semibold text-lg mb-4">Tarjetas</h3>
+          
+          <div class="bg-white dark:bg-slate-800 rounded-xl p-4 shadow border border-slate-200 dark:border-slate-700 mb-4">
+            <h4 class="font-semibold text-SM-blue mb-2">Tarjeta Básica</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400">Contenido de la tarjeta con bordes y sombras sutiles.</p>
+          </div>
+
+          <div class="bg-SM-blue text-white rounded-xl p-4 shadow mb-4">
+            <h4 class="font-semibold mb-2">Tarjeta Destacada</h4>
+            <p class="text-sm opacity-90">Tarjeta con color de fondo para destacar contenido importante.</p>
+          </div>
+
+          <div class="bg-white dark:bg-slate-800 rounded-xl p-4 shadow border-l-4 border-SM-yellow border-slate-200 dark:border-slate-700">
+            <h4 class="font-semibold text-SM-yellow mb-2">Tarjeta con Acento</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400">Tarjeta con borde izquierdo de color para categorización.</p>
+          </div>
+        </div>
+        
+        <!-- Alertas y Badges -->
+        <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
+          <h3 class="font-semibold text-lg mb-4">Alertas y Badges</h3>
+          
+          <div class="bg-blue-50 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-lg p-4 mb-4 flex items-start">
+            <span class="mr-2">ℹ️</span>
+            <div>
+              <p class="font-semibold">Información</p>
+              <p class="text-sm">Esta es una alerta informativa.</p>
+            </div>
+          </div>
+          
+          <div class="bg-yellow-50 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-200 rounded-lg p-4 mb-4 flex items-start">
+            <span class="mr-2">⚠️</span>
+            <div>
+              <p class="font-semibold">Advertencia</p>
+              <p class="text-sm">Esta es una alerta de advertencia.</p>
+            </div>
+          </div>
+          
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-SM-blue text-white text-xs px-2 py-1 rounded-full">Badge Azul</span>
+            <span class="bg-SM-yellow text-SM-black text-xs px-2 py-1 rounded-full">Badge Amarillo</span>
+            <span class="bg-SM-gray text-white text-xs px-2 py-1 rounded-full">Badge Gris</span>
+            <span class="bg-white text-SM-blue text-xs px-2 py-1 rounded-full border border-SM-blue">Badge Outline</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Formularios -->
+      <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700 mb-8">
+        <h3 class="font-semibold text-lg mb-4">Formularios</h3>
+        
+        <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label for="name" class="block text-sm font-medium mb-1">Nombre</label>
+            <input type="text" id="name" class="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-SM-blue dark:bg-slate-700 dark:text-white" placeholder="Escribe tu nombre">
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-medium mb-1">Email</label>
+            <input type="email" id="email" class="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-SM-blue dark:bg-slate-700 dark:text-white" placeholder="tu@email.com">
+          </div>
+
+          <div class="md:col-span-2">
+            <label for="message" class="block text-sm font-medium mb-1">Mensaje</label>
+            <textarea id="message" rows="4" class="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-SM-blue dark:bg-slate-700 dark:text-white" placeholder="Escribe tu mensaje"></textarea>
+          </div>
+
+          <div>
+            <label class="flex items-center">
+              <input type="checkbox" class="w-4 h-4 text-SM-blue focus:ring-SM-blue rounded">
+              <span class="ml-2 text-sm">Acepto los términos y condiciones</span>
+            </label>
+          </div>
+
+          <div class="flex justify-end md:col-span-2">
+            <button type="submit" class="bg-SM-blue text-white px-4 py-2 rounded-lg hover:opacity-90 transition">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Sección de Tipografía -->
+    <section class="mb-12">
+      <h2 class="text-fluid-lg font-bold mb-4 text-SM-blue">Tipografía</h2>
+      <p class="mb-6 max-w-3xl">
+        Utilizamos la fuente Nunito para todo el contenido, proporcionando una lectura clara y moderna.
+      </p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <!-- Jerarquía de texto -->
+        <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
+          <h3 class="font-semibold text-lg mb-4">Jerarquía de texto</h3>
+          <div class="space-y-4">
+            <div>
+              <h1 class="text-fluid-xl font-bold mb-4 text-SM-blue">
+                Showroom del Manual de Identidad
+              </h1>
+              <p class="text-fluid-base text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+                Demostración visual de todos los elementos del manual de identidad para el proyecto 
+                <strong>"Audioguías Murales Santa Marta"</strong>, inspirado en "La llegada del color digital".
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección: Botones y Estados -->
+    <section class="mb-16">
+      <h2 class="text-fluid-lg font-semibold text-slate-900 dark:text-slate-100 mb-8 pb-2 border-b-2 border-SM-blue">
+        🎯 Botones y Estados de Interacción
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Botones Primarios -->
+        <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
+          <h3 class="font-semibold text-lg mb-4">Botones Primarios</h3>
+          <div class="space-y-4">
+            <button class="w-full bg-SM-blue hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-SM-blue focus:ring-offset-2 dark:focus:ring-offset-slate-800">
+              Comenzar audioguía
+            </button>
+            
+            <button class="w-full bg-SM-yellow hover:bg-yellow-500 text-SM-black font-medium py-3 px-4 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-SM-yellow focus:ring-offset-2 dark:focus:ring-offset-slate-800">
+              Descargar mapa
+            </button>
+            
+            <button class="w-full bg-SM-black hover:bg-gray-800 text-white font-medium py-3 px-4 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-SM-black focus:ring-offset-2 dark:focus:ring-offset-slate-800">
+              Completado
+            </button>
+          </div>
+        </div>
+
+        <!-- Botones Secundarios -->
+        <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
+          <h3 class="font-semibold text-lg mb-4">Botones Secundarios</h3>
+          <div class="space-y-4">
+            <button class="w-full border-2 border-SM-blue text-SM-blue hover:bg-blue-50 dark:hover:bg-blue-900/20 font-medium py-3 px-4 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-SM-blue focus:ring-offset-2 dark:focus:ring-offset-slate-800">
+              Ver información
+            </button>
+            
+            <button class="w-full border-2 border-SM-yellow text-SM-yellow hover:bg-yellow-50 dark:hover:bg-yellow-900/20 font-medium py-3 px-4 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-SM-yellow focus:ring-offset-2 dark:focus:ring-offset-slate-800">
+              Compartir
+            </button>
+            
+            <button class="w-full border-2 border-SM-gray text-SM-gray hover:bg-gray-50 dark:hover:bg-gray-900/20 font-medium py-3 px-4 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-SM-gray focus:ring-offset-2 dark:focus:ring-offset-slate-800" disabled>
+              Deshabilitado
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección: Cards de Audioguía -->
+    <section class="mb-16">
+      <h2 class="text-fluid-lg font-semibold text-slate-900 dark:text-slate-100 mb-8 pb-2 border-b-2 border-SM-gray">
+        🎵 Cards de Audioguía
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Audioguía Fácil -->
+        <div class="bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+          <div class="relative h-48 bg-gradient-to-br from-SM-blue to-blue-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+            <div class="absolute top-4 left-4">
+              <span class="px-3 py-1 bg-SM-yellow text-SM-black text-sm font-medium rounded-full">
+                Audioguía Fácil
+              </span>
+            </div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <h3 class="text-white font-semibold text-lg">Fácil Lectura</h3>
+            </div>
+          </div>
+          
+          <div class="p-6">
+            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">
+              Audio adaptado para discapacidad intelectual con descripciones simples y claras.
+            </p>
+            
+            <div class="flex items-center justify-between text-sm text-slate-500 dark:text-slate-400 mb-4">
+              <span class="flex items-center">
+                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                15 min
+              </span>
+              <span class="flex items-center">
+                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                </svg>
+                3 murales
+              </span>
+            </div>
+            
+            <button class="w-full bg-SM-blue hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-colors">
+              Comenzar audioguía
+            </button>
+          </div>
+        </div>
+
+        <!-- Audioguía Normativa -->
+        <div class="bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+          <div class="relative h-48 bg-gradient-to-br from-SM-yellow to-yellow-600">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+            <div class="absolute top-4 left-4">
+              <span class="px-3 py-1 bg-SM-blue text-white text-sm font-medium rounded-full">
+                Audioguía Normativa
+              </span>
+            </div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <h3 class="text-white font-semibold text-lg">Estándar</h3>
+            </div>
+          </div>
+          
+          <div class="p-6">
+            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">
+              Audio estándar con información completa sobre los murales y su contexto histórico.
+            </p>
+            
+            <div class="flex items-center justify-between text-sm text-slate-500 dark:text-slate-400 mb-4">
+              <span class="flex items-center">
+                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                25 min
+              </span>
+              <span class="flex items-center">
+                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                </svg>
+                3 murales
+              </span>
+            </div>
+            
+            <button class="w-full bg-SM-yellow hover:bg-yellow-500 text-SM-black font-medium py-3 px-4 rounded-lg transition-colors">
+              Comenzar audioguía
+            </button>
+          </div>
+        </div>
+
+        <!-- Signoguía -->
+        <div class="bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+          <div class="relative h-48 bg-gradient-to-br from-SM-gray to-gray-600">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+            <div class="absolute top-4 left-4">
+              <span class="px-3 py-1 bg-SM-black text-white text-sm font-medium rounded-full">
+                Signoguía
+              </span>
+            </div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <h3 class="text-white font-semibold text-lg">Lengua de Signos</h3>
+            </div>
+          </div>
+
+          <div class="p-6">
+            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">
+              Videos en lengua de signos española para personas con discapacidad auditiva.
+            </p>
+
+            <div class="flex items-center justify-between text-sm text-slate-500 dark:text-slate-400 mb-4">
+              <span class="flex items-center">
+                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                </svg>
+                20 min
+              </span>
+              <span class="flex items-center">
+                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                </svg>
+                3 murales
+              </span>
+            </div>
+
+            <button class="w-full bg-SM-gray hover:bg-gray-600 text-white font-medium py-3 px-4 rounded-lg transition-colors">
+              Ver signoguía
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección: Reproductor de Audio -->
+    <section class="mb-16">
+      <h2 class="text-fluid-lg font-semibold text-slate-900 dark:text-slate-100 mb-8 pb-2"
+          style="border-bottom: 2px solid var(--color-SM-blue)">
+        🎧 Reproductor de Audio
+      </h2>
+      
+      <div class="bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 p-6 max-w-md mx-auto">
+        <!-- Información de la pista actual -->
+        <div class="flex items-center mb-6">
+          <div class="w-16 h-16 rounded-lg mr-4 flex items-center justify-center"
+               style="background: linear-gradient(135deg, var(--color-SM-blue), var(--color-SM-yellow))">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <div class="flex-1 min-w-0">
+            <h4 class="font-semibold text-lg text-slate-900 dark:text-slate-100 truncate">
+              La llegada del color
+            </h4>
+            <p class="text-slate-600 dark:text-slate-300 text-sm">
+              Dr. Torres Villarroel, 1
+            </p>
+          </div>
+        </div>
+        
+        <!-- Controles de reproducción -->
+        <div class="flex items-center justify-center space-x-6 mb-6">
+          <button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors"
+                  aria-label="Pista anterior">
+            <svg class="w-6 h-6 text-slate-600 dark:text-slate-300" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                    d="M12.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0019 16V8a1 1 0 00-1.6-.8l-5.334 4zM4.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0011 16V8a1 1 0 00-1.6-.8l-5.334 4z"/>
+            </svg>
+          </button>
+          
+          <button class="p-4 text-white rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-slate-800"
+                  style="background-color: var(--color-SM-blue); focus-ring-color: var(--color-SM-blue)"
+                  aria-label="Reproducir"
+                  onmouseover="this.style.backgroundColor='#005a9c'"
+                  onmouseout="this.style.backgroundColor='var(--color-SM-blue)'">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                    d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1l4-4v12l-4-4H9V10z"/>
+            </svg>
+          </button>
+          
+          <button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors"
+                  aria-label="Siguiente pista">
+            <svg class="w-6 h-6 text-slate-600 dark:text-slate-300" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                    d="M11.933 12.8a1 1 0 000-1.6L6.6 7.2A1 1 0 005 8v8a1 1 0 001.6.8l5.333-4zM19.933 12.8a1 1 0 000-1.6l-5.333-4A1 1 0 0013 8v8a1 1 0 001.6.8l5.333-4z"/>
+            </svg>
+          </button>
+        </div>
+        
+        <!-- Barra de progreso -->
+        <div class="mb-4">
+          <div class="flex justify-between text-xs text-slate-500 dark:text-slate-400 mb-1">
+            <span>2:34</span>
+            <span>5:47</span>
+          </div>
+          <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+            <div class="h-2 rounded-full transition-all duration-300"
+                 style="width: 45%; background-color: var(--color-SM-blue)"></div>
+          </div>
+        </div>
+        
+        <!-- Control de volumen -->
+        <div class="flex items-center space-x-3">
+          <svg class="w-5 h-5 text-slate-600 dark:text-slate-300" fill="none" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                  d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M6.343 17.657l-.707.707"/>
+          </svg>
+          <div class="flex-1 bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+            <div class="bg-SM-yellow h-2 rounded-full" style="width: 70%"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección: Estados de Accesibilidad -->
+    <section class="mb-16">
+      <h2 class="text-fluid-lg font-semibold text-slate-900 dark:text-slate-100 mb-8 pb-2"
+          style="border-bottom: 2px solid var(--color-SM-yellow)">
+        ♿ Características de Accesibilidad
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
+          <div class="mb-4" style="color: var(--color-SM-blue)">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-lg mb-2">Alto Contraste</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">
+            Modo de alto contraste activable para usuarios con dificultades visuales.
+          </p>
+          <button onclick="toggleHighContrast()" class="text-sm font-medium hover:underline transition-colors"
+                  style="color: var(--color-SM-blue)">
+            Probar alto contraste →
+          </button>
+        </div>
+
+        <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
+          <div class="mb-4" style="color: var(--color-SM-yellow)">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-lg mb-2">Tamaño de Fuente</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">
+            Controles para aumentar y reducir el tamaño de fuente según las necesidades.
+          </p>
+          <div class="flex space-x-2">
+            <button onclick="adjustFontSize('increase')" class="text-sm font-medium hover:underline transition-colors"
+                    style="color: var(--color-SM-yellow)">
+              A+ →
+            </button>
+            <button onclick="adjustFontSize('decrease')" class="text-sm font-medium hover:underline transition-colors"
+                    style="color: var(--color-SM-yellow)">
+              A- →
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
+          <div class="mb-4" style="color: var(--color-SM-gray)">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-lg mb-2">Navegación por Teclado</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">
+            Todos los elementos son navegables usando solo el teclado (Tab, Enter, Espacio).
+          </p>
+          <span class="text-sm font-medium" style="color: var(--color-SM-gray)">
+            ✓ WCAG 2.1 AA Compliant
+          </span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-100 dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700 py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-slate-600 dark:text-slate-400 mb-2">
+        Showroom del Manual de Identidad
+      </p>
+      <p class="text-sm text-slate-500 dark:text-slate-500">
+        Proyecto <strong>"Audioguías Murales Santa Marta"</strong> - Inspirado en "La llegada del color digital"
+      </p>
+    </div>
+  </footer>
+
+  <!-- JavaScript para funcionalidades de accesibilidad -->
+  <script>
+    // Configuración inicial del modo oscuro
+    function initializeDarkMode() {
+      const html = document.documentElement;
+      const savedTheme = localStorage.getItem('theme');
+      
+      if (savedTheme === 'dark' || 
+          (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        html.classList.add('dark');
+      } else {
+        html.classList.remove('dark');
+      }
+      
+      updateDarkModeButton();
+    }
+
+    // Actualizar iconos del botón de modo oscuro
+    function updateDarkModeButton() {
+      const isDark = document.documentElement.classList.contains('dark');
+      const sunIcon = document.querySelector('.sun-icon') as HTMLElement;
+      const moonIcon = document.querySelector('.moon-icon') as HTMLElement;
+      
+      if (sunIcon && moonIcon) {
+        sunIcon.style.display = isDark ? 'block' : 'none';
+        moonIcon.style.display = isDark ? 'none' : 'block';
+      }
+    }
+
+    // Toggle modo oscuro
+    function toggleDarkMode() {
+      const html = document.documentElement;
+      const isDark = html.classList.contains('dark');
+      
+      if (isDark) {
+        html.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      } else {
+        html.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      }
+      
+      updateDarkModeButton();
+      
+      // Animación suave
+      document.body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
+      setTimeout(() => {
+        document.body.style.transition = '';
+      }, 300);
+    }
+
+    // Toggle alto contraste
+    function toggleHighContrast() {
+      const html = document.documentElement;
+      const hasHighContrast = html.classList.contains('high-contrast');
+      
+      if (hasHighContrast) {
+        html.classList.remove('high-contrast');
+        localStorage.setItem('highContrast', 'false');
+      } else {
+        html.classList.add('high-contrast');
+        localStorage.setItem('highContrast', 'true');
+      }
+    }
+
+    // Control de tamaño de fuente
+    function adjustFontSize(direction: string) {
+      const html = document.documentElement;
+      const currentSize = parseInt(getComputedStyle(html).fontSize) || 16;
+      let newSize;
+      
+      if (direction === 'increase') {
+        newSize = Math.min(currentSize + 2, 24);
+      } else {
+        newSize = Math.max(currentSize - 2, 14);
+      }
+      
+      html.style.fontSize = newSize + 'px';
+      localStorage.setItem('fontSize', newSize.toString());
+      
+      showFontSizeToast(newSize);
+    }
+
+    // Mostrar notificación de cambio de tamaño
+    function showFontSizeToast(size: number) {
+      // Remover toast anterior
+      const existingToast = document.querySelector('.font-size-toast');
+      if (existingToast) {
+        existingToast.remove();
+      }
+      
+      // Crear nuevo toast
+      const toast = document.createElement('div');
+      toast.className = 'font-size-toast fixed top-20 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg z-50 transition-opacity duration-300';
+      toast.textContent = `Tamaño de fuente: ${size}px`;
+      
+      document.body.appendChild(toast);
+      
+      // Remover después de 2 segundos
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        setTimeout(() => toast.remove(), 300);
+      }, 2000);
+    }
+
+    // Inicializar cuando se carga la página
+    document.addEventListener('DOMContentLoaded', function() {
+      // Configurar modo oscuro
+      initializeDarkMode();
+      
+      // Cargar alto contraste guardado
+      if (localStorage.getItem('highContrast') === 'true') {
+        document.documentElement.classList.add('high-contrast');
+      }
+      
+      // Cargar tamaño de fuente guardado
+      const savedFontSize = localStorage.getItem('fontSize');
+      if (savedFontSize) {
+        document.documentElement.style.fontSize = savedFontSize + 'px';
+      }
+      
+      // Reducción de movimiento para accesibilidad
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.documentElement.classList.add('reduce-motion');
+      }
+      
+      // Escuchar cambios en preferencias del sistema (solo si no hay tema guardado)
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme')) {
+          const html = document.documentElement;
+          if (e.matches) {
+            html.classList.add('dark');
+          } else {
+            html.classList.remove('dark');
+          }
+          updateDarkModeButton();
+        }
+      });
+    });
+
+    // Exponer funciones globalmente para que funcionen con onclick
+    (window as any).toggleDarkMode = toggleDarkMode;
+    (window as any).toggleHighContrast = toggleHighContrast;
+    (window as any).adjustFontSize = adjustFontSize;
+  </script>
+</body>
+</html> 

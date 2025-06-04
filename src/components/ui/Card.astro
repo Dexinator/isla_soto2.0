@@ -1,0 +1,198 @@
+---
+// Componente Card reutilizable
+// Audioguías Murales Santa Marta
+
+export interface Props {
+  variant?: 'square' | 'wide';
+  title: string;
+  description?: string;
+  href?: string;
+  image?: string;
+  imageAlt?: string;
+  priority?: boolean;
+  badge?: string;
+  badgeColor?: 'blue' | 'yellow' | 'gray' | 'black';
+  gradient?: string;
+  icon?: string;
+  className?: string;
+}
+
+const {
+  variant = 'square',
+  title,
+  description,
+  href,
+  image,
+  imageAlt,
+  priority = false,
+  badge,
+  badgeColor = 'blue',
+  gradient,
+  icon,
+  className = ''
+} = Astro.props;
+
+// Clases base para las variantes
+const variantClasses = {
+  square: 'aspect-square',
+  wide: 'aspect-[2/1] col-span-2'
+};
+
+// Clases para los badges
+const badgeClasses = {
+  blue: 'bg-SM-blue text-white',
+  yellow: 'bg-SM-yellow text-SM-black',
+  gray: 'bg-SM-gray text-white',
+  black: 'bg-SM-black text-white'
+};
+
+// Gradientes predefinidos
+const gradients = {
+  blue: 'from-SM-blue to-blue-700',
+  yellow: 'from-SM-yellow to-yellow-600',
+  gray: 'from-SM-gray to-gray-600',
+  black: 'from-SM-black to-gray-800',
+  custom: gradient || 'from-SM-blue to-blue-700'
+};
+
+const cardGradient = gradient ? 'custom' : 'blue';
+---
+
+<!-- Card Container -->
+<div class={`
+  ${variantClasses[variant]}
+  ${priority ? 'ring-2 ring-SM-yellow ring-offset-2 ring-offset-slate-50 dark:ring-offset-slate-900' : ''}
+  ${className}
+`}>
+  {href ? (
+    <a 
+      href={href}
+      class="group block h-full bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 overflow-hidden hover:shadow-xl hover:scale-[1.02] transition-all duration-300 focus-visible"
+      aria-label={`${title}${description ? ': ' + description : ''}`}
+    >
+      <div class="h-full flex flex-col">
+        <!-- Imagen o área de gradiente -->
+        <div class={`
+          relative flex-1 min-h-[120px]
+          ${image ? 'bg-slate-100 dark:bg-slate-700' : `bg-gradient-to-br ${gradients[cardGradient]}`}
+        `}>
+          {image ? (
+            <img 
+              src={image}
+              alt={imageAlt || title}
+              class="w-full h-full object-cover"
+              loading={priority ? "eager" : "lazy"}
+            />
+          ) : (
+            <!-- Área de gradiente con icono -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+          )}
+          
+          <!-- Badge -->
+          {badge && (
+            <div class="absolute top-4 left-4">
+              <span class={`px-3 py-1 text-sm font-medium rounded-full ${badgeClasses[badgeColor]}`}>
+                {badge}
+              </span>
+            </div>
+          )}
+          
+          <!-- Icono central (si no hay imagen) -->
+          {!image && icon && (
+            <div class="absolute inset-0 flex items-center justify-center">
+              <span class="text-4xl md:text-5xl text-white opacity-90">
+                {icon}
+              </span>
+            </div>
+          )}
+          
+          <!-- Título superpuesto (si no hay imagen) -->
+          {!image && (
+            <div class="absolute bottom-4 left-4 right-4">
+              <h3 class="text-white font-semibold text-lg md:text-xl leading-tight">
+                {title}
+              </h3>
+            </div>
+          )}
+        </div>
+        
+        <!-- Contenido de texto (si hay imagen) -->
+        {image && (
+          <div class="p-4 md:p-6">
+            <h3 class="font-semibold text-lg md:text-xl text-slate-900 dark:text-slate-100 mb-2 group-hover:text-SM-blue transition-colors">
+              {title}
+            </h3>
+            {description && (
+              <p class="text-slate-600 dark:text-slate-300 text-sm md:text-base leading-relaxed">
+                {description}
+              </p>
+            )}
+          </div>
+        )}
+      </div>
+    </a>
+  ) : (
+    <!-- Card sin enlace -->
+    <div class="h-full bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 overflow-hidden">
+      <div class="h-full flex flex-col">
+        <!-- Imagen o área de gradiente -->
+        <div class={`
+          relative flex-1 min-h-[120px]
+          ${image ? 'bg-slate-100 dark:bg-slate-700' : `bg-gradient-to-br ${gradients[cardGradient]}`}
+        `}>
+          {image ? (
+            <img 
+              src={image}
+              alt={imageAlt || title}
+              class="w-full h-full object-cover"
+              loading={priority ? "eager" : "lazy"}
+            />
+          ) : (
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+          )}
+          
+          <!-- Badge -->
+          {badge && (
+            <div class="absolute top-4 left-4">
+              <span class={`px-3 py-1 text-sm font-medium rounded-full ${badgeClasses[badgeColor]}`}>
+                {badge}
+              </span>
+            </div>
+          )}
+          
+          <!-- Icono central (si no hay imagen) -->
+          {!image && icon && (
+            <div class="absolute inset-0 flex items-center justify-center">
+              <span class="text-4xl md:text-5xl text-white opacity-90">
+                {icon}
+              </span>
+            </div>
+          )}
+          
+          <!-- Título superpuesto (si no hay imagen) -->
+          {!image && (
+            <div class="absolute bottom-4 left-4 right-4">
+              <h3 class="text-white font-semibold text-lg md:text-xl leading-tight">
+                {title}
+              </h3>
+            </div>
+          )}
+        </div>
+        
+        <!-- Contenido de texto (si hay imagen) -->
+        {image && (
+          <div class="p-4 md:p-6">
+            <h3 class="font-semibold text-lg md:text-xl text-slate-900 dark:text-slate-100 mb-2">
+              {title}
+            </h3>
+            {description && (
+              <p class="text-slate-600 dark:text-slate-300 text-sm md:text-base leading-relaxed">
+                {description}
+              </p>
+            )}
+          </div>
+        )}
+      </div>
+    </div>
+  )}
+</div>

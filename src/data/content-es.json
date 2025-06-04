@@ -1,0 +1,150 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "audioguides": "Audioguías",
+    "normative": "Normativa",
+    "descriptive": "Descriptiva",
+    "easy": "Fácil",
+    "sign": "Signoguía",
+    "map": "Mapa",
+    "download": "Descargar PDF",
+    "language": "Idioma",
+    "accessibility": "Accesibilidad"
+  },
+  "audioguide_types": {
+    "normal": {
+      "title": "Audioguía Normativa",
+      "description": "Audio estándar con información completa sobre los murales y su contexto histórico",
+      "duration": "25 min",
+      "features": [
+        "Información completa",
+        "Contexto histórico",
+        "Detalles artísticos",
+        "Disponible en español e inglés"
+      ]
+    },
+    "descriptive": {
+      "title": "Audioguía Descriptiva",
+      "description": "Audio con descripciones detalladas de los elementos visuales para personas con discapacidad visual",
+      "duration": "35 min",
+      "features": [
+        "Descripciones visuales detalladas",
+        "Información táctil",
+        "Orientación espacial",
+        "Solo en español"
+      ]
+    },
+    "easy": {
+      "title": "Audioguía Fácil",
+      "description": "Audio adaptado para discapacidad intelectual con lenguaje claro y simple",
+      "duration": "15 min",
+      "features": [
+        "Lenguaje claro y simple",
+        "Conceptos básicos",
+        "Ritmo pausado",
+        "Solo en español"
+      ]
+    },
+    "sign": {
+      "title": "Signoguía",
+      "description": "Videos en lengua de signos española para personas con discapacidad auditiva",
+      "duration": "20 min",
+      "features": [
+        "Lengua de signos española",
+        "Subtítulos disponibles",
+        "Intérprete profesional",
+        "Solo en español"
+      ]
+    }
+  },
+  "controls": {
+    "play": "Reproducir",
+    "pause": "Pausar",
+    "stop": "Detener",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "volume": "Volumen",
+    "mute": "Silenciar",
+    "unmute": "Activar sonido",
+    "fullscreen": "Pantalla completa",
+    "exitFullscreen": "Salir de pantalla completa",
+    "speed": "Velocidad",
+    "captions": "Subtítulos",
+    "transcript": "Transcripción"
+  },
+  "accessibility": {
+    "skipToContent": "Saltar al contenido principal",
+    "skipToNavigation": "Saltar a la navegación",
+    "darkMode": "Cambiar a modo oscuro",
+    "lightMode": "Cambiar a modo claro",
+    "highContrast": "Activar alto contraste",
+    "normalContrast": "Desactivar alto contraste",
+    "increaseFontSize": "Aumentar tamaño de texto",
+    "decreaseFontSize": "Disminuir tamaño de texto",
+    "resetFontSize": "Restablecer tamaño de texto",
+    "reduceMotion": "Reducir animaciones",
+    "enableMotion": "Activar animaciones"
+  },
+  "map": {
+    "title": "Mapa de la Ruta",
+    "description": "Ubicación de todos los murales y ruta recomendada",
+    "openInGoogleMaps": "Abrir en Google Maps",
+    "getDirections": "Cómo llegar",
+    "currentLocation": "Ubicación actual",
+    "muralLocation": "Ubicación del mural",
+    "routeStart": "Inicio de la ruta",
+    "routeEnd": "Final de la ruta",
+    "estimatedTime": "Tiempo estimado",
+    "totalDistance": "Distancia total",
+    "difficulty": "Dificultad",
+    "accessibility": "Accesibilidad"
+  },
+  "playlist": {
+    "title": "Lista de reproducción",
+    "currentTrack": "Reproduciendo ahora",
+    "nextTrack": "Siguiente",
+    "previousTrack": "Anterior",
+    "trackNumber": "Pista",
+    "totalTracks": "de",
+    "duration": "Duración",
+    "completed": "Completado",
+    "inProgress": "En progreso",
+    "notStarted": "No iniciado"
+  },
+  "messages": {
+    "loading": "Cargando...",
+    "error": "Ha ocurrido un error",
+    "noAudioSupport": "Tu navegador no soporta la reproducción de audio",
+    "noVideoSupport": "Tu navegador no soporta la reproducción de video",
+    "networkError": "Error de conexión. Verifica tu conexión a internet",
+    "audioLoadError": "Error al cargar el audio",
+    "videoLoadError": "Error al cargar el video",
+    "tryAgain": "Intentar de nuevo",
+    "close": "Cerrar",
+    "ok": "Aceptar",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "reset": "Restablecer"
+  },
+  "footer": {
+    "description": "Descubre el arte urbano de Santa Marta con nuestras audioguías accesibles e interactivas.",
+    "quickLinks": "Enlaces rápidos",
+    "contact": "Contacto",
+    "legal": "Legal",
+    "privacy": "Política de privacidad",
+    "terms": "Términos de uso",
+    "cookies": "Política de cookies",
+    "copyright": "© 2025 Audioguías Murales Santa Marta. Todos los derechos reservados.",
+    "poweredBy": "Desarrollado con",
+    "madeWith": "Hecho con ❤️ para la accesibilidad",
+    "wcagCompliant": "Cumple WCAG 2.1 AA",
+    "email": "info@audioguiasmurales.es",
+    "phone": "+34 923 XXX XXX",
+    "address": "Santa Marta de Tormes, Salamanca"
+  },
+  "seo": {
+    "homeTitle": "Audioguías Murales Santa Marta | Descubre el arte urbano accesible",
+    "homeDescription": "Explora los murales de Santa Marta con audioguías accesibles. Versiones normativa, descriptiva, fácil y signoguía disponibles.",
+    "keywords": "audioguías, murales, Santa Marta, arte urbano, accesibilidad, turismo, lengua de signos, discapacidad visual, discapacidad intelectual"
+  }
+}

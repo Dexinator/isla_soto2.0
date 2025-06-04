@@ -1,0 +1,242 @@
+---
+// Header principal con navegación y controles de accesibilidad
+// Audioguías Murales Santa Marta
+
+export interface Props {
+  currentPage?: string;
+  lang?: string;
+}
+
+const { currentPage = "", lang = "es" } = Astro.props;
+
+// Contenido bilingüe
+const content = {
+  es: {
+    home: "Inicio",
+    audioguides: "Audioguías",
+    normative: "Normativa",
+    descriptive: "Descriptiva", 
+    easy: "Fácil",
+    sign: "Signoguía",
+    map: "Mapa",
+    download: "Descargar PDF",
+    menu: "Menú",
+    darkMode: "Cambiar modo oscuro/claro",
+    highContrast: "Activar/desactivar alto contraste",
+    increaseFontSize: "Aumentar tamaño de texto",
+    decreaseFontSize: "Disminuir tamaño de texto",
+    language: "Cambiar idioma"
+  },
+  en: {
+    home: "Home",
+    audioguides: "Audio Guides",
+    normative: "Standard",
+    descriptive: "Descriptive",
+    easy: "Easy",
+    sign: "Sign Guide",
+    map: "Map", 
+    download: "Download PDF",
+    menu: "Menu",
+    darkMode: "Toggle dark/light mode",
+    highContrast: "Toggle high contrast",
+    increaseFontSize: "Increase text size",
+    decreaseFontSize: "Decrease text size",
+    language: "Change language"
+  }
+};
+
+const t = content[lang as keyof typeof content];
+---
+
+<header class="bg-white dark:bg-slate-900 shadow-md border-b border-slate-200 dark:border-slate-700 sticky top-0 z-50">
+  <nav class="container mx-auto px-4 py-3" role="navigation" aria-label="Navegación principal">
+    <div class="flex justify-between items-center">
+      
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a href={lang === "es" ? "/" : "/english"} class="block focus-visible">
+          <h1 class="text-xl md:text-2xl font-bold">
+            <span class="text-SM-blue">AUDIOGUÍAS</span>
+            <span class="text-SM-yellow">MURALES</span>
+            <span class="block text-sm font-normal text-SM-gray">Santa Marta</span>
+          </h1>
+        </a>
+      </div>
+
+      <!-- Navegación Desktop -->
+      <div class="hidden lg:flex items-center space-x-6">
+        <a 
+          href={lang === "es" ? "/" : "/english"} 
+          class={`text-sm font-medium transition-colors hover:text-SM-blue focus-visible ${
+            currentPage === "home" ? "text-SM-blue" : "text-slate-600 dark:text-slate-300"
+          }`}
+        >
+          {t.home}
+        </a>
+        
+        <div class="relative group">
+          <button class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-SM-blue transition-colors focus-visible flex items-center">
+            {t.audioguides}
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          
+          <!-- Dropdown menu -->
+          <div class="absolute top-full left-0 mt-1 w-48 bg-white dark:bg-slate-800 rounded-lg shadow-lg border border-slate-200 dark:border-slate-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+            <div class="py-2">
+              <a href="/audioguia-normativa" class="block px-4 py-2 text-sm text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 hover:text-SM-blue transition-colors">
+                {t.normative}
+              </a>
+              <a href="/audioguia-descriptiva" class="block px-4 py-2 text-sm text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 hover:text-SM-blue transition-colors">
+                {t.descriptive}
+              </a>
+              <a href="/audioguia-facil" class="block px-4 py-2 text-sm text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 hover:text-SM-blue transition-colors">
+                {t.easy}
+              </a>
+              <a href="/signoguia" class="block px-4 py-2 text-sm text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 hover:text-SM-blue transition-colors">
+                {t.sign}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controles de accesibilidad y menú móvil -->
+      <div class="flex items-center space-x-2">
+        
+        <!-- Controles de accesibilidad -->
+        <div class="hidden md:flex items-center space-x-2">
+          <!-- Selector de idioma -->
+          <a 
+            href={lang === "es" ? "/english" : "/"} 
+            class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 focus-visible text-sm font-medium"
+            aria-label={t.language}
+          >
+            {lang === "es" ? "EN" : "ES"}
+          </a>
+          
+          <!-- Modo oscuro -->
+          <button 
+            onclick="toggleDarkMode()" 
+            class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 focus-visible"
+            aria-label={t.darkMode}
+          >
+            <span class="sun-icon">🔆</span>
+            <span class="moon-icon">🌙</span>
+          </button>
+          
+          <!-- Alto contraste -->
+          <button 
+            onclick="toggleHighContrast()" 
+            class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 focus-visible"
+            aria-label={t.highContrast}
+          >
+            <span>👁️</span>
+          </button>
+          
+          <!-- Tamaño de fuente -->
+          <button 
+            onclick="adjustFontSize(1)" 
+            class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 focus-visible text-xs font-bold"
+            aria-label={t.increaseFontSize}
+          >
+            A+
+          </button>
+          
+          <button 
+            onclick="adjustFontSize(-1)" 
+            class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 focus-visible text-xs font-bold"
+            aria-label={t.decreaseFontSize}
+          >
+            A-
+          </button>
+        </div>
+
+        <!-- Menú hamburguesa móvil -->
+        <button 
+          id="mobile-menu-button"
+          class="lg:hidden p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 focus-visible"
+          aria-label={t.menu}
+          aria-expanded="false"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menú móvil -->
+    <div id="mobile-menu" class="lg:hidden hidden mt-4 pb-4 border-t border-slate-200 dark:border-slate-700">
+      <div class="pt-4 space-y-2">
+        <a 
+          href={lang === "es" ? "/" : "/english"} 
+          class="block px-3 py-2 text-base font-medium text-slate-600 dark:text-slate-300 hover:text-SM-blue hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors"
+        >
+          {t.home}
+        </a>
+        
+        <div class="px-3 py-2">
+          <div class="text-sm font-medium text-slate-400 dark:text-slate-500 mb-2">{t.audioguides}</div>
+          <div class="space-y-1 ml-4">
+            <a href="/audioguia-normativa" class="block py-1 text-sm text-slate-600 dark:text-slate-300 hover:text-SM-blue transition-colors">
+              {t.normative}
+            </a>
+            <a href="/audioguia-descriptiva" class="block py-1 text-sm text-slate-600 dark:text-slate-300 hover:text-SM-blue transition-colors">
+              {t.descriptive}
+            </a>
+            <a href="/audioguia-facil" class="block py-1 text-sm text-slate-600 dark:text-slate-300 hover:text-SM-blue transition-colors">
+              {t.easy}
+            </a>
+            <a href="/signoguia" class="block py-1 text-sm text-slate-600 dark:text-slate-300 hover:text-SM-blue transition-colors">
+              {t.sign}
+            </a>
+          </div>
+        </div>
+
+        <!-- Controles de accesibilidad móvil -->
+        <div class="px-3 py-2 border-t border-slate-200 dark:border-slate-700 mt-4 pt-4">
+          <div class="text-sm font-medium text-slate-400 dark:text-slate-500 mb-2">Accesibilidad</div>
+          <div class="flex flex-wrap gap-2">
+            <a 
+              href={lang === "es" ? "/english" : "/"} 
+              class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-sm font-medium"
+            >
+              {lang === "es" ? "English" : "Español"}
+            </a>
+            <button onclick="toggleDarkMode()" class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-sm">
+              🔆/🌙
+            </button>
+            <button onclick="toggleHighContrast()" class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-sm">
+              👁️
+            </button>
+            <button onclick="adjustFontSize(1)" class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-sm font-bold">
+              A+
+            </button>
+            <button onclick="adjustFontSize(-1)" class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-sm font-bold">
+              A-
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  // Script para el menú móvil
+  document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', () => {
+        const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        
+        mobileMenuButton.setAttribute('aria-expanded', (!isExpanded).toString());
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  });
+</script>

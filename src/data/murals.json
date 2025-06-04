@@ -1,0 +1,170 @@
+{
+  "murals": [
+    {
+      "id": 1,
+      "title": {
+        "es": "La llegada del color",
+        "en": "The Arrival of Color"
+      },
+      "description": {
+        "es": "Mural inspirado en la obra de Daniel Martín que representa la transformación urbana a través del arte y el color.",
+        "en": "Mural inspired by Daniel Martín's work representing urban transformation through art and color."
+      },
+      "coordinates": [40.9701, -5.6635],
+      "order": 1,
+      "audio": {
+        "normal": {
+          "es": "https://audio.com/embed/mural-1-normal-es",
+          "en": "https://audio.com/embed/mural-1-normal-en"
+        },
+        "descriptive": "https://audio.com/embed/mural-1-descriptive-es",
+        "easy": "https://audio.com/embed/mural-1-easy-es"
+      },
+      "video": {
+        "sign": "https://player.vimeo.com/video/mural-1-sign"
+      },
+      "image": "/images/mural-1.webp",
+      "alt": {
+        "es": "Mural colorido en la calle Dr. Torres Villarroel que muestra la llegada del color digital a Santa Marta",
+        "en": "Colorful mural on Dr. Torres Villarroel street showing the arrival of digital color to Santa Marta"
+      },
+      "location": {
+        "es": "Dr. Torres Villarroel, 1",
+        "en": "Dr. Torres Villarroel, 1"
+      },
+      "artist": "Daniel Martín",
+      "year": 2024,
+      "duration": {
+        "normal": "8 min",
+        "descriptive": "12 min",
+        "easy": "5 min",
+        "sign": "7 min"
+      }
+    },
+    {
+      "id": 2,
+      "title": {
+        "es": "Memoria urbana",
+        "en": "Urban Memory"
+      },
+      "description": {
+        "es": "Representación de la historia y tradiciones de Santa Marta de Tormes a través de elementos visuales contemporáneos.",
+        "en": "Representation of Santa Marta de Tormes' history and traditions through contemporary visual elements."
+      },
+      "coordinates": [40.9705, -5.6640],
+      "order": 2,
+      "audio": {
+        "normal": {
+          "es": "https://audio.com/embed/mural-2-normal-es",
+          "en": "https://audio.com/embed/mural-2-normal-en"
+        },
+        "descriptive": "https://audio.com/embed/mural-2-descriptive-es",
+        "easy": "https://audio.com/embed/mural-2-easy-es"
+      },
+      "video": {
+        "sign": "https://player.vimeo.com/video/mural-2-sign"
+      },
+      "image": "/images/mural-2.webp",
+      "alt": {
+        "es": "Mural que representa la memoria histórica de Santa Marta con elementos tradicionales y modernos",
+        "en": "Mural representing Santa Marta's historical memory with traditional and modern elements"
+      },
+      "location": {
+        "es": "Plaza Mayor",
+        "en": "Main Square"
+      },
+      "artist": "Colectivo Mural",
+      "year": 2024,
+      "duration": {
+        "normal": "10 min",
+        "descriptive": "15 min",
+        "easy": "6 min",
+        "sign": "9 min"
+      }
+    },
+    {
+      "id": 3,
+      "title": {
+        "es": "Futuro sostenible",
+        "en": "Sustainable Future"
+      },
+      "description": {
+        "es": "Visión artística del compromiso de Santa Marta con la sostenibilidad y el respeto al medio ambiente.",
+        "en": "Artistic vision of Santa Marta's commitment to sustainability and environmental respect."
+      },
+      "coordinates": [40.9710, -5.6645],
+      "order": 3,
+      "audio": {
+        "normal": {
+          "es": "https://audio.com/embed/mural-3-normal-es",
+          "en": "https://audio.com/embed/mural-3-normal-en"
+        },
+        "descriptive": "https://audio.com/embed/mural-3-descriptive-es",
+        "easy": "https://audio.com/embed/mural-3-easy-es"
+      },
+      "video": {
+        "sign": "https://player.vimeo.com/video/mural-3-sign"
+      },
+      "image": "/images/mural-3.webp",
+      "alt": {
+        "es": "Mural ecológico con elementos naturales y tecnológicos que simbolizan un futuro sostenible",
+        "en": "Ecological mural with natural and technological elements symbolizing a sustainable future"
+      },
+      "location": {
+        "es": "Avenida de la Constitución",
+        "en": "Constitution Avenue"
+      },
+      "artist": "EcoArt Collective",
+      "year": 2024,
+      "duration": {
+        "normal": "7 min",
+        "descriptive": "11 min",
+        "easy": "4 min",
+        "sign": "6 min"
+      }
+    }
+  ],
+  "route": {
+    "name": {
+      "es": "Ruta de Murales Santa Marta",
+      "en": "Santa Marta Murals Route"
+    },
+    "description": {
+      "es": "Recorrido accesible por los principales murales de Santa Marta de Tormes",
+      "en": "Accessible tour through the main murals of Santa Marta de Tormes"
+    },
+    "waypoints": [
+      [40.9701, -5.6635],
+      [40.9705, -5.6640],
+      [40.9710, -5.6645]
+    ],
+    "totalDistance": "1.2 km",
+    "estimatedTime": "45 min",
+    "difficulty": {
+      "es": "Fácil",
+      "en": "Easy"
+    },
+    "accessibility": {
+      "es": "Ruta completamente accesible para sillas de ruedas",
+      "en": "Fully wheelchair accessible route"
+    },
+    "startPoint": {
+      "es": "Dr. Torres Villarroel, 1",
+      "en": "Dr. Torres Villarroel, 1"
+    },
+    "endPoint": {
+      "es": "Avenida de la Constitución",
+      "en": "Constitution Avenue"
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2025-01-30",
+    "version": "1.0",
+    "totalMurals": 3,
+    "languages": ["es", "en"],
+    "audioguideTypes": ["normal", "descriptive", "easy", "sign"],
+    "city": "Santa Marta de Tormes",
+    "province": "Salamanca",
+    "country": "España"
+  }
+}

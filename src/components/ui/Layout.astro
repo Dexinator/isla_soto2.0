@@ -1,0 +1,140 @@
+---
+// Layout principal para todas las páginas
+// Audioguías Murales Santa Marta
+export interface Props {
+  title: string;
+  description?: string;
+  lang?: string;
+}
+
+const { 
+  title, 
+  description = "Audioguías interactivas de los murales de Santa Marta. Descubre el arte urbano con audio accesible.",
+  lang = "es"
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang={lang} class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="keywords" content="audioguías, murales, Santa Marta, arte urbano, accesibilidad, turismo">
+  <meta name="author" content="Audioguías Murales Santa Marta">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content={lang === "es" ? "es_ES" : "en_US"}>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  
+  <!-- Preload critical fonts -->
+  <link rel="preload" href="/fonts/Nunito-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
+  
+  <!-- Accessibility -->
+  <meta name="theme-color" content="#0072c0">
+  <meta name="color-scheme" content="light dark">
+</head>
+
+<body class="font-nunito bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+  <!-- Skip Link para accesibilidad -->
+  <a href="#main-content" class="skip-link">
+    {lang === "es" ? "Saltar al contenido principal" : "Skip to main content"}
+  </a>
+
+  <!-- Slot para el contenido -->
+  <slot />
+
+  <!-- Scripts de accesibilidad y modo oscuro -->
+  <script>
+    // Configuración de modo oscuro
+    function initTheme() {
+      const theme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      
+      if (theme === 'dark' || (!theme && prefersDark)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    }
+
+    function toggleDarkMode() {
+      const isDark = document.documentElement.classList.contains('dark');
+      
+      if (isDark) {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+
+    // Configuración de alto contraste
+    function toggleHighContrast() {
+      document.body.classList.toggle('high-contrast');
+      const isHighContrast = document.body.classList.contains('high-contrast');
+      localStorage.setItem('high-contrast', isHighContrast ? 'true' : 'false');
+    }
+
+    // Configuración de tamaño de fuente
+    let currentFontSize = 1;
+    function adjustFontSize(delta) {
+      currentFontSize = Math.max(0.8, Math.min(1.4, currentFontSize + (delta * 0.1)));
+      document.documentElement.style.fontSize = `${currentFontSize}rem`;
+      localStorage.setItem('font-size', currentFontSize.toString());
+    }
+
+    // Configuración de reducción de movimiento
+    function initReduceMotion() {
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReducedMotion) {
+        document.body.classList.add('reduce-motion');
+      }
+    }
+
+    // Inicializar configuraciones al cargar la página
+    document.addEventListener('DOMContentLoaded', () => {
+      initTheme();
+      initReduceMotion();
+      
+      // Restaurar configuraciones guardadas
+      const savedHighContrast = localStorage.getItem('high-contrast');
+      if (savedHighContrast === 'true') {
+        document.body.classList.add('high-contrast');
+      }
+      
+      const savedFontSize = localStorage.getItem('font-size');
+      if (savedFontSize) {
+        currentFontSize = parseFloat(savedFontSize);
+        document.documentElement.style.fontSize = `${currentFontSize}rem`;
+      }
+    });
+
+    // Escuchar cambios en preferencias del sistema
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      if (!localStorage.getItem('theme')) {
+        if (e.matches) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      }
+    });
+
+    // Hacer funciones globales para uso en componentes
+    window.toggleDarkMode = toggleDarkMode;
+    window.toggleHighContrast = toggleHighContrast;
+    window.adjustFontSize = adjustFontSize;
+  </script>
+</body>
+</html>
