@@ -1,13 +1,13 @@
 import { useState, useEffect, useRef } from 'react';
 
-const AudioPlayer = ({ 
-  currentMural, 
-  onNext, 
-  onPrevious, 
+const AudioPlayer = ({
+  currentMural,
+  onNext,
+  onPrevious,
   onTrackEnd,
   audioType = 'normal',
   language = 'es',
-  className = "" 
+  className = ""
 }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -17,19 +17,45 @@ const AudioPlayer = ({
   const [currentTime, setCurrentTime] = useState(0);
   const [volume, setVolume] = useState(1);
   const [isMuted, setIsMuted] = useState(false);
-  
+
   const audioRef = useRef(null);
-  const progressIntervalRef = useRef(null);
 
   // Obtener URL del audio según tipo y idioma
   const getAudioUrl = (mural) => {
     if (!mural || !mural.audio) return null;
-    
+
+    let audioUrl;
     if (audioType === 'normal') {
-      return mural.audio.normal?.[language] || mural.audio.normal?.es;
+      audioUrl = mural.audio.normal?.[language] || mural.audio.normal?.es;
+    } else {
+      audioUrl = mural.audio[audioType];
     }
-    
-    return mural.audio[audioType];
+
+    return audioUrl;
+  };
+
+  // Determinar si es una URL directa de MP3 o un embed
+  const getDirectAudioUrl = (url) => {
+    if (!url) return null;
+
+    // Si ya es una URL directa de MP3, devolverla
+    if (url.endsWith('.mp3') || url.endsWith('.wav') || url.endsWith('.ogg')) {
+      return url;
+    }
+
+    // Si es una URL de Audio.com, intentar convertir a URL directa
+    if (url.includes('audio.com/embed/audio/')) {
+      // Extraer el ID del audio
+      const match = url.match(/audio\.com\/embed\/audio\/(\d+)/);
+      if (match) {
+        const audioId = match[1];
+        // Intentar URL directa (esto puede variar según Audio.com)
+        return `https://audio.com/api/audio/${audioId}/stream`;
+      }
+    }
+
+    // Si no podemos convertir, devolver la URL original para el embed
+    return url;
   };
 
   // Formatear tiempo en mm:ss
@@ -40,74 +66,82 @@ const AudioPlayer = ({
     return `${mins}:${secs.toString().padStart(2, '0')}`;
   };
 
-  // Simular reproductor de audio (ya que usamos embeds de Audio.com)
+  // Cargar audio cuando cambia el mural
   useEffect(() => {
     if (currentMural) {
       setIsLoading(true);
       setError(null);
+      setIsPlaying(false);
       setProgress(0);
       setCurrentTime(0);
-      
-      // Simular carga del audio
-      const loadTimeout = setTimeout(() => {
-        setIsLoading(false);
-        // Duración simulada basada en el tipo de audioguía
-        const simulatedDuration = audioType === 'easy' ? 300 : audioType === 'descriptive' ? 600 : 450; // 5, 10, 7.5 min
-        setDuration(simulatedDuration);
-      }, 1000);
 
-      return () => clearTimeout(loadTimeout);
+      const audioUrl = getAudioUrl(currentMural);
+      const directUrl = getDirectAudioUrl(audioUrl);
+
+      if (audioRef.current) {
+        audioRef.current.src = directUrl;
+        audioRef.current.load();
+      }
+
+      setIsLoading(false);
     }
   }, [currentMural, audioType]);
 
-  // Simular progreso del audio
+  // Event listeners para el audio
   useEffect(() => {
-    if (isPlaying && !isLoading) {
-      progressIntervalRef.current = setInterval(() => {
-        setCurrentTime(prev => {
-          const newTime = prev + 1;
-          const newProgress = (newTime / duration) * 100;
-          setProgress(newProgress);
-          
-          // Auto-avanzar al siguiente track cuando termine
-          if (newTime >= duration) {
-            setIsPlaying(false);
-            setProgress(100);
-            if (onTrackEnd) {
-              onTrackEnd();
-            }
-            return duration;
-          }
-          
-          return newTime;
-        });
-      }, 1000);
-    } else {
-      if (progressIntervalRef.current) {
-        clearInterval(progressIntervalRef.current);
-        progressIntervalRef.current = null;
-      }
-    }
+    const audio = audioRef.current;
+    if (!audio) return;
 
-    return () => {
-      if (progressIntervalRef.current) {
-        clearInterval(progressIntervalRef.current);
+    const handleLoadedMetadata = () => {
+      setDuration(audio.duration);
+      setIsLoading(false);
+    };
+
+    const handleTimeUpdate = () => {
+      setCurrentTime(audio.currentTime);
+      setProgress((audio.currentTime / audio.duration) * 100);
+    };
+
+    const handleEnded = () => {
+      setIsPlaying(false);
+      setProgress(100);
+      if (onTrackEnd) {
+        onTrackEnd();
       }
     };
-  }, [isPlaying, isLoading, duration, onTrackEnd]);
 
+    const handleError = () => {
+      setError('Error al cargar el audio');
+      setIsLoading(false);
+    };
+
+    audio.addEventListener('loadedmetadata', handleLoadedMetadata);
+    audio.addEventListener('timeupdate', handleTimeUpdate);
+    audio.addEventListener('ended', handleEnded);
+    audio.addEventListener('error', handleError);
+
+    return () => {
+      audio.removeEventListener('loadedmetadata', handleLoadedMetadata);
+      audio.removeEventListener('timeupdate', handleTimeUpdate);
+      audio.removeEventListener('ended', handleEnded);
+      audio.removeEventListener('error', handleError);
+    };
+  }, [onTrackEnd]);
+
+  // Controles de reproducción
   const handlePlayPause = () => {
-    if (isLoading) return;
-    
-    if (error) {
-      setError(null);
-      setIsLoading(true);
-      setTimeout(() => setIsLoading(false), 1000);
-      return;
+    if (!audioRef.current) return;
+
+    if (isPlaying) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play().catch(err => {
+        setError('Error al reproducir el audio');
+        console.error('Error playing audio:', err);
+      });
     }
-    
     setIsPlaying(!isPlaying);
-    
+
     // Analytics tracking
     if (typeof gtag !== 'undefined' && currentMural) {
       gtag('event', isPlaying ? 'audio_pause' : 'audio_play', {
@@ -120,29 +154,37 @@ const AudioPlayer = ({
   };
 
   const handleSeek = (e) => {
-    if (isLoading || !duration) return;
-    
+    if (!audioRef.current || !duration) return;
+
     const rect = e.currentTarget.getBoundingClientRect();
     const clickX = e.clientX - rect.left;
     const newProgress = (clickX / rect.width) * 100;
     const newTime = (newProgress / 100) * duration;
-    
-    setProgress(newProgress);
+
+    audioRef.current.currentTime = newTime;
     setCurrentTime(newTime);
+    setProgress(newProgress);
   };
 
   const handleVolumeChange = (e) => {
     const newVolume = parseFloat(e.target.value);
     setVolume(newVolume);
     setIsMuted(newVolume === 0);
+
+    if (audioRef.current) {
+      audioRef.current.volume = newVolume;
+    }
   };
 
   const toggleMute = () => {
-    setIsMuted(!isMuted);
-    if (!isMuted) {
-      setVolume(0);
-    } else {
-      setVolume(1);
+    if (audioRef.current) {
+      if (isMuted) {
+        audioRef.current.volume = volume;
+        setIsMuted(false);
+      } else {
+        audioRef.current.volume = 0;
+        setIsMuted(true);
+      }
     }
   };
 
@@ -167,9 +209,17 @@ const AudioPlayer = ({
   }
 
   const audioUrl = getAudioUrl(currentMural);
+  const directAudioUrl = getDirectAudioUrl(audioUrl);
 
   return (
     <div className={`bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 overflow-hidden ${className}`}>
+      {/* Audio element oculto */}
+      <audio
+        ref={audioRef}
+        preload="metadata"
+        style={{ display: 'none' }}
+      />
+
       {/* Header con información del mural */}
       <div className="p-6">
         <div className="flex items-start space-x-4">
@@ -177,8 +227,8 @@ const AudioPlayer = ({
           <div className="flex-shrink-0">
             <div className="w-20 h-20 rounded-lg overflow-hidden bg-gradient-to-br from-SM-blue to-blue-700 flex items-center justify-center">
               {currentMural.image ? (
-                <img 
-                  src={currentMural.image} 
+                <img
+                  src={currentMural.image}
                   alt={currentMural.alt?.[language] || currentMural.title[language]}
                   className="w-full h-full object-cover"
                 />
@@ -188,14 +238,14 @@ const AudioPlayer = ({
             </div>
           </div>
 
-          {/* Información del track */}
+          {/* Información del mural */}
           <div className="flex-1 min-w-0">
             <h3 className="font-semibold text-lg text-slate-900 dark:text-slate-100 truncate">
               {currentMural.title[language]}
             </h3>
             <p className="text-slate-600 dark:text-slate-400 text-sm mb-2">
-              Audioguía {audioType === 'normal' ? 'Normativa' : 
-                        audioType === 'descriptive' ? 'Descriptiva' : 
+              Audioguía {audioType === 'normal' ? 'Normativa' :
+                        audioType === 'descriptive' ? 'Descriptiva' :
                         audioType === 'easy' ? 'Fácil' : 'Signoguía'}
             </p>
             <div className="flex items-center text-xs text-slate-500 dark:text-slate-400">
@@ -231,11 +281,11 @@ const AudioPlayer = ({
 
       {/* Barra de progreso */}
       <div className="px-6 pb-4">
-        <div 
+        <div
           className="w-full h-2 bg-slate-200 dark:bg-slate-600 rounded-full cursor-pointer"
           onClick={handleSeek}
         >
-          <div 
+          <div
             className="h-full bg-SM-blue rounded-full transition-all duration-300"
             style={{ width: `${progress}%` }}
           />
@@ -253,7 +303,7 @@ const AudioPlayer = ({
             aria-label="Pista anterior"
           >
             <svg className="w-6 h-6 text-slate-600 dark:text-slate-300" fill="none" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                     d="M12.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0019 16V8a1 1 0 00-1.6-.8l-5.334 4zM4.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0011 16V8a1 1 0 00-1.6-.8l-5.334 4z"/>
             </svg>
           </button>
@@ -270,10 +320,10 @@ const AudioPlayer = ({
             ) : (
               <svg className="w-6 h-6" fill="none" stroke="currentColor">
                 {isPlaying ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                         d="M10 9v6m4-6v6"/>
                 ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                         d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h8m-9 0h10"/>
                 )}
               </svg>
@@ -288,30 +338,88 @@ const AudioPlayer = ({
             aria-label="Pista siguiente"
           >
             <svg className="w-6 h-6 text-slate-600 dark:text-slate-300" fill="none" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                     d="M11.933 12.8a1 1 0 000-1.6L6.6 7.2A1 1 0 005 8v8a1 1 0 001.6.8l5.333-4zM19.933 12.8a1 1 0 000-1.6l-5.333-4A1 1 0 0013 8v8a1 1 0 001.6.8l5.333-4z"/>
             </svg>
           </button>
         </div>
       </div>
 
-      {/* Embed real de Audio.com (oculto, solo para analytics) */}
+      {/* Información del reproductor */}
       {audioUrl && (
-        <div className="hidden">
-          <iframe 
-            src={audioUrl}
-            width="100%" 
-            height="166" 
-            frameBorder="no"
-            allow="autoplay"
-            title={`Audio: ${currentMural.title[language]}`}
-          />
+        <div className="px-6 pb-6">
+          <div className="bg-slate-50 dark:bg-slate-700 rounded-xl p-4">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-2">
+                <span className="text-green-500">🎵</span>
+                <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
+                  Audio cargado y listo
+                </span>
+              </div>
+              <div className="text-xs text-slate-500 dark:text-slate-400">
+                {directAudioUrl?.endsWith('.mp3') ? 'Reproductor nativo' : 'Audio.com embed'}
+              </div>
+            </div>
+
+            {/* Fallback: mostrar embed si no funciona la URL directa */}
+            {error && (
+              <div className="mt-4">
+                <p className="text-xs text-slate-600 dark:text-slate-400 mb-3 text-center">
+                  Fallback: Reproductor de Audio.com
+                </p>
+                <div style={{ height: '228px', width: '204px', margin: '0 auto' }}>
+                  <iframe
+                    id={`audio-iframe-${currentMural.id}`}
+                    src={audioUrl}
+                    style={{
+                      display: 'block',
+                      borderRadius: '1px',
+                      border: 'none',
+                      height: '204px',
+                      width: '204px'
+                    }}
+                    allow="autoplay"
+                    title={`Audio: ${currentMural.title[language]}`}
+                  />
+                  <a
+                    href="https://audio.com/jorge-badillo"
+                    style={{
+                      textAlign: 'center',
+                      display: 'block',
+                      color: '#A4ABB6',
+                      fontSize: '12px',
+                      fontFamily: 'sans-serif',
+                      lineHeight: '16px',
+                      marginTop: '8px',
+                      overflow: 'hidden',
+                      whiteSpace: 'nowrap',
+                      textOverflow: 'ellipsis'
+                    }}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    @jorge-badillo
+                  </a>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* Estado de carga */}
+      {isLoading && (
+        <div className="px-6 pb-6">
+          <div className="flex items-center justify-center space-x-2 text-slate-600 dark:text-slate-400">
+            <div className="animate-spin w-4 h-4 border-2 border-SM-blue border-t-transparent rounded-full"></div>
+            <span className="text-sm">Cargando audio...</span>
+          </div>
         </div>
       )}
 
       {/* Estado de error */}
       {error && (
-        <div className="px-6 pb-4">
+        <div className="px-6 pb-6">
           <div className="bg-red-50 dark:bg-red-900/30 text-red-800 dark:text-red-200 rounded-lg p-3 text-sm">
             <div className="flex items-center">
               <span className="mr-2">⚠️</span>

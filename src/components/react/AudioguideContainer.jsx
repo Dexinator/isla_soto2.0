@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import MapComponent from './MapComponent.jsx';
-import AudioPlayer from './AudioPlayer.jsx';
+import SoundCloudPlayer from './SoundCloudPlayer.jsx';
 import PlaylistManager from './PlaylistManager.jsx';
 
 const AudioguideContainer = ({ 
@@ -175,7 +175,7 @@ const AudioguideContainer = ({
         {/* Reproductor actual (columna izquierda) */}
         <section aria-labelledby="player-title">
           <h2 id="player-title" className="sr-only">Reproductor de audio</h2>
-          <AudioPlayer 
+          <SoundCloudPlayer
             currentMural={currentMural}
             onNext={sortedMurals.length > 1 ? handleNext : null}
             onPrevious={sortedMurals.length > 1 ? handlePrevious : null}

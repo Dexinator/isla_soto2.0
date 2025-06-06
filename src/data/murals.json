@@ -14,11 +14,11 @@
       "order": 1,
       "audio": {
         "normal": {
-          "es": "https://audio.com/embed/mural-1-normal-es",
-          "en": "https://audio.com/embed/mural-1-normal-en"
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2107850961%3Fsecret_token%3Ds-aPi7bGa9jHU&color=%2378766c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
+          "en": "https://soundcloud.com/user-example/mural-1-normal-en"
         },
-        "descriptive": "https://audio.com/embed/mural-1-descriptive-es",
-        "easy": "https://audio.com/embed/mural-1-easy-es"
+        "descriptive": "https://soundcloud.com/user-example/mural-1-descriptive-es",
+        "easy": "https://soundcloud.com/user-example/mural-1-easy-es"
       },
       "video": {
         "sign": "https://player.vimeo.com/video/mural-1-sign"
@@ -55,11 +55,11 @@
       "order": 2,
       "audio": {
         "normal": {
-          "es": "https://audio.com/embed/mural-2-normal-es",
-          "en": "https://audio.com/embed/mural-2-normal-en"
+          "es": "https://soundcloud.com/user-example/mural-2-normal-es",
+          "en": "https://soundcloud.com/user-example/mural-2-normal-en"
         },
-        "descriptive": "https://audio.com/embed/mural-2-descriptive-es",
-        "easy": "https://audio.com/embed/mural-2-easy-es"
+        "descriptive": "https://soundcloud.com/user-example/mural-2-descriptive-es",
+        "easy": "https://soundcloud.com/user-example/mural-2-easy-es"
       },
       "video": {
         "sign": "https://player.vimeo.com/video/mural-2-sign"
@@ -96,11 +96,11 @@
       "order": 3,
       "audio": {
         "normal": {
-          "es": "https://audio.com/embed/mural-3-normal-es",
-          "en": "https://audio.com/embed/mural-3-normal-en"
+          "es": "https://soundcloud.com/user-example/mural-3-normal-es",
+          "en": "https://soundcloud.com/user-example/mural-3-normal-en"
         },
-        "descriptive": "https://audio.com/embed/mural-3-descriptive-es",
-        "easy": "https://audio.com/embed/mural-3-easy-es"
+        "descriptive": "https://soundcloud.com/user-example/mural-3-descriptive-es",
+        "easy": "https://soundcloud.com/user-example/mural-3-easy-es"
       },
       "video": {
         "sign": "https://player.vimeo.com/video/mural-3-sign"
