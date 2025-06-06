@@ -97,7 +97,7 @@ const SoundCloudPlayer = ({
 
   // Inicializar widget cuando cambia el mural
   useEffect(() => {
-    if (!currentMural || !window.SC || !window.SC.Widget) return;
+    if (!currentMural) return;
 
     const audioUrl = getAudioUrl(currentMural);
     const embedUrl = getSoundCloudEmbedUrl(audioUrl);
@@ -119,74 +119,81 @@ const SoundCloudPlayer = ({
       iframeRef.current.src = embedUrl;
     }
 
-    // Esperar un poco para que el iframe se cargue y tenga dimensiones
-    setTimeout(() => {
-      if (iframeRef.current && window.SC && window.SC.Widget) {
-        try {
-          // Asegurar que el iframe tenga dimensiones antes de inicializar el widget
-          const iframe = iframeRef.current;
-          if (iframe.offsetWidth === 0 || iframe.offsetHeight === 0) {
-            console.warn('Audio iframe no tiene dimensiones adecuadas');
-            setIsLoading(false);
-            return;
-          }
-
-          widgetRef.current = window.SC.Widget(iframe);
-          
-          // Configurar event listeners
-          widgetRef.current.bind(window.SC.Widget.Events.READY, () => {
-            setWidgetReady(true);
-            setIsLoading(false);
-            
-            // Obtener duración
-            widgetRef.current.getDuration((duration) => {
-              setDuration(duration);
-            });
-
-            // Configurar volumen inicial
-            widgetRef.current.setVolume(volume);
-          });
-
-          widgetRef.current.bind(window.SC.Widget.Events.PLAY, () => {
-            setIsPlaying(true);
-          });
-
-          widgetRef.current.bind(window.SC.Widget.Events.PAUSE, () => {
-            setIsPlaying(false);
-          });
-
-          widgetRef.current.bind(window.SC.Widget.Events.FINISH, () => {
-            setIsPlaying(false);
-            setProgress(100);
-            if (onTrackEnd) {
-              onTrackEnd();
-            }
-          });
-
-          widgetRef.current.bind(window.SC.Widget.Events.PLAY_PROGRESS, (data) => {
-            setCurrentTime(data.currentPosition);
-            setProgress(data.relativePosition * 100);
-          });
-
-          widgetRef.current.bind(window.SC.Widget.Events.ERROR, (error) => {
-            console.error('Audio Widget Error:', error);
-            setIsLoading(false);
-          });
-
-          // Timeout de seguridad para detectar si el widget no se inicializa
-          setTimeout(() => {
-            if (!widgetReady && !error) {
-              console.warn('Audio Widget no se inicializó en tiempo esperado');
-              setIsLoading(false);
-            }
-          }, 10000); // 10 segundos de timeout
-
-        } catch (err) {
-          console.error('Error initializing audio widget:', err);
-          setIsLoading(false);
-        }
+    // Función para inicializar el widget
+    const initializeWidget = () => {
+      if (!window.SC || !window.SC.Widget || !iframeRef.current) {
+        // Si no está listo, intentar de nuevo en un momento
+        setTimeout(initializeWidget, 500);
+        return;
       }
-    }, 1000);
+
+      try {
+        // Asegurar que el iframe tenga dimensiones antes de inicializar el widget
+        const iframe = iframeRef.current;
+        if (iframe.offsetWidth === 0 || iframe.offsetHeight === 0) {
+          console.warn('Audio iframe no tiene dimensiones adecuadas');
+          setIsLoading(false);
+          return;
+        }
+
+        widgetRef.current = window.SC.Widget(iframe);
+
+        // Configurar event listeners
+        widgetRef.current.bind(window.SC.Widget.Events.READY, () => {
+          setWidgetReady(true);
+          setIsLoading(false);
+
+          // Obtener duración
+          widgetRef.current.getDuration((duration) => {
+            setDuration(duration);
+          });
+
+          // Configurar volumen inicial
+          widgetRef.current.setVolume(volume);
+        });
+
+        widgetRef.current.bind(window.SC.Widget.Events.PLAY, () => {
+          setIsPlaying(true);
+        });
+
+        widgetRef.current.bind(window.SC.Widget.Events.PAUSE, () => {
+          setIsPlaying(false);
+        });
+
+        widgetRef.current.bind(window.SC.Widget.Events.FINISH, () => {
+          setIsPlaying(false);
+          setProgress(100);
+          if (onTrackEnd) {
+            onTrackEnd();
+          }
+        });
+
+        widgetRef.current.bind(window.SC.Widget.Events.PLAY_PROGRESS, (data) => {
+          setCurrentTime(data.currentPosition);
+          setProgress(data.relativePosition * 100);
+        });
+
+        widgetRef.current.bind(window.SC.Widget.Events.ERROR, (error) => {
+          console.error('Audio Widget Error:', error);
+          setIsLoading(false);
+        });
+
+        // Timeout de seguridad para detectar si el widget no se inicializa
+        setTimeout(() => {
+          if (!widgetReady && !error) {
+            console.warn('Audio Widget no se inicializó en tiempo esperado');
+            setIsLoading(false);
+          }
+        }, 10000); // 10 segundos de timeout
+
+      } catch (err) {
+        console.error('Error initializing audio widget:', err);
+        setIsLoading(false);
+      }
+    };
+
+    // Esperar un poco para que el iframe se cargue y luego inicializar
+    setTimeout(initializeWidget, 1500);
 
   }, [currentMural, audioType, language]);
 
@@ -391,6 +398,9 @@ const SoundCloudPlayer = ({
             </svg>
           </button>
 
+
+
+
           {/* Botón play/pause principal */}
           <button
             onClick={handlePlayPause}
@@ -407,7 +417,7 @@ const SoundCloudPlayer = ({
                         d="M10 9v6m4-6v6"/>
                 ) : (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                        d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h8m-9 0h10"/>
+                        d="M8 18V6l8 6-8 6Z"/>
                 )}
               </svg>
             )}
@@ -435,7 +445,7 @@ const SoundCloudPlayer = ({
         <div className="px-6 pb-6">
           <div className="flex items-center justify-center space-x-2 text-slate-600 dark:text-slate-400">
             <div className="animate-spin w-4 h-4 border-2 border-SM-blue border-t-transparent rounded-full"></div>
-            <span className="text-sm">Cargando SoundCloud...</span>
+            <span className="text-sm">Cargando audio...</span>
           </div>
         </div>
       )}
