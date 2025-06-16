@@ -26,7 +26,7 @@ const PlaylistManager = ({
     switch (status) {
       case 'completed': return '✅';
       case 'inProgress': return '▶️';
-      default: return '⭕';
+      default: return '▶️'; // Icono de play para las que faltan escuchar
     }
   };
 
@@ -102,13 +102,10 @@ const PlaylistManager = ({
         <div className="flex items-center justify-between mb-4">
           <div>
             <h3 className="font-semibold text-lg text-slate-900 dark:text-slate-100">
-              🎵 Murales del Tour
+              🏷️ {audioType === 'normal' ? 'Audioguía Normativa' :
+                    audioType === 'descriptive' ? 'Audioguía Descriptiva' :
+                    audioType === 'easy' ? 'Audioguía Fácil' : 'Signoguía'}
             </h3>
-            <p className="text-sm text-slate-600 dark:text-slate-400">
-              {murals.length} murales • {audioType === 'normal' ? 'Normativa' :
-                        audioType === 'descriptive' ? 'Descriptiva' :
-                        audioType === 'easy' ? 'Fácil' : 'Signoguía'}
-            </p>
           </div>
           <div className="text-right">
             <div className="text-sm font-medium text-slate-900 dark:text-slate-100">
@@ -155,21 +152,16 @@ const PlaylistManager = ({
           </div>
         )}
 
-        {/* Progreso actual */}
+        {/* Recuadro amarillo: Reproduciendo ahora */}
         {currentMural && (
-          <div className="mt-4 p-3 bg-SM-yellow/10 dark:bg-SM-yellow/20 rounded-lg border border-SM-yellow/20">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-sm font-medium text-SM-yellow">
-                  🎧 Reproduciendo ahora
-                </p>
-                <p className="text-xs text-slate-600 dark:text-slate-400">
-                  {currentMural.title[language]}
-                </p>
-              </div>
-              <div className="text-xs text-slate-500 dark:text-slate-400">
-                Mural {currentMural.order} de {murals.length}
-              </div>
+          <div className="mt-4 p-4 bg-SM-yellow text-SM-black rounded-lg shadow-md">
+            <div className="text-center">
+              <p className="font-bold text-lg">
+                Reproduciendo ahora
+              </p>
+              <p className="text-base mt-1 font-medium">
+                {currentMural.title[language]}
+              </p>
             </div>
           </div>
         )}
@@ -195,16 +187,16 @@ const PlaylistManager = ({
                 className="w-full p-4 text-left focus:outline-none focus:ring-2 focus:ring-SM-blue focus:ring-inset"
               >
                 <div className="flex items-center space-x-4">
-                  {/* Número de orden */}
+                  {/* Número de orden más grande */}
                   <div className="flex-shrink-0">
-                    <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${statusColor} border border-slate-200 dark:border-slate-600`}>
-                      {isActive ? '▶️' : mural.order}
+                    <div className={`w-12 h-12 rounded-full flex items-center justify-center text-lg font-bold ${statusColor} border-2 border-slate-200 dark:border-slate-600`}>
+                      {mural.order}
                     </div>
                   </div>
 
-                  {/* Imagen del mural */}
+                  {/* Imagen del mural más grande */}
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 rounded-lg overflow-hidden bg-gradient-to-br from-SM-blue to-blue-700 flex items-center justify-center">
+                    <div className="w-16 h-16 rounded-lg overflow-hidden bg-gradient-to-br from-SM-blue to-blue-700 flex items-center justify-center">
                       {mural.image ? (
                         <img 
                           src={mural.image} 
@@ -212,7 +204,7 @@ const PlaylistManager = ({
                           className="w-full h-full object-cover"
                         />
                       ) : (
-                        <span className="text-white text-lg">🎨</span>
+                        <span className="text-white text-2xl">🎨</span>
                       )}
                     </div>
                   </div>
@@ -220,44 +212,43 @@ const PlaylistManager = ({
                   {/* Información del mural */}
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center space-x-2 mb-1">
-                      <h4 className={`font-medium truncate ${
+                      <h4 className={`font-medium text-base truncate ${
                         isActive ? 'text-SM-blue' : 'text-slate-900 dark:text-slate-100'
                       }`}>
                         {mural.title[language]}
                       </h4>
-                      <span className="text-lg">{statusIcon}</span>
                     </div>
-                    <p className="text-sm text-slate-600 dark:text-slate-400 truncate">
-                      {mural.description[language]}
-                    </p>
-                    <div className="flex items-center space-x-4 mt-1 text-xs text-slate-500 dark:text-slate-400">
+                    
+                    {/* Artista y ubicación */}
+                    <div className="space-y-1">
+                      <div className="flex items-center text-slate-600 dark:text-slate-400">
+                        <span className="text-xs mr-1">🎨</span>
+                        <span className="text-sm">{mural.artist || 'Artista desconocido'}</span>
+                      </div>
+                      <div className="flex items-center text-slate-600 dark:text-slate-400">
+                        <span className="text-xs mr-1">📍</span>
+                        <span className="text-sm">{mural.location?.[language] || 'Ubicación no disponible'}</span>
+                      </div>
+                    </div>
+                    
+                    {/* Solo tiempo de duración */}
+                    <div className="mt-2 text-xs text-slate-500 dark:text-slate-400">
                       <span className="flex items-center">
                         <svg className="w-3 h-3 mr-1" fill="none" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
                                 d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
-                        {getEstimatedDuration(audioType)}
-                      </span>
-                      <span className="flex items-center">
-                        <svg className="w-3 h-3 mr-1" fill="none" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
-                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                        </svg>
-                        Mural {mural.order}
+                        {mural.duration?.[audioType] || getEstimatedDuration(audioType)}
                       </span>
                     </div>
                   </div>
 
-                  {/* Indicador de reproducción */}
-                  {isActive && (
-                    <div className="flex-shrink-0">
-                      <div className="flex space-x-1">
-                        <div className="w-1 h-4 bg-SM-blue rounded-full animate-pulse"></div>
-                        <div className="w-1 h-4 bg-SM-blue rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
-                        <div className="w-1 h-4 bg-SM-blue rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
-                      </div>
-                    </div>
-                  )}
+                  {/* Icono de estado */}
+                  <div className="flex-shrink-0">
+                    <span className="text-2xl">
+                      {status === 'completed' ? '✅' : '▶️'}
+                    </span>
+                  </div>
                 </div>
               </button>
             </div>
@@ -265,22 +256,12 @@ const PlaylistManager = ({
         })}
       </div>
 
-      {/* Footer con estadísticas */}
+      {/* Footer con tiempo total */}
       <div className="p-4 bg-slate-50 dark:bg-slate-700/50 border-t border-slate-200 dark:border-slate-700">
-        <div className="flex items-center justify-between text-sm">
-          <div className="flex items-center space-x-4">
-            <span className="text-slate-600 dark:text-slate-400">
-              📊 Progreso: {completedMurals.size}/{murals.length}
-            </span>
-            <span className="text-slate-600 dark:text-slate-400">
-              ⏱️ Tiempo total: ~{murals.length * (audioType === 'easy' ? 5 : audioType === 'descriptive' ? 10 : 7)} min
-            </span>
-          </div>
-          {completedMurals.size === murals.length && (
-            <span className="text-green-600 dark:text-green-400 font-medium">
-              🎉 ¡Completado!
-            </span>
-          )}
+        <div className="text-center">
+          <span className="text-slate-600 dark:text-slate-400 text-sm">
+            ⏱️ Tiempo total de la audioguía: ~{murals.length * (audioType === 'easy' ? 5 : audioType === 'descriptive' ? 10 : 7)} min
+          </span>
         </div>
       </div>
     </div>

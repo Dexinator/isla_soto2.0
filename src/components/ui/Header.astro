@@ -52,14 +52,21 @@ const t = content[lang as keyof typeof content];
   <nav class="container mx-auto px-4 py-3" role="navigation" aria-label="Navegación principal">
     <div class="flex justify-between items-center">
       
-      <!-- Logo -->
+      <!-- Logos -->
       <div class="flex-shrink-0">
-        <a href={lang === "es" ? "/" : "/english"} class="block focus-visible">
-          <h1 class="text-xl md:text-2xl font-bold">
-            <span class="text-SM-blue">AUDIOGUÍAS</span>
-            <span class="text-SM-yellow">MURALES</span>
-            <span class="block text-sm font-normal text-SM-gray">Santa Marta</span>
-          </h1>
+        <a href={lang === "es" ? "/" : "/english"} class="flex items-center space-x-2 md:space-x-3 focus-visible">
+          <!-- Logo Murales (principal) -->
+          <img 
+            src="/logo_murales.png" 
+            alt="Logo Audioguías Murales" 
+            class="h-8 md:h-12 w-auto object-contain"
+          />
+          <!-- Logo Santa Marta -->
+          <img 
+            src="/logo_santamarta.png" 
+            alt="Logo Santa Marta de Tormes" 
+            class="h-6 md:h-10 w-auto object-contain"
+          />
         </a>
       </div>
 

@@ -81,6 +81,16 @@ const {
       }
     }
 
+    function setLightMode() {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+
+    function setDarkMode() {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    }
+
     // Configuración de alto contraste
     function toggleHighContrast() {
       document.body.classList.toggle('high-contrast');
@@ -136,6 +146,8 @@ const {
     // Hacer funciones globales para uso en componentes
     // Declarar las funciones en el objeto window
     (window as any).toggleDarkMode = toggleDarkMode;
+    (window as any).setLightMode = setLightMode;
+    (window as any).setDarkMode = setDarkMode;
     (window as any).toggleHighContrast = toggleHighContrast;
     (window as any).adjustFontSize = adjustFontSize;
   </script>

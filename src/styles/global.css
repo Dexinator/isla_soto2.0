@@ -68,11 +68,11 @@
   --font-family-nunito: "Nunito", system-ui, sans-serif;
   --font-family-sans: "Nunito", system-ui, sans-serif;
 
-  /* Tamaños de fuente fluidos */
-  --font-size-fluid-xl: clamp(1.75rem, 4vw, 2.25rem);
-  --font-size-fluid-lg: clamp(1.5rem, 3vw, 1.875rem);
-  --font-size-fluid-base: clamp(1rem, 2vw, 1.125rem);
-  --font-size-fluid-sm: clamp(0.875rem, 1.5vw, 1rem);
+  /* Tamaños de fuente fluidos - Aumentados */
+  --font-size-fluid-xl: clamp(2.25rem, 5vw, 3rem);
+  --font-size-fluid-lg: clamp(1.875rem, 4vw, 2.5rem);
+  --font-size-fluid-base: clamp(1.25rem, 2.5vw, 1.5rem);
+  --font-size-fluid-sm: clamp(1.125rem, 2vw, 1.25rem);
 
   /* Espaciado personalizado */
   --spacing-18: 4.5rem;
@@ -116,11 +116,11 @@
   100% { transform: translateY(0); opacity: 1; }
 }
 
-/* Configuración de fuentes responsivas fluidas */
-.text-fluid-xl { font-size: clamp(1.75rem, 4vw, 2.25rem); }
-.text-fluid-lg { font-size: clamp(1.5rem, 3vw, 1.875rem); }
-.text-fluid-base { font-size: clamp(1rem, 2vw, 1.125rem); }
-.text-fluid-sm { font-size: clamp(0.875rem, 1.5vw, 1rem); }
+/* Configuración de fuentes responsivas fluidas - Aumentadas */
+.text-fluid-xl { font-size: clamp(2.25rem, 5vw, 3rem); }
+.text-fluid-lg { font-size: clamp(1.875rem, 4vw, 2.5rem); }
+.text-fluid-base { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
+.text-fluid-sm { font-size: clamp(1.125rem, 2vw, 1.25rem); }
 
 /* Clases de accesibilidad del manual de identidad */
 
@@ -178,6 +178,7 @@
 
 html {
   font-family: 'Nunito', system-ui, sans-serif;
+  font-size: 18px; /* Tamaño base aumentado de 16px a 18px */
   line-height: 1.6;
   transition: background-color 0.3s ease, color 0.3s ease;
 }

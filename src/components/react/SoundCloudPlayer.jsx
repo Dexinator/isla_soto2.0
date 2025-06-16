@@ -308,64 +308,56 @@ const SoundCloudPlayer = ({
         />
       </div>
 
-      {/* Header con información del mural */}
-      <div className="p-6">
-        <div className="flex items-start space-x-4">
-          {/* Cover del mural */}
-          <div className="flex-shrink-0">
-            <div className="w-20 h-20 rounded-lg overflow-hidden bg-gradient-to-br from-SM-blue to-blue-700 flex items-center justify-center">
-              {currentMural.image ? (
-                <img
-                  src={currentMural.image}
-                  alt={currentMural.alt?.[language] || currentMural.title[language]}
-                  className="w-full h-full object-cover"
-                />
-              ) : (
-                <span className="text-white text-2xl">🎨</span>
-              )}
-            </div>
+      {/* Imagen cuadrada arriba */}
+      <div className="p-6 pb-4">
+        <div className="relative">
+          <div className="aspect-square w-full rounded-xl overflow-hidden bg-gradient-to-br from-SM-blue to-blue-700 flex items-center justify-center">
+            {currentMural.image ? (
+              <img
+                src={currentMural.image}
+                alt={currentMural.alt?.[language] || currentMural.title[language]}
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <span className="text-white text-6xl">🎨</span>
+            )}
           </div>
+          
+          {/* Botón de like flotante */}
+          <button
+            className="absolute top-4 right-4 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm p-3 rounded-full shadow-lg hover:bg-white dark:hover:bg-slate-800 transition-all duration-300 hover:scale-110"
+            aria-label="Me gusta"
+          >
+            <svg className="w-6 h-6 text-red-500" fill="none" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
 
-          {/* Información del mural */}
-          <div className="flex-1 min-w-0">
-            <h3 className="font-semibold text-lg text-slate-900 dark:text-slate-100 truncate">
-              {currentMural.title[language]}
-            </h3>
-            <p className="text-slate-600 dark:text-slate-400 text-sm mb-2">
-              Audioguía {audioType === 'normal' ? 'Normativa' :
-                        audioType === 'descriptive' ? 'Descriptiva' :
-                        audioType === 'easy' ? 'Fácil' : 'Signoguía'}
-            </p>
-            <div className="flex items-center text-xs text-slate-500 dark:text-slate-400">
-              <span>{formatTime(currentTime)}</span>
-              <span className="mx-2">/</span>
-              <span>{formatTime(duration)}</span>
-            </div>
+      {/* Información del mural */}
+      <div className="px-6 pb-4">
+        {/* Nombre del mural */}
+        <h3 className="font-bold text-xl text-slate-900 dark:text-slate-100 mb-2">
+          {currentMural.title[language]}
+        </h3>
+        
+        {/* Artista y ubicación */}
+        <div className="space-y-1 mb-4">
+          <div className="flex items-center text-slate-600 dark:text-slate-400">
+            <span className="text-sm">🎨</span>
+            <span className="ml-2 text-sm font-medium">{currentMural.artist || 'Artista desconocido'}</span>
           </div>
+          <div className="flex items-center text-slate-600 dark:text-slate-400">
+            <span className="text-sm">📍</span>
+            <span className="ml-2 text-sm">{currentMural.location?.[language] || 'Ubicación no disponible'}</span>
+          </div>
+        </div>
 
-          {/* Controles de volumen */}
-          <div className="flex items-center space-x-2">
-            <button
-              onClick={toggleMute}
-              disabled={!widgetReady}
-              className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors disabled:opacity-50"
-              aria-label={isMuted ? "Activar sonido" : "Silenciar"}
-            >
-              <span className="text-lg">
-                {isMuted || volume === 0 ? '🔇' : volume < 50 ? '🔉' : '🔊'}
-              </span>
-            </button>
-            <input
-              type="range"
-              min="0"
-              max="100"
-              step="5"
-              value={isMuted ? 0 : volume}
-              onChange={handleVolumeChange}
-              disabled={!widgetReady}
-              className="w-16 h-1 bg-slate-200 dark:bg-slate-600 rounded-lg appearance-none cursor-pointer disabled:opacity-50"
-            />
-          </div>
+        {/* Tiempo de reproducción */}
+        <div className="flex items-center justify-between text-sm text-slate-500 dark:text-slate-400">
+          <span>{formatTime(currentTime)}</span>
+          <span>{formatTime(duration)}</span>
         </div>
       </div>
 
@@ -383,8 +375,8 @@ const SoundCloudPlayer = ({
       </div>
 
       {/* Controles principales */}
-      <div className="px-6 pb-6">
-        <div className="flex items-center justify-center space-x-6">
+      <div className="px-6 pb-4">
+        <div className="flex items-center justify-center space-x-6 mb-4">
           {/* Botón anterior */}
           <button
             onClick={onPrevious}
@@ -397,9 +389,6 @@ const SoundCloudPlayer = ({
                     d="M12.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0019 16V8a1 1 0 00-1.6-.8l-5.334 4zM4.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0011 16V8a1 1 0 00-1.6-.8l-5.334 4z"/>
             </svg>
           </button>
-
-
-
 
           {/* Botón play/pause principal */}
           <button
@@ -435,6 +424,30 @@ const SoundCloudPlayer = ({
                     d="M11.933 12.8a1 1 0 000-1.6L6.6 7.2A1 1 0 005 8v8a1 1 0 001.6.8l5.333-4zM19.933 12.8a1 1 0 000-1.6l-5.333-4A1 1 0 0013 8v8a1 1 0 001.6.8l5.333-4z"/>
             </svg>
           </button>
+        </div>
+
+        {/* Controles de volumen */}
+        <div className="flex items-center justify-center space-x-3">
+          <button
+            onClick={toggleMute}
+            disabled={!widgetReady}
+            className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors disabled:opacity-50"
+            aria-label={isMuted ? "Activar sonido" : "Silenciar"}
+          >
+            <span className="text-lg">
+              {isMuted || volume === 0 ? '🔇' : volume < 50 ? '🔉' : '🔊'}
+            </span>
+          </button>
+          <input
+            type="range"
+            min="0"
+            max="100"
+            step="5"
+            value={isMuted ? 0 : volume}
+            onChange={handleVolumeChange}
+            disabled={!widgetReady}
+            className="w-24 h-2 bg-slate-200 dark:bg-slate-600 rounded-lg appearance-none cursor-pointer disabled:opacity-50"
+          />
         </div>
       </div>
 

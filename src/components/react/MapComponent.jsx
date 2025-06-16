@@ -6,6 +6,7 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, className = 
   const markersRef = useRef([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [scrollZoomEnabled, setScrollZoomEnabled] = useState(false);
 
   // Configuración del mapa
   const mapConfig = {
@@ -13,6 +14,18 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, className = 
     zoom: 16,
     maxZoom: 18,
     attribution: '© OpenStreetMap contributors'
+  };
+
+  // Función para alternar el scroll zoom
+  const toggleScrollZoom = () => {
+    if (mapInstanceRef.current) {
+      if (scrollZoomEnabled) {
+        mapInstanceRef.current.scrollWheelZoom.disable();
+      } else {
+        mapInstanceRef.current.scrollWheelZoom.enable();
+      }
+      setScrollZoomEnabled(!scrollZoomEnabled);
+    }
   };
 
   useEffect(() => {
@@ -33,31 +46,40 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, className = 
         const L = await import('https://unpkg.com/leaflet@1.9.4/dist/leaflet-src.esm.js');
         
         if (mapRef.current && !mapInstanceRef.current) {
-          // Crear el mapa
-          const map = L.map(mapRef.current).setView(mapConfig.center, mapConfig.zoom);
+          // Crear el mapa con scroll deshabilitado y controles simplificados
+          const map = L.map(mapRef.current, {
+            scrollWheelZoom: false, // Deshabilitar zoom con scroll
+            doubleClickZoom: true,  // Mantener zoom con doble click
+            touchZoom: true,        // Mantener zoom con touch en móvil
+            boxZoom: false,         // Deshabilitar zoom con selección de área
+            keyboard: false,        // Deshabilitar controles de teclado
+            zoomControl: false,     // Ocultar controles de zoom para simplificar
+            attributionControl: false // Ocultar atribución para simplificar
+          }).setView(mapConfig.center, mapConfig.zoom);
           
-          // Añadir capa de tiles
-          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: mapConfig.attribution,
-            maxZoom: mapConfig.maxZoom
+          // Añadir capa de tiles con estilo simplificado y colores reducidos
+          L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
+            attribution: '© CartoDB, © OpenStreetMap',
+            maxZoom: mapConfig.maxZoom,
+            className: 'map-tiles-muted' // Clase para aplicar filtros CSS
           }).addTo(map);
 
-          // Crear iconos personalizados
+          // Crear iconos personalizados más grandes y prominentes
           const createCustomIcon = (isActive = false) => {
             return L.divIcon({
               className: 'custom-marker',
               html: `
-                <div class="w-8 h-8 rounded-full border-2 border-white shadow-lg flex items-center justify-center text-white text-sm font-bold ${
+                <div class="w-12 h-12 rounded-full border-3 border-white shadow-xl flex items-center justify-center text-white text-lg font-bold ${
                   isActive 
-                    ? 'bg-SM-yellow animate-pulse' 
-                    : 'bg-SM-blue hover:bg-blue-700'
-                } transition-colors">
+                    ? 'bg-SM-yellow animate-pulse shadow-yellow-400/50' 
+                    : 'bg-SM-blue hover:bg-blue-700 shadow-blue-500/50'
+                } transition-all duration-300 transform hover:scale-110">
                   🎨
                 </div>
               `,
-              iconSize: [32, 32],
-              iconAnchor: [16, 16],
-              popupAnchor: [0, -16]
+              iconSize: [48, 48],
+              iconAnchor: [24, 24],
+              popupAnchor: [0, -24]
             });
           };
 
@@ -164,17 +186,17 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, className = 
           const newIcon = L.divIcon({
             className: 'custom-marker',
             html: `
-              <div class="w-8 h-8 rounded-full border-2 border-white shadow-lg flex items-center justify-center text-white text-sm font-bold ${
+              <div class="w-12 h-12 rounded-full border-3 border-white shadow-xl flex items-center justify-center text-white text-lg font-bold ${
                 isActive 
-                  ? 'bg-SM-yellow animate-pulse' 
-                  : 'bg-SM-blue hover:bg-blue-700'
-              } transition-colors">
+                  ? 'bg-SM-yellow animate-pulse shadow-yellow-400/50' 
+                  : 'bg-SM-blue hover:bg-blue-700 shadow-blue-500/50'
+              } transition-all duration-300 transform hover:scale-110">
                 🎨
               </div>
             `,
-            iconSize: [32, 32],
-            iconAnchor: [16, 16],
-            popupAnchor: [0, -16]
+            iconSize: [48, 48],
+            iconAnchor: [24, 24],
+            popupAnchor: [0, -24]
           });
           marker.setIcon(newIcon);
         });
@@ -201,7 +223,52 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, className = 
   }
 
   return (
-    <div className={`bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 overflow-hidden ${className}`}>
+    <>
+      {/* Estilos CSS para el mapa */}
+      <style jsx>{`
+        .map-container .leaflet-container {
+          position: relative !important;
+          z-index: 1 !important;
+        }
+        .map-container .leaflet-control-container {
+          display: none !important;
+        }
+        .map-container .leaflet-tile {
+          filter: grayscale(0.3) contrast(0.8) brightness(1.1) !important;
+        }
+        .map-tiles-muted {
+          opacity: 0.7 !important;
+        }
+        .custom-marker {
+          z-index: 10 !important;
+        }
+        .custom-marker div {
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+        }
+        .map-container .leaflet-pane {
+          z-index: auto !important;
+        }
+        .map-container .leaflet-map-pane {
+          z-index: 1 !important;
+        }
+        .map-container .leaflet-tile-pane {
+          z-index: 1 !important;
+        }
+        .map-container .leaflet-overlay-pane {
+          z-index: 2 !important;
+        }
+        .map-container .leaflet-marker-pane {
+          z-index: 3 !important;
+        }
+        .map-container .leaflet-tooltip-pane {
+          z-index: 4 !important;
+        }
+        .map-container .leaflet-popup-pane {
+          z-index: 5 !important;
+        }
+      `}</style>
+      
+      <div className={`bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 overflow-hidden ${className}`} style={{ position: 'relative', zIndex: 1 }}>
       {/* Header del mapa */}
       <div className="p-4 border-b border-slate-200 dark:border-slate-700">
         <div className="flex items-center justify-between">
@@ -213,14 +280,27 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, className = 
               {route?.totalDistance} • {route?.estimatedTime}
             </p>
           </div>
-          <a
-            href={`https://maps.google.com/maps?daddr=${murals[0]?.coordinates[0]},${murals[0]?.coordinates[1]}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-SM-yellow text-SM-black px-3 py-2 rounded-lg text-sm font-medium hover:bg-yellow-500 transition-colors"
-          >
-            Abrir en Google Maps
-          </a>
+          <div className="flex items-center space-x-2">
+            <button
+              onClick={toggleScrollZoom}
+              className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                scrollZoomEnabled
+                  ? 'bg-SM-blue text-white hover:bg-blue-700'
+                  : 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600'
+              }`}
+              title={scrollZoomEnabled ? 'Scroll habilitado - Click para deshabilitar' : 'Scroll deshabilitado - Click para habilitar zoom'}
+            >
+              {scrollZoomEnabled ? '🔓 Zoom activo' : '🔒 Zoom bloqueado'}
+            </button>
+            <a
+              href={`https://maps.google.com/maps?daddr=${murals[0]?.coordinates[0]},${murals[0]?.coordinates[1]}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-SM-yellow text-SM-black px-3 py-2 rounded-lg text-sm font-medium hover:bg-yellow-500 transition-colors"
+            >
+              Abrir en Google Maps
+            </a>
+          </div>
         </div>
       </div>
 
@@ -236,34 +316,47 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, className = 
         )}
         <div 
           ref={mapRef} 
-          className="h-64 md:h-80 w-full"
-          style={{ minHeight: '256px' }}
+          className="h-64 md:h-80 w-full map-container"
+          style={{ 
+            minHeight: '256px',
+            position: 'relative',
+            zIndex: 1
+          }}
         />
       </div>
 
       {/* Leyenda */}
       <div className="p-4 bg-slate-50 dark:bg-slate-700/50">
-        <div className="flex items-center justify-between text-sm">
-          <div className="flex items-center space-x-4">
-            <div className="flex items-center">
-              <div className="w-4 h-4 bg-SM-blue rounded-full mr-2"></div>
-              <span className="text-slate-600 dark:text-slate-400">Mural</span>
+        <div className="flex flex-col space-y-3">
+          <div className="flex items-center justify-between text-sm">
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center">
+                <div className="w-4 h-4 bg-SM-blue rounded-full mr-2"></div>
+                <span className="text-slate-600 dark:text-slate-400">Mural</span>
+              </div>
+              <div className="flex items-center">
+                <div className="w-4 h-4 bg-SM-yellow rounded-full mr-2"></div>
+                <span className="text-slate-600 dark:text-slate-400">Reproduciendo</span>
+              </div>
+              <div className="flex items-center">
+                <div className="w-4 h-1 bg-SM-blue mr-2"></div>
+                <span className="text-slate-600 dark:text-slate-400">Ruta recomendada</span>
+              </div>
             </div>
-            <div className="flex items-center">
-              <div className="w-4 h-4 bg-SM-yellow rounded-full mr-2"></div>
-              <span className="text-slate-600 dark:text-slate-400">Reproduciendo</span>
-            </div>
-            <div className="flex items-center">
-              <div className="w-4 h-1 bg-SM-blue mr-2"></div>
-              <span className="text-slate-600 dark:text-slate-400">Ruta recomendada</span>
-            </div>
+            <span className="text-slate-500 dark:text-slate-400">
+              {murals.length} murales
+            </span>
           </div>
-          <span className="text-slate-500 dark:text-slate-400">
-            {murals.length} murales
-          </span>
+          {!scrollZoomEnabled && (
+            <div className="text-xs text-slate-500 dark:text-slate-400 flex items-center">
+              <span className="mr-1">💡</span>
+              <span>Scroll bloqueado para mejor navegación. Usa el botón "Zoom bloqueado" para habilitar zoom con scroll.</span>
+            </div>
+          )}
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 

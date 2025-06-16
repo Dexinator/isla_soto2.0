@@ -22,9 +22,11 @@ import '../styles/global.css';
 
   <main id="main-content" class="flex-1 bg-slate-50 dark:bg-slate-900">
 
-    <!-- Selector de idioma flotante -->
+    <!-- Controles flotantes: Idioma y Accesibilidad -->
     <div class="container mx-auto px-4 pt-6">
-      <div class="flex justify-center">
+      <div class="flex flex-col items-center space-y-4">
+        
+        <!-- Selector de idioma -->
         <div class="bg-white dark:bg-slate-800 rounded-full shadow-lg border border-slate-200 dark:border-slate-700 p-2 flex items-center space-x-2">
           <!-- Español seleccionado -->
           <div class="flex items-center bg-SM-blue text-white px-3 py-2 rounded-full text-sm font-medium">
@@ -41,6 +43,59 @@ import '../styles/global.css';
             <span>EN</span>
           </a>
         </div>
+
+        <!-- Controles de accesibilidad -->
+        <div class="bg-white dark:bg-slate-800 rounded-full shadow-lg border border-slate-200 dark:border-slate-700 p-2 flex items-center space-x-2">
+          <!-- Modo claro -->
+          <button 
+            onclick="setLightMode()" 
+            class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors focus-visible"
+            aria-label="Activar modo claro"
+            title="Modo claro"
+          >
+            <span class="text-sm">☀️</span>
+          </button>
+          
+          <!-- Modo oscuro -->
+          <button 
+            onclick="setDarkMode()" 
+            class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors focus-visible"
+            aria-label="Activar modo oscuro"
+            title="Modo oscuro"
+          >
+            <span class="text-sm">🌙</span>
+          </button>
+          
+          <!-- Alto contraste -->
+          <button 
+            onclick="toggleHighContrast()" 
+            class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors focus-visible"
+            aria-label="Activar/desactivar alto contraste"
+            title="Alto contraste"
+          >
+            <span class="text-sm">👁️</span>
+          </button>
+          
+          <!-- Aumentar tamaño de fuente -->
+          <button 
+            onclick="adjustFontSize(1)" 
+            class="px-2 py-1 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors focus-visible text-xs font-bold"
+            aria-label="Aumentar tamaño de texto"
+            title="Texto más grande"
+          >
+            A+
+          </button>
+          
+          <!-- Disminuir tamaño de fuente -->
+          <button 
+            onclick="adjustFontSize(-1)" 
+            class="px-2 py-1 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors focus-visible text-xs font-bold"
+            aria-label="Disminuir tamaño de texto"
+            title="Texto más pequeño"
+          >
+            A-
+          </button>
+        </div>
       </div>
     </div>
 
@@ -50,6 +105,20 @@ import '../styles/global.css';
 
         <!-- Grid de audioguías - Mobile First -->
         <div class="grid grid-cols-2 gap-4 md:gap-6 max-w-4xl mx-auto">
+
+
+          <!-- Audioguía Normativa -->
+          <Card
+            variant="square"
+            title="Audioguía Normativa"
+            description="Audio estándar con información completa"
+            href="/audioguia-normativa"
+            icon="🎧"
+            badge="Estándar"
+            badgeColor="blue"
+            gradient="from-SM-yellow to-yellow-600"
+            className="order-1"
+          />
 
           <!-- Audioguía Fácil (primera opción, mismo tamaño) -->
           <Card
@@ -62,19 +131,6 @@ import '../styles/global.css';
             badgeColor="yellow"
             gradient="from-SM-blue to-blue-700"
             priority={true}
-            className="order-1"
-          />
-
-          <!-- Audioguía Normativa -->
-          <Card
-            variant="square"
-            title="Audioguía Normativa"
-            description="Audio estándar con información completa"
-            href="/audioguia-normativa"
-            icon="🎧"
-            badge="Estándar"
-            badgeColor="blue"
-            gradient="from-SM-yellow to-yellow-600"
             className="order-2"
           />
 
