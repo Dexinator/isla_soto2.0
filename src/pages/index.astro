@@ -24,62 +24,56 @@ import '../styles/global.css';
 
     <!-- Controles flotantes: Idioma y Accesibilidad -->
     <div class="container mx-auto px-4 pt-6">
-      <div class="flex flex-col items-center space-y-4">
+      <div class="flex justify-center">
         
-        <!-- Selector de idioma -->
+        <!-- Controles combinados de idioma y accesibilidad -->
         <div class="bg-white dark:bg-slate-800 rounded-full shadow-lg border border-slate-200 dark:border-slate-700 p-2 flex items-center space-x-2">
-          <!-- Español seleccionado -->
-          <div class="flex items-center bg-SM-blue text-white px-3 py-2 rounded-full text-sm font-medium">
-            <span class="mr-2">🇪🇸</span>
-            <span>ES</span>
-          </div>
-          <!-- Inglés disponible -->
+          <!-- Selector de idioma -->
           <a
             href="/english"
-            class="flex items-center text-slate-600 dark:text-slate-300 hover:text-SM-blue dark:hover:text-SM-blue px-3 py-2 rounded-full text-sm font-medium transition-colors focus-visible"
+            class="flex items-center text-slate-600 dark:text-slate-300 hover:text-SM-blue dark:hover:text-SM-blue px-3 py-2 rounded-full text-base font-medium transition-colors focus-visible border-r border-slate-200 dark:border-slate-700 pr-3 mr-1"
             aria-label="Switch to English"
           >
             <span class="mr-2">🇬🇧</span>
             <span>EN</span>
           </a>
-        </div>
-
-        <!-- Controles de accesibilidad -->
-        <div class="bg-white dark:bg-slate-800 rounded-full shadow-lg border border-slate-200 dark:border-slate-700 p-2 flex items-center space-x-2">
+          <!-- Controles de accesibilidad -->
           <!-- Modo claro -->
           <button 
             onclick="setLightMode()" 
-            class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors focus-visible"
+            class="p-3 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors focus-visible"
             aria-label="Activar modo claro"
             title="Modo claro"
           >
-            <span class="text-sm">☀️</span>
+            <span class="text-base">☀️</span>
           </button>
           
           <!-- Modo oscuro -->
           <button 
             onclick="setDarkMode()" 
-            class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors focus-visible"
+            class="p-3 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors focus-visible"
             aria-label="Activar modo oscuro"
             title="Modo oscuro"
           >
-            <span class="text-sm">🌙</span>
+            <span class="text-base">🌙</span>
           </button>
           
           <!-- Alto contraste -->
           <button 
             onclick="toggleHighContrast()" 
-            class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors focus-visible"
+            class="p-3 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors focus-visible"
             aria-label="Activar/desactivar alto contraste"
             title="Alto contraste"
           >
-            <span class="text-sm">👁️</span>
+            <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 508.47" class="w-5 h-5 fill-current">
+              <path fill-rule="nonzero" d="M254.23 508.47c-3.94 0-7.87-.1-11.77-.28h-1.54v-.07c-64.9-3.34-123.37-31.04-166.45-74.12C28.46 387.99 0 324.42 0 254.23c0-70.19 28.46-133.75 74.47-179.76C117.55 31.39 176.03 3.69 240.92.34V.27h1.54c3.9-.18 7.83-.27 11.77-.27l3.46.02.08-.02c70.19 0 133.75 28.46 179.76 74.47 46 46.01 74.47 109.57 74.47 179.76S483.53 387.99 437.53 434c-46.01 46.01-109.57 74.47-179.76 74.47l-.08-.03-3.46.03zm-13.31-30.56V30.56C184.33 33.87 133.4 58.17 95.79 95.79c-40.55 40.54-65.62 96.56-65.62 158.44 0 61.89 25.07 117.91 65.62 158.45 37.61 37.61 88.54 61.91 145.13 65.23z"/>
+            </svg>
           </button>
           
           <!-- Aumentar tamaño de fuente -->
           <button 
             onclick="adjustFontSize(1)" 
-            class="px-2 py-1 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors focus-visible text-xs font-bold"
+            class="px-3 py-3 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors focus-visible text-base font-bold"
             aria-label="Aumentar tamaño de texto"
             title="Texto más grande"
           >
@@ -89,7 +83,7 @@ import '../styles/global.css';
           <!-- Disminuir tamaño de fuente -->
           <button 
             onclick="adjustFontSize(-1)" 
-            class="px-2 py-1 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors focus-visible text-xs font-bold"
+            class="px-3 py-3 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors focus-visible text-base font-bold"
             aria-label="Disminuir tamaño de texto"
             title="Texto más pequeño"
           >

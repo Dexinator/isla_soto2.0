@@ -69,10 +69,10 @@
   --font-family-sans: "Nunito", system-ui, sans-serif;
 
   /* Tamaños de fuente fluidos - Aumentados */
-  --font-size-fluid-xl: clamp(2.25rem, 5vw, 3rem);
-  --font-size-fluid-lg: clamp(1.875rem, 4vw, 2.5rem);
-  --font-size-fluid-base: clamp(1.25rem, 2.5vw, 1.5rem);
-  --font-size-fluid-sm: clamp(1.125rem, 2vw, 1.25rem);
+  --font-size-fluid-xl: clamp(2.5rem, 5vw, 3.25rem);
+  --font-size-fluid-lg: clamp(2rem, 4vw, 2.75rem);
+  --font-size-fluid-base: clamp(1.375rem, 2.5vw, 1.625rem);
+  --font-size-fluid-sm: clamp(1.25rem, 2vw, 1.375rem);
 
   /* Espaciado personalizado */
   --spacing-18: 4.5rem;
@@ -117,25 +117,91 @@
 }
 
 /* Configuración de fuentes responsivas fluidas - Aumentadas */
-.text-fluid-xl { font-size: clamp(2.25rem, 5vw, 3rem); }
-.text-fluid-lg { font-size: clamp(1.875rem, 4vw, 2.5rem); }
-.text-fluid-base { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
-.text-fluid-sm { font-size: clamp(1.125rem, 2vw, 1.25rem); }
+.text-fluid-xl { font-size: clamp(2.5rem, 5vw, 3.25rem); }
+.text-fluid-lg { font-size: clamp(2rem, 4vw, 2.75rem); }
+.text-fluid-base { font-size: clamp(1.375rem, 2.5vw, 1.625rem); }
+.text-fluid-sm { font-size: clamp(1.25rem, 2vw, 1.375rem); }
 
 /* Clases de accesibilidad del manual de identidad */
 
 /* Alto contraste */
 .high-contrast {
+  /* Colores de texto */
   --tw-text-slate-900: #000000;
+  --tw-text-slate-800: #000000;
+  --tw-text-slate-700: #000000;
+  --tw-text-slate-600: #000000;
+  --tw-text-slate-500: #000000;
+  --tw-text-slate-400: #333333;
+  --tw-text-slate-300: #ffffff;
+  --tw-text-slate-200: #ffffff;
   --tw-text-slate-100: #ffffff;
+  
+  /* Colores de fondo */
   --tw-bg-white: #ffffff;
+  --tw-bg-slate-50: #ffffff;
+  --tw-bg-slate-100: #f0f0f0;
+  --tw-bg-slate-200: #e0e0e0;
+  --tw-bg-slate-700: #1a1a1a;
+  --tw-bg-slate-800: #000000;
   --tw-bg-slate-900: #000000;
+  
+  /* Bordes */
   --tw-border-slate-200: #000000;
+  --tw-border-slate-300: #000000;
+  --tw-border-slate-700: #ffffff;
+  
+  /* Colores de marca en alto contraste */
+  --color-SM-blue: #0056b3;
+  --color-SM-yellow: #ffcc00;
+  --color-SM-gray: #666666;
 }
 
-.high-contrast button, .high-contrast .card {
+/* Elementos interactivos en alto contraste */
+.high-contrast button, 
+.high-contrast .card,
+.high-contrast input,
+.high-contrast select,
+.high-contrast textarea,
+.high-contrast a {
   border: 2px solid currentColor !important;
 }
+
+/* Links en alto contraste */
+.high-contrast a {
+  text-decoration: underline !important;
+  text-decoration-thickness: 2px !important;
+}
+
+/* Hover states en alto contraste */
+.high-contrast button:hover,
+.high-contrast a:hover {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+.high-contrast .dark button:hover,
+.high-contrast .dark a:hover {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Eliminar sombras en alto contraste */
+.high-contrast * {
+  box-shadow: none !important;
+}
+
+/* Focus mejorado en alto contraste */
+.high-contrast *:focus {
+  outline: 3px solid currentColor !important;
+  outline-offset: 2px !important;
+}
+
+/* Colores de marca específicos */
+.high-contrast .text-SM-blue { color: #0056b3 !important; }
+.high-contrast .bg-SM-blue { background-color: #0056b3 !important; }
+.high-contrast .text-SM-yellow { color: #000000 !important; background-color: #ffcc00 !important; }
+.high-contrast .bg-SM-yellow { background-color: #ffcc00 !important; color: #000000 !important; }
 
 /* Reducción de movimiento */
 .reduce-motion *,
@@ -178,7 +244,7 @@
 
 html {
   font-family: 'Nunito', system-ui, sans-serif;
-  font-size: 18px; /* Tamaño base aumentado de 16px a 18px */
+  font-size: 20px; /* Tamaño base aumentado de 18px a 20px */
   line-height: 1.6;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
