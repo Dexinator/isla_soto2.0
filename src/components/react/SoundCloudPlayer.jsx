@@ -323,15 +323,6 @@ const SoundCloudPlayer = ({
             )}
           </div>
           
-          {/* Botón de like flotante */}
-          <button
-            className="absolute top-4 right-4 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm p-3 rounded-full shadow-lg hover:bg-white dark:hover:bg-slate-800 transition-all duration-300 hover:scale-110"
-            aria-label="Me gusta"
-          >
-            <svg className="w-6 h-6 text-red-500" fill="none" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-            </svg>
-          </button>
         </div>
       </div>
 

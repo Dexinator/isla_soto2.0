@@ -16,13 +16,19 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, className = 
     attribution: '© OpenStreetMap contributors'
   };
 
-  // Función para alternar el scroll zoom
+  // Función para alternar el scroll zoom y paneo del mapa
   const toggleScrollZoom = () => {
     if (mapInstanceRef.current) {
       if (scrollZoomEnabled) {
+        // Deshabilitar scroll zoom y paneo/arrastre
         mapInstanceRef.current.scrollWheelZoom.disable();
+        mapInstanceRef.current.dragging.disable();
+        mapInstanceRef.current.touchZoom.disable();
       } else {
+        // Habilitar scroll zoom y paneo/arrastre
         mapInstanceRef.current.scrollWheelZoom.enable();
+        mapInstanceRef.current.dragging.enable();
+        mapInstanceRef.current.touchZoom.enable();
       }
       setScrollZoomEnabled(!scrollZoomEnabled);
     }
@@ -49,8 +55,9 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, className = 
           // Crear el mapa con scroll deshabilitado y controles simplificados
           const map = L.map(mapRef.current, {
             scrollWheelZoom: false, // Deshabilitar zoom con scroll
+            dragging: false,        // Deshabilitar paneo/arrastre por defecto
+            touchZoom: false,       // Deshabilitar zoom con touch en móvil
             doubleClickZoom: true,  // Mantener zoom con doble click
-            touchZoom: true,        // Mantener zoom con touch en móvil
             boxZoom: false,         // Deshabilitar zoom con selección de área
             keyboard: false,        // Deshabilitar controles de teclado
             zoomControl: false,     // Ocultar controles de zoom para simplificar
@@ -288,9 +295,9 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, className = 
                   ? 'bg-SM-blue text-white hover:bg-blue-700'
                   : 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600'
               }`}
-              title={scrollZoomEnabled ? 'Scroll habilitado - Click para deshabilitar' : 'Scroll deshabilitado - Click para habilitar zoom'}
+              title={scrollZoomEnabled ? 'Mapa libre - Click para bloquear' : 'Mapa bloqueado - Click para liberar interacción'}
             >
-              {scrollZoomEnabled ? '🔓 Zoom activo' : '🔒 Zoom bloqueado'}
+              {scrollZoomEnabled ? '🔓 Mapa libre' : '🔒 Mapa bloqueado'}
             </button>
             <a
               href={`https://maps.google.com/maps?daddr=${murals[0]?.coordinates[0]},${murals[0]?.coordinates[1]}`}

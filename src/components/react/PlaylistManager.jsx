@@ -6,9 +6,9 @@ const PlaylistManager = ({
   onMuralSelect, 
   audioType = 'normal',
   language = 'es',
+  completedMurals = new Set(),
   className = "" 
 }) => {
-  const [completedMurals, setCompletedMurals] = useState(new Set());
   const [inProgressMurals, setInProgressMurals] = useState(new Set());
 
   // Ordenar murales por orden recomendado
@@ -73,15 +73,6 @@ const PlaylistManager = ({
     }
   };
 
-  // Marcar mural como completado cuando termine
-  const markAsCompleted = (muralId) => {
-    setCompletedMurals(prev => new Set([...prev, muralId]));
-    setInProgressMurals(prev => {
-      const newSet = new Set(prev);
-      newSet.delete(muralId);
-      return newSet;
-    });
-  };
 
   // Obtener progreso total
   const getTotalProgress = () => {
@@ -234,11 +225,8 @@ const PlaylistManager = ({
                     {/* Solo tiempo de duración */}
                     <div className="mt-2 text-xs text-slate-500 dark:text-slate-400">
                       <span className="flex items-center">
-                        <svg className="w-3 h-3 mr-1" fill="none" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
-                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                        {mural.duration?.[audioType] || getEstimatedDuration(audioType)}
+                        <svg fill="#000000" width="16px" height="16px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-1-7.59V4h2v5.59l3.95 3.95-1.41 1.41L9 10.41z"/></svg>
+                        <span className="ml-1">{mural.duration?.[audioType] || getEstimatedDuration(audioType)}</span>
                       </span>
                     </div>
                   </div>

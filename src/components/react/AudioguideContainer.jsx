@@ -83,9 +83,21 @@ const AudioguideContainer = ({
     }
   };
 
+  // Función para marcar como completado
+  const [completedMurals, setCompletedMurals] = useState(new Set());
+  
+  const handleTrackComplete = (muralId) => {
+    setCompletedMurals(prev => new Set([...prev, muralId]));
+  };
+
   // Función cuando termina un track
   const handleTrackEnd = () => {
     setIsPlaying(false);
+    
+    // Marcar el mural actual como completado
+    if (currentMural) {
+      handleTrackComplete(currentMural.id);
+    }
     
     // Auto-avanzar al siguiente mural si no es el último
     if (currentMural && sortedMurals.length > 0) {
@@ -195,6 +207,7 @@ const AudioguideContainer = ({
             onMuralSelect={handleMuralSelect}
             audioType={audioType}
             language={language}
+            completedMurals={completedMurals}
             className="h-fit"
           />
         </section>
