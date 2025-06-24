@@ -247,9 +247,9 @@ const AudioguideContainer = ({
                   className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors disabled:opacity-50"
                   aria-label="Anterior"
                 >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
-                          d="M15 19l-7-7 7-7"/>
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                          d="M12.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0019 16V8a1 1 0 00-1.6-.8l-5.334 4zM4.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0011 16V8a1 1 0 00-1.6-.8l-5.334 4z"/>
                   </svg>
                 </button>
                 
@@ -258,13 +258,13 @@ const AudioguideContainer = ({
                   className="p-2 bg-SM-blue text-white rounded-lg hover:bg-blue-700 transition-colors"
                   aria-label={isPlaying ? "Pausar" : "Reproducir"}
                 >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     {isPlaying ? (
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                             d="M10 9v6m4-6v6"/>
                     ) : (
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
-                            d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h8m-9 0h10"/>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                            d="M8 18V6l8 6-8 6Z"/>
                     )}
                   </svg>
                 </button>
@@ -275,9 +275,9 @@ const AudioguideContainer = ({
                   className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors disabled:opacity-50"
                   aria-label="Siguiente"
                 >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
-                          d="M9 5l7 7-7 7"/>
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                          d="M11.933 12.8a1 1 0 000-1.6L6.6 7.2A1 1 0 005 8v8a1 1 0 001.6.8l5.333-4zM19.933 12.8a1 1 0 000-1.6l-5.333-4A1 1 0 0013 8v8a1 1 0 001.6.8l5.333-4z"/>
                   </svg>
                 </button>
               </div>

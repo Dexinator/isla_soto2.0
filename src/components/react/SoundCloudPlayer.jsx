@@ -329,31 +329,31 @@ const SoundCloudPlayer = ({
       {/* Información del mural */}
       <div className="px-6 pb-4">
         {/* Nombre del mural */}
-        <h3 className="font-bold text-xl text-slate-900 dark:text-slate-100 mb-2">
+        <h3 className="font-bold text-xl text-slate-900 dark:text-slate-100 mb-3 text-center">
           {currentMural.title[language]}
         </h3>
         
         {/* Artista y ubicación */}
-        <div className="space-y-1 mb-4">
-          <div className="flex items-center text-slate-600 dark:text-slate-400">
-            <span className="text-sm">🎨</span>
-            <span className="ml-2 text-sm font-medium">{currentMural.artist || 'Artista desconocido'}</span>
+        <div className="space-y-2 mb-4">
+          <div className="flex items-center justify-center text-slate-600 dark:text-slate-400">
+            <span className="text-base mr-2">🎨</span>
+            <span className="text-sm font-medium">{currentMural.artist || 'Artista desconocido'}</span>
           </div>
-          <div className="flex items-center text-slate-600 dark:text-slate-400">
-            <span className="text-sm">📍</span>
-            <span className="ml-2 text-sm">{currentMural.location?.[language] || 'Ubicación no disponible'}</span>
+          <div className="flex items-center justify-center text-slate-600 dark:text-slate-400">
+            <span className="text-base mr-2">📍</span>
+            <span className="text-sm">{currentMural.location?.[language] || 'Ubicación no disponible'}</span>
           </div>
-        </div>
-
-        {/* Tiempo de reproducción */}
-        <div className="flex items-center justify-between text-sm text-slate-500 dark:text-slate-400">
-          <span>{formatTime(currentTime)}</span>
-          <span>{formatTime(duration)}</span>
         </div>
       </div>
 
-      {/* Barra de progreso */}
+      {/* Barra de progreso con tiempos */}
       <div className="px-6 pb-4">
+        {/* Tiempo de reproducción */}
+        <div className="flex items-center justify-between text-sm text-slate-500 dark:text-slate-400 mb-2">
+          <span>{formatTime(currentTime)}</span>
+          <span>{formatTime(duration)}</span>
+        </div>
+        
         <div
           className="w-full h-2 bg-slate-200 dark:bg-slate-600 rounded-full cursor-pointer"
           onClick={handleSeek}
@@ -365,9 +365,10 @@ const SoundCloudPlayer = ({
         </div>
       </div>
 
+
       {/* Controles principales */}
-      <div className="px-6 pb-4">
-        <div className="flex items-center justify-center space-x-6 mb-4">
+      <div className="px-6 pb-6">
+        <div className="flex items-center justify-center space-x-8 mb-6">
           {/* Botón anterior */}
           <button
             onClick={onPrevious}
@@ -418,27 +419,32 @@ const SoundCloudPlayer = ({
         </div>
 
         {/* Controles de volumen */}
-        <div className="flex items-center justify-center space-x-3">
+        <div className="flex items-center justify-center space-x-4 bg-slate-50 dark:bg-slate-700 rounded-lg py-3 px-4">
           <button
             onClick={toggleMute}
             disabled={!widgetReady}
-            className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors disabled:opacity-50"
+            className="p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors disabled:opacity-50"
             aria-label={isMuted ? "Activar sonido" : "Silenciar"}
           >
             <span className="text-lg">
               {isMuted || volume === 0 ? '🔇' : volume < 50 ? '🔉' : '🔊'}
             </span>
           </button>
-          <input
-            type="range"
-            min="0"
-            max="100"
-            step="5"
-            value={isMuted ? 0 : volume}
-            onChange={handleVolumeChange}
-            disabled={!widgetReady}
-            className="w-24 h-2 bg-slate-200 dark:bg-slate-600 rounded-lg appearance-none cursor-pointer disabled:opacity-50"
-          />
+          <div className="flex-1 max-w-32">
+            <input
+              type="range"
+              min="0"
+              max="100"
+              step="5"
+              value={isMuted ? 0 : volume}
+              onChange={handleVolumeChange}
+              disabled={!widgetReady}
+              className="w-full h-2 bg-slate-300 dark:bg-slate-500 rounded-lg appearance-none cursor-pointer disabled:opacity-50 slider"
+            />
+          </div>
+          <span className="text-sm text-slate-500 dark:text-slate-400 font-medium min-w-[3rem] text-center">
+            {Math.round(isMuted ? 0 : volume)}%
+          </span>
         </div>
       </div>
 
