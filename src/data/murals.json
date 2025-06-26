@@ -3,14 +3,14 @@
     {
       "id": 1,
       "title": {
-        "es": "La llegada del color",
+        "es": "La llegada del colores - revisar PDF",
         "en": "The Arrival of Color"
       },
       "description": {
         "es": "Mural inspirado en la obra de Daniel Martín que representa la transformación urbana a través del arte y el color.",
         "en": "Mural inspired by Daniel Martín's work representing urban transformation through art and color."
       },
-      "coordinates": [19.438188187539662, -99.20075597301614],
+      "coordinates": [33.67168258770903, 42.03187513256082],
       "order": 1,
       "audio": {
         "normal": {
@@ -55,7 +55,7 @@
       "order": 2,
       "audio": {
         "normal": {
-          "es": "https://soundcloud.com/user-example/mural-2-normal-es",
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606282%3Fsecret_token%3Ds-rKEyQ9aCtwP&color=%2378766c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
           "en": "https://soundcloud.com/user-example/mural-2-normal-en"
         },
         "descriptive": "https://soundcloud.com/user-example/mural-2-descriptive-es",

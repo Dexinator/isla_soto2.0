@@ -8,6 +8,12 @@ import Footer from '../components/ui/Footer.astro';
 import Card from '../components/ui/Card.astro';
 import '../styles/global.css';
 
+// Importar imágenes de iconos para optimización
+import iconAudioguiaNormativa from '../assets/images/icons/audioguia-normativa.jpg';
+import iconAudioguiaFacil from '../assets/images/icons/audioguia-facil.jpg';
+import iconAudioguiaDescriptiva from '../assets/images/icons/audioguia-descriptiva.jpg';
+import iconSignoguia from '../assets/images/icons/signoguia.jpg';
+
 // Importar datos estáticos (para futuras funcionalidades)
 // import muralsData from '../data/murals.json';
 // import contentEs from '../data/content-es.json';
@@ -33,26 +39,26 @@ import '../styles/global.css';
           <!-- Audioguía Normativa -->
           <Card
             variant="square"
-            title="Audioguía Normativa"
-            description="Audio estándar con información completa"
+            title="Audioguía"
+            description=""
             href="/audioguia-normativa"
-            icon="🎧"
-            badge="Estándar"
-            badgeColor="blue"
-            gradient="from-SM-yellow to-yellow-600"
+            image={iconAudioguiaNormativa}
+            imageAlt="Icono de la audioguía normativa - Ruta de los Murales Santa Marta"
+            badge="Español"
+            badgeColor="yellow"
             className="order-1"
           />
 
           <!-- Audioguía Fácil (primera opción, mismo tamaño) -->
           <Card
             variant="square"
-            title="Audioguía Fácil"
-            description="Audio adaptado para discapacidad intelectual"
+            title="Audioguía Lectura Fácil"
+            description=""
             href="/audioguia-facil"
-            icon="♿"
-            badge="Recomendada"
-            badgeColor="yellow"
-            gradient="from-SM-blue to-blue-700"
+            image={iconAudioguiaFacil}
+            imageAlt="Icono de la audioguía de lectura fácil - Accesible para discapacidad intelectual"
+            badge="LF"
+            badgeColor="green"
             priority={true}
             className="order-2"
           />
@@ -61,25 +67,25 @@ import '../styles/global.css';
           <Card
             variant="square"
             title="Audioguía Descriptiva"
-            description="Audio con descripciones detalladas"
+            description=""
             href="/audioguia-descriptiva"
-            icon="📝"
+            image={iconAudioguiaDescriptiva}
+            imageAlt="Icono de la audioguía descriptiva con información detallada sobre los murales"
             badge="Detallada"
             badgeColor="gray"
-            gradient="from-SM-gray to-gray-600"
             className="order-3"
           />
 
           <!-- Signoguía -->
           <Card
             variant="square"
-            title="Signoguía"
-            description="Videos en lengua de signos española"
+            title="SignoGuía LSE"
+            description=""
             href="/signoguia"
-            icon="👋"
-            badge="LSE"
+            image={iconSignoguia}
+            imageAlt="Icono de la signoguía en lengua de signos española (LSE)"
+            badge="Subtitulada"
             badgeColor="black"
-            gradient="from-SM-black to-gray-800"
             className="order-4"
           />
 

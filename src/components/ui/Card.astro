@@ -2,16 +2,18 @@
 // Componente Card reutilizable
 // Audioguías Murales Santa Marta
 
+import { Image } from 'astro:assets';
+
 export interface Props {
   variant?: 'square' | 'wide';
   title: string;
   description?: string;
   href?: string;
-  image?: string;
+  image?: string | any;
   imageAlt?: string;
   priority?: boolean;
   badge?: string;
-  badgeColor?: 'blue' | 'yellow' | 'gray' | 'black';
+  badgeColor?: 'blue' | 'yellow' | 'gray' | 'black' | 'green';
   gradient?: string;
   icon?: string;
   className?: string;
@@ -43,7 +45,8 @@ const badgeClasses = {
   blue: 'bg-SM-blue text-white',
   yellow: 'bg-SM-yellow text-SM-black',
   gray: 'bg-SM-gray text-white',
-  black: 'bg-SM-black text-white'
+  black: 'bg-SM-black text-white',
+  green: 'bg-SM-green text-white'
 };
 
 // Gradientes predefinidos
@@ -77,11 +80,15 @@ const cardGradient = gradient ? 'custom' : 'blue';
           ${image ? 'bg-slate-100 dark:bg-slate-700' : `bg-gradient-to-br ${gradients[cardGradient]}`}
         `}>
           {image ? (
-            <img 
+            <Image 
               src={image}
               alt={imageAlt || title}
               class="w-full h-full object-cover"
               loading={priority ? "eager" : "lazy"}
+              format="webp"
+              quality={85}
+              width={400}
+              height={400}
             />
           ) : (
             <!-- Área de gradiente con icono -->
@@ -141,11 +148,15 @@ const cardGradient = gradient ? 'custom' : 'blue';
           ${image ? 'bg-slate-100 dark:bg-slate-700' : `bg-gradient-to-br ${gradients[cardGradient]}`}
         `}>
           {image ? (
-            <img 
+            <Image 
               src={image}
               alt={imageAlt || title}
               class="w-full h-full object-cover"
               loading={priority ? "eager" : "lazy"}
+              format="webp"
+              quality={85}
+              width={400}
+              height={400}
             />
           ) : (
             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
