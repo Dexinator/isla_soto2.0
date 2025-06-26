@@ -229,10 +229,15 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, className = 
     );
   }
 
-  return (
-    <>
-      {/* Estilos CSS para el mapa */}
-      <style jsx>{`
+  // Añadir estilos CSS dinámicamente
+  useEffect(() => {
+    const styleId = 'map-component-styles';
+    
+    // Verificar si ya existen los estilos
+    if (!document.getElementById(styleId)) {
+      const style = document.createElement('style');
+      style.id = styleId;
+      style.textContent = `
         .map-container .leaflet-container {
           position: relative !important;
           z-index: 1 !important;
@@ -273,7 +278,20 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, className = 
         .map-container .leaflet-popup-pane {
           z-index: 5 !important;
         }
-      `}</style>
+      `;
+      document.head.appendChild(style);
+    }
+
+    // Cleanup
+    return () => {
+      const existingStyle = document.getElementById(styleId);
+      if (existingStyle) {
+        existingStyle.remove();
+      }
+    };
+  }, []);
+
+  return (
       
       <div className={`bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 overflow-hidden ${className}`} style={{ position: 'relative', zIndex: 1 }}>
       {/* Header del mapa */}
@@ -363,7 +381,6 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, className = 
         </div>
       </div>
       </div>
-    </>
   );
 };
 

@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import MuralImage from './MuralImage.jsx';
 
 const SoundCloudPlayer = ({
   currentMural,
@@ -18,7 +19,6 @@ const SoundCloudPlayer = ({
   const [volume, setVolume] = useState(100);
   const [isMuted, setIsMuted] = useState(false);
   const [widgetReady, setWidgetReady] = useState(false);
-
 
   const iframeRef = useRef(null);
   const widgetRef = useRef(null);
@@ -312,15 +312,13 @@ const SoundCloudPlayer = ({
       <div className="p-6 pb-4">
         <div className="relative">
           <div className="aspect-square w-full rounded-xl overflow-hidden bg-gradient-to-br from-SM-blue to-blue-700 flex items-center justify-center">
-            {currentMural.image ? (
-              <img
-                src={currentMural.image}
-                alt={currentMural.alt?.[language] || currentMural.title[language]}
-                className="w-full h-full object-cover"
-              />
-            ) : (
-              <span className="text-white text-6xl">🎨</span>
-            )}
+            <MuralImage 
+              imagePath={currentMural?.image}
+              alt={currentMural?.alt?.[language] || currentMural?.title[language]}
+              className="w-full h-full object-cover"
+              fallbackIcon="🎨"
+              fallbackIconSize="text-6xl"
+            />
           </div>
           
         </div>

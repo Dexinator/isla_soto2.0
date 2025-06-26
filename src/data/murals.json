@@ -3,30 +3,153 @@
     {
       "id": 1,
       "title": {
-        "es": "La llegada del colores - revisar PDF",
-        "en": "The Arrival of Color"
+        "es": "Empieza La Ruta de los Murales",
+        "en": "Start of the Murals Route"
       },
       "description": {
-        "es": "Mural inspirado en la obra de Daniel Martín que representa la transformación urbana a través del arte y el color.",
-        "en": "Mural inspired by Daniel Martín's work representing urban transformation through art and color."
+        "es": "Punto de inicio del recorrido por los murales de Santa Marta de Tormes.",
+        "en": "Starting point of the Santa Marta de Tormes murals tour."
       },
-      "coordinates": [33.67168258770903, 42.03187513256082],
+      "coordinates": [40.9701, -5.6635],
       "order": 1,
       "audio": {
         "normal": {
-          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2107850961%3Fsecret_token%3Ds-aPi7bGa9jHU&color=%2378766c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
-          "en": "https://soundcloud.com/user-example/mural-1-normal-en"
+          "es": "https://soundcloud.com/user-example/ruta-inicio-normal-es",
+          "en": "https://soundcloud.com/user-example/ruta-inicio-normal-en"
         },
-        "descriptive": "https://soundcloud.com/user-example/mural-1-descriptive-es",
-        "easy": "https://soundcloud.com/user-example/mural-1-easy-es"
+        "descriptive": "https://soundcloud.com/user-example/ruta-inicio-descriptive-es",
+        "easy": "https://soundcloud.com/user-example/ruta-inicio-easy-es"
       },
       "video": {
-        "sign": "https://player.vimeo.com/video/mural-1-sign"
+        "sign": "https://player.vimeo.com/video/ruta-inicio-sign"
       },
-      "image": "/images/mural-1.webp",
+      "image": "1- Empieza La Ruta de los Murales. Audioguía. Santa Marta de Tormes.png",
       "alt": {
-        "es": "Mural colorido en la calle Dr. Torres Villarroel que muestra la llegada del color digital a Santa Marta",
-        "en": "Colorful mural on Dr. Torres Villarroel street showing the arrival of digital color to Santa Marta"
+        "es": "Inicio de la ruta de murales en Santa Marta de Tormes",
+        "en": "Start of the murals route in Santa Marta de Tormes"
+      },
+      "location": {
+        "es": "Punto de partida",
+        "en": "Starting point"
+      },
+      "artist": "Información general",
+      "year": 2024,
+      "duration": {
+        "normal": "3 min",
+        "descriptive": "5 min",
+        "easy": "2 min",
+        "sign": "3 min"
+      }
+    },
+    {
+      "id": 2,
+      "title": {
+        "es": "Mural Paseo Fluvial",
+        "en": "Riverside Walk Mural"
+      },
+      "description": {
+        "es": "Mural que representa el paseo fluvial de Santa Marta junto al río Tormes.",
+        "en": "Mural representing Santa Marta's riverside walk along the Tormes river."
+      },
+      "coordinates": [40.9705, -5.6640],
+      "order": 2,
+      "audio": {
+        "normal": {
+          "es": "https://soundcloud.com/user-example/paseo-fluvial-normal-es",
+          "en": "https://soundcloud.com/user-example/paseo-fluvial-normal-en"
+        },
+        "descriptive": "https://soundcloud.com/user-example/paseo-fluvial-descriptive-es",
+        "easy": "https://soundcloud.com/user-example/paseo-fluvial-easy-es"
+      },
+      "video": {
+        "sign": "https://player.vimeo.com/video/paseo-fluvial-sign"
+      },
+      "image": "2- Mural Paseo Fluvial. Audioguía. Santa Marta de Tormes.jpg",
+      "alt": {
+        "es": "Mural del paseo fluvial junto al río Tormes",
+        "en": "Riverside walk mural along the Tormes river"
+      },
+      "location": {
+        "es": "Paseo Fluvial",
+        "en": "Riverside Walk"
+      },
+      "artist": "Artista local",
+      "year": 2024,
+      "duration": {
+        "normal": "5 min",
+        "descriptive": "8 min",
+        "easy": "3 min",
+        "sign": "5 min"
+      }
+    },
+    {
+      "id": 3,
+      "title": {
+        "es": "Mural Centro de Interpretación. Isla del Soto",
+        "en": "Interpretation Center Mural. Soto Island"
+      },
+      "description": {
+        "es": "Mural ubicado en el Centro de Interpretación de la Isla del Soto.",
+        "en": "Mural located at the Soto Island Interpretation Center."
+      },
+      "coordinates": [40.9710, -5.6645],
+      "order": 3,
+      "audio": {
+        "normal": {
+          "es": "https://soundcloud.com/user-example/isla-soto-normal-es",
+          "en": "https://soundcloud.com/user-example/isla-soto-normal-en"
+        },
+        "descriptive": "https://soundcloud.com/user-example/isla-soto-descriptive-es",
+        "easy": "https://soundcloud.com/user-example/isla-soto-easy-es"
+      },
+      "video": {
+        "sign": "https://player.vimeo.com/video/isla-soto-sign"
+      },
+      "image": "3- Mural Centro de Interpretación. Isla del Soto. Audioguía. Santa Marta de Tormes.jpg",
+      "alt": {
+        "es": "Mural en el Centro de Interpretación de la Isla del Soto",
+        "en": "Mural at the Soto Island Interpretation Center"
+      },
+      "location": {
+        "es": "Centro de Interpretación - Isla del Soto",
+        "en": "Interpretation Center - Soto Island"
+      },
+      "artist": "Artista especializado",
+      "year": 2024,
+      "duration": {
+        "normal": "6 min",
+        "descriptive": "9 min",
+        "easy": "4 min",
+        "sign": "6 min"
+      }
+    },
+    {
+      "id": 4,
+      "title": {
+        "es": "Mural La Llegada del Color",
+        "en": "The Arrival of Color Mural"
+      },
+      "description": {
+        "es": "Mural inspirado en la transformación urbana a través del arte y el color digital.",
+        "en": "Mural inspired by urban transformation through art and digital color."
+      },
+      "coordinates": [40.9715, -5.6650],
+      "order": 4,
+      "audio": {
+        "normal": {
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2107850961%3Fsecret_token%3Ds-aPi7bGa9jHU&color=%2378766c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
+          "en": "https://soundcloud.com/user-example/llegada-color-normal-en"
+        },
+        "descriptive": "https://soundcloud.com/user-example/llegada-color-descriptive-es",
+        "easy": "https://soundcloud.com/user-example/llegada-color-easy-es"
+      },
+      "video": {
+        "sign": "https://player.vimeo.com/video/llegada-color-sign"
+      },
+      "image": "4- Mural La Llegada del Color. Audioguía. Santa Marta de Tormes.jpg",
+      "alt": {
+        "es": "Mural colorido que representa la llegada del color digital a Santa Marta",
+        "en": "Colorful mural representing the arrival of digital color to Santa Marta"
       },
       "location": {
         "es": "Dr. Torres Villarroel, 1",
@@ -42,38 +165,120 @@
       }
     },
     {
-      "id": 2,
+      "id": 5,
       "title": {
-        "es": "Memoria urbana",
-        "en": "Urban Memory"
+        "es": "Mural La Bosque",
+        "en": "The Forest Mural"
       },
       "description": {
-        "es": "Representación de la historia y tradiciones de Santa Marta de Tormes a través de elementos visuales contemporáneos.",
-        "en": "Representation of Santa Marta de Tormes' history and traditions through contemporary visual elements."
+        "es": "Mural que representa la conexión entre la naturaleza y la vida urbana.",
+        "en": "Mural representing the connection between nature and urban life."
       },
-      "coordinates": [40.9705, -5.6640],
-      "order": 2,
+      "coordinates": [40.9720, -5.6655],
+      "order": 5,
       "audio": {
         "normal": {
-          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606282%3Fsecret_token%3Ds-rKEyQ9aCtwP&color=%2378766c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
-          "en": "https://soundcloud.com/user-example/mural-2-normal-en"
+          "es": "https://soundcloud.com/user-example/bosque-normal-es",
+          "en": "https://soundcloud.com/user-example/bosque-normal-en"
         },
-        "descriptive": "https://soundcloud.com/user-example/mural-2-descriptive-es",
-        "easy": "https://soundcloud.com/user-example/mural-2-easy-es"
+        "descriptive": "https://soundcloud.com/user-example/bosque-descriptive-es",
+        "easy": "https://soundcloud.com/user-example/bosque-easy-es"
       },
       "video": {
-        "sign": "https://player.vimeo.com/video/mural-2-sign"
+        "sign": "https://player.vimeo.com/video/bosque-sign"
       },
-      "image": "/images/mural-2.webp",
+      "image": "5- Mural La Bosque. Audioguía. Santa Marta de Tormes.jpg",
       "alt": {
-        "es": "Mural que representa la memoria histórica de Santa Marta con elementos tradicionales y modernos",
-        "en": "Mural representing Santa Marta's historical memory with traditional and modern elements"
+        "es": "Mural del bosque que conecta naturaleza y ciudad",
+        "en": "Forest mural connecting nature and city"
       },
       "location": {
-        "es": "Plaza Mayor",
-        "en": "Main Square"
+        "es": "Zona verde urbana",
+        "en": "Urban green area"
       },
-      "artist": "Colectivo Mural",
+      "artist": "Artista naturalista",
+      "year": 2024,
+      "duration": {
+        "normal": "7 min",
+        "descriptive": "10 min",
+        "easy": "4 min",
+        "sign": "6 min"
+      }
+    },
+    {
+      "id": 6,
+      "title": {
+        "es": "Mural Mujer, historia y pueblo",
+        "en": "Women, History and Town Mural"
+      },
+      "description": {
+        "es": "Mural dedicado al papel de la mujer en la historia de Santa Marta de Tormes.",
+        "en": "Mural dedicated to women's role in Santa Marta de Tormes' history."
+      },
+      "coordinates": [40.9725, -5.6660],
+      "order": 6,
+      "audio": {
+        "normal": {
+          "es": "https://soundcloud.com/user-example/mujer-historia-normal-es",
+          "en": "https://soundcloud.com/user-example/mujer-historia-normal-en"
+        },
+        "descriptive": "https://soundcloud.com/user-example/mujer-historia-descriptive-es",
+        "easy": "https://soundcloud.com/user-example/mujer-historia-easy-es"
+      },
+      "video": {
+        "sign": "https://player.vimeo.com/video/mujer-historia-sign"
+      },
+      "image": "6- Mural Mujer, historia y pueblo. Audioguía. Santa Marta de Tormes.jpg",
+      "alt": {
+        "es": "Mural que representa el papel de la mujer en la historia local",
+        "en": "Mural representing women's role in local history"
+      },
+      "location": {
+        "es": "Plaza de las Mujeres",
+        "en": "Women's Square"
+      },
+      "artist": "Colectivo feminista",
+      "year": 2024,
+      "duration": {
+        "normal": "9 min",
+        "descriptive": "13 min",
+        "easy": "5 min",
+        "sign": "8 min"
+      }
+    },
+    {
+      "id": 7,
+      "title": {
+        "es": "Mural Doctor Torres Villarroel",
+        "en": "Doctor Torres Villarroel Mural"
+      },
+      "description": {
+        "es": "Mural dedicado al famoso escritor y matemático Diego de Torres Villarroel.",
+        "en": "Mural dedicated to the famous writer and mathematician Diego de Torres Villarroel."
+      },
+      "coordinates": [40.9730, -5.6665],
+      "order": 7,
+      "audio": {
+        "normal": {
+          "es": "https://soundcloud.com/user-example/torres-villarroel-normal-es",
+          "en": "https://soundcloud.com/user-example/torres-villarroel-normal-en"
+        },
+        "descriptive": "https://soundcloud.com/user-example/torres-villarroel-descriptive-es",
+        "easy": "https://soundcloud.com/user-example/torres-villarroel-easy-es"
+      },
+      "video": {
+        "sign": "https://player.vimeo.com/video/torres-villarroel-sign"
+      },
+      "image": "7- Mural Doctor Torres Villarroel. Audioguía. Santa Marta de Tormes.jpg",
+      "alt": {
+        "es": "Mural del Doctor Torres Villarroel, ilustre figura histórica",
+        "en": "Mural of Doctor Torres Villarroel, illustrious historical figure"
+      },
+      "location": {
+        "es": "Calle Dr. Torres Villarroel",
+        "en": "Dr. Torres Villarroel Street"
+      },
+      "artist": "Artista histórico",
       "year": 2024,
       "duration": {
         "normal": "10 min",
@@ -83,44 +288,536 @@
       }
     },
     {
-      "id": 3,
+      "id": 8,
       "title": {
-        "es": "Futuro sostenible",
-        "en": "Sustainable Future"
+        "es": "Mural El Rincón de Sandra y Gustavo",
+        "en": "Sandra and Gustavo's Corner Mural"
       },
       "description": {
-        "es": "Visión artística del compromiso de Santa Marta con la sostenibilidad y el respeto al medio ambiente.",
-        "en": "Artistic vision of Santa Marta's commitment to sustainability and environmental respect."
+        "es": "Mural que representa un espacio especial dedicado a Sandra y Gustavo.",
+        "en": "Mural representing a special space dedicated to Sandra and Gustavo."
       },
-      "coordinates": [40.9710, -5.6645],
-      "order": 3,
+      "coordinates": [40.9735, -5.6670],
+      "order": 8,
       "audio": {
         "normal": {
-          "es": "https://soundcloud.com/user-example/mural-3-normal-es",
-          "en": "https://soundcloud.com/user-example/mural-3-normal-en"
+          "es": "https://soundcloud.com/user-example/rincon-sandra-gustavo-normal-es",
+          "en": "https://soundcloud.com/user-example/rincon-sandra-gustavo-normal-en"
         },
-        "descriptive": "https://soundcloud.com/user-example/mural-3-descriptive-es",
-        "easy": "https://soundcloud.com/user-example/mural-3-easy-es"
+        "descriptive": "https://soundcloud.com/user-example/rincon-sandra-gustavo-descriptive-es",
+        "easy": "https://soundcloud.com/user-example/rincon-sandra-gustavo-easy-es"
       },
       "video": {
-        "sign": "https://player.vimeo.com/video/mural-3-sign"
+        "sign": "https://player.vimeo.com/video/rincon-sandra-gustavo-sign"
       },
-      "image": "/images/mural-3.webp",
+      "image": "8- Mural El Rincón de Sandra y Gustavo. Audioguía. Santa Marta de Tormes.jpg",
       "alt": {
-        "es": "Mural ecológico con elementos naturales y tecnológicos que simbolizan un futuro sostenible",
-        "en": "Ecological mural with natural and technological elements symbolizing a sustainable future"
+        "es": "Mural del rincón especial de Sandra y Gustavo",
+        "en": "Mural of Sandra and Gustavo's special corner"
       },
       "location": {
-        "es": "Avenida de la Constitución",
-        "en": "Constitution Avenue"
+        "es": "Rincón especial",
+        "en": "Special corner"
       },
-      "artist": "EcoArt Collective",
+      "artist": "Artista comunitario",
+      "year": 2024,
+      "duration": {
+        "normal": "6 min",
+        "descriptive": "9 min",
+        "easy": "4 min",
+        "sign": "5 min"
+      }
+    },
+    {
+      "id": 9,
+      "title": {
+        "es": "Murales Festival de Arte Urbano. Ediciones 1 y 2",
+        "en": "Urban Art Festival Murals. Editions 1 and 2"
+      },
+      "description": {
+        "es": "Murales creados durante las primeras dos ediciones del Festival de Arte Urbano.",
+        "en": "Murals created during the first two editions of the Urban Art Festival."
+      },
+      "coordinates": [40.9740, -5.6675],
+      "order": 9,
+      "audio": {
+        "normal": {
+          "es": "https://soundcloud.com/user-example/festival-arte-urbano-normal-es",
+          "en": "https://soundcloud.com/user-example/festival-arte-urbano-normal-en"
+        },
+        "descriptive": "https://soundcloud.com/user-example/festival-arte-urbano-descriptive-es",
+        "easy": "https://soundcloud.com/user-example/festival-arte-urbano-easy-es"
+      },
+      "video": {
+        "sign": "https://player.vimeo.com/video/festival-arte-urbano-sign"
+      },
+      "image": "9- Murales Festival de Arte Urbano. Ediciones 1 y 2. Audioguía. Santa Marta de Tormes.jpg",
+      "alt": {
+        "es": "Murales del Festival de Arte Urbano, ediciones 1 y 2",
+        "en": "Urban Art Festival murals, editions 1 and 2"
+      },
+      "location": {
+        "es": "Zona del festival",
+        "en": "Festival area"
+      },
+      "artist": "Artistas del festival",
+      "year": 2024,
+      "duration": {
+        "normal": "12 min",
+        "descriptive": "18 min",
+        "easy": "7 min",
+        "sign": "10 min"
+      }
+    },
+    {
+      "id": 10,
+      "title": {
+        "es": "Mural Generación Millennial",
+        "en": "Millennial Generation Mural"
+      },
+      "description": {
+        "es": "Mural que representa la cultura y valores de la generación millennial.",
+        "en": "Mural representing millennial generation culture and values."
+      },
+      "coordinates": [40.9745, -5.6680],
+      "order": 10,
+      "audio": {
+        "normal": {
+          "es": "https://soundcloud.com/user-example/generacion-millennial-normal-es",
+          "en": "https://soundcloud.com/user-example/generacion-millennial-normal-en"
+        },
+        "descriptive": "https://soundcloud.com/user-example/generacion-millennial-descriptive-es",
+        "easy": "https://soundcloud.com/user-example/generacion-millennial-easy-es"
+      },
+      "video": {
+        "sign": "https://player.vimeo.com/video/generacion-millennial-sign"
+      },
+      "image": "10- Mural Generación Millennial. Audioguía. Santa Marta de Tormes.jpg",
+      "alt": {
+        "es": "Mural de la generación millennial con elementos contemporáneos",
+        "en": "Millennial generation mural with contemporary elements"
+      },
+      "location": {
+        "es": "Zona juvenil",
+        "en": "Youth area"
+      },
+      "artist": "Artista millennial",
+      "year": 2024,
+      "duration": {
+        "normal": "8 min",
+        "descriptive": "11 min",
+        "easy": "5 min",
+        "sign": "7 min"
+      }
+    },
+    {
+      "id": 11,
+      "title": {
+        "es": "Mural Paseo Alcalde José Sánchez",
+        "en": "Mayor José Sánchez Walk Mural"
+      },
+      "description": {
+        "es": "Mural ubicado en el paseo dedicado al Alcalde José Sánchez.",
+        "en": "Mural located on the walk dedicated to Mayor José Sánchez."
+      },
+      "coordinates": [40.9750, -5.6685],
+      "order": 11,
+      "audio": {
+        "normal": {
+          "es": "https://soundcloud.com/user-example/paseo-alcalde-normal-es",
+          "en": "https://soundcloud.com/user-example/paseo-alcalde-normal-en"
+        },
+        "descriptive": "https://soundcloud.com/user-example/paseo-alcalde-descriptive-es",
+        "easy": "https://soundcloud.com/user-example/paseo-alcalde-easy-es"
+      },
+      "video": {
+        "sign": "https://player.vimeo.com/video/paseo-alcalde-sign"
+      },
+      "image": "11- Mural Paseo Alcalde José Sánchez. Audioguía. Santa Marta de Tormes.jpg",
+      "alt": {
+        "es": "Mural en el paseo del Alcalde José Sánchez",
+        "en": "Mural on Mayor José Sánchez walk"
+      },
+      "location": {
+        "es": "Paseo Alcalde José Sánchez",
+        "en": "Mayor José Sánchez Walk"
+      },
+      "artist": "Artista municipal",
       "year": 2024,
       "duration": {
         "normal": "7 min",
-        "descriptive": "11 min",
+        "descriptive": "10 min",
         "easy": "4 min",
         "sign": "6 min"
+      }
+    },
+    {
+      "id": 12,
+      "title": {
+        "es": "Mural Respira",
+        "en": "Breathe Mural"
+      },
+      "description": {
+        "es": "Mural que invita a la reflexión y al bienestar personal.",
+        "en": "Mural that invites reflection and personal well-being."
+      },
+      "coordinates": [40.9755, -5.6690],
+      "order": 12,
+      "audio": {
+        "normal": {
+          "es": "https://soundcloud.com/user-example/respira-normal-es",
+          "en": "https://soundcloud.com/user-example/respira-normal-en"
+        },
+        "descriptive": "https://soundcloud.com/user-example/respira-descriptive-es",
+        "easy": "https://soundcloud.com/user-example/respira-easy-es"
+      },
+      "video": {
+        "sign": "https://player.vimeo.com/video/respira-sign"
+      },
+      "image": "12- Mural Respira. Audioguía. Santa Marta de Tormes.jpg",
+      "alt": {
+        "es": "Mural Respira que invita a la calma y reflexión",
+        "en": "Breathe mural inviting calm and reflection"
+      },
+      "location": {
+        "es": "Zona de descanso",
+        "en": "Rest area"
+      },
+      "artist": "Artista zen",
+      "year": 2024,
+      "duration": {
+        "normal": "5 min",
+        "descriptive": "8 min",
+        "easy": "3 min",
+        "sign": "4 min"
+      }
+    },
+    {
+      "id": 13,
+      "title": {
+        "es": "Mural La Llegada de las Llaves",
+        "en": "The Arrival of the Keys Mural"
+      },
+      "description": {
+        "es": "Mural simbólico sobre las llaves como símbolo de nuevas oportunidades.",
+        "en": "Symbolic mural about keys as a symbol of new opportunities."
+      },
+      "coordinates": [40.9760, -5.6695],
+      "order": 13,
+      "audio": {
+        "normal": {
+          "es": "https://soundcloud.com/user-example/llegada-llaves-normal-es",
+          "en": "https://soundcloud.com/user-example/llegada-llaves-normal-en"
+        },
+        "descriptive": "https://soundcloud.com/user-example/llegada-llaves-descriptive-es",
+        "easy": "https://soundcloud.com/user-example/llegada-llaves-easy-es"
+      },
+      "video": {
+        "sign": "https://player.vimeo.com/video/llegada-llaves-sign"
+      },
+      "image": "13- Mural La Llegada de las Llaves. Audioguía. Santa Marta de Tormes.jpg",
+      "alt": {
+        "es": "Mural de las llaves simbolizando nuevas oportunidades",
+        "en": "Keys mural symbolizing new opportunities"
+      },
+      "location": {
+        "es": "Entrada principal",
+        "en": "Main entrance"
+      },
+      "artist": "Artista simbólico",
+      "year": 2024,
+      "duration": {
+        "normal": "6 min",
+        "descriptive": "9 min",
+        "easy": "4 min",
+        "sign": "5 min"
+      }
+    },
+    {
+      "id": 14,
+      "title": {
+        "es": "Mural Sueña",
+        "en": "Dream Mural"
+      },
+      "description": {
+        "es": "Mural inspirador que invita a soñar y perseguir los objetivos.",
+        "en": "Inspiring mural that invites to dream and pursue goals."
+      },
+      "coordinates": [40.9765, -5.6700],
+      "order": 14,
+      "audio": {
+        "normal": {
+          "es": "https://soundcloud.com/user-example/suena-normal-es",
+          "en": "https://soundcloud.com/user-example/suena-normal-en"
+        },
+        "descriptive": "https://soundcloud.com/user-example/suena-descriptive-es",
+        "easy": "https://soundcloud.com/user-example/suena-easy-es"
+      },
+      "video": {
+        "sign": "https://player.vimeo.com/video/suena-sign"
+      },
+      "image": "14- Mural Sueña. Audioguía. Santa Marta de Tormes.jpg",
+      "alt": {
+        "es": "Mural Sueña con elementos inspiradores",
+        "en": "Dream mural with inspiring elements"
+      },
+      "location": {
+        "es": "Zona inspiracional",
+        "en": "Inspirational area"
+      },
+      "artist": "Artista motivacional",
+      "year": 2024,
+      "duration": {
+        "normal": "5 min",
+        "descriptive": "7 min",
+        "easy": "3 min",
+        "sign": "4 min"
+      }
+    },
+    {
+      "id": 15,
+      "title": {
+        "es": "Mural Océano",
+        "en": "Ocean Mural"
+      },
+      "description": {
+        "es": "Mural que representa la vastedad y belleza del océano.",
+        "en": "Mural representing the vastness and beauty of the ocean."
+      },
+      "coordinates": [40.9770, -5.6705],
+      "order": 15,
+      "audio": {
+        "normal": {
+          "es": "https://soundcloud.com/user-example/oceano-normal-es",
+          "en": "https://soundcloud.com/user-example/oceano-normal-en"
+        },
+        "descriptive": "https://soundcloud.com/user-example/oceano-descriptive-es",
+        "easy": "https://soundcloud.com/user-example/oceano-easy-es"
+      },
+      "video": {
+        "sign": "https://player.vimeo.com/video/oceano-sign"
+      },
+      "image": "15- Mural Océano. Audioguía. Santa Marta de Tormes.jpg",
+      "alt": {
+        "es": "Mural del océano con elementos marinos",
+        "en": "Ocean mural with marine elements"
+      },
+      "location": {
+        "es": "Zona acuática",
+        "en": "Aquatic area"
+      },
+      "artist": "Artista marino",
+      "year": 2024,
+      "duration": {
+        "normal": "8 min",
+        "descriptive": "12 min",
+        "easy": "5 min",
+        "sign": "7 min"
+      }
+    },
+    {
+      "id": 16,
+      "title": {
+        "es": "Mural Carretera Madrid",
+        "en": "Madrid Highway Mural"
+      },
+      "description": {
+        "es": "Mural ubicado en la zona de la carretera hacia Madrid.",
+        "en": "Mural located in the Madrid highway area."
+      },
+      "coordinates": [40.9775, -5.6710],
+      "order": 16,
+      "audio": {
+        "normal": {
+          "es": "https://soundcloud.com/user-example/carretera-madrid-normal-es",
+          "en": "https://soundcloud.com/user-example/carretera-madrid-normal-en"
+        },
+        "descriptive": "https://soundcloud.com/user-example/carretera-madrid-descriptive-es",
+        "easy": "https://soundcloud.com/user-example/carretera-madrid-easy-es"
+      },
+      "video": {
+        "sign": "https://player.vimeo.com/video/carretera-madrid-sign"
+      },
+      "image": "16- Mural Carretera Madrid. Audioguía. Santa Marta de Tormes.jpg",
+      "alt": {
+        "es": "Mural en la zona de la carretera hacia Madrid",
+        "en": "Mural in the Madrid highway area"
+      },
+      "location": {
+        "es": "Carretera Madrid",
+        "en": "Madrid Highway"
+      },
+      "artist": "Artista viajero",
+      "year": 2024,
+      "duration": {
+        "normal": "6 min",
+        "descriptive": "9 min",
+        "easy": "4 min",
+        "sign": "5 min"
+      }
+    },
+    {
+      "id": 17,
+      "title": {
+        "es": "Daniel Martín. Artista",
+        "en": "Daniel Martín. Artist"
+      },
+      "description": {
+        "es": "Información sobre el artista Daniel Martín y su obra en Santa Marta.",
+        "en": "Information about artist Daniel Martín and his work in Santa Marta."
+      },
+      "coordinates": [40.9780, -5.6715],
+      "order": 17,
+      "audio": {
+        "normal": {
+          "es": "https://soundcloud.com/user-example/daniel-martin-normal-es",
+          "en": "https://soundcloud.com/user-example/daniel-martin-normal-en"
+        },
+        "descriptive": "https://soundcloud.com/user-example/daniel-martin-descriptive-es",
+        "easy": "https://soundcloud.com/user-example/daniel-martin-easy-es"
+      },
+      "video": {
+        "sign": "https://player.vimeo.com/video/daniel-martin-sign"
+      },
+      "image": "17- Daniel Martín. Artista. Audioguía. Santa Marta de Tormes.jpg",
+      "alt": {
+        "es": "Información sobre el artista Daniel Martín",
+        "en": "Information about artist Daniel Martín"
+      },
+      "location": {
+        "es": "Zona de artistas",
+        "en": "Artists area"
+      },
+      "artist": "Daniel Martín",
+      "year": 2024,
+      "duration": {
+        "normal": "10 min",
+        "descriptive": "15 min",
+        "easy": "6 min",
+        "sign": "8 min"
+      }
+    },
+    {
+      "id": 18,
+      "title": {
+        "es": "Caín Ferreras. Artista",
+        "en": "Caín Ferreras. Artist"
+      },
+      "description": {
+        "es": "Información sobre el artista Caín Ferreras y su contribución al arte urbano.",
+        "en": "Information about artist Caín Ferreras and his contribution to urban art."
+      },
+      "coordinates": [40.9785, -5.6720],
+      "order": 18,
+      "audio": {
+        "normal": {
+          "es": "https://soundcloud.com/user-example/cain-ferreras-normal-es",
+          "en": "https://soundcloud.com/user-example/cain-ferreras-normal-en"
+        },
+        "descriptive": "https://soundcloud.com/user-example/cain-ferreras-descriptive-es",
+        "easy": "https://soundcloud.com/user-example/cain-ferreras-easy-es"
+      },
+      "video": {
+        "sign": "https://player.vimeo.com/video/cain-ferreras-sign"
+      },
+      "image": "18- Caín Ferreras. Artista. Audioguía. Santa Marta de Tormes.jpg",
+      "alt": {
+        "es": "Información sobre el artista Caín Ferreras",
+        "en": "Information about artist Caín Ferreras"
+      },
+      "location": {
+        "es": "Zona de artistas",
+        "en": "Artists area"
+      },
+      "artist": "Caín Ferreras",
+      "year": 2024,
+      "duration": {
+        "normal": "9 min",
+        "descriptive": "13 min",
+        "easy": "5 min",
+        "sign": "7 min"
+      }
+    },
+    {
+      "id": 19,
+      "title": {
+        "es": "Rober Bece. Artista",
+        "en": "Rober Bece. Artist"
+      },
+      "description": {
+        "es": "Información sobre el artista Rober Bece y su estilo único.",
+        "en": "Information about artist Rober Bece and his unique style."
+      },
+      "coordinates": [40.9790, -5.6725],
+      "order": 19,
+      "audio": {
+        "normal": {
+          "es": "https://soundcloud.com/user-example/rober-bece-normal-es",
+          "en": "https://soundcloud.com/user-example/rober-bece-normal-en"
+        },
+        "descriptive": "https://soundcloud.com/user-example/rober-bece-descriptive-es",
+        "easy": "https://soundcloud.com/user-example/rober-bece-easy-es"
+      },
+      "video": {
+        "sign": "https://player.vimeo.com/video/rober-bece-sign"
+      },
+      "image": "19- Rober Bece. Artista. Audioguía. Santa Marta de Tormes.jpg",
+      "alt": {
+        "es": "Información sobre el artista Rober Bece",
+        "en": "Information about artist Rober Bece"
+      },
+      "location": {
+        "es": "Zona de artistas",
+        "en": "Artists area"
+      },
+      "artist": "Rober Bece",
+      "year": 2024,
+      "duration": {
+        "normal": "8 min",
+        "descriptive": "11 min",
+        "easy": "5 min",
+        "sign": "6 min"
+      }
+    },
+    {
+      "id": 20,
+      "title": {
+        "es": "Llegamos al Final",
+        "en": "We Reach the End"
+      },
+      "description": {
+        "es": "Punto final del recorrido por los murales de Santa Marta de Tormes.",
+        "en": "Final point of the Santa Marta de Tormes murals tour."
+      },
+      "coordinates": [40.9795, -5.6730],
+      "order": 20,
+      "audio": {
+        "normal": {
+          "es": "https://soundcloud.com/user-example/final-normal-es",
+          "en": "https://soundcloud.com/user-example/final-normal-en"
+        },
+        "descriptive": "https://soundcloud.com/user-example/final-descriptive-es",
+        "easy": "https://soundcloud.com/user-example/final-easy-es"
+      },
+      "video": {
+        "sign": "https://player.vimeo.com/video/final-sign"
+      },
+      "image": "20- Llegamos al Final. Audioguía. Santa Marta de Tormes.png",
+      "alt": {
+        "es": "Final del recorrido de murales en Santa Marta de Tormes",
+        "en": "End of the murals tour in Santa Marta de Tormes"
+      },
+      "location": {
+        "es": "Punto final",
+        "en": "End point"
+      },
+      "artist": "Información general",
+      "year": 2024,
+      "duration": {
+        "normal": "4 min",
+        "descriptive": "6 min",
+        "easy": "3 min",
+        "sign": "4 min"
       }
     }
   ],
@@ -136,10 +833,27 @@
     "waypoints": [
       [40.9701, -5.6635],
       [40.9705, -5.6640],
-      [40.9710, -5.6645]
+      [40.9710, -5.6645],
+      [40.9715, -5.6650],
+      [40.9720, -5.6655],
+      [40.9725, -5.6660],
+      [40.9730, -5.6665],
+      [40.9735, -5.6670],
+      [40.9740, -5.6675],
+      [40.9745, -5.6680],
+      [40.9750, -5.6685],
+      [40.9755, -5.6690],
+      [40.9760, -5.6695],
+      [40.9765, -5.6700],
+      [40.9770, -5.6705],
+      [40.9775, -5.6710],
+      [40.9780, -5.6715],
+      [40.9785, -5.6720],
+      [40.9790, -5.6725],
+      [40.9795, -5.6730]
     ],
-    "totalDistance": "1.2 km",
-    "estimatedTime": "45 min",
+    "totalDistance": "3.2 km",
+    "estimatedTime": "2.5 horas",
     "difficulty": {
       "es": "Fácil",
       "en": "Easy"
@@ -149,18 +863,18 @@
       "en": "Fully wheelchair accessible route"
     },
     "startPoint": {
-      "es": "Dr. Torres Villarroel, 1",
-      "en": "Dr. Torres Villarroel, 1"
+      "es": "Punto de partida de la ruta",
+      "en": "Route starting point"
     },
     "endPoint": {
-      "es": "Avenida de la Constitución",
-      "en": "Constitution Avenue"
+      "es": "Punto final de la ruta",
+      "en": "Route end point"
     }
   },
   "metadata": {
     "lastUpdated": "2025-01-30",
-    "version": "1.0",
-    "totalMurals": 3,
+    "version": "2.0",
+    "totalMurals": 20,
     "languages": ["es", "en"],
     "audioguideTypes": ["normal", "descriptive", "easy", "sign"],
     "city": "Santa Marta de Tormes",

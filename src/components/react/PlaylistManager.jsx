@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import MuralImage from './MuralImage.jsx';
 
 const PlaylistManager = ({ 
   murals, 
@@ -188,15 +189,14 @@ const PlaylistManager = ({
                   {/* Imagen del mural más grande */}
                   <div className="flex-shrink-0">
                     <div className="w-16 h-16 rounded-lg overflow-hidden bg-gradient-to-br from-SM-blue to-blue-700 flex items-center justify-center">
-                      {mural.image ? (
-                        <img 
-                          src={mural.image} 
-                          alt={mural.alt?.[language] || mural.title[language]}
-                          className="w-full h-full object-cover"
-                        />
-                      ) : (
-                        <span className="text-white text-2xl">🎨</span>
-                      )}
+                      <MuralImage 
+                        imagePath={mural.image}
+                        alt={mural.alt?.[language] || mural.title[language]}
+                        className="w-full h-full object-cover"
+                        fallbackIcon="🎨"
+                        fallbackIconSize="text-2xl"
+                        showLoading={false}
+                      />
                     </div>
                   </div>
 
