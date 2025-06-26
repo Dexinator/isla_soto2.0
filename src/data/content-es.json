@@ -13,7 +13,7 @@
   },
   "audioguide_types": {
     "normal": {
-      "title": "Audioguía Normativa",
+      "title": "Audioguía",
       "description": "Audio estándar con información completa sobre los murales y su contexto histórico",
       "duration": "25 min",
       "features": [
