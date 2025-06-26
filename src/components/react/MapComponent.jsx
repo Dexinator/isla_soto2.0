@@ -310,12 +310,12 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, className = 
               onClick={toggleScrollZoom}
               className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                 scrollZoomEnabled
-                  ? 'bg-SM-blue text-white hover:bg-blue-700'
-                  : 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600'
+                  ? 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600'
+                  : 'bg-SM-blue text-white hover:bg-blue-700'
               }`}
               title={scrollZoomEnabled ? 'Mapa libre - Click para bloquear' : 'Mapa bloqueado - Click para liberar interacción'}
             >
-              {scrollZoomEnabled ? '🔓 Mapa libre' : '🔒 Mapa bloqueado'}
+              {scrollZoomEnabled ? '🔒 Bloquear Mapa' : '🔓 Desbloquear Mapa'}
             </button>
             <a
               href={`https://maps.google.com/maps?daddr=${murals[0]?.coordinates[0]},${murals[0]?.coordinates[1]}`}
@@ -368,14 +368,12 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, className = 
                 <span className="text-slate-600 dark:text-slate-400">Ruta recomendada</span>
               </div>
             </div>
-            <span className="text-slate-500 dark:text-slate-400">
-              {murals.length} murales
-            </span>
           </div>
           {!scrollZoomEnabled && (
             <div className="text-xs text-slate-500 dark:text-slate-400 flex items-center">
               <span className="mr-1">💡</span>
-              <span>Scroll bloqueado para mejor navegación. Usa el botón "Zoom bloqueado" para habilitar zoom con scroll.</span>
+              <span>Desplazamiento del mapa bloqueado. Haz clic en el botón "Desbloquear mapa" para navegar por él.
+              </span>
             </div>
           )}
         </div>

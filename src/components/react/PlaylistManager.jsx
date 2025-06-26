@@ -179,15 +179,8 @@ const PlaylistManager = ({
                 className="w-full p-4 text-left focus:outline-none focus:ring-2 focus:ring-SM-blue focus:ring-inset"
               >
                 <div className="flex items-center space-x-4">
-                  {/* Número de orden más grande */}
-                  <div className="flex-shrink-0">
-                    <div className={`w-12 h-12 rounded-full flex items-center justify-center text-lg font-bold ${statusColor} border-2 border-slate-200 dark:border-slate-600`}>
-                      {mural.order}
-                    </div>
-                  </div>
-
-                  {/* Imagen del mural más grande */}
-                  <div className="flex-shrink-0">
+                  {/* Imagen del mural con número superpuesto */}
+                  <div className="flex-shrink-0 relative">
                     <div className="w-16 h-16 rounded-lg overflow-hidden bg-gradient-to-br from-SM-blue to-blue-700 flex items-center justify-center">
                       <MuralImage 
                         muralId={mural.id}
@@ -198,6 +191,10 @@ const PlaylistManager = ({
                         fallbackIconSize="text-2xl"
                         showLoading={false}
                       />
+                    </div>
+                    {/* Número superpuesto en el centro de la imagen */}
+                    <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${statusColor} border-2 border-slate-200 dark:border-slate-600 shadow-lg`}>
+                      {mural.order}
                     </div>
                   </div>
 
