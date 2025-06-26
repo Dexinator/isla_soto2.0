@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import MuralImage from './MuralImageSimple.jsx';
+import MuralImage from './MuralImageOptimized.jsx';
 
 const PlaylistManager = ({ 
   murals, 
@@ -190,6 +190,7 @@ const PlaylistManager = ({
                   <div className="flex-shrink-0">
                     <div className="w-16 h-16 rounded-lg overflow-hidden bg-gradient-to-br from-SM-blue to-blue-700 flex items-center justify-center">
                       <MuralImage 
+                        muralId={mural.id}
                         imagePath={mural.image}
                         alt={mural.alt?.[language] || mural.title[language]}
                         className="w-full h-full object-cover"

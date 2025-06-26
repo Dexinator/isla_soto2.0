@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import MuralImage from './MuralImageSimple.jsx';
+import MuralImage from './MuralImageOptimized.jsx';
 
 const SoundCloudPlayer = ({
   currentMural,
@@ -313,6 +313,7 @@ const SoundCloudPlayer = ({
         <div className="relative">
           <div className="aspect-square w-full rounded-xl overflow-hidden bg-gradient-to-br from-SM-blue to-blue-700 flex items-center justify-center">
             <MuralImage 
+              muralId={currentMural?.id}
               imagePath={currentMural?.image}
               alt={currentMural?.alt?.[language] || currentMural?.title[language]}
               className="w-full h-full object-cover"
