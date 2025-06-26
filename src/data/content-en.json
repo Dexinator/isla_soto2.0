@@ -125,6 +125,23 @@
       "audacetics": "Audacetics",
       "ayuntamiento": "Santa Marta City Council",
       "turismo": "Santa Marta Tourism"
+    },
+    "contact": {
+      "title": "SANTA MARTA DE TORMES TOURISM",
+      "address": "Plaza España, s/n - Santa Marta de Tormes (Salamanca)",
+      "phone": "+34 923 200 005",
+      "email": "info@turismosantamartadetormes.com",
+      "instagram": "@turismosantamartadetormes"
+    },
+    "legal": {
+      "copyright": "© 2025 Santa Marta Murals Audio Guides. All rights reserved.",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Use",
+      "cookies": "Cookie Policy"
+    },
+    "technical": {
+      "poweredBy": "Built with",
+      "madeWith": "Made with ❤️ for accessibility"
     }
   }
 }

@@ -15,8 +15,8 @@ const { murals, route } = muralsData;
 const content = contentEs;
 
 // SEO y metadatos
-const pageTitle = `${content.audioguide_types.normal.title} | Audioguías Murales Santa Marta`;
-const pageDescription = content.audioguide_types.normal.description;
+const pageTitle = `${content.audioguidePages.normal.title} ${content.seo.pageTitles.suffix}`;
+const pageDescription = content.audioguidePages.normal.description;
 ---
 
 <Layout 
@@ -39,7 +39,7 @@ const pageDescription = content.audioguide_types.normal.description;
 
           <!-- Título directo -->
           <h1 class="text-fluid-xl font-bold mb-6 text-slate-900 dark:text-slate-100">
-            🎧 {content.audioguide_types.normal.title}
+            {content.audioguidePages.normal.emoji} {content.audioguidePages.normal.title}
           </h1>
 
           <!-- Botón principal súper prominente -->
@@ -50,7 +50,7 @@ const pageDescription = content.audioguide_types.normal.description;
               class="group relative bg-gradient-to-r from-SM-blue to-blue-700 hover:from-blue-700 hover:to-SM-blue text-white font-bold text-xl px-12 py-6 rounded-2xl shadow-2xl transition-all duration-300 hover:shadow-3xl hover:scale-110 focus:outline-none focus:ring-4 focus:ring-SM-blue/50 transform hover:-translate-y-1"
             >
               <span class="flex items-center justify-center space-x-3">
-                <span>Comenzar Ruta de los Murales</span>
+                <span>{content.audioguidePages.normal.startButton}</span>
                 <span class="text-2xl group-hover:animate-bounce">▶️</span>
               </span>
 
@@ -60,11 +60,11 @@ const pageDescription = content.audioguide_types.normal.description;
 
             <!-- Texto de ayuda sutil -->
             <p class="text-sm text-slate-500 dark:text-slate-400 mt-3">
-              👆 Haz clic para comenzar la experiencia
+              {content.audioguidePages.normal.clickToStart}
             </p>
             <br>
             <p class="text-sm text-slate-500 dark:text-slate-400 mt-3">
-            Para complementar la experiencia, <a href="/ruta-de-los-murales.pdf" class="text-SM-blue hover:underline">descarga</a> el folleto con fotos e información.
+            {content.audioguidePages.normal.downloadBrochure.split('descarga')[0]}<a href="/ruta-de-los-murales.pdf" class="text-SM-blue hover:underline">descarga</a>{content.audioguidePages.normal.downloadBrochure.split('descarga')[1]}
             </p>
           </div>
         </div>

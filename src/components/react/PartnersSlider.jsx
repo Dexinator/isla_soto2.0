@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
-const PartnersSlider = ({ partners, autoPlayInterval = 3000 }) => {
+const PartnersSlider = ({ partners, autoPlayInterval = 3000, gridLayout = false }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
 
-  // Auto-play functionality
+  // Auto-play functionality for slider mode
   useEffect(() => {
-    if (!isPlaying || partners.length <= 1) return;
+    if (gridLayout || !isPlaying || partners.length <= 1) return;
 
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => 
@@ -15,7 +15,7 @@ const PartnersSlider = ({ partners, autoPlayInterval = 3000 }) => {
     }, autoPlayInterval);
 
     return () => clearInterval(interval);
-  }, [currentIndex, isPlaying, partners.length, autoPlayInterval]);
+  }, [currentIndex, isPlaying, partners.length, autoPlayInterval, gridLayout]);
 
   const goToSlide = (index) => {
     setCurrentIndex(index);
@@ -37,6 +37,36 @@ const PartnersSlider = ({ partners, autoPlayInterval = 3000 }) => {
     return null;
   }
 
+  // Grid layout for two rows
+  if (gridLayout) {
+    return (
+      <div className="w-full max-w-2xl mx-auto">
+        <div className="space-y-6">
+          {partners.map((row, rowIndex) => (
+            <div key={rowIndex} className="flex justify-center items-center gap-4 md:gap-8">
+              {row.map((partner, index) => (
+                <div 
+                  key={index}
+                  className="flex flex-col items-center"
+                >
+                  <div className="bg-white dark:bg-slate-800 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <img
+                      src={partner.src}
+                      alt={partner.alt}
+                      className="h-16 md:h-20 w-auto object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  // Original slider layout
   return (
     <div className="relative w-full max-w-md mx-auto">
       {/* Main slider container */}

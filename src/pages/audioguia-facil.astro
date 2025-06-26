@@ -15,8 +15,8 @@ const { murals, route } = muralsData;
 const content = contentEs;
 
 // SEO y metadatos
-const pageTitle = `${content.audioguide_types.easy.title} | Audioguías Murales Santa Marta`;
-const pageDescription = content.audioguide_types.easy.description;
+const pageTitle = `${content.audioguidePages.easy.title} ${content.seo.pageTitles.suffix}`;
+const pageDescription = content.audioguidePages.easy.description;
 ---
 
 <Layout 
@@ -39,7 +39,7 @@ const pageDescription = content.audioguide_types.easy.description;
 
           <!-- Título directo -->
           <h1 class="text-fluid-xl font-bold mb-6 text-slate-900 dark:text-slate-100">
-            📖 {content.audioguide_types.easy.title}
+            {content.audioguidePages.easy.emoji} {content.audioguidePages.easy.title}
           </h1>
 
           <!-- Botón principal súper prominente -->
@@ -50,7 +50,7 @@ const pageDescription = content.audioguide_types.easy.description;
               class="group relative bg-gradient-to-r from-SM-green to-green-700 hover:from-green-700 hover:to-SM-green text-white font-bold text-xl px-12 py-6 rounded-2xl shadow-2xl transition-all duration-300 hover:shadow-3xl hover:scale-110 focus:outline-none focus:ring-4 focus:ring-SM-green/50 transform hover:-translate-y-1"
             >
               <span class="flex items-center justify-center space-x-3">
-                <span>{content.audioguide_page.startTour}</span>
+                <span>{content.audioguidePages.easy.startButton}</span>
                 <span class="text-2xl group-hover:animate-bounce">▶️</span>
               </span>
 
@@ -60,11 +60,11 @@ const pageDescription = content.audioguide_types.easy.description;
 
             <!-- Texto de ayuda sutil -->
             <p class="text-sm text-slate-500 dark:text-slate-400 mt-3">
-              {content.audioguide_page.clickToStart}
+              {content.audioguidePages.easy.clickToStart}
             </p>
             <br>
             <p class="text-sm text-slate-500 dark:text-slate-400 mt-3">
-              {content.audioguide_page.downloadBrochure.split('descarga')[0]}<a href="/ruta-de-los-murales.pdf" class="text-SM-green hover:underline">descarga</a>{content.audioguide_page.downloadBrochure.split('descarga')[1]}
+              {content.audioguidePages.easy.downloadBrochure.split('descarga')[0]}<a href="/ruta-de-los-murales.pdf" class="text-SM-green hover:underline">descarga</a>{content.audioguidePages.easy.downloadBrochure.split('descarga')[1]}
             </p>
           </div>
         </div>

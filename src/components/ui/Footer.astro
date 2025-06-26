@@ -9,34 +9,42 @@ import aspasLogo from '../../assets/images/aspas-logo.png';
 import audaceticsLogo from '../../assets/images/audacetics-logo.png';
 import ayuntamientoLogo from '../../assets/images/ayuntamiento-logo.png';
 import turismoColaboradorLogo from '../../assets/images/turismo-colaborador-logo.png';
+import contentEs from '../../data/content-es.json';
+import contentEn from '../../data/content-en.json';
 
-// Configuración de partners para el slider
+// Configuración de partners para el slider - organizados en dos filas
 const partners = [
-  {
-    src: asprodesLogo.src,
-    alt: "ASPRODES",
-    name: "ASPRODES"
-  },
-  {
-    src: aspasLogo.src,
-    alt: "ASPAS",
-    name: "ASPAS"
-  },
-  {
-    src: audaceticsLogo.src,
-    alt: "Audacetics",
-    name: "Audacetics"
-  },
-  {
-    src: ayuntamientoLogo.src,
-    alt: "Ayuntamiento Santa Marta de Tormes",
-    name: "Ayuntamiento"
-  },
-  {
-    src: turismoColaboradorLogo.src,
-    alt: "Turismo Santa Marta de Tormes",
-    name: "Turismo Santa Marta"
-  }
+  // Primera fila
+  [
+    {
+      src: ayuntamientoLogo.src,
+      alt: "Ayuntamiento Santa Marta de Tormes",
+      name: "Ayuntamiento"
+    },
+    {
+      src: turismoColaboradorLogo.src,
+      alt: "Turismo Santa Marta de Tormes",
+      name: "Turismo Santa Marta"
+    }
+  ],
+  // Segunda fila
+  [
+    {
+      src: audaceticsLogo.src,
+      alt: "Audacetics",
+      name: "Audacetics"
+    },
+    {
+      src: asprodesLogo.src,
+      alt: "ASPRODES",
+      name: "ASPRODES"
+    },
+    {
+      src: aspasLogo.src,
+      alt: "ASPAS",
+      name: "ASPAS"
+    }
+  ]
 ];
 
 export interface Props {
@@ -45,134 +53,89 @@ export interface Props {
 
 const { lang = "es" } = Astro.props;
 
-// Contenido bilingüe
-const content = {
-  es: {
-    title: "Audioguías Murales Santa Marta",
-    description: "Descubre el arte urbano de Santa Marta con nuestras audioguías accesibles e interactivas.",
-    quickLinks: "Enlaces rápidos",
-    home: "Inicio",
-    audioguides: "Audioguías",
-    normative: "Normativa",
-    descriptive: "Descriptiva",
-    easy: "Fácil",
-    sign: "Signoguía",
-    map: "Mapa de ruta",
-    download: "Descargar PDF",
-    accessibility: "Accesibilidad",
-    accessibilityFeatures: "Características de accesibilidad",
-    highContrast: "Alto contraste",
-    fontSize: "Tamaño de fuente ajustable",
-    keyboardNav: "Navegación por teclado",
-    screenReader: "Compatible con lectores de pantalla",
-    reducedMotion: "Respeta preferencias de movimiento",
-    contact: "Contacto",
-    email: "info@audioguiasmurales.es",
-    phone: "+34 923 XXX XXX",
-    address: "Santa Marta de Tormes, Salamanca",
-    legal: "Legal",
-    privacy: "Política de privacidad",
-    terms: "Términos de uso",
-    cookies: "Política de cookies",
-    copyright: "© 2025 Audioguías Murales Santa Marta. Todos los derechos reservados.",
-    poweredBy: "Desarrollado con",
-    madeWith: "Hecho con ❤️ para la accesibilidad",
-    wcagCompliant: "Cumple WCAG 2.1 AA"
-  },
-  en: {
-    title: "Santa Marta Murals Audio Guides",
-    description: "Discover Santa Marta's urban art with our accessible and interactive audio guides.",
-    quickLinks: "Quick links",
-    home: "Home",
-    audioguides: "Audio Guides",
-    normative: "Standard",
-    descriptive: "Descriptive",
-    easy: "Easy",
-    sign: "Sign Guide",
-    map: "Route map",
-    download: "Download PDF",
-    accessibility: "Accessibility",
-    accessibilityFeatures: "Accessibility features",
-    highContrast: "High contrast",
-    fontSize: "Adjustable font size",
-    keyboardNav: "Keyboard navigation",
-    screenReader: "Screen reader compatible",
-    reducedMotion: "Respects motion preferences",
-    contact: "Contact",
-    email: "info@audioguiasmurales.es",
-    phone: "+34 923 XXX XXX",
-    address: "Santa Marta de Tormes, Salamanca",
-    legal: "Legal",
-    privacy: "Privacy policy",
-    terms: "Terms of use",
-    cookies: "Cookie policy",
-    copyright: "© 2025 Santa Marta Murals Audio Guides. All rights reserved.",
-    poweredBy: "Built with",
-    madeWith: "Made with ❤️ for accessibility",
-    wcagCompliant: "WCAG 2.1 AA Compliant"
-  }
-};
-
-const t = content[lang as keyof typeof content];
+// Seleccionar contenido según el idioma
+const content = lang === "en" ? contentEn : contentEs;
+const footerContent = content.footer;
 ---
 
 <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-700 mt-auto">
   <div class="container mx-auto px-4 py-8 md:py-12">
     
-    <!-- Contenido principal del footer -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-8">      
-    
     <!-- Logos de colaboradores -->
-    <div>
-      <div class="text-center mb-6">
-        <h3 class="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-2">
-          {lang === "es" ? "Colaboradores" : "Partners"}
-        </h3>
-        <p class="text-sm text-slate-600 dark:text-slate-300">
-          {lang === "es" ? "Entidades que hacen posible este proyecto" : "Organizations that make this project possible"}
-        </p>
-      </div>
-      
-      <!-- Slider de colaboradores -->
+    <div class="mb-12">
       <PartnersSlider 
         partners={partners} 
         autoPlayInterval={4000}
+        gridLayout={true}
         client:load
       />
     </div>
-    
-    <!-- Separador -->
-    <div class="pt-6">
-      <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-        
-        <!-- Copyright -->
-        <div class="text-sm text-slate-600 dark:text-slate-300 text-center md:text-left">
-          {t.copyright}
-        </div>
-        
-        <!-- Enlaces legales -->
-        <div class="flex flex-wrap justify-center md:justify-end space-x-4 text-sm">
-          <a href="/privacidad" class="text-slate-600 dark:text-slate-300 hover:text-SM-blue transition-colors">
-            {t.privacy}
+
+    <!-- Información de contacto -->
+    <div class="max-w-xl mx-auto text-center mb-8">
+      <h3 class="text-lg font-bold text-slate-900 dark:text-slate-100 mb-4">
+        {footerContent.contact.title}
+      </h3>
+      <div class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+        <p>{footerContent.contact.address}</p>
+        <p>
+          <a href={`tel:${footerContent.contact.phone.replace(/\s/g, '')}`} class="hover:text-SM-blue transition-colors">
+            {footerContent.contact.phone}
           </a>
-          <a href="/terminos" class="text-slate-600 dark:text-slate-300 hover:text-SM-blue transition-colors">
-            {t.terms}
+        </p>
+        <p>
+          <a href={`mailto:${footerContent.contact.email}`} class="hover:text-SM-blue transition-colors">
+            {footerContent.contact.email}
           </a>
-          <a href="/cookies" class="text-slate-600 dark:text-slate-300 hover:text-SM-blue transition-colors">
-            {t.cookies}
+        </p>
+        <p>
+          <a 
+            href="https://www.instagram.com/turismosantamartadetormes/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-SM-blue transition-colors"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1112.324 0 6.162 6.162 0 01-12.324 0zM12 16a4 4 0 110-8 4 4 0 010 8zm4.965-10.405a1.44 1.44 0 112.881.001 1.44 1.44 0 01-2.881-.001z"/>
+            </svg>
+            {footerContent.contact.instagram}
           </a>
-        </div>
-      </div>
-      
-      <!-- Información técnica -->
-      <div class="mt-4 text-center">
-        <p class="text-xs text-slate-500 dark:text-slate-400">
-          {t.poweredBy} <span class="text-SM-blue font-medium">Astro</span> + 
-          <span class="text-SM-blue font-medium">Tailwind CSS</span> • 
-          {t.madeWith}
         </p>
       </div>
     </div>
+
+    <!-- Separador -->
+    <hr class="border-slate-200 dark:border-slate-700 my-8" />
+
+    <!-- Copyright y enlaces legales -->
+    <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+      
+      <!-- Copyright -->
+      <div class="text-sm text-slate-600 dark:text-slate-300 text-center md:text-left">
+        {footerContent.legal.copyright}
+      </div>
+      
+      <!-- Enlaces legales -->
+      <div class="flex flex-wrap justify-center md:justify-end space-x-4 text-sm">
+        <a href="/privacidad" class="text-slate-600 dark:text-slate-300 hover:text-SM-blue transition-colors">
+          {footerContent.legal.privacy}
+        </a>
+        <a href="/terminos" class="text-slate-600 dark:text-slate-300 hover:text-SM-blue transition-colors">
+          {footerContent.legal.terms}
+        </a>
+        <a href="/cookies" class="text-slate-600 dark:text-slate-300 hover:text-SM-blue transition-colors">
+          {footerContent.legal.cookies}
+        </a>
+      </div>
+    </div>
+    
+    <!-- Información técnica -->
+    <div class="mt-4 text-center">
+      <p class="text-xs text-slate-500 dark:text-slate-400">
+        {footerContent.technical.poweredBy} <span class="text-SM-blue font-medium">Astro</span> + 
+        <span class="text-SM-blue font-medium">Tailwind CSS</span> • 
+        {footerContent.technical.madeWith}
+      </p>
+    </div>
   </div>
 </footer>
-
