@@ -66,8 +66,8 @@
   --color-SM-green: #008000;
 
   /* Fuentes */
-  --font-family-nunito: "Nunito", system-ui, sans-serif;
-  --font-family-sans: "Nunito", system-ui, sans-serif;
+  --font-family-nunito: "Nunito", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+  --font-family-sans: "Nunito", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
 
   /* Tamaños de fuente fluidos - Aumentados */
   --font-size-fluid-xl: clamp(2.5rem, 5vw, 3.25rem);
@@ -95,7 +95,7 @@
   src: url('/fonts/Nunito-VariableFont_wght.ttf') format('truetype-variations');
   font-weight: 200 1000;
   font-style: normal;
-  font-display: swap;
+  font-display: block; /* Cambio a block para evitar flash */
 }
 
 @font-face {
@@ -103,7 +103,7 @@
   src: url('/fonts/Nunito-Italic-VariableFont_wght.ttf') format('truetype-variations');
   font-weight: 200 1000;
   font-style: italic;
-  font-display: swap;
+  font-display: block; /* Cambio a block para evitar flash */
 }
 
 /* Keyframes para animaciones */
@@ -244,7 +244,7 @@
 }
 
 html {
-  font-family: 'Nunito', system-ui, sans-serif;
+  font-family: 'Nunito', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
   font-size: 20px; /* Tamaño base aumentado de 18px a 20px */
   line-height: 1.6;
   transition: background-color 0.3s ease, color 0.3s ease;

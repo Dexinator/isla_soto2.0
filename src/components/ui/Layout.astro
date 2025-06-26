@@ -19,6 +19,29 @@ const {
 <!DOCTYPE html>
 <html lang={lang} class="scroll-smooth">
 <head>
+  <!-- Script crítico para prevenir FOUC - debe ir antes de cualquier CSS -->
+  <script>
+    // Aplicar tema inmediatamente para prevenir flash
+    (function() {
+      const theme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      
+      if (theme === 'dark' || (!theme && prefersDark)) {
+        document.documentElement.classList.add('dark');
+      }
+      
+      // Aplicar configuraciones de accesibilidad inmediatamente
+      const savedHighContrast = localStorage.getItem('high-contrast');
+      if (savedHighContrast === 'true') {
+        document.body.classList.add('high-contrast');
+      }
+      
+      const savedFontSize = localStorage.getItem('font-size');
+      if (savedFontSize) {
+        document.documentElement.style.fontSize = `${savedFontSize}rem`;
+      }
+    })();
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{title}</title>
@@ -40,6 +63,7 @@ const {
   
   <!-- Preload critical fonts -->
   <link rel="preload" href="/fonts/Nunito-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="/fonts/Nunito-Italic-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
   
   <!-- Accessibility -->
   <meta name="theme-color" content="#0072c0">
@@ -117,15 +141,9 @@ const {
 
     // Inicializar configuraciones al cargar la página
     document.addEventListener('DOMContentLoaded', () => {
-      initTheme();
       initReduceMotion();
       
-      // Restaurar configuraciones guardadas
-      const savedHighContrast = localStorage.getItem('high-contrast');
-      if (savedHighContrast === 'true') {
-        document.body.classList.add('high-contrast');
-      }
-      
+      // Restaurar tamaño de fuente guardado
       const savedFontSize = localStorage.getItem('font-size');
       if (savedFontSize) {
         currentFontSize = parseFloat(savedFontSize);
