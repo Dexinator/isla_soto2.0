@@ -23,7 +23,7 @@
       "video": {
         "sign": "https://player.vimeo.com/video/ruta-inicio-sign"
       },
-      "image": "1- Empieza La Ruta de los Murales. Audioguía. Santa Marta de Tormes.png",
+      "image": "/images/murals/1- Empieza La Ruta de los Murales. Audioguía. Santa Marta de Tormes.png",
       "alt": {
         "es": "Inicio de la ruta de murales en Santa Marta de Tormes",
         "en": "Start of the murals route in Santa Marta de Tormes"
@@ -64,7 +64,7 @@
       "video": {
         "sign": "https://player.vimeo.com/video/paseo-fluvial-sign"
       },
-      "image": "2- Mural Paseo Fluvial. Audioguía. Santa Marta de Tormes.jpg",
+      "image": "/images/murals/2- Mural Paseo Fluvial. Audioguía. Santa Marta de Tormes.jpg",
       "alt": {
         "es": "Mural del paseo fluvial junto al río Tormes",
         "en": "Riverside walk mural along the Tormes river"
@@ -105,7 +105,7 @@
       "video": {
         "sign": "https://player.vimeo.com/video/isla-soto-sign"
       },
-      "image": "3- Mural Centro de Interpretación. Isla del Soto. Audioguía. Santa Marta de Tormes.jpg",
+      "image": "/images/murals/3- Mural Centro de Interpretación. Isla del Soto. Audioguía. Santa Marta de Tormes.jpg",
       "alt": {
         "es": "Mural en el Centro de Interpretación de la Isla del Soto",
         "en": "Mural at the Soto Island Interpretation Center"
@@ -146,7 +146,7 @@
       "video": {
         "sign": "https://player.vimeo.com/video/llegada-color-sign"
       },
-      "image": "4- Mural La Llegada del Color. Audioguía. Santa Marta de Tormes.jpg",
+      "image": "/images/murals/4- Mural La Llegada del Color. Audioguía. Santa Marta de Tormes.jpg",
       "alt": {
         "es": "Mural colorido que representa la llegada del color digital a Santa Marta",
         "en": "Colorful mural representing the arrival of digital color to Santa Marta"
@@ -187,7 +187,7 @@
       "video": {
         "sign": "https://player.vimeo.com/video/bosque-sign"
       },
-      "image": "5- Mural La Bosque. Audioguía. Santa Marta de Tormes.jpg",
+      "image": "/images/murals/5- Mural La Bosque. Audioguía. Santa Marta de Tormes.jpg",
       "alt": {
         "es": "Mural del bosque que conecta naturaleza y ciudad",
         "en": "Forest mural connecting nature and city"
@@ -228,7 +228,7 @@
       "video": {
         "sign": "https://player.vimeo.com/video/mujer-historia-sign"
       },
-      "image": "6- Mural Mujer, historia y pueblo. Audioguía. Santa Marta de Tormes.jpg",
+      "image": "/images/murals/6- Mural Mujer, historia y pueblo. Audioguía. Santa Marta de Tormes.jpg",
       "alt": {
         "es": "Mural que representa el papel de la mujer en la historia local",
         "en": "Mural representing women's role in local history"
@@ -269,7 +269,7 @@
       "video": {
         "sign": "https://player.vimeo.com/video/torres-villarroel-sign"
       },
-      "image": "7- Mural Doctor Torres Villarroel. Audioguía. Santa Marta de Tormes.jpg",
+      "image": "/images/murals/7- Mural Doctor Torres Villarroel. Audioguía. Santa Marta de Tormes.jpg",
       "alt": {
         "es": "Mural del Doctor Torres Villarroel, ilustre figura histórica",
         "en": "Mural of Doctor Torres Villarroel, illustrious historical figure"
@@ -310,7 +310,7 @@
       "video": {
         "sign": "https://player.vimeo.com/video/rincon-sandra-gustavo-sign"
       },
-      "image": "8- Mural El Rincón de Sandra y Gustavo. Audioguía. Santa Marta de Tormes.jpg",
+      "image": "/images/murals/8- Mural El Rincón de Sandra y Gustavo. Audioguía. Santa Marta de Tormes.jpg",
       "alt": {
         "es": "Mural del rincón especial de Sandra y Gustavo",
         "en": "Mural of Sandra and Gustavo's special corner"
@@ -351,7 +351,7 @@
       "video": {
         "sign": "https://player.vimeo.com/video/festival-arte-urbano-sign"
       },
-      "image": "9- Murales Festival de Arte Urbano. Ediciones 1 y 2. Audioguía. Santa Marta de Tormes.jpg",
+      "image": "/images/murals/9- Murales Festival de Arte Urbano. Ediciones 1 y 2. Audioguía. Santa Marta de Tormes.jpg",
       "alt": {
         "es": "Murales del Festival de Arte Urbano, ediciones 1 y 2",
         "en": "Urban Art Festival murals, editions 1 and 2"
@@ -392,7 +392,7 @@
       "video": {
         "sign": "https://player.vimeo.com/video/generacion-millennial-sign"
       },
-      "image": "10- Mural Generación Millennial. Audioguía. Santa Marta de Tormes.jpg",
+      "image": "/images/murals/10- Mural Generación Millennial. Audioguía. Santa Marta de Tormes.jpg",
       "alt": {
         "es": "Mural de la generación millennial con elementos contemporáneos",
         "en": "Millennial generation mural with contemporary elements"
@@ -433,7 +433,7 @@
       "video": {
         "sign": "https://player.vimeo.com/video/paseo-alcalde-sign"
       },
-      "image": "11- Mural Paseo Alcalde José Sánchez. Audioguía. Santa Marta de Tormes.jpg",
+      "image": "/images/murals/11- Mural Paseo Alcalde José Sánchez. Audioguía. Santa Marta de Tormes.jpg",
       "alt": {
         "es": "Mural en el paseo del Alcalde José Sánchez",
         "en": "Mural on Mayor José Sánchez walk"
@@ -474,7 +474,7 @@
       "video": {
         "sign": "https://player.vimeo.com/video/respira-sign"
       },
-      "image": "12- Mural Respira. Audioguía. Santa Marta de Tormes.jpg",
+      "image": "/images/murals/12- Mural Respira. Audioguía. Santa Marta de Tormes.jpg",
       "alt": {
         "es": "Mural Respira que invita a la calma y reflexión",
         "en": "Breathe mural inviting calm and reflection"
@@ -515,7 +515,7 @@
       "video": {
         "sign": "https://player.vimeo.com/video/llegada-llaves-sign"
       },
-      "image": "13- Mural La Llegada de las Llaves. Audioguía. Santa Marta de Tormes.jpg",
+      "image": "/images/murals/13- Mural La Llegada de las Llaves. Audioguía. Santa Marta de Tormes.jpg",
       "alt": {
         "es": "Mural de las llaves simbolizando nuevas oportunidades",
         "en": "Keys mural symbolizing new opportunities"
@@ -556,7 +556,7 @@
       "video": {
         "sign": "https://player.vimeo.com/video/suena-sign"
       },
-      "image": "14- Mural Sueña. Audioguía. Santa Marta de Tormes.jpg",
+      "image": "/images/murals/14- Mural Sueña. Audioguía. Santa Marta de Tormes.jpg",
       "alt": {
         "es": "Mural Sueña con elementos inspiradores",
         "en": "Dream mural with inspiring elements"
@@ -597,7 +597,7 @@
       "video": {
         "sign": "https://player.vimeo.com/video/oceano-sign"
       },
-      "image": "15- Mural Océano. Audioguía. Santa Marta de Tormes.jpg",
+      "image": "/images/murals/15- Mural Océano. Audioguía. Santa Marta de Tormes.jpg",
       "alt": {
         "es": "Mural del océano con elementos marinos",
         "en": "Ocean mural with marine elements"
@@ -638,7 +638,7 @@
       "video": {
         "sign": "https://player.vimeo.com/video/carretera-madrid-sign"
       },
-      "image": "16- Mural Carretera Madrid. Audioguía. Santa Marta de Tormes.jpg",
+      "image": "/images/murals/16- Mural Carretera Madrid. Audioguía. Santa Marta de Tormes.jpg",
       "alt": {
         "es": "Mural en la zona de la carretera hacia Madrid",
         "en": "Mural in the Madrid highway area"
@@ -679,7 +679,7 @@
       "video": {
         "sign": "https://player.vimeo.com/video/daniel-martin-sign"
       },
-      "image": "17- Daniel Martín. Artista. Audioguía. Santa Marta de Tormes.jpg",
+      "image": "/images/murals/17- Daniel Martín. Artista. Audioguía. Santa Marta de Tormes.jpg",
       "alt": {
         "es": "Información sobre el artista Daniel Martín",
         "en": "Information about artist Daniel Martín"
@@ -720,7 +720,7 @@
       "video": {
         "sign": "https://player.vimeo.com/video/cain-ferreras-sign"
       },
-      "image": "18- Caín Ferreras. Artista. Audioguía. Santa Marta de Tormes.jpg",
+      "image": "/images/murals/18- Caín Ferreras. Artista. Audioguía. Santa Marta de Tormes.jpg",
       "alt": {
         "es": "Información sobre el artista Caín Ferreras",
         "en": "Information about artist Caín Ferreras"
@@ -761,7 +761,7 @@
       "video": {
         "sign": "https://player.vimeo.com/video/rober-bece-sign"
       },
-      "image": "19- Rober Bece. Artista. Audioguía. Santa Marta de Tormes.jpg",
+      "image": "/images/murals/19- Rober Bece. Artista. Audioguía. Santa Marta de Tormes.jpg",
       "alt": {
         "es": "Información sobre el artista Rober Bece",
         "en": "Information about artist Rober Bece"
@@ -802,7 +802,7 @@
       "video": {
         "sign": "https://player.vimeo.com/video/final-sign"
       },
-      "image": "20- Llegamos al Final. Audioguía. Santa Marta de Tormes.png",
+      "image": "/images/murals/20- Llegamos al Final. Audioguía. Santa Marta de Tormes.png",
       "alt": {
         "es": "Final del recorrido de murales en Santa Marta de Tormes",
         "en": "End of the murals tour in Santa Marta de Tormes"

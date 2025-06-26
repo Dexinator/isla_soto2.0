@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import MuralImage from './MuralImage.jsx';
+import MuralImage from './MuralImageSimple.jsx';
 
 const SoundCloudPlayer = ({
   currentMural,

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import MapComponent from './MapComponent.jsx';
 import SoundCloudPlayer from './SoundCloudPlayer.jsx';
 import PlaylistManager from './PlaylistManager.jsx';
-import MuralImage from './MuralImage.jsx';
+import MuralImage from './MuralImageSimple.jsx';
 
 const AudioguideContainer = ({ 
   muralsData, 

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import MuralImage from './MuralImage.jsx';
+import MuralImage from './MuralImageSimple.jsx';
 
 const PlaylistManager = ({ 
   murals, 
