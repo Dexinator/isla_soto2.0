@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import MapComponent from './MapComponent.jsx';
 import SoundCloudPlayer from './SoundCloudPlayer.jsx';
 import PlaylistManager from './PlaylistManager.jsx';
@@ -13,6 +13,7 @@ const AudioguideContainer = ({
   const [currentMural, setCurrentMural] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [autoPlay, setAutoPlay] = useState(false);
+  const playerRef = useRef(null);
 
   // Ordenar murales por orden recomendado
   const sortedMurals = [...muralsData].sort((a, b) => a.order - b.order);
@@ -23,6 +24,13 @@ const AudioguideContainer = ({
       setCurrentMural(sortedMurals[0]);
     }
   }, [sortedMurals, currentMural]);
+
+  // Función para controlar play/pause desde los botones flotantes
+  const handlePlayPause = () => {
+    if (playerRef.current && playerRef.current.handlePlayPause) {
+      playerRef.current.handlePlayPause();
+    }
+  };
 
   // Función para seleccionar un mural
   const handleMuralSelect = (mural) => {
@@ -189,10 +197,12 @@ const AudioguideContainer = ({
         <section aria-labelledby="player-title">
           <h2 id="player-title" className="sr-only">Reproductor de audio</h2>
           <SoundCloudPlayer
+            ref={playerRef}
             currentMural={currentMural}
             onNext={sortedMurals.length > 1 ? handleNext : null}
             onPrevious={sortedMurals.length > 1 ? handlePrevious : null}
             onTrackEnd={handleTrackEnd}
+            onPlayStateChange={setIsPlaying}
             audioType={audioType}
             language={language}
             className="h-fit"
@@ -255,7 +265,7 @@ const AudioguideContainer = ({
                 </button>
                 
                 <button
-                  onClick={() => setIsPlaying(!isPlaying)}
+                  onClick={handlePlayPause}
                   className="p-2 bg-SM-blue text-white rounded-lg hover:bg-blue-700 transition-colors"
                   aria-label={isPlaying ? "Pausar" : "Reproducir"}
                 >

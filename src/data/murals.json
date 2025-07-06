@@ -10,7 +10,6 @@
         "es": "Punto de inicio del recorrido por los murales de Santa Marta de Tormes.",
         "en": "Starting point of the Santa Marta de Tormes murals tour."
       },
-      "coordinates": [40.9701, -5.6635],
       "order": 1,
       "audio": {
         "normal": {
@@ -51,7 +50,7 @@
         "es": "Mural que representa el paseo fluvial de Santa Marta junto al río Tormes.",
         "en": "Mural representing Santa Marta's riverside walk along the Tormes river."
       },
-      "coordinates": [40.9705, -5.6640],
+      "coordinates": [40.950624059703735, -5.637681861162018],
       "order": 2,
       "audio": {
         "normal": {
@@ -73,7 +72,7 @@
         "es": "Paseo Fluvial",
         "en": "Riverside Walk"
       },
-      "artist": "Artista local",
+      "artist": "Caín Ferreras",
       "year": 2024,
       "duration": {
         "normal": "5 min",
@@ -92,7 +91,7 @@
         "es": "Mural ubicado en el Centro de Interpretación de la Isla del Soto.",
         "en": "Mural located at the Soto Island Interpretation Center."
       },
-      "coordinates": [40.9710, -5.6645],
+      "coordinates": [40.9522547832176, -5.632777086840274],
       "order": 3,
       "audio": {
         "normal": {
@@ -114,7 +113,7 @@
         "es": "Centro de Interpretación - Isla del Soto",
         "en": "Interpretation Center - Soto Island"
       },
-      "artist": "Artista especializado",
+      "artist": "Caín Ferreras",
       "year": 2024,
       "duration": {
         "normal": "6 min",
@@ -133,7 +132,7 @@
         "es": "Mural inspirado en la transformación urbana a través del arte y el color digital.",
         "en": "Mural inspired by urban transformation through art and digital color."
       },
-      "coordinates": [40.9715, -5.6650],
+      "coordinates": [40.950508174347085, -5.630577903555368],
       "order": 4,
       "audio": {
         "normal": {
@@ -174,7 +173,7 @@
         "es": "Mural que representa la conexión entre la naturaleza y la vida urbana.",
         "en": "Mural representing the connection between nature and urban life."
       },
-      "coordinates": [40.9720, -5.6655],
+      "coordinates": [40.94939751212852, -5.63064640156047],
       "order": 5,
       "audio": {
         "normal": {
@@ -196,7 +195,7 @@
         "es": "Zona verde urbana",
         "en": "Urban green area"
       },
-      "artist": "Artista naturalista",
+      "artist": "Daniel Martín",
       "year": 2024,
       "duration": {
         "normal": "7 min",
@@ -215,7 +214,7 @@
         "es": "Mural dedicado al papel de la mujer en la historia de Santa Marta de Tormes.",
         "en": "Mural dedicated to women's role in Santa Marta de Tormes' history."
       },
-      "coordinates": [40.9725, -5.6660],
+      "coordinates": [40.94908236429532, -5.6300556081211734],
       "order": 6,
       "audio": {
         "normal": {
@@ -237,7 +236,7 @@
         "es": "Plaza de las Mujeres",
         "en": "Women's Square"
       },
-      "artist": "Colectivo feminista",
+      "artist": "Rober Bece",
       "year": 2024,
       "duration": {
         "normal": "9 min",
@@ -256,7 +255,7 @@
         "es": "Mural dedicado al famoso escritor y matemático Diego de Torres Villarroel.",
         "en": "Mural dedicated to the famous writer and mathematician Diego de Torres Villarroel."
       },
-      "coordinates": [40.9730, -5.6665],
+      "coordinates": [40.94974059181188, -5.629269464039794],
       "order": 7,
       "audio": {
         "normal": {
@@ -278,7 +277,7 @@
         "es": "Calle Dr. Torres Villarroel",
         "en": "Dr. Torres Villarroel Street"
       },
-      "artist": "Artista histórico",
+      "artist": "Caín Ferreras",
       "year": 2024,
       "duration": {
         "normal": "10 min",
@@ -297,7 +296,7 @@
         "es": "Mural que representa un espacio especial dedicado a Sandra y Gustavo.",
         "en": "Mural representing a special space dedicated to Sandra and Gustavo."
       },
-      "coordinates": [40.9735, -5.6670],
+      "coordinates": [40.94957657272803, -5.628866434815848],
       "order": 8,
       "audio": {
         "normal": {
@@ -319,7 +318,7 @@
         "es": "Rincón especial",
         "en": "Special corner"
       },
-      "artist": "Artista comunitario",
+      "artist": "Rober Bece",
       "year": 2024,
       "duration": {
         "normal": "6 min",
@@ -338,7 +337,7 @@
         "es": "Murales creados durante las primeras dos ediciones del Festival de Arte Urbano.",
         "en": "Murals created during the first two editions of the Urban Art Festival."
       },
-      "coordinates": [40.9740, -5.6675],
+      "coordinates": [40.94920000175988, -5.628841258158136],
       "order": 9,
       "audio": {
         "normal": {
@@ -360,7 +359,7 @@
         "es": "Zona del festival",
         "en": "Festival area"
       },
-      "artist": "Artistas del festival",
+      "artist": "Varias/os autoras/es",
       "year": 2024,
       "duration": {
         "normal": "12 min",
@@ -379,7 +378,7 @@
         "es": "Mural que representa la cultura y valores de la generación millennial.",
         "en": "Mural representing millennial generation culture and values."
       },
-      "coordinates": [40.9745, -5.6680],
+      "coordinates": [40.94539824049695, -5.625584241181644],
       "order": 10,
       "audio": {
         "normal": {
@@ -401,7 +400,7 @@
         "es": "Zona juvenil",
         "en": "Youth area"
       },
-      "artist": "Artista millennial",
+      "artist": "Rober Bece",
       "year": 2024,
       "duration": {
         "normal": "8 min",
@@ -420,7 +419,7 @@
         "es": "Mural ubicado en el paseo dedicado al Alcalde José Sánchez.",
         "en": "Mural located on the walk dedicated to Mayor José Sánchez."
       },
-      "coordinates": [40.9750, -5.6685],
+      "coordinates": [40.947689703673745, -5.627101412120439],
       "order": 11,
       "audio": {
         "normal": {
@@ -442,7 +441,7 @@
         "es": "Paseo Alcalde José Sánchez",
         "en": "Mayor José Sánchez Walk"
       },
-      "artist": "Artista municipal",
+      "artist": "Caín Ferreras",
       "year": 2024,
       "duration": {
         "normal": "7 min",
@@ -461,7 +460,7 @@
         "es": "Mural que invita a la reflexión y al bienestar personal.",
         "en": "Mural that invites reflection and personal well-being."
       },
-      "coordinates": [40.9755, -5.6690],
+      "coordinates": [40.949723546303495, -5.627586438509093],
       "order": 12,
       "audio": {
         "normal": {
@@ -483,7 +482,7 @@
         "es": "Zona de descanso",
         "en": "Rest area"
       },
-      "artist": "Artista zen",
+      "artist": "Rober Bece",
       "year": 2024,
       "duration": {
         "normal": "5 min",
@@ -502,7 +501,7 @@
         "es": "Mural simbólico sobre las llaves como símbolo de nuevas oportunidades.",
         "en": "Symbolic mural about keys as a symbol of new opportunities."
       },
-      "coordinates": [40.9760, -5.6695],
+      "coordinates": [40.95020894913536, -5.622374450977097],
       "order": 13,
       "audio": {
         "normal": {
@@ -524,7 +523,7 @@
         "es": "Entrada principal",
         "en": "Main entrance"
       },
-      "artist": "Artista simbólico",
+      "artist": "Rober Bece",
       "year": 2024,
       "duration": {
         "normal": "6 min",
@@ -543,7 +542,7 @@
         "es": "Mural inspirador que invita a soñar y perseguir los objetivos.",
         "en": "Inspiring mural that invites to dream and pursue goals."
       },
-      "coordinates": [40.9765, -5.6700],
+      "coordinates": [40.950626401984, -5.624583814823785],
       "order": 14,
       "audio": {
         "normal": {
@@ -565,7 +564,7 @@
         "es": "Zona inspiracional",
         "en": "Inspirational area"
       },
-      "artist": "Artista motivacional",
+      "artist": "Rober Bece",
       "year": 2024,
       "duration": {
         "normal": "5 min",
@@ -584,7 +583,7 @@
         "es": "Mural que representa la vastedad y belleza del océano.",
         "en": "Mural representing the vastness and beauty of the ocean."
       },
-      "coordinates": [40.9770, -5.6705],
+      "coordinates": [40.95066936931654, -5.628456314268188],
       "order": 15,
       "audio": {
         "normal": {
@@ -606,7 +605,7 @@
         "es": "Zona acuática",
         "en": "Aquatic area"
       },
-      "artist": "Artista marino",
+      "artist": "Rober Bece",
       "year": 2024,
       "duration": {
         "normal": "8 min",
@@ -625,7 +624,7 @@
         "es": "Mural ubicado en la zona de la carretera hacia Madrid.",
         "en": "Mural located in the Madrid highway area."
       },
-      "coordinates": [40.9775, -5.6710],
+      "coordinates": [40.95002255663563, -5.629455943072232],
       "order": 16,
       "audio": {
         "normal": {
@@ -647,7 +646,7 @@
         "es": "Carretera Madrid",
         "en": "Madrid Highway"
       },
-      "artist": "Artista viajero",
+      "artist": "Daniel Martín",
       "year": 2024,
       "duration": {
         "normal": "6 min",
@@ -666,7 +665,6 @@
         "es": "Información sobre el artista Daniel Martín y su obra en Santa Marta.",
         "en": "Information about artist Daniel Martín and his work in Santa Marta."
       },
-      "coordinates": [40.9780, -5.6715],
       "order": 17,
       "audio": {
         "normal": {
@@ -707,7 +705,6 @@
         "es": "Información sobre el artista Caín Ferreras y su contribución al arte urbano.",
         "en": "Information about artist Caín Ferreras and his contribution to urban art."
       },
-      "coordinates": [40.9785, -5.6720],
       "order": 18,
       "audio": {
         "normal": {
@@ -748,7 +745,6 @@
         "es": "Información sobre el artista Rober Bece y su estilo único.",
         "en": "Information about artist Rober Bece and his unique style."
       },
-      "coordinates": [40.9790, -5.6725],
       "order": 19,
       "audio": {
         "normal": {
@@ -789,7 +785,6 @@
         "es": "Punto final del recorrido por los murales de Santa Marta de Tormes.",
         "en": "Final point of the Santa Marta de Tormes murals tour."
       },
-      "coordinates": [40.9795, -5.6730],
       "order": 20,
       "audio": {
         "normal": {
@@ -831,26 +826,21 @@
       "en": "Accessible tour through the main murals of Santa Marta de Tormes"
     },
     "waypoints": [
-      [40.9701, -5.6635],
-      [40.9705, -5.6640],
-      [40.9710, -5.6645],
-      [40.9715, -5.6650],
-      [40.9720, -5.6655],
-      [40.9725, -5.6660],
-      [40.9730, -5.6665],
-      [40.9735, -5.6670],
-      [40.9740, -5.6675],
-      [40.9745, -5.6680],
-      [40.9750, -5.6685],
-      [40.9755, -5.6690],
-      [40.9760, -5.6695],
-      [40.9765, -5.6700],
-      [40.9770, -5.6705],
-      [40.9775, -5.6710],
-      [40.9780, -5.6715],
-      [40.9785, -5.6720],
-      [40.9790, -5.6725],
-      [40.9795, -5.6730]
+      [40.950624059703735, -5.637681861162018],
+      [40.9522547832176, -5.632777086840274],
+      [40.950508174347085, -5.630577903555368],
+      [40.94939751212852, -5.63064640156047],
+      [40.94908236429532, -5.6300556081211734],
+      [40.94974059181188, -5.629269464039794],
+      [40.94957657272803, -5.628866434815848],
+      [40.94920000175988, -5.628841258158136],
+      [40.94539824049695, -5.625584241181644],
+      [40.947689703673745, -5.627101412120439],
+      [40.949723546303495, -5.627586438509093],
+      [40.95020894913536, -5.622374450977097],
+      [40.950626401984, -5.624583814823785],
+      [40.95066936931654, -5.628456314268188],
+      [40.95002255663563, -5.629455943072232]
     ],
     "totalDistance": "3.2 km",
     "estimatedTime": "2.5 horas",

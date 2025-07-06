@@ -8,10 +8,16 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, className = 
   const [error, setError] = useState(null);
   const [scrollZoomEnabled, setScrollZoomEnabled] = useState(false);
 
+  // Filtrar murales que tienen coordenadas válidas (no [0,0])
+  const muralsWithCoordinates = murals.filter(
+    mural => mural.coordinates && 
+    !(mural.coordinates[0] === 0 && mural.coordinates[1] === 0)
+  );
+
   // Configuración del mapa
   const mapConfig = {
-    center: [40.9705, -5.6640], // Santa Marta de Tormes
-    zoom: 16,
+    center: [40.9505, -5.6300], // Centro aproximado de Santa Marta de Tormes
+    zoom: 15,
     maxZoom: 18,
     attribution: '© OpenStreetMap contributors'
   };
@@ -90,8 +96,8 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, className = 
             });
           };
 
-          // Añadir markers para cada mural
-          markersRef.current = murals.map((mural, index) => {
+          // Añadir markers solo para murales con coordenadas válidas
+          markersRef.current = muralsWithCoordinates.map((mural, index) => {
             const isActive = currentMural && currentMural.id === mural.id;
             const marker = L.marker(mural.coordinates, {
               icon: createCustomIcon(isActive)
@@ -135,18 +141,23 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, className = 
             return { marker, mural };
           });
 
-          // Añadir ruta si está disponible
+          // Añadir ruta si está disponible (filtrando waypoints [0,0])
           if (route && route.waypoints && route.waypoints.length > 0) {
-            L.polyline(route.waypoints, {
-              color: '#0072c0', // SM-blue
-              weight: 4,
-              opacity: 0.8,
-              dashArray: '10, 5'
-            }).addTo(map);
+            const validWaypoints = route.waypoints.filter(
+              waypoint => !(waypoint[0] === 0 && waypoint[1] === 0)
+            );
+            if (validWaypoints.length > 1) {
+              L.polyline(validWaypoints, {
+                color: '#0072c0', // SM-blue
+                weight: 4,
+                opacity: 0.8,
+                dashArray: '10, 5'
+              }).addTo(map);
+            }
           }
 
-          // Ajustar vista para mostrar todos los murales
-          if (murals.length > 0) {
+          // Ajustar vista para mostrar todos los murales con coordenadas
+          if (muralsWithCoordinates.length > 0) {
             const group = new L.featureGroup(markersRef.current.map(m => m.marker));
             map.fitBounds(group.getBounds().pad(0.1));
           }
@@ -317,14 +328,16 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, className = 
             >
               {scrollZoomEnabled ? '🔒 Bloquear Mapa' : '🔓 Desbloquear Mapa'}
             </button>
-            <a
-              href={`https://maps.google.com/maps?daddr=${murals[0]?.coordinates[0]},${murals[0]?.coordinates[1]}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-SM-yellow text-SM-black px-3 py-2 rounded-lg text-sm font-medium hover:bg-yellow-500 transition-colors"
-            >
-              Abrir en Google Maps
-            </a>
+            {muralsWithCoordinates.length > 0 && (
+              <a
+                href={`https://maps.google.com/maps?daddr=${muralsWithCoordinates[0]?.coordinates[0]},${muralsWithCoordinates[0]?.coordinates[1]}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-SM-yellow text-SM-black px-3 py-2 rounded-lg text-sm font-medium hover:bg-yellow-500 transition-colors"
+              >
+                Abrir en Google Maps
+              </a>
+            )}
           </div>
         </div>
       </div>

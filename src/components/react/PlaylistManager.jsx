@@ -215,8 +215,14 @@ const PlaylistManager = ({
                         <span className="text-sm">{mural.artist || 'Artista desconocido'}</span>
                       </div>
                       <div className="flex items-center text-slate-600 dark:text-slate-400">
-                        <span className="text-xs mr-1">📍</span>
-                        <span className="text-sm">{mural.location?.[language] || 'Ubicación no disponible'}</span>
+                        <span className="text-xs mr-1">
+                          {mural.coordinates && !(mural.coordinates[0] === 0 && mural.coordinates[1] === 0) ? '📍' : 'ℹ️'}
+                        </span>
+                        <span className="text-sm">
+                          {mural.coordinates && !(mural.coordinates[0] === 0 && mural.coordinates[1] === 0) 
+                            ? (mural.location?.[language] || 'Ubicación no disponible')
+                            : 'Pista informativa'}
+                        </span>
                       </div>
                     </div>
                     

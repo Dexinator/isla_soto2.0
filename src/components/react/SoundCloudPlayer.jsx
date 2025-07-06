@@ -1,15 +1,16 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, forwardRef, useImperativeHandle } from 'react';
 import MuralImage from './MuralImageOptimized.jsx';
 
-const SoundCloudPlayer = ({
+const SoundCloudPlayer = forwardRef(({
   currentMural,
   onNext,
   onPrevious,
   onTrackEnd,
+  onPlayStateChange,
   audioType = 'normal',
   language = 'es',
   className = ""
-}) => {
+}, ref) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -154,14 +155,17 @@ const SoundCloudPlayer = ({
 
         widgetRef.current.bind(window.SC.Widget.Events.PLAY, () => {
           setIsPlaying(true);
+          if (onPlayStateChange) onPlayStateChange(true);
         });
 
         widgetRef.current.bind(window.SC.Widget.Events.PAUSE, () => {
           setIsPlaying(false);
+          if (onPlayStateChange) onPlayStateChange(false);
         });
 
         widgetRef.current.bind(window.SC.Widget.Events.FINISH, () => {
           setIsPlaying(false);
+          if (onPlayStateChange) onPlayStateChange(false);
           setProgress(100);
           if (onTrackEnd) {
             onTrackEnd();
@@ -195,7 +199,7 @@ const SoundCloudPlayer = ({
     // Esperar un poco para que el iframe se cargue y luego inicializar
     setTimeout(initializeWidget, 1500);
 
-  }, [currentMural, audioType, language]);
+  }, [currentMural, audioType, language, onPlayStateChange]);
 
   // Controles de reproducción
   const handlePlayPause = () => {
@@ -269,6 +273,11 @@ const SoundCloudPlayer = ({
       console.error('Error toggling mute:', err);
     }
   };
+
+  // Exponer el método handlePlayPause para los botones flotantes
+  useImperativeHandle(ref, () => ({
+    handlePlayPause
+  }), [handlePlayPause]);
 
   if (!currentMural) {
     return (
@@ -462,6 +471,8 @@ const SoundCloudPlayer = ({
 
     </div>
   );
-};
+});
+
+SoundCloudPlayer.displayName = 'SoundCloudPlayer';
 
 export default SoundCloudPlayer;
