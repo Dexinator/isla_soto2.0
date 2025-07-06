@@ -14,11 +14,11 @@
       "order": 1,
       "audio": {
         "normal": {
-          "es": "https://soundcloud.com/user-example/ruta-inicio-normal-es",
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960961%3Fsecret_token%3Ds-aWKFzmbhl8y",
           "en": "https://soundcloud.com/user-example/ruta-inicio-normal-en"
         },
-        "descriptive": "https://soundcloud.com/user-example/ruta-inicio-descriptive-es",
-        "easy": "https://soundcloud.com/user-example/ruta-inicio-easy-es"
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023547%3Fsecret_token%3Ds-BWOsYK9houq",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606264%3Fsecret_token%3Ds-q499Tanjp7Q"
       },
       "video": {
         "sign": "icAH8y_FEPc"
@@ -55,11 +55,11 @@
       "order": 2,
       "audio": {
         "normal": {
-          "es": "https://soundcloud.com/user-example/paseo-fluvial-normal-es",
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960997%3Fsecret_token%3Ds-4htsSn5ECt6",
           "en": "https://soundcloud.com/user-example/paseo-fluvial-normal-en"
         },
-        "descriptive": "https://soundcloud.com/user-example/paseo-fluvial-descriptive-es",
-        "easy": "https://soundcloud.com/user-example/paseo-fluvial-easy-es"
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023520%3Fsecret_token%3Ds-DxSGINScIle",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606282%3Fsecret_token%3Ds-rKEyQ9aCtwP"
       },
       "video": {
         "sign": "https://www.youtube.com/watch?v=EXAMPLE_VIDEO_ID_2"
@@ -96,11 +96,11 @@
       "order": 3,
       "audio": {
         "normal": {
-          "es": "https://soundcloud.com/user-example/isla-soto-normal-es",
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960988%3Fsecret_token%3Ds-1HB817uvUxI",
           "en": "https://soundcloud.com/user-example/isla-soto-normal-en"
         },
-        "descriptive": "https://soundcloud.com/user-example/isla-soto-descriptive-es",
-        "easy": "https://soundcloud.com/user-example/isla-soto-easy-es"
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023550%3Fsecret_token%3Ds-yP755oKyZUn",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606267%3Fsecret_token%3Ds-oqSa4mcIIQM"
       },
       "video": {
         "sign": "https://player.vimeo.com/video/isla-soto-sign"
@@ -137,11 +137,11 @@
       "order": 4,
       "audio": {
         "normal": {
-          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2107850961%3Fsecret_token%3Ds-aPi7bGa9jHU&color=%2378766c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960970%3Fsecret_token%3Ds-ZZfGZRY29D4",
           "en": "https://soundcloud.com/user-example/llegada-color-normal-en"
         },
-        "descriptive": "https://soundcloud.com/user-example/llegada-color-descriptive-es",
-        "easy": "https://soundcloud.com/user-example/llegada-color-easy-es"
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023535%3Fsecret_token%3Ds-Ipo9wFHuETP",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606252%3Fsecret_token%3Ds-vMvclTiolRi"
       },
       "video": {
         "sign": "https://player.vimeo.com/video/llegada-color-sign"
@@ -178,11 +178,11 @@
       "order": 5,
       "audio": {
         "normal": {
-          "es": "https://soundcloud.com/user-example/bosque-normal-es",
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960964%3Fsecret_token%3Ds-EMPcpJZWhf8",
           "en": "https://soundcloud.com/user-example/bosque-normal-en"
         },
-        "descriptive": "https://soundcloud.com/user-example/bosque-descriptive-es",
-        "easy": "https://soundcloud.com/user-example/bosque-easy-es"
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023556%3Fsecret_token%3Ds-1Y9yCNvJ63X",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606261%3Fsecret_token%3Ds-sWPPE3X2vRF"
       },
       "video": {
         "sign": "https://player.vimeo.com/video/bosque-sign"
@@ -219,11 +219,11 @@
       "order": 6,
       "audio": {
         "normal": {
-          "es": "https://soundcloud.com/user-example/mujer-historia-normal-es",
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960955%3Fsecret_token%3Ds-MpqEy9apYYp",
           "en": "https://soundcloud.com/user-example/mujer-historia-normal-en"
         },
-        "descriptive": "https://soundcloud.com/user-example/mujer-historia-descriptive-es",
-        "easy": "https://soundcloud.com/user-example/mujer-historia-easy-es"
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023568%3Fsecret_token%3Ds-Bw2t3ydyf8r",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606273%3Fsecret_token%3Ds-EPrOEuqAnqy"
       },
       "video": {
         "sign": "https://player.vimeo.com/video/mujer-historia-sign"
@@ -260,11 +260,11 @@
       "order": 7,
       "audio": {
         "normal": {
-          "es": "https://soundcloud.com/user-example/torres-villarroel-normal-es",
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117961000%3Fsecret_token%3Ds-WKK5dwwTkWW",
           "en": "https://soundcloud.com/user-example/torres-villarroel-normal-en"
         },
-        "descriptive": "https://soundcloud.com/user-example/torres-villarroel-descriptive-es",
-        "easy": "https://soundcloud.com/user-example/torres-villarroel-easy-es"
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023553%3Fsecret_token%3Ds-fCpYMsadex7",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606240%3Fsecret_token%3Ds-UY320WegVND"
       },
       "video": {
         "sign": "https://player.vimeo.com/video/torres-villarroel-sign"
@@ -301,11 +301,11 @@
       "order": 8,
       "audio": {
         "normal": {
-          "es": "https://soundcloud.com/user-example/rincon-sandra-gustavo-normal-es",
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960952%3Fsecret_token%3Ds-Qrzetuo2mmM",
           "en": "https://soundcloud.com/user-example/rincon-sandra-gustavo-normal-en"
         },
-        "descriptive": "https://soundcloud.com/user-example/rincon-sandra-gustavo-descriptive-es",
-        "easy": "https://soundcloud.com/user-example/rincon-sandra-gustavo-easy-es"
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023511%3Fsecret_token%3Ds-fJVQXydUQxu",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606234%3Fsecret_token%3Ds-kv8Ev7K56Vb"
       },
       "video": {
         "sign": "https://player.vimeo.com/video/rincon-sandra-gustavo-sign"
@@ -342,11 +342,11 @@
       "order": 9,
       "audio": {
         "normal": {
-          "es": "https://soundcloud.com/user-example/festival-arte-urbano-normal-es",
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960973%3Fsecret_token%3Ds-4WGsLuhg5Yb",
           "en": "https://soundcloud.com/user-example/festival-arte-urbano-normal-en"
         },
-        "descriptive": "https://soundcloud.com/user-example/festival-arte-urbano-descriptive-es",
-        "easy": "https://soundcloud.com/user-example/festival-arte-urbano-easy-es"
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023523%3Fsecret_token%3Ds-aj22LGi3KB2",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606243%3Fsecret_token%3Ds-ptDZvmHsZtt"
       },
       "video": {
         "sign": "https://player.vimeo.com/video/festival-arte-urbano-sign"
@@ -383,11 +383,11 @@
       "order": 10,
       "audio": {
         "normal": {
-          "es": "https://soundcloud.com/user-example/generacion-millennial-normal-es",
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960958%3Fsecret_token%3Ds-XL9ZWY43zp9",
           "en": "https://soundcloud.com/user-example/generacion-millennial-normal-en"
         },
-        "descriptive": "https://soundcloud.com/user-example/generacion-millennial-descriptive-es",
-        "easy": "https://soundcloud.com/user-example/generacion-millennial-easy-es"
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023544%3Fsecret_token%3Ds-KAcWT9Tb4mW",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606228%3Fsecret_token%3Ds-vHlxxQiUZG2"
       },
       "video": {
         "sign": "https://player.vimeo.com/video/generacion-millennial-sign"
@@ -424,11 +424,11 @@
       "order": 11,
       "audio": {
         "normal": {
-          "es": "https://soundcloud.com/user-example/paseo-alcalde-normal-es",
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960982%3Fsecret_token%3Ds-KRWlwSVzwPM",
           "en": "https://soundcloud.com/user-example/paseo-alcalde-normal-en"
         },
-        "descriptive": "https://soundcloud.com/user-example/paseo-alcalde-descriptive-es",
-        "easy": "https://soundcloud.com/user-example/paseo-alcalde-easy-es"
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023559%3Fsecret_token%3Ds-OHR26jjn1zO",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606237%3Fsecret_token%3Ds-53MygvXCYd1"
       },
       "video": {
         "sign": "https://player.vimeo.com/video/paseo-alcalde-sign"
@@ -465,11 +465,11 @@
       "order": 12,
       "audio": {
         "normal": {
-          "es": "https://soundcloud.com/user-example/respira-normal-es",
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960994%3Fsecret_token%3Ds-Stz02SFTS8g",
           "en": "https://soundcloud.com/user-example/respira-normal-en"
         },
-        "descriptive": "https://soundcloud.com/user-example/respira-descriptive-es",
-        "easy": "https://soundcloud.com/user-example/respira-easy-es"
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023514%3Fsecret_token%3Ds-uyq3LAfho8n",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606231%3Fsecret_token%3Ds-UXjku1CQafg"
       },
       "video": {
         "sign": "https://player.vimeo.com/video/respira-sign"
@@ -506,11 +506,11 @@
       "order": 13,
       "audio": {
         "normal": {
-          "es": "https://soundcloud.com/user-example/llegada-llaves-normal-es",
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960946%3Fsecret_token%3Ds-qTvhQ7oRYnP",
           "en": "https://soundcloud.com/user-example/llegada-llaves-normal-en"
         },
-        "descriptive": "https://soundcloud.com/user-example/llegada-llaves-descriptive-es",
-        "easy": "https://soundcloud.com/user-example/llegada-llaves-easy-es"
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023562%3Fsecret_token%3Ds-6gXiIE1iDdS",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606279%3Fsecret_token%3Ds-KgFWiJsJ2Co"
       },
       "video": {
         "sign": "https://player.vimeo.com/video/llegada-llaves-sign"
@@ -547,11 +547,11 @@
       "order": 14,
       "audio": {
         "normal": {
-          "es": "https://soundcloud.com/user-example/suena-normal-es",
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960967%3Fsecret_token%3Ds-A0GXmKTZx7S",
           "en": "https://soundcloud.com/user-example/suena-normal-en"
         },
-        "descriptive": "https://soundcloud.com/user-example/suena-descriptive-es",
-        "easy": "https://soundcloud.com/user-example/suena-easy-es"
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023538%3Fsecret_token%3Ds-kn9EzoeoXtu",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606276%3Fsecret_token%3Ds-fHIwEixbk5L"
       },
       "video": {
         "sign": "https://player.vimeo.com/video/suena-sign"
@@ -588,11 +588,11 @@
       "order": 15,
       "audio": {
         "normal": {
-          "es": "https://soundcloud.com/user-example/oceano-normal-es",
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960991%3Fsecret_token%3Ds-ix42CNZjTKv",
           "en": "https://soundcloud.com/user-example/oceano-normal-en"
         },
-        "descriptive": "https://soundcloud.com/user-example/oceano-descriptive-es",
-        "easy": "https://soundcloud.com/user-example/oceano-easy-es"
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023517%3Fsecret_token%3Ds-m4gWqnAquX3",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606270%3Fsecret_token%3Ds-YbnRcbM3Mol"
       },
       "video": {
         "sign": "https://player.vimeo.com/video/oceano-sign"
@@ -629,11 +629,11 @@
       "order": 16,
       "audio": {
         "normal": {
-          "es": "https://soundcloud.com/user-example/carretera-madrid-normal-es",
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960949%3Fsecret_token%3Ds-FT8nH19KbFp",
           "en": "https://soundcloud.com/user-example/carretera-madrid-normal-en"
         },
-        "descriptive": "https://soundcloud.com/user-example/carretera-madrid-descriptive-es",
-        "easy": "https://soundcloud.com/user-example/carretera-madrid-easy-es"
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023532%3Fsecret_token%3Ds-E9IY0Kw9Tom",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606255%3Fsecret_token%3Ds-mjXOhc6gMUU"
       },
       "video": {
         "sign": "https://player.vimeo.com/video/carretera-madrid-sign"
@@ -670,11 +670,11 @@
       "order": 17,
       "audio": {
         "normal": {
-          "es": "https://soundcloud.com/user-example/daniel-martin-normal-es",
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960976%3Fsecret_token%3Ds-6PQXSHRVxnY",
           "en": "https://soundcloud.com/user-example/daniel-martin-normal-en"
         },
-        "descriptive": "https://soundcloud.com/user-example/daniel-martin-descriptive-es",
-        "easy": "https://soundcloud.com/user-example/daniel-martin-easy-es"
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023526%3Fsecret_token%3Ds-Ara5iFM9yvm",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606285%3Fsecret_token%3Ds-52uOC51dwlF"
       },
       "video": {
         "sign": "https://player.vimeo.com/video/daniel-martin-sign"
@@ -711,11 +711,11 @@
       "order": 18,
       "audio": {
         "normal": {
-          "es": "https://soundcloud.com/user-example/cain-ferreras-normal-es",
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960985%3Fsecret_token%3Ds-PYkFEOA1jE9",
           "en": "https://soundcloud.com/user-example/cain-ferreras-normal-en"
         },
-        "descriptive": "https://soundcloud.com/user-example/cain-ferreras-descriptive-es",
-        "easy": "https://soundcloud.com/user-example/cain-ferreras-easy-es"
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023529%3Fsecret_token%3Ds-rsPVdZDprQx",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606246%3Fsecret_token%3Ds-dX4agNf2tTG"
       },
       "video": {
         "sign": "https://player.vimeo.com/video/cain-ferreras-sign"
@@ -752,11 +752,11 @@
       "order": 19,
       "audio": {
         "normal": {
-          "es": "https://soundcloud.com/user-example/rober-bece-normal-es",
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960979%3Fsecret_token%3Ds-ueLAk2Wwz6h",
           "en": "https://soundcloud.com/user-example/rober-bece-normal-en"
         },
-        "descriptive": "https://soundcloud.com/user-example/rober-bece-descriptive-es",
-        "easy": "https://soundcloud.com/user-example/rober-bece-easy-es"
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023565%3Fsecret_token%3Ds-RAbJDFIJmUa",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606249%3Fsecret_token%3Ds-1dHfam95PMv"
       },
       "video": {
         "sign": "https://player.vimeo.com/video/rober-bece-sign"
@@ -793,11 +793,11 @@
       "order": 20,
       "audio": {
         "normal": {
-          "es": "https://soundcloud.com/user-example/final-normal-es",
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960943%3Fsecret_token%3Ds-i2TvU5iIOEO",
           "en": "https://soundcloud.com/user-example/final-normal-en"
         },
-        "descriptive": "https://soundcloud.com/user-example/final-descriptive-es",
-        "easy": "https://soundcloud.com/user-example/final-easy-es"
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023541%3Fsecret_token%3Ds-UW6daPDpttB",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606258%3Fsecret_token%3Ds-17HxIwk5eeY"
       },
       "video": {
         "sign": "https://player.vimeo.com/video/final-sign"
