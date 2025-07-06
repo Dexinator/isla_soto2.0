@@ -135,13 +135,17 @@ const YouTubePlayer = ({
         playerVars: {
           autoplay: 0,
           controls: 0,
+          disablekb: 1,
           modestbranding: 1,
           rel: 0,
           showinfo: 0,
+          fs: 0,
           iv_load_policy: 3,
           cc_lang_pref: 'es',
           cc_load_policy: 1, // Mostrar subtítulos por defecto
-          playsinline: 1
+          playsinline: 1,
+          enablejsapi: 1,
+          origin: window.location.origin
         },
         events: {
           onReady: (event) => {
@@ -299,7 +303,7 @@ const YouTubePlayer = ({
               </div>
             ) : (
               <>
-                <div id={`youtube-player-${currentMural?.id || 'default'}`} ref={playerRef} className="w-full h-full" />
+                <div id={`youtube-player-${currentMural?.id || 'default'}`} ref={playerRef} className="w-full h-full youtube-player-container" />
                 {/* Capa transparente para bloquear clics en el video */}
                 <div className="absolute inset-0 z-10" style={{ cursor: 'default' }} />
               </>
@@ -446,6 +450,25 @@ const YouTubePlayer = ({
           </div>
         </div>
       </div>
+      
+      {/* Estilos CSS para ocultar elementos de YouTube */}
+      <style jsx>{`
+        :global(.youtube-player-container iframe) {
+          pointer-events: none;
+        }
+        
+        /* Ocultar logo de YouTube y otros elementos */
+        :global(.youtube-player-container .ytp-watermark),
+        :global(.youtube-player-container .ytp-title),
+        :global(.youtube-player-container .ytp-title-channel),
+        :global(.youtube-player-container .ytp-chrome-top),
+        :global(.youtube-player-container .ytp-chrome-bottom),
+        :global(.youtube-player-container .ytp-gradient-top),
+        :global(.youtube-player-container .ytp-gradient-bottom),
+        :global(.youtube-player-container .ytp-pause-overlay) {
+          display: none !important;
+        }
+      `}</style>
     </div>
   );
 };
