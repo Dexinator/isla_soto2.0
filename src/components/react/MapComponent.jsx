@@ -1,12 +1,17 @@
 import { useEffect, useRef, useState } from 'react';
+import contentEs from '../../data/content-es.json';
+import contentEn from '../../data/content-en.json';
 
-const MapComponent = ({ murals, route, currentMural, onMuralSelect, className = "" }) => {
+const MapComponent = ({ murals, route, currentMural, onMuralSelect, language = 'es', className = "" }) => {
   const mapRef = useRef(null);
   const mapInstanceRef = useRef(null);
   const markersRef = useRef([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [scrollZoomEnabled, setScrollZoomEnabled] = useState(false);
+
+  // Seleccionar el contenido según el idioma
+  const content = language === 'en' ? contentEn : contentEs;
 
   // Filtrar murales que tienen coordenadas válidas (no [0,0])
   const muralsWithCoordinates = murals.filter(
@@ -106,21 +111,21 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, className = 
             // Popup con información del mural
             const popupContent = `
               <div class="p-2 min-w-48">
-                <h3 class="font-semibold text-SM-blue mb-2">${mural.title.es}</h3>
-                <p class="text-sm text-slate-600 mb-3">${mural.description.es}</p>
+                <h3 class="font-semibold text-SM-blue mb-2">${mural.title[language]}</h3>
+                <p class="text-sm text-slate-600 mb-3">${mural.description[language]}</p>
                 <div class="flex flex-col space-y-2">
                   <button 
                     onclick="window.selectMural(${mural.id})" 
                     class="bg-SM-blue text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors"
                   >
-                    🎧 Escuchar audioguía
+                    ${content.map.listenAudioguide}
                   </button>
                   <a 
                     href="https://maps.google.com/maps?daddr=${mural.coordinates[0]},${mural.coordinates[1]}" 
                     target="_blank"
                     class="bg-SM-yellow text-SM-black px-3 py-1 rounded text-sm text-center hover:bg-yellow-500 transition-colors"
                   >
-                    🗺️ Cómo llegar
+                    ${content.map.getDirections}
                   </a>
                 </div>
               </div>
@@ -175,7 +180,7 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, className = 
         }
       } catch (err) {
         console.error('Error loading map:', err);
-        setError('Error al cargar el mapa');
+        setError(content.map.error);
         setIsLoading(false);
       }
     };
@@ -192,7 +197,7 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, className = 
         delete window.selectMural;
       }
     };
-  }, [murals, route]);
+  }, [murals, route, language, content]);
 
   // Actualizar markers cuando cambia el mural actual
   useEffect(() => {
@@ -227,13 +232,13 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, className = 
       <div className={`bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700 ${className}`}>
         <div className="text-center">
           <div className="text-red-500 text-4xl mb-4">⚠️</div>
-          <h3 className="font-semibold text-lg mb-2">Error al cargar el mapa</h3>
+          <h3 className="font-semibold text-lg mb-2">{content.map.error}</h3>
           <p className="text-slate-600 dark:text-slate-400 mb-4">{error}</p>
           <button 
             onClick={() => window.location.reload()} 
             className="bg-SM-blue text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
           >
-            Intentar de nuevo
+            {content.map.tryAgain}
           </button>
         </div>
       </div>
@@ -310,10 +315,10 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, className = 
         <div className="flex items-center justify-between">
           <div>
             <h3 className="font-semibold text-lg text-slate-900 dark:text-slate-100">
-              🗺️ Mapa de la Ruta
+              {content.map.title}
             </h3>
             <p className="text-sm text-slate-600 dark:text-slate-400">
-              {route?.totalDistance} • {route?.estimatedTime}
+              {language === 'en' ? "Total Route" : "Recorrido Total"} • {route?.totalDistance} • {language === 'en' ? "Total Duration" : "Duración total:"} {route?.estimatedTime}
             </p>
           </div>
           <div className="flex items-center space-x-2">
@@ -324,9 +329,9 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, className = 
                   ? 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600'
                   : 'bg-SM-blue text-white hover:bg-blue-700'
               }`}
-              title={scrollZoomEnabled ? 'Mapa libre - Click para bloquear' : 'Mapa bloqueado - Click para liberar interacción'}
+              title={scrollZoomEnabled ? content.map.mapUnlockedTitle : content.map.mapLockedTitle}
             >
-              {scrollZoomEnabled ? '🔒 Bloquear Mapa' : '🔓 Desbloquear Mapa'}
+              {scrollZoomEnabled ? content.map.lockMap : content.map.unlockMap}
             </button>
             {muralsWithCoordinates.length > 0 && (
               <a
@@ -335,7 +340,7 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, className = 
                 rel="noopener noreferrer"
                 className="bg-SM-yellow text-SM-black px-3 py-2 rounded-lg text-sm font-medium hover:bg-yellow-500 transition-colors"
               >
-                Abrir en Google Maps
+                {content.map.openInGoogleMaps}
               </a>
             )}
           </div>
@@ -348,7 +353,7 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, className = 
           <div className="absolute inset-0 bg-slate-100 dark:bg-slate-700 flex items-center justify-center z-10">
             <div className="text-center">
               <div className="animate-spin w-8 h-8 border-4 border-SM-blue border-t-transparent rounded-full mx-auto mb-2"></div>
-              <p className="text-sm text-slate-600 dark:text-slate-400">Cargando mapa...</p>
+              <p className="text-sm text-slate-600 dark:text-slate-400">{content.map.loading}</p>
             </div>
           </div>
         )}
@@ -370,23 +375,22 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, className = 
             <div className="flex items-center space-x-4">
               <div className="flex items-center">
                 <div className="w-4 h-4 bg-SM-blue rounded-full mr-2"></div>
-                <span className="text-slate-600 dark:text-slate-400">Mural</span>
+                <span className="text-slate-600 dark:text-slate-400">{content.map.legend.currentMural}</span>
               </div>
               <div className="flex items-center">
                 <div className="w-4 h-4 bg-SM-yellow rounded-full mr-2"></div>
-                <span className="text-slate-600 dark:text-slate-400">Reproduciendo</span>
+                <span className="text-slate-600 dark:text-slate-400">{content.map.legend.playing}</span>
               </div>
               <div className="flex items-center">
                 <div className="w-4 h-1 bg-SM-blue mr-2"></div>
-                <span className="text-slate-600 dark:text-slate-400">Ruta recomendada</span>
+                <span className="text-slate-600 dark:text-slate-400">{content.map.legend.recommendedRoute}</span>
               </div>
             </div>
           </div>
           {!scrollZoomEnabled && (
             <div className="text-xs text-slate-500 dark:text-slate-400 flex items-center">
               <span className="mr-1">💡</span>
-              <span>Desplazamiento del mapa bloqueado. Haz clic en el botón "Desbloquear mapa" para navegar por él.
-              </span>
+              <span>{content.map.scrollLockMessage}</span>
             </div>
           )}
         </div>

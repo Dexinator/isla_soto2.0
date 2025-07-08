@@ -87,14 +87,14 @@
     "loading": "Loading map...",
     "error": "Error loading map",
     "tryAgain": "Try again",
-    "mapFree": "🔓 Map unlocked",
-    "mapLocked": "🔒 Map locked",
-    "mapFreeTitle": "Map unlocked - Click to lock",
+    "lockMap": "🔒 Lock Map",
+    "unlockMap": "🔓 Unlock Map",
     "mapLockedTitle": "Map locked - Click to unlock interaction",
-    "scrollLockMessage": "💡 Scroll locked for better navigation. Use the \"Zoom locked\" button to enable scroll zoom.",
+    "mapUnlockedTitle": "Map free - Click to lock",
+    "scrollLockMessage": "💡 Map scrolling locked. Click the 'Unlock Map' button to navigate.",
     "legend": {
       "currentMural": "Mural",
-      "playing": "Playing",
+      "playing": "Now playing",
       "recommendedRoute": "Recommended route",
       "muralsCount": "murals"
     }

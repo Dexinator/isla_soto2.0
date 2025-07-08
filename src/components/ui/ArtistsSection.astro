@@ -1,0 +1,94 @@
+---
+import { Image } from 'astro:assets';
+import danielMartinImg from '../../assets/images/artists/Daniel Martín.jpg';
+import cainFerrerasImg from '../../assets/images/artists/Caín Ferreras.jpg';
+import roberBeceImg from '../../assets/images/artists/Rober Beces.jpg';
+
+interface Props {
+  language?: 'es' | 'en';
+}
+
+const { language = 'es' } = Astro.props;
+
+const artists = [
+  {
+    id: 'daniel-martin',
+    name: 'Daniel Martín',
+    instagram: '@artedanielmartín',
+    instagramUrl: 'https://www.instagram.com/artedanielmartin',
+    image: danielMartinImg
+  },
+  {
+    id: 'cain-ferreras',
+    name: 'Caín Ferreras',
+    instagram: '@caínferreras',
+    instagramUrl: 'https://www.instagram.com/cainferreras',
+    image: cainFerrerasImg
+  },
+  {
+    id: 'rober-bece',
+    name: 'Rober Bece',
+    instagram: '@rober_bece_art',
+    instagramUrl: 'https://www.instagram.com/rober_bece_art',
+    image: roberBeceImg
+  }
+];
+
+const content = {
+  es: {
+    title: 'Artistas',
+    followOn: 'Síguelo en Instagram'
+  },
+  en: {
+    title: 'Artists',
+    followOn: 'Follow on Instagram'
+  }
+};
+---
+
+<section class="w-full" aria-labelledby="artists-title">
+  <div class="card bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-6 sm:p-8">
+    <h2 id="artists-title" class="text-2xl font-bold mb-8 text-center text-gray-900 dark:text-gray-100">
+      {content[language].title}
+    </h2>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+      {artists.map((artist) => (
+        <div class="flex flex-col items-center space-y-4">
+          <div class="relative group">
+            <div class="w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden bg-gradient-to-br from-SM-blue to-blue-700 shadow-lg transition-transform group-hover:scale-105">
+              <Image
+                src={artist.image}
+                alt={artist.name}
+                width={160}
+                height={160}
+                quality={85}
+                format="webp"
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          
+          <div class="text-center space-y-2">
+            <h3 class="font-semibold text-lg text-gray-900 dark:text-gray-100">
+              {artist.name}
+            </h3>
+            <a
+              href={artist.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center space-x-2 text-SM-blue hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition-colors"
+              aria-label={`${content[language].followOn}: ${artist.name}`}
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1112.324 0 6.162 6.162 0 01-12.324 0zM12 16a4 4 0 110-8 4 4 0 010 8zm4.965-10.405a1.44 1.44 0 112.881.001 1.44 1.44 0 01-2.881-.001z"/>
+              </svg>
+              <span class="font-medium">{artist.instagram}</span>
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -3,6 +3,7 @@ import Layout from '../components/ui/Layout.astro';
 import Header from '../components/ui/Header.astro';
 import Footer from '../components/ui/Footer.astro';
 import AudioguideContainer from '../components/react/AudioguideContainer.jsx';
+import ArtistsSection from '../components/ui/ArtistsSection.astro';
 
 // Importar datos
 import muralsData from '../data/murals.json';
@@ -83,6 +84,11 @@ const pageDescription = content.audioguidePages.descriptive.description;
           language={lang}
           client:load
         />
+        
+        <!-- Sección de artistas -->
+        <div class="mt-8">
+          <ArtistsSection language={lang} />
+        </div>
       </div>
     </div>
   </main>

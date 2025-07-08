@@ -186,6 +186,7 @@ const AudioguideContainer = ({
           route={routeData}
           currentMural={currentMural}
           onMuralSelect={handleMuralSelect}
+          language={language}
           className="w-full"
         />
       </section>

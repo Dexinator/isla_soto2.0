@@ -4,7 +4,7 @@
       "id": 1,
       "title": {
         "es": "Empieza La Ruta de los Murales",
-        "en": "Start of the Murals Route"
+        "en": "Welcome to the Mural Route"
       },
       "description": {
         "es": "Punto de inicio del recorrido por los murales de Santa Marta de Tormes.",
@@ -14,7 +14,7 @@
       "audio": {
         "normal": {
           "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960961%3Fsecret_token%3Ds-aWKFzmbhl8y",
-          "en": "https://soundcloud.com/user-example/ruta-inicio-normal-en"
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807329%3Fsecret_token%3Ds-UeTvuPhcc34"
         },
         "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023547%3Fsecret_token%3Ds-BWOsYK9houq",
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606264%3Fsecret_token%3Ds-q499Tanjp7Q"
@@ -37,14 +37,15 @@
         "normal": "3 min",
         "descriptive": "5 min",
         "easy": "2 min",
-        "sign": "3 min"
+        "sign": "3 min",
+        "english": "2 min"
       }
     },
     {
       "id": 2,
       "title": {
         "es": "Mural Paseo Fluvial",
-        "en": "Riverside Walk Mural"
+        "en": "Riverside Promenade"
       },
       "description": {
         "es": "Mural que representa el paseo fluvial de Santa Marta junto al río Tormes.",
@@ -55,7 +56,7 @@
       "audio": {
         "normal": {
           "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960997%3Fsecret_token%3Ds-4htsSn5ECt6",
-          "en": "https://soundcloud.com/user-example/paseo-fluvial-normal-en"
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807341%3Fsecret_token%3Ds-XzyoJZcopoJ"
         },
         "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023520%3Fsecret_token%3Ds-DxSGINScIle",
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606282%3Fsecret_token%3Ds-rKEyQ9aCtwP"
@@ -78,14 +79,15 @@
         "normal": "5 min",
         "descriptive": "8 min",
         "easy": "3 min",
-        "sign": "5 min"
+        "sign": "5 min",
+        "english": "2 min"
       }
     },
     {
       "id": 3,
       "title": {
         "es": "Mural Centro de Interpretación. Isla del Soto",
-        "en": "Interpretation Center Mural. Soto Island"
+        "en": "Interpretation Centre. Soto Island"
       },
       "description": {
         "es": "Mural ubicado en el Centro de Interpretación de la Isla del Soto.",
@@ -96,7 +98,7 @@
       "audio": {
         "normal": {
           "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960988%3Fsecret_token%3Ds-1HB817uvUxI",
-          "en": "https://soundcloud.com/user-example/isla-soto-normal-en"
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807335%3Fsecret_token%3Ds-yIgmJodRtfX"
         },
         "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023550%3Fsecret_token%3Ds-yP755oKyZUn",
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606267%3Fsecret_token%3Ds-oqSa4mcIIQM"
@@ -119,14 +121,15 @@
         "normal": "6 min",
         "descriptive": "9 min",
         "easy": "4 min",
-        "sign": "6 min"
+        "sign": "6 min",
+        "english": "2 min"
       }
     },
     {
       "id": 4,
       "title": {
         "es": "Mural La Llegada del Color",
-        "en": "The Arrival of Color Mural"
+        "en": "The Arrival of Colour"
       },
       "description": {
         "es": "Mural inspirado en la transformación urbana a través del arte y el color digital.",
@@ -137,7 +140,7 @@
       "audio": {
         "normal": {
           "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960970%3Fsecret_token%3Ds-ZZfGZRY29D4",
-          "en": "https://soundcloud.com/user-example/llegada-color-normal-en"
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807338%3Fsecret_token%3Ds-EpPgyGFZu51"
         },
         "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023535%3Fsecret_token%3Ds-Ipo9wFHuETP",
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606252%3Fsecret_token%3Ds-vMvclTiolRi"
@@ -160,14 +163,15 @@
         "normal": "8 min",
         "descriptive": "12 min",
         "easy": "5 min",
-        "sign": "7 min"
+        "sign": "7 min",
+        "english": "2 min"
       }
     },
     {
       "id": 5,
       "title": {
         "es": "Mural La Bosque",
-        "en": "The Forest Mural"
+        "en": "Forest"
       },
       "description": {
         "es": "Mural que representa la conexión entre la naturaleza y la vida urbana.",
@@ -178,7 +182,7 @@
       "audio": {
         "normal": {
           "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960964%3Fsecret_token%3Ds-EMPcpJZWhf8",
-          "en": "https://soundcloud.com/user-example/bosque-normal-en"
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807386%3Fsecret_token%3Ds-dqJq1vKk7to"
         },
         "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023556%3Fsecret_token%3Ds-1Y9yCNvJ63X",
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606261%3Fsecret_token%3Ds-sWPPE3X2vRF"
@@ -201,14 +205,15 @@
         "normal": "7 min",
         "descriptive": "10 min",
         "easy": "4 min",
-        "sign": "6 min"
+        "sign": "6 min",
+        "english": "2 min"
       }
     },
     {
       "id": 6,
       "title": {
         "es": "Mural Mujer, historia y pueblo",
-        "en": "Women, History and Town Mural"
+        "en": "Woman, History and Community"
       },
       "description": {
         "es": "Mural dedicado al papel de la mujer en la historia de Santa Marta de Tormes.",
@@ -219,7 +224,7 @@
       "audio": {
         "normal": {
           "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960955%3Fsecret_token%3Ds-MpqEy9apYYp",
-          "en": "https://soundcloud.com/user-example/mujer-historia-normal-en"
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807356%3Fsecret_token%3Ds-usq50t2bjfC"
         },
         "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023568%3Fsecret_token%3Ds-Bw2t3ydyf8r",
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606273%3Fsecret_token%3Ds-EPrOEuqAnqy"
@@ -242,14 +247,15 @@
         "normal": "9 min",
         "descriptive": "13 min",
         "easy": "5 min",
-        "sign": "8 min"
+        "sign": "8 min",
+        "english": "2 min"
       }
     },
     {
       "id": 7,
       "title": {
         "es": "Mural Doctor Torres Villarroel",
-        "en": "Doctor Torres Villarroel Mural"
+        "en": "Doctor Torres Villarroel"
       },
       "description": {
         "es": "Mural dedicado al famoso escritor y matemático Diego de Torres Villarroel.",
@@ -260,7 +266,7 @@
       "audio": {
         "normal": {
           "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117961000%3Fsecret_token%3Ds-WKK5dwwTkWW",
-          "en": "https://soundcloud.com/user-example/torres-villarroel-normal-en"
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807359%3Fsecret_token%3Ds-TnmaHOsyNxV"
         },
         "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023553%3Fsecret_token%3Ds-fCpYMsadex7",
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606240%3Fsecret_token%3Ds-UY320WegVND"
@@ -283,14 +289,15 @@
         "normal": "10 min",
         "descriptive": "15 min",
         "easy": "6 min",
-        "sign": "9 min"
+        "sign": "9 min",
+        "english": "2 min"
       }
     },
     {
       "id": 8,
       "title": {
         "es": "Mural El Rincón de Sandra y Gustavo",
-        "en": "Sandra and Gustavo's Corner Mural"
+        "en": "Sandra and Gustavo's Corner"
       },
       "description": {
         "es": "Mural que representa un espacio especial dedicado a Sandra y Gustavo.",
@@ -301,7 +308,7 @@
       "audio": {
         "normal": {
           "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960952%3Fsecret_token%3Ds-Qrzetuo2mmM",
-          "en": "https://soundcloud.com/user-example/rincon-sandra-gustavo-normal-en"
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807362%3Fsecret_token%3Ds-LMjMGzxHJca"
         },
         "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023511%3Fsecret_token%3Ds-fJVQXydUQxu",
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606234%3Fsecret_token%3Ds-kv8Ev7K56Vb"
@@ -324,14 +331,15 @@
         "normal": "6 min",
         "descriptive": "9 min",
         "easy": "4 min",
-        "sign": "5 min"
+        "sign": "5 min",
+        "english": "1 min"
       }
     },
     {
       "id": 9,
       "title": {
         "es": "Murales Festival de Arte Urbano. Ediciones 1 y 2",
-        "en": "Urban Art Festival Murals. Editions 1 and 2"
+        "en": "Santa Marta Urban Art Festival – Editions I and II"
       },
       "description": {
         "es": "Murales creados durante las primeras dos ediciones del Festival de Arte Urbano.",
@@ -342,7 +350,7 @@
       "audio": {
         "normal": {
           "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960973%3Fsecret_token%3Ds-4WGsLuhg5Yb",
-          "en": "https://soundcloud.com/user-example/festival-arte-urbano-normal-en"
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807380%3Fsecret_token%3Ds-lTmgc3w6vBl"
         },
         "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023523%3Fsecret_token%3Ds-aj22LGi3KB2",
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606243%3Fsecret_token%3Ds-ptDZvmHsZtt"
@@ -365,14 +373,15 @@
         "normal": "12 min",
         "descriptive": "18 min",
         "easy": "7 min",
-        "sign": "10 min"
+        "sign": "10 min",
+        "english": "2 min"
       }
     },
     {
       "id": 10,
       "title": {
         "es": "Mural Generación Millennial",
-        "en": "Millennial Generation Mural"
+        "en": "Millennial Generation"
       },
       "description": {
         "es": "Mural que representa la cultura y valores de la generación millennial.",
@@ -383,7 +392,7 @@
       "audio": {
         "normal": {
           "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960958%3Fsecret_token%3Ds-XL9ZWY43zp9",
-          "en": "https://soundcloud.com/user-example/generacion-millennial-normal-en"
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807332%3Fsecret_token%3Ds-OPlbtonX7Uw"
         },
         "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023544%3Fsecret_token%3Ds-KAcWT9Tb4mW",
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606228%3Fsecret_token%3Ds-vHlxxQiUZG2"
@@ -406,14 +415,15 @@
         "normal": "8 min",
         "descriptive": "11 min",
         "easy": "5 min",
-        "sign": "7 min"
+        "sign": "7 min",
+        "english": "2 min"
       }
     },
     {
       "id": 11,
       "title": {
         "es": "Mural Paseo Alcalde José Sánchez",
-        "en": "Mayor José Sánchez Walk Mural"
+        "en": "Paseo Alcalde José Sánchez"
       },
       "description": {
         "es": "Mural ubicado en el paseo dedicado al Alcalde José Sánchez.",
@@ -424,7 +434,7 @@
       "audio": {
         "normal": {
           "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960982%3Fsecret_token%3Ds-KRWlwSVzwPM",
-          "en": "https://soundcloud.com/user-example/paseo-alcalde-normal-en"
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807353%3Fsecret_token%3Ds-swZYK5p8X2F"
         },
         "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023559%3Fsecret_token%3Ds-OHR26jjn1zO",
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606237%3Fsecret_token%3Ds-53MygvXCYd1"
@@ -447,14 +457,15 @@
         "normal": "7 min",
         "descriptive": "10 min",
         "easy": "4 min",
-        "sign": "6 min"
+        "sign": "6 min",
+        "english": "2 min"
       }
     },
     {
       "id": 12,
       "title": {
         "es": "Mural Respira",
-        "en": "Breathe Mural"
+        "en": "Breathe"
       },
       "description": {
         "es": "Mural que invita a la reflexión y al bienestar personal.",
@@ -465,7 +476,7 @@
       "audio": {
         "normal": {
           "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960994%3Fsecret_token%3Ds-Stz02SFTS8g",
-          "en": "https://soundcloud.com/user-example/respira-normal-en"
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807371%3Fsecret_token%3Ds-nfp8FhNEnUG"
         },
         "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023514%3Fsecret_token%3Ds-uyq3LAfho8n",
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606231%3Fsecret_token%3Ds-UXjku1CQafg"
@@ -488,14 +499,15 @@
         "normal": "5 min",
         "descriptive": "8 min",
         "easy": "3 min",
-        "sign": "4 min"
+        "sign": "4 min",
+        "english": "2 min"
       }
     },
     {
       "id": 13,
       "title": {
         "es": "Mural La Llegada de las Llaves",
-        "en": "The Arrival of the Keys Mural"
+        "en": "The Arrival of the Keys"
       },
       "description": {
         "es": "Mural simbólico sobre las llaves como símbolo de nuevas oportunidades.",
@@ -506,7 +518,7 @@
       "audio": {
         "normal": {
           "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960946%3Fsecret_token%3Ds-qTvhQ7oRYnP",
-          "en": "https://soundcloud.com/user-example/llegada-llaves-normal-en"
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807368%3Fsecret_token%3Ds-tgCmzuC5dDD"
         },
         "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023562%3Fsecret_token%3Ds-6gXiIE1iDdS",
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606279%3Fsecret_token%3Ds-KgFWiJsJ2Co"
@@ -529,14 +541,15 @@
         "normal": "6 min",
         "descriptive": "9 min",
         "easy": "4 min",
-        "sign": "5 min"
+        "sign": "5 min",
+        "english": "2 min"
       }
     },
     {
       "id": 14,
       "title": {
         "es": "Mural Sueña",
-        "en": "Dream Mural"
+        "en": "Dream"
       },
       "description": {
         "es": "Mural inspirador que invita a soñar y perseguir los objetivos.",
@@ -547,7 +560,7 @@
       "audio": {
         "normal": {
           "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960967%3Fsecret_token%3Ds-A0GXmKTZx7S",
-          "en": "https://soundcloud.com/user-example/suena-normal-en"
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807374%3Fsecret_token%3Ds-vjFoKhgEfUq"
         },
         "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023538%3Fsecret_token%3Ds-kn9EzoeoXtu",
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606276%3Fsecret_token%3Ds-fHIwEixbk5L"
@@ -570,14 +583,15 @@
         "normal": "5 min",
         "descriptive": "7 min",
         "easy": "3 min",
-        "sign": "4 min"
+        "sign": "4 min",
+        "english": "2 min"
       }
     },
     {
       "id": 15,
       "title": {
         "es": "Mural Océano",
-        "en": "Ocean Mural"
+        "en": "Ocean"
       },
       "description": {
         "es": "Mural que representa la vastedad y belleza del océano.",
@@ -588,7 +602,7 @@
       "audio": {
         "normal": {
           "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960991%3Fsecret_token%3Ds-ix42CNZjTKv",
-          "en": "https://soundcloud.com/user-example/oceano-normal-en"
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807377%3Fsecret_token%3Ds-97ZhrvEwSak"
         },
         "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023517%3Fsecret_token%3Ds-m4gWqnAquX3",
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606270%3Fsecret_token%3Ds-YbnRcbM3Mol"
@@ -611,14 +625,15 @@
         "normal": "8 min",
         "descriptive": "12 min",
         "easy": "5 min",
-        "sign": "7 min"
+        "sign": "7 min",
+        "english": "2 min"
       }
     },
     {
       "id": 16,
       "title": {
         "es": "Mural Carretera Madrid",
-        "en": "Madrid Highway Mural"
+        "en": "Madrid Road"
       },
       "description": {
         "es": "Mural ubicado en la zona de la carretera hacia Madrid.",
@@ -629,7 +644,7 @@
       "audio": {
         "normal": {
           "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960949%3Fsecret_token%3Ds-FT8nH19KbFp",
-          "en": "https://soundcloud.com/user-example/carretera-madrid-normal-en"
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807365%3Fsecret_token%3Ds-aBOPt8hR0R4"
         },
         "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023532%3Fsecret_token%3Ds-E9IY0Kw9Tom",
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606255%3Fsecret_token%3Ds-mjXOhc6gMUU"
@@ -652,14 +667,15 @@
         "normal": "6 min",
         "descriptive": "9 min",
         "easy": "4 min",
-        "sign": "5 min"
+        "sign": "5 min",
+        "english": "1 min"
       }
     },
     {
       "id": 17,
       "title": {
         "es": "Daniel Martín. Artista",
-        "en": "Daniel Martín. Artist"
+        "en": "Daniel Martín"
       },
       "description": {
         "es": "Información sobre el artista Daniel Martín y su obra en Santa Marta.",
@@ -669,7 +685,7 @@
       "audio": {
         "normal": {
           "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960976%3Fsecret_token%3Ds-6PQXSHRVxnY",
-          "en": "https://soundcloud.com/user-example/daniel-martin-normal-en"
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807383%3Fsecret_token%3Ds-4MtKZPQ2AR6"
         },
         "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023526%3Fsecret_token%3Ds-Ara5iFM9yvm",
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606285%3Fsecret_token%3Ds-52uOC51dwlF"
@@ -692,14 +708,15 @@
         "normal": "10 min",
         "descriptive": "15 min",
         "easy": "6 min",
-        "sign": "8 min"
+        "sign": "8 min",
+        "english": "2 min"
       }
     },
     {
       "id": 18,
       "title": {
         "es": "Caín Ferreras. Artista",
-        "en": "Caín Ferreras. Artist"
+        "en": "Caín Ferreras"
       },
       "description": {
         "es": "Información sobre el artista Caín Ferreras y su contribución al arte urbano.",
@@ -709,7 +726,7 @@
       "audio": {
         "normal": {
           "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960985%3Fsecret_token%3Ds-PYkFEOA1jE9",
-          "en": "https://soundcloud.com/user-example/cain-ferreras-normal-en"
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807350%3Fsecret_token%3Ds-HOnqXxoOtDB"
         },
         "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023529%3Fsecret_token%3Ds-rsPVdZDprQx",
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606246%3Fsecret_token%3Ds-dX4agNf2tTG"
@@ -732,14 +749,15 @@
         "normal": "9 min",
         "descriptive": "13 min",
         "easy": "5 min",
-        "sign": "7 min"
+        "sign": "7 min",
+        "english": "2 min"
       }
     },
     {
       "id": 19,
       "title": {
         "es": "Rober Bece. Artista",
-        "en": "Rober Bece. Artist"
+        "en": "Rober Bece"
       },
       "description": {
         "es": "Información sobre el artista Rober Bece y su estilo único.",
@@ -749,7 +767,7 @@
       "audio": {
         "normal": {
           "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960979%3Fsecret_token%3Ds-ueLAk2Wwz6h",
-          "en": "https://soundcloud.com/user-example/rober-bece-normal-en"
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807344%3Fsecret_token%3Ds-S63rAK5dYKt"
         },
         "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023565%3Fsecret_token%3Ds-RAbJDFIJmUa",
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606249%3Fsecret_token%3Ds-1dHfam95PMv"
@@ -772,14 +790,15 @@
         "normal": "8 min",
         "descriptive": "11 min",
         "easy": "5 min",
-        "sign": "6 min"
+        "sign": "6 min",
+        "english": "2 min"
       }
     },
     {
       "id": 20,
       "title": {
         "es": "Llegamos al Final",
-        "en": "We Reach the End"
+        "en": "We've Reached the End"
       },
       "description": {
         "es": "Punto final del recorrido por los murales de Santa Marta de Tormes.",
@@ -789,7 +808,7 @@
       "audio": {
         "normal": {
           "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960943%3Fsecret_token%3Ds-i2TvU5iIOEO",
-          "en": "https://soundcloud.com/user-example/final-normal-en"
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807347%3Fsecret_token%3Ds-0lRDba8LJn9"
         },
         "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023541%3Fsecret_token%3Ds-UW6daPDpttB",
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606258%3Fsecret_token%3Ds-17HxIwk5eeY"
@@ -812,7 +831,8 @@
         "normal": "4 min",
         "descriptive": "6 min",
         "easy": "3 min",
-        "sign": "4 min"
+        "sign": "4 min",
+        "english": "2 min"
       }
     }
   ],

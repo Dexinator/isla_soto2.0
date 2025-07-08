@@ -122,32 +122,24 @@
     "loading": "Cargando audio..."
   },
   "map": {
-    "header": {
-      "title": "🗺️ Mapa de la Ruta"
-    },
-    "popup": {
-      "listenAudioguide": "🎧 Escuchar audioguía",
-      "getDirections": "🗺️ Cómo llegar"
-    },
-    "errors": {
-      "loadError": "Error al cargar el mapa",
-      "tryAgain": "Intentar de nuevo"
-    },
+    "title": "🗺️ Mapa de la Ruta",
+    "listenAudioguide": "🎧 Escuchar audioguía",
+    "getDirections": "🗺️ Cómo llegar",
+    "openInGoogleMaps": "Abrir en Google Maps",
     "loading": "Cargando mapa...",
-    "controls": {
-      "mapFreeTitle": "Mapa libre - Click para bloquear",
-      "mapLockedTitle": "Mapa bloqueado - Click para liberar interacción",
-      "mapFree": "🔓 Mapa libre",
-      "mapLocked": "🔒 Mapa bloqueado",
-      "openInGoogleMaps": "Abrir en Google Maps"
-    },
+    "error": "Error al cargar el mapa",
+    "tryAgain": "Intentar de nuevo",
+    "lockMap": "🔒 Bloquear Mapa",
+    "unlockMap": "🔓 Desbloquear Mapa",
+    "mapLockedTitle": "Mapa bloqueado - Click para liberar interacción",
+    "mapUnlockedTitle": "Mapa libre - Click para bloquear",
+    "scrollLockMessage": "💡 Desplazamiento del mapa bloqueado. Haz clic en el botón 'Desbloquear mapa' para navegar por él.",
     "legend": {
-      "mural": "Mural",
+      "currentMural": "Mural",
       "playing": "Reproduciendo",
       "recommendedRoute": "Ruta recomendada",
-      "murals": "murales"
-    },
-    "scrollLockMessage": "💡 Scroll bloqueado para mejor navegación. Usa el botón \"Zoom bloqueado\" para habilitar zoom con scroll."
+      "muralsCount": "murales"
+    }
   },
   "playlist": {
     "header": {

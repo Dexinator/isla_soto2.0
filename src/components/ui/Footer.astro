@@ -8,7 +8,7 @@ import asprodesLogo from '../../assets/images/asprodes-logo.png';
 import aspasLogo from '../../assets/images/aspas-logo.png';
 import audaceticsLogo from '../../assets/images/audacetics-logo.png';
 import ayuntamientoLogo from '../../assets/images/ayuntamiento-logo.png';
-import turismoColaboradorLogo from '../../assets/images/turismo-colaborador-logo.png';
+import turismoColaboradorLogo from '../../assets/images/turismo-sm.png';
 import contentEs from '../../data/content-es.json';
 import contentEn from '../../data/content-en.json';
 
@@ -73,18 +73,40 @@ const footerContent = content.footer;
 
     <!-- Información de contacto -->
     <div class="max-w-xl mx-auto text-center mb-8">
-      <h3 class="text-lg font-bold text-slate-900 dark:text-slate-100 mb-4">
-        {footerContent.contact.title}
-      </h3>
       <div class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
-        <p>{footerContent.contact.address}</p>
+        <p class="inline-flex items-center gap-2">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 64 64">
+            <path d="M32,0C18.746,0,8,10.746,8,24c0,5.219,1.711,10.008,4.555,13.93c0.051,0.094,0.059,0.199,0.117,0.289l16,24
+            C29.414,63.332,30.664,64,32,64s2.586-0.668,3.328-1.781l16-24c0.059-0.09,0.066-0.195,0.117-0.289C54.289,34.008,56,29.219,56,24
+            C56,10.746,45.254,0,32,0z M32,32c-4.418,0-8-3.582-8-8s3.582-8,8-8s8,3.582,8,8S36.418,32,32,32z"/>
+          </svg>
+
+        
+          {footerContent.contact.address}
+        </p>
         <p>
-          <a href={`tel:${footerContent.contact.phone.replace(/\s/g, '')}`} class="hover:text-SM-blue transition-colors">
+          <a 
+          href={`tel:${footerContent.contact.phone.replace(/\s/g, '')}`} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-SM-blue transition-colors"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M10.91 2.75h3a11.67 11.67 0 0 1-3.8 7.46 11.71 11.71 0 0 1-7.88 3h-.77V10.4L4 9.52l.84 1.42.59 1.06 1.07-.62a14.36 14.36 0 0 0 4.77-4.5L12 5.73l-1.22-.64-1-.52 1.09-1.82m0-1.25a1.26 1.26 0 0 0-1.07.61L8.75 3.93a1.24 1.24 0 0 0 .49 1.75l1 .52a13.06 13.06 0 0 1-4.36 4.1L5 8.89a1.25 1.25 0 0 0-1-.62 1.22 1.22 0 0 0-.41.07L1 9.22a1.25 1.25 0 0 0-.79 1.18v2.85a1.25 1.25 0 0 0 1.25 1.25h.75A13 13 0 0 0 15.14 2.88a1.26 1.26 0 0 0-1.25-1.38z"/>
+            </svg>
             {footerContent.contact.phone}
           </a>
         </p>
         <p>
-          <a href={`mailto:${footerContent.contact.email}`} class="hover:text-SM-blue transition-colors">
+          <a 
+          href={`mailto:${footerContent.contact.email}`} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-SM-blue transition-colors"
+          >
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentcolor">
+              <path d="M3.02832 10L10.2246 14.8166C10.8661 15.2443 11.1869 15.4581 11.5336 15.5412C11.8399 15.6146 12.1593 15.6146 12.4657 15.5412C12.8124 15.4581 13.1332 15.2443 13.7747 14.8166L20.971 10M10.2981 4.06879L4.49814 7.71127C3.95121 8.05474 3.67775 8.22648 3.4794 8.45864C3.30385 8.66412 3.17176 8.90305 3.09111 9.161C3 9.45244 3 9.77535 3 10.4212V16.8C3 17.9201 3 18.4802 3.21799 18.908C3.40973 19.2843 3.71569 19.5903 4.09202 19.782C4.51984 20 5.07989 20 6.2 20H17.8C18.9201 20 19.4802 20 19.908 19.782C20.2843 19.5903 20.5903 19.2843 20.782 18.908C21 18.4802 21 17.9201 21 16.8V10.4212C21 9.77535 21 9.45244 20.9089 9.161C20.8282 8.90305 20.6962 8.66412 20.5206 8.45864C20.3223 8.22648 20.0488 8.05474 19.5019 7.71127L13.7019 4.06879C13.0846 3.68116 12.776 3.48735 12.4449 3.4118C12.152 3.34499 11.848 3.34499 11.5551 3.4118C11.224 3.48735 10.9154 3.68116 10.2981 4.06879Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
             {footerContent.contact.email}
           </a>
         </p>

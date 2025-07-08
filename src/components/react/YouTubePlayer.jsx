@@ -231,17 +231,42 @@ const YouTubePlayer = ({
     setCurrentTime(newTime);
   };
 
-  const toggleFullscreen = () => {
+  const toggleFullscreen = async () => {
     if (!containerRef.current) return;
 
     if (!document.fullscreenElement) {
-      containerRef.current.requestFullscreen().catch(err => {
+      try {
+        // Entrar en pantalla completa
+        await containerRef.current.requestFullscreen();
+        
+        // En dispositivos móviles, intentar forzar orientación landscape
+        if ('orientation' in screen && screen.orientation.lock) {
+          try {
+            await screen.orientation.lock('landscape');
+          } catch (err) {
+            // Muchos navegadores móviles no soportan lock(), pero no es crítico
+            console.log('No se pudo bloquear la orientación:', err);
+          }
+        }
+      } catch (err) {
         console.error('Error al entrar en pantalla completa:', err);
-      });
+      }
     } else {
-      document.exitFullscreen().catch(err => {
+      try {
+        // Salir de pantalla completa
+        await document.exitFullscreen();
+        
+        // Desbloquear la orientación para volver a portrait
+        if ('orientation' in screen && screen.orientation.unlock) {
+          try {
+            screen.orientation.unlock();
+          } catch (err) {
+            console.log('No se pudo desbloquear la orientación:', err);
+          }
+        }
+      } catch (err) {
         console.error('Error al salir de pantalla completa:', err);
-      });
+      }
     }
   };
 
@@ -280,10 +305,10 @@ const YouTubePlayer = ({
       ref={containerRef}
       className={`bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 overflow-hidden ${className} ${isFullscreen ? 'fixed inset-0 z-[100] rounded-none bg-black' : ''}`}
     >
-      <div className="flex flex-col h-full">
+      <div className={`flex ${isFullscreen ? 'flex-row' : 'flex-col'} h-full`}>
         {/* Video container con aspect ratio 16:9 */}
-        <div className="relative w-full bg-black" style={{ paddingBottom: '56.25%' }}>
-          <div className="absolute inset-0">
+        <div className={`relative bg-black ${isFullscreen ? 'h-full flex-1' : 'w-full'}`} style={{ paddingBottom: isFullscreen ? '0' : '56.25%' }}>
+          <div className={`${isFullscreen ? 'h-full' : 'absolute inset-0'}`}>
             {error ? (
               <div className="flex items-center justify-center h-full bg-slate-900">
                 <div className="text-center p-6">
@@ -312,12 +337,12 @@ const YouTubePlayer = ({
         </div>
 
         {/* Información del mural */}
-        <div className="p-6 flex-grow">
-          <div className="text-center mb-6">
-            <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-2">
+        <div className={`${isFullscreen ? 'w-96 bg-black bg-opacity-90 overflow-y-auto' : 'flex-grow'} p-6`}>
+          <div className={`text-center ${isFullscreen ? 'mb-4' : 'mb-6'}`}>
+            <h3 className={`${isFullscreen ? 'text-xl text-white' : 'text-2xl text-slate-900 dark:text-slate-100'} font-bold mb-2`}>
               {currentMural.title[language]}
             </h3>
-            <div className="flex items-center justify-center space-x-4 text-sm text-slate-600 dark:text-slate-400">
+            <div className={`flex items-center justify-center space-x-4 text-sm ${isFullscreen ? 'text-gray-300' : 'text-slate-600 dark:text-slate-400'}`}>
               <span className="flex items-center">
                 <span className="mr-1">🎨</span> {currentMural.artist}
               </span>
@@ -328,13 +353,13 @@ const YouTubePlayer = ({
           </div>
 
           {/* Barra de progreso */}
-          <div className="mb-6">
-            <div className="flex items-center justify-between text-sm text-slate-600 dark:text-slate-400 mb-2">
+          <div className={`${isFullscreen ? 'mb-4' : 'mb-6'}`}>
+            <div className={`flex items-center justify-between text-sm ${isFullscreen ? 'text-gray-300' : 'text-slate-600 dark:text-slate-400'} mb-2`}>
               <span>{formatTime(currentTime)}</span>
               <span>{formatTime(duration)}</span>
             </div>
             <div 
-              className="h-2 bg-slate-200 dark:bg-slate-700 rounded-full cursor-pointer relative"
+              className={`h-2 ${isFullscreen ? 'bg-gray-800' : 'bg-slate-200 dark:bg-slate-700'} rounded-full cursor-pointer relative`}
               onClick={handleSeek}
             >
               <div 
@@ -345,11 +370,13 @@ const YouTubePlayer = ({
           </div>
 
           {/* Controles principales */}
-          <div className="flex items-center justify-center space-x-8 mb-6">
+          <div className={`flex items-center justify-center ${isFullscreen ? 'space-x-6 mb-4' : 'space-x-8 mb-6'}`}>
             <button
               onClick={onPrevious}
               disabled={!onPrevious}
-              className="p-3 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className={`p-3 rounded-full transition-colors disabled:opacity-50 disabled:cursor-not-allowed ${
+                isFullscreen ? 'hover:bg-gray-800 text-white' : 'hover:bg-slate-100 dark:hover:bg-slate-700'
+              }`}
               aria-label="Anterior"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -378,7 +405,9 @@ const YouTubePlayer = ({
             <button
               onClick={onNext}
               disabled={!onNext}
-              className="p-3 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className={`p-3 rounded-full transition-colors disabled:opacity-50 disabled:cursor-not-allowed ${
+                isFullscreen ? 'hover:bg-gray-800 text-white' : 'hover:bg-slate-100 dark:hover:bg-slate-700'
+              }`}
               aria-label="Siguiente"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -391,10 +420,16 @@ const YouTubePlayer = ({
           {/* Controles de volumen y pantalla completa */}
           <div className="flex items-center justify-between">
             {/* Control de volumen */}
-            <div className="flex items-center space-x-3 bg-slate-100 dark:bg-slate-700 rounded-lg px-4 py-2">
+            <div className={`flex items-center space-x-3 rounded-lg px-4 py-2 ${
+              isFullscreen ? 'bg-gray-800' : 'bg-slate-100 dark:bg-slate-700'
+            }`}>
               <button
                 onClick={() => setIsMuted(!isMuted)}
-                className="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors"
+                className={`transition-colors ${
+                  isFullscreen 
+                    ? 'text-gray-400 hover:text-white' 
+                    : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100'
+                }`}
                 aria-label={isMuted ? "Activar sonido" : "Silenciar"}
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -418,11 +453,15 @@ const YouTubePlayer = ({
                   setVolume(Number(e.target.value));
                   setIsMuted(false);
                 }}
-                className="w-24 h-1 bg-slate-300 dark:bg-slate-600 rounded-lg appearance-none cursor-pointer slider"
+                className={`w-24 h-1 rounded-lg appearance-none cursor-pointer slider ${
+                  isFullscreen ? 'bg-gray-600' : 'bg-slate-300 dark:bg-slate-600'
+                }`}
                 aria-label="Control de volumen"
               />
               
-              <span className="text-sm text-slate-600 dark:text-slate-400 w-10 text-right">
+              <span className={`text-sm w-10 text-right ${
+                isFullscreen ? 'text-gray-400' : 'text-slate-600 dark:text-slate-400'
+              }`}>
                 {isMuted ? '0' : volume}%
               </span>
             </div>
