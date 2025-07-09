@@ -6,6 +6,7 @@ import Layout from '../components/ui/Layout.astro';
 import Header from '../components/ui/Header.astro';
 import Footer from '../components/ui/Footer.astro';
 import Card from '../components/ui/Card.astro';
+import MapCard from '../components/ui/MapCard.astro';
 import '../styles/global.css';
 
 // Importar imágenes de iconos para optimización
@@ -14,9 +15,9 @@ import iconAudioguiaFacil from '../assets/images/icons/audioguia-facil.jpg';
 import iconAudioguiaDescriptiva from '../assets/images/icons/audioguia-descriptiva.jpg';
 import iconSignoguia from '../assets/images/icons/signoguia.jpg';
 
-// Importar datos estáticos (para futuras funcionalidades)
-// import muralsData from '../data/murals.json';
-// import contentEs from '../data/content-es.json';
+// Importar datos para el mapa
+import muralsData from '../data/murals.json';
+const { murals, route } = muralsData;
 ---
 
 <Layout
@@ -90,15 +91,10 @@ import iconSignoguia from '../assets/images/icons/signoguia.jpg';
           />
 
           <!-- Mapa de la Ruta (tarjeta ancha) -->
-          <Card
-            variant="wide"
-            title="Mapa de la Ruta"
-            description="Recorrido completo por los murales de Santa Marta"
-            href="#mapa"
-            icon="🗺️"
-            badge="Interactivo"
-            badgeColor="yellow"
-            gradient="from-green-600 to-green-800"
+          <MapCard
+            muralsData={murals}
+            routeData={route}
+            language="es"
             className="order-5"
           />
         </div>

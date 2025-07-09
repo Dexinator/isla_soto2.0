@@ -14,6 +14,7 @@ const AudioguideContainer = ({
   const [isPlaying, setIsPlaying] = useState(false);
   const [autoPlay, setAutoPlay] = useState(false);
   const playerRef = useRef(null);
+  const playerSectionRef = useRef(null);
 
   // Ordenar murales por orden recomendado
   const sortedMurals = [...muralsData].sort((a, b) => a.order - b.order);
@@ -24,6 +25,21 @@ const AudioguideContainer = ({
       setCurrentMural(sortedMurals[0]);
     }
   }, [sortedMurals, currentMural]);
+
+  // Función para hacer scroll al reproductor (solo en móvil)
+  const scrollToPlayer = () => {
+    // Solo hacer scroll en móvil (viewport < 768px)
+    if (window.innerWidth < 768 && playerSectionRef.current) {
+      // Obtener posición del reproductor con un margen de 30px desde el top
+      const playerPosition = playerSectionRef.current.offsetTop - 30;
+      
+      // Scroll suave hacia el reproductor
+      window.scrollTo({
+        top: playerPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   // Función para controlar play/pause desde los botones flotantes
   const handlePlayPause = () => {
@@ -36,6 +52,11 @@ const AudioguideContainer = ({
   const handleMuralSelect = (mural) => {
     setCurrentMural(mural);
     setIsPlaying(false); // Pausar el audio actual al cambiar
+    
+    // Hacer scroll al reproductor en móvil
+    setTimeout(() => {
+      scrollToPlayer();
+    }, 100);
     
     // Analytics tracking
     if (typeof gtag !== 'undefined') {
@@ -58,6 +79,11 @@ const AudioguideContainer = ({
       setCurrentMural(nextMural);
       setIsPlaying(false);
       
+      // Hacer scroll al reproductor en móvil
+      setTimeout(() => {
+        scrollToPlayer();
+      }, 100);
+      
       // Analytics tracking
       if (typeof gtag !== 'undefined') {
         gtag('event', 'mural_next', {
@@ -79,6 +105,11 @@ const AudioguideContainer = ({
       
       setCurrentMural(prevMural);
       setIsPlaying(false);
+      
+      // Hacer scroll al reproductor en móvil
+      setTimeout(() => {
+        scrollToPlayer();
+      }, 100);
       
       // Analytics tracking
       if (typeof gtag !== 'undefined') {
@@ -195,7 +226,7 @@ const AudioguideContainer = ({
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         
         {/* Reproductor actual (columna izquierda) */}
-        <section aria-labelledby="player-title">
+        <section aria-labelledby="player-title" ref={playerSectionRef}>
           <h2 id="player-title" className="sr-only">Reproductor de audio</h2>
           <SoundCloudPlayer
             ref={playerRef}

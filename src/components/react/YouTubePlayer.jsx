@@ -363,7 +363,7 @@ const YouTubePlayer = ({
               onClick={handleSeek}
             >
               <div 
-                className="h-full bg-gradient-to-r from-SM-black to-gray-700 rounded-full transition-all duration-100"
+                className="h-full bg-gradient-to-r from-SM-blue to-blue-700 rounded-full transition-all duration-100"
                 style={{ width: `${duration ? (currentTime / duration) * 100 : 0}%` }}
               />
             </div>
@@ -388,7 +388,7 @@ const YouTubePlayer = ({
             <button
               onClick={() => setIsPlaying(!isPlaying)}
               disabled={!isReady}
-              className="p-4 bg-gradient-to-r from-SM-black to-gray-700 hover:from-gray-700 hover:to-SM-black text-white rounded-full shadow-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+              className="p-4 bg-gradient-to-r from-SM-blue to-blue-700 hover:from-blue-700 hover:to-SM-blue text-white rounded-full shadow-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed"
               aria-label={isPlaying ? "Pausar" : "Reproducir"}
             >
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">

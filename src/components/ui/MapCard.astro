@@ -1,0 +1,38 @@
+---
+// Componente MapCard para mostrar el mapa en la página principal
+// Audioguías Murales Santa Marta
+
+import MapComponent from '../react/MapComponent.jsx';
+
+export interface Props {
+  muralsData: any;
+  routeData: any;
+  language?: string;
+  className?: string;
+}
+
+const { 
+  muralsData, 
+  routeData, 
+  language = 'es',
+  className = ''
+} = Astro.props;
+
+// Ordenar murales por orden recomendado
+const sortedMurals = [...muralsData].sort((a, b) => a.order - b.order);
+---
+
+<!-- Contenedor del mapa con aspecto de tarjeta ancha -->
+<div class={`aspect-[2/1] col-span-2 ${className}`}>
+  <div class="h-full bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 overflow-hidden">
+    <MapComponent 
+      murals={sortedMurals}
+      route={routeData}
+      currentMural={null}
+      onMuralSelect={null}
+      language={language}
+      className="h-full [&_.map-container]:h-full [&_#map-title]:hidden [&_.p-4]:p-3 [&_.h-64]:h-full [&_.md\\:h-80]:h-full"
+      client:load
+    />
+  </div>
+</div>

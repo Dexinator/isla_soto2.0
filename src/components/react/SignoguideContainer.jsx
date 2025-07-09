@@ -226,7 +226,7 @@ const SignoguideContainer = ({
           <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 p-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-3 flex-1 min-w-0">
-                <div className="w-10 h-10 rounded-lg overflow-hidden bg-gradient-to-br from-SM-black to-gray-700 flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 rounded-lg overflow-hidden bg-gradient-to-br from-SM-blue to-blue-700 flex items-center justify-center flex-shrink-0">
                   <MuralImage 
                     muralId={currentMural?.id}
                     imagePath={currentMural?.image}
@@ -262,7 +262,7 @@ const SignoguideContainer = ({
                 
                 <button
                   onClick={() => setIsPlaying(!isPlaying)}
-                  className="p-2 bg-SM-black text-white rounded-lg hover:bg-gray-800 transition-colors"
+                  className="p-2 bg-SM-blue text-white rounded-lg hover:bg-blue-700 transition-colors"
                   aria-label={isPlaying ? "Pausar" : "Reproducir"}
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
