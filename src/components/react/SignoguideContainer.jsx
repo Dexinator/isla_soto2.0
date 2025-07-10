@@ -213,6 +213,7 @@ const SignoguideContainer = ({
           route={routeData}
           currentMural={currentMural}
           onMuralSelect={handleMuralSelect}
+          audioType={audioType}
           language={language}
           className="w-full"
         />
@@ -261,7 +262,7 @@ const SignoguideContainer = ({
                   <MuralImage 
                     muralId={currentMural?.id}
                     imagePath={currentMural?.image}
-                    alt={currentMural?.alt?.[language] || currentMural?.title[language]}
+                    alt={currentMural?.alt?.[language] || currentMural?.title[audioType][language]}
                     className="w-full h-full object-cover"
                     fallbackIcon="🤟"
                     fallbackIconSize="text-sm"
@@ -270,7 +271,7 @@ const SignoguideContainer = ({
                 </div>
                 <div className="flex-1 min-w-0">
                   <h3 className="font-medium text-sm text-slate-900 dark:text-slate-100 truncate">
-                    {currentMural.title[language]}
+                    {currentMural.title[audioType][language]}
                   </h3>
                   <p className="text-xs text-slate-600 dark:text-slate-400">
                     Mural {currentMural.order} de {sortedMurals.length}

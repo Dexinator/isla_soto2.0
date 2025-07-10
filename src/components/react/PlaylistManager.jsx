@@ -139,7 +139,7 @@ const PlaylistManager = ({
                     {content.playlist.item.startHere}
                   </p>
                   <p className="text-xs text-slate-600 dark:text-slate-400">
-                    {getNextRecommended().title[language]}
+                    {getNextRecommended().title[audioType][language]}
                   </p>
                 </div>
               </div>
@@ -161,7 +161,7 @@ const PlaylistManager = ({
                 {content.playlist.item.playingNow}
               </p>
               <p className="text-base mt-1 font-medium">
-                {currentMural.title[language]}
+                {currentMural.title[audioType][language]}
               </p>
             </div>
           </div>
@@ -194,7 +194,7 @@ const PlaylistManager = ({
                       <MuralImage 
                         muralId={mural.id}
                         imagePath={mural.image}
-                        alt={mural.alt?.[language] || mural.title[language]}
+                        alt={mural.alt?.[language] || mural.title[audioType][language]}
                         className="w-full h-full object-cover"
                         fallbackIcon="🎨"
                         fallbackIconSize="text-2xl"
@@ -213,7 +213,7 @@ const PlaylistManager = ({
                       <h4 className={`font-medium text-base truncate ${
                         isActive ? 'text-SM-blue' : 'text-slate-900 dark:text-slate-100'
                       }`}>
-                        {mural.title[language]}
+                        {mural.title[audioType][language]}
                       </h4>
                     </div>
                     

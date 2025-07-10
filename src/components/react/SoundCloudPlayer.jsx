@@ -313,7 +313,7 @@ const SoundCloudPlayer = forwardRef(({
           style={{ border: 'none', overflow: 'hidden' }}
           allow="autoplay"
           src={embedUrl}
-          title={`Audio: ${currentMural.title[language]}`}
+          title={`Audio: ${currentMural.title[audioType][language]}`}
         />
       </div>
 
@@ -324,7 +324,7 @@ const SoundCloudPlayer = forwardRef(({
             <MuralImage 
               muralId={currentMural?.id}
               imagePath={currentMural?.image}
-              alt={currentMural?.alt?.[language] || currentMural?.title[language]}
+              alt={currentMural?.alt?.[language] || currentMural?.title[audioType][language]}
               className="w-full h-full object-cover"
               fallbackIcon="🎨"
               fallbackIconSize="text-6xl"
@@ -338,7 +338,7 @@ const SoundCloudPlayer = forwardRef(({
       <div className="px-6 pb-4">
         {/* Nombre del mural */}
         <h3 className="font-bold text-xl text-slate-900 dark:text-slate-100 mb-3 text-center">
-          {currentMural.title[language]}
+          {currentMural.title[audioType][language]}
         </h3>
         
         {/* Artista y ubicación */}

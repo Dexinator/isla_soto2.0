@@ -10,6 +10,7 @@ const YouTubePlayer = ({
   onVideoEnd,
   isPlaying,
   setIsPlaying,
+  audioType = 'sign',
   language = 'es',
   className = ''
 }) => {
@@ -340,7 +341,7 @@ const YouTubePlayer = ({
         <div className={`${isFullscreen ? 'w-96 bg-black bg-opacity-90 overflow-y-auto' : 'flex-grow'} p-6`}>
           <div className={`text-center ${isFullscreen ? 'mb-4' : 'mb-6'}`}>
             <h3 className={`${isFullscreen ? 'text-xl text-white' : 'text-2xl text-slate-900 dark:text-slate-100'} font-bold mb-2`}>
-              {currentMural.title[language]}
+              {currentMural.title[audioType][language]}
             </h3>
             <div className={`flex items-center justify-center space-x-4 text-sm ${isFullscreen ? 'text-gray-300' : 'text-slate-600 dark:text-slate-400'}`}>
               <span className="flex items-center">

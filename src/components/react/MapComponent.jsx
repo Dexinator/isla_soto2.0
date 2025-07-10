@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import contentEs from '../../data/content-es.json';
 import contentEn from '../../data/content-en.json';
 
-const MapComponent = ({ murals, route, currentMural, onMuralSelect, language = 'es', className = "" }) => {
+const MapComponent = ({ murals, route, currentMural, onMuralSelect, audioType = 'normal', language = 'es', className = "" }) => {
   const mapRef = useRef(null);
   const mapInstanceRef = useRef(null);
   const markersRef = useRef([]);
@@ -111,7 +111,7 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, language = '
             // Popup con información del mural
             const popupContent = `
               <div class="p-2 min-w-48">
-                <h3 class="font-semibold text-SM-blue mb-2">${mural.title[language]}</h3>
+                <h3 class="font-semibold text-SM-blue mb-2">${mural.title[audioType][language]}</h3>
                 <p class="text-sm text-slate-600 mb-3">${mural.description[language]}</p>
                 <div class="flex flex-col space-y-2">
                   <button 

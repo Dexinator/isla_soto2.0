@@ -3,8 +3,22 @@
     {
       "id": 1,
       "title": {
-        "es": "Empieza La Ruta de los Murales",
-        "en": "Welcome to the Mural Route"
+        "normal": {
+          "es": "Comenzamos la ruta de los murales",
+          "en": "Welcome to the mural route"
+        },
+        "descriptive": {
+          "es": "AD- Comenzamos la ruta de los murales-descriptiva",
+          "en": "Welcome to the mural route"
+        },
+        "easy": {
+          "es": "LF- Empieza la ruta de los murales",
+          "en": "Welcome to the mural route"
+        },
+        "sign": {
+          "es": "LSE- Comenzamos la ruta de los murales",
+          "en": "Welcome to the mural route"
+        }
       },
       "description": {
         "es": "Punto de inicio del recorrido por los murales de Santa Marta de Tormes.",
@@ -44,14 +58,31 @@
     {
       "id": 2,
       "title": {
-        "es": "Mural Paseo Fluvial",
-        "en": "Riverside Promenade"
+        "normal": {
+          "es": "Paseo fluvial",
+          "en": "Riverside promenade"
+        },
+        "descriptive": {
+          "es": "AD- Paseo fluvial-descriptiva",
+          "en": "Riverside promenade"
+        },
+        "easy": {
+          "es": "LF- Paseo fluvial",
+          "en": "Riverside promenade"
+        },
+        "sign": {
+          "es": "LSE- Paseo fluvial",
+          "en": "Riverside promenade"
+        }
       },
       "description": {
         "es": "Mural que representa el paseo fluvial de Santa Marta junto al río Tormes.",
         "en": "Mural representing Santa Marta's riverside walk along the Tormes river."
       },
-      "coordinates": [40.950624059703735, -5.637681861162018],
+      "coordinates": [
+        40.950624059703735,
+        -5.637681861162018
+      ],
       "order": 2,
       "audio": {
         "normal": {
@@ -86,14 +117,31 @@
     {
       "id": 3,
       "title": {
-        "es": "Mural Centro de Interpretación. Isla del Soto",
-        "en": "Interpretation Centre. Soto Island"
+        "normal": {
+          "es": "Centro de interpretación. Isla del Soto",
+          "en": "Interpretation centre. Soto island"
+        },
+        "descriptive": {
+          "es": "AD- Centro de interpretación. Isla del Soto-descriptiva",
+          "en": "Interpretation centre. Soto island"
+        },
+        "easy": {
+          "es": "LF- Centro de interpretación. Isla del Soto",
+          "en": "Interpretation centre. Soto island"
+        },
+        "sign": {
+          "es": "LSE- Centro de interpretación. Isla del Soto",
+          "en": "Interpretation centre. Soto island"
+        }
       },
       "description": {
         "es": "Mural ubicado en el Centro de Interpretación de la Isla del Soto.",
         "en": "Mural located at the Soto Island Interpretation Center."
       },
-      "coordinates": [40.9522547832176, -5.632777086840274],
+      "coordinates": [
+        40.9522547832176,
+        -5.632777086840274
+      ],
       "order": 3,
       "audio": {
         "normal": {
@@ -128,14 +176,31 @@
     {
       "id": 4,
       "title": {
-        "es": "Mural La Llegada del Color",
-        "en": "The Arrival of Colour"
+        "normal": {
+          "es": "La llegada del color",
+          "en": "The arrival of colour"
+        },
+        "descriptive": {
+          "es": "AD- La llegada del color",
+          "en": "The arrival of colour"
+        },
+        "easy": {
+          "es": "LF- La llegada del color",
+          "en": "The arrival of colour"
+        },
+        "sign": {
+          "es": "LSE- La llegada del color",
+          "en": "The arrival of colour"
+        }
       },
       "description": {
         "es": "Mural inspirado en la transformación urbana a través del arte y el color digital.",
         "en": "Mural inspired by urban transformation through art and digital color."
       },
-      "coordinates": [40.950508174347085, -5.630577903555368],
+      "coordinates": [
+        40.950508174347085,
+        -5.630577903555368
+      ],
       "order": 4,
       "audio": {
         "normal": {
@@ -170,14 +235,31 @@
     {
       "id": 5,
       "title": {
-        "es": "Mural La Bosque",
-        "en": "Forest"
+        "normal": {
+          "es": "Bosque",
+          "en": "Forest"
+        },
+        "descriptive": {
+          "es": "AD- Bosque",
+          "en": "Forest"
+        },
+        "easy": {
+          "es": "LF- Bosque",
+          "en": "Forest"
+        },
+        "sign": {
+          "es": "LSE- Bosque",
+          "en": "Forest"
+        }
       },
       "description": {
         "es": "Mural que representa la conexión entre la naturaleza y la vida urbana.",
         "en": "Mural representing the connection between nature and urban life."
       },
-      "coordinates": [40.94939751212852, -5.63064640156047],
+      "coordinates": [
+        40.94939751212852,
+        -5.63064640156047
+      ],
       "order": 5,
       "audio": {
         "normal": {
@@ -212,14 +294,31 @@
     {
       "id": 6,
       "title": {
-        "es": "Mural Mujer, historia y pueblo",
-        "en": "Woman, History and Community"
+        "normal": {
+          "es": "Mujer, historia y pueblo",
+          "en": "Woman, history and community"
+        },
+        "descriptive": {
+          "es": "AD- Mujer, historia y pueblo",
+          "en": "Woman, history and community"
+        },
+        "easy": {
+          "es": "LF- Mujer, historia y pueblo",
+          "en": "Woman, history and community"
+        },
+        "sign": {
+          "es": "LSE- Mujer, historia y pueblo",
+          "en": "Woman, history and community"
+        }
       },
       "description": {
         "es": "Mural dedicado al papel de la mujer en la historia de Santa Marta de Tormes.",
         "en": "Mural dedicated to women's role in Santa Marta de Tormes' history."
       },
-      "coordinates": [40.94908236429532, -5.6300556081211734],
+      "coordinates": [
+        40.94908236429532,
+        -5.6300556081211734
+      ],
       "order": 6,
       "audio": {
         "normal": {
@@ -254,14 +353,31 @@
     {
       "id": 7,
       "title": {
-        "es": "Mural Doctor Torres Villarroel",
-        "en": "Doctor Torres Villarroel"
+        "normal": {
+          "es": "Doctor Torres Villarroel",
+          "en": "Doctor Torres Villarroel"
+        },
+        "descriptive": {
+          "es": "AD- Doctor Torres Villarroel",
+          "en": "Doctor Torres Villarroel"
+        },
+        "easy": {
+          "es": "LF- Doctor Torres Villarroel",
+          "en": "Doctor Torres Villarroel"
+        },
+        "sign": {
+          "es": "LSE- Doctor Torres Villarroel",
+          "en": "Doctor Torres Villarroel"
+        }
       },
       "description": {
         "es": "Mural dedicado al famoso escritor y matemático Diego de Torres Villarroel.",
         "en": "Mural dedicated to the famous writer and mathematician Diego de Torres Villarroel."
       },
-      "coordinates": [40.94974059181188, -5.629269464039794],
+      "coordinates": [
+        40.94974059181188,
+        -5.629269464039794
+      ],
       "order": 7,
       "audio": {
         "normal": {
@@ -296,14 +412,31 @@
     {
       "id": 8,
       "title": {
-        "es": "Mural El Rincón de Sandra y Gustavo",
-        "en": "Sandra and Gustavo's Corner"
+        "normal": {
+          "es": "El rincón de Sandra y Gustavo",
+          "en": "Sandra and Gustavo's corner"
+        },
+        "descriptive": {
+          "es": "AD- El rincón de Sandra y Gustavo",
+          "en": "Sandra and Gustavo's corner"
+        },
+        "easy": {
+          "es": "LF- El rincón de Sandra y Gustavo",
+          "en": "Sandra and Gustavo's corner"
+        },
+        "sign": {
+          "es": "LSE- El rincón de Sandra y Gustavo",
+          "en": "Sandra and Gustavo's corner"
+        }
       },
       "description": {
         "es": "Mural que representa un espacio especial dedicado a Sandra y Gustavo.",
         "en": "Mural representing a special space dedicated to Sandra and Gustavo."
       },
-      "coordinates": [40.94957657272803, -5.628866434815848],
+      "coordinates": [
+        40.94957657272803,
+        -5.628866434815848
+      ],
       "order": 8,
       "audio": {
         "normal": {
@@ -338,14 +471,31 @@
     {
       "id": 9,
       "title": {
-        "es": "Murales Festival de Arte Urbano. Ediciones 1 y 2",
-        "en": "Santa Marta Urban Art Festival – Editions I and II"
+        "normal": {
+          "es": "Festival de arte urbano de Santa Marta. Ediciones I y II",
+          "en": "Santa Marta urban art festival. Editions I and II"
+        },
+        "descriptive": {
+          "es": "AD- Festival de arte urbano de Santa Marta. Ediciones I y II",
+          "en": "Santa Marta urban art festival. Editions I and II"
+        },
+        "easy": {
+          "es": "LF- Festival de arte urbano de Santa Marta. Ediciones 1 y 2",
+          "en": "Santa Marta urban art festival. Editions I and II"
+        },
+        "sign": {
+          "es": "LSE- Festival de arte urbano de Santa Marta. Ediciones I y II",
+          "en": "Santa Marta urban art festival. Editions I and II"
+        }
       },
       "description": {
         "es": "Murales creados durante las primeras dos ediciones del Festival de Arte Urbano.",
         "en": "Murals created during the first two editions of the Urban Art Festival."
       },
-      "coordinates": [40.94920000175988, -5.628841258158136],
+      "coordinates": [
+        40.94920000175988,
+        -5.628841258158136
+      ],
       "order": 9,
       "audio": {
         "normal": {
@@ -380,14 +530,31 @@
     {
       "id": 10,
       "title": {
-        "es": "Mural Generación Millennial",
-        "en": "Millennial Generation"
+        "normal": {
+          "es": "Generación millennial",
+          "en": "Millennial generation"
+        },
+        "descriptive": {
+          "es": "AD- Generación millennial",
+          "en": "Millennial generation"
+        },
+        "easy": {
+          "es": "LF- Generación millennial",
+          "en": "Millennial generation"
+        },
+        "sign": {
+          "es": "LSE- Generación millennial",
+          "en": "Millennial generation"
+        }
       },
       "description": {
         "es": "Mural que representa la cultura y valores de la generación millennial.",
         "en": "Mural representing millennial generation culture and values."
       },
-      "coordinates": [40.94539824049695, -5.625584241181644],
+      "coordinates": [
+        40.94539824049695,
+        -5.625584241181644
+      ],
       "order": 10,
       "audio": {
         "normal": {
@@ -422,14 +589,31 @@
     {
       "id": 11,
       "title": {
-        "es": "Mural Paseo Alcalde José Sánchez",
-        "en": "Paseo Alcalde José Sánchez"
+        "normal": {
+          "es": "Paseo alcalde José Sánchez",
+          "en": "Mayor José Sánchez's walk"
+        },
+        "descriptive": {
+          "es": "AD- Paseo alcalde José Sánchez",
+          "en": "Mayor José Sánchez's walk"
+        },
+        "easy": {
+          "es": "LF- Paseo alcalde José Sánchez",
+          "en": "Mayor José Sánchez's walk"
+        },
+        "sign": {
+          "es": "LSE- Paseo alcalde José Sánchez",
+          "en": "Mayor José Sánchez's walk"
+        }
       },
       "description": {
         "es": "Mural ubicado en el paseo dedicado al Alcalde José Sánchez.",
         "en": "Mural located on the walk dedicated to Mayor José Sánchez."
       },
-      "coordinates": [40.947689703673745, -5.627101412120439],
+      "coordinates": [
+        40.947689703673745,
+        -5.627101412120439
+      ],
       "order": 11,
       "audio": {
         "normal": {
@@ -464,14 +648,31 @@
     {
       "id": 12,
       "title": {
-        "es": "Mural Respira",
-        "en": "Breathe"
+        "normal": {
+          "es": "Respira",
+          "en": "Breathe"
+        },
+        "descriptive": {
+          "es": "AD- Respira",
+            "en": "Breathe"
+        },
+        "easy": {
+          "es": "LF- Respira",
+          "en": "Breathe"
+        },
+        "sign": {
+          "es": "LSE- Respira",
+          "en": "Breathe"
+        }
       },
       "description": {
         "es": "Mural que invita a la reflexión y al bienestar personal.",
         "en": "Mural that invites reflection and personal well-being."
       },
-      "coordinates": [40.949723546303495, -5.627586438509093],
+      "coordinates": [
+        40.949723546303495,
+        -5.627586438509093
+      ],
       "order": 12,
       "audio": {
         "normal": {
@@ -506,14 +707,31 @@
     {
       "id": 13,
       "title": {
-        "es": "Mural La Llegada de las Llaves",
-        "en": "The Arrival of the Keys"
+        "normal": {
+          "es": "La llegada de las llaves",
+          "en": "The arrival of the keys"
+        },
+        "descriptive": {
+          "es": "AD- La llegada de las llaves",
+          "en": "The arrival of the keys"
+        },
+        "easy": {
+          "es": "LF- La llegada de las llaves",
+          "en": "The arrival of the keys"
+        },
+        "sign": {
+          "es": "LSE- La llegada de las llaves",
+          "en": "The arrival of the keys"
+        }
       },
       "description": {
         "es": "Mural simbólico sobre las llaves como símbolo de nuevas oportunidades.",
         "en": "Symbolic mural about keys as a symbol of new opportunities."
       },
-      "coordinates": [40.95020894913536, -5.622374450977097],
+      "coordinates": [
+        40.95020894913536,
+        -5.622374450977097
+      ],
       "order": 13,
       "audio": {
         "normal": {
@@ -548,14 +766,31 @@
     {
       "id": 14,
       "title": {
-        "es": "Mural Sueña",
-        "en": "Dream"
+        "normal": {
+          "es": "Sueña",
+          "en": "Dream"
+        },
+        "descriptive": {
+          "es": "AD- Sueña",
+          "en": "Dream"
+        },
+        "easy": {
+          "es": "LF- Sueña",
+          "en": "Dream"
+        },
+        "sign": {
+          "es": "LSE- Sueña",
+          "en": "Dream"
+        }
       },
       "description": {
         "es": "Mural inspirador que invita a soñar y perseguir los objetivos.",
         "en": "Inspiring mural that invites to dream and pursue goals."
       },
-      "coordinates": [40.950626401984, -5.624583814823785],
+      "coordinates": [
+        40.950626401984,
+        -5.624583814823785
+      ],
       "order": 14,
       "audio": {
         "normal": {
@@ -590,14 +825,31 @@
     {
       "id": 15,
       "title": {
-        "es": "Mural Océano",
-        "en": "Ocean"
+        "normal": {
+          "es": "Océano",
+          "en": "Ocean"
+        },
+        "descriptive": {
+          "es": "AD- Océano",
+          "en": "Ocean"
+        },
+        "easy": {
+          "es": "LF- Océano",
+          "en": "Ocean"
+        },
+        "sign": {
+          "es": "LSE- Océano",
+          "en": "Ocean"
+        }
       },
       "description": {
         "es": "Mural que representa la vastedad y belleza del océano.",
         "en": "Mural representing the vastness and beauty of the ocean."
       },
-      "coordinates": [40.95066936931654, -5.628456314268188],
+      "coordinates": [
+        40.95066936931654,
+        -5.628456314268188
+      ],
       "order": 15,
       "audio": {
         "normal": {
@@ -632,14 +884,31 @@
     {
       "id": 16,
       "title": {
-        "es": "Mural Carretera Madrid",
-        "en": "Madrid Road"
+        "normal": {
+          "es": "Carretera de Madrid",
+          "en": "Madrid road"
+        },
+        "descriptive": {
+          "es": "AD- Carretera de Madrid",
+          "en": "Madrid road"
+        },
+        "easy": {
+          "es": "LF- Carretera de Madrid",
+          "en": "Madrid road"
+        },
+        "sign": {
+          "es": "LSE- Carretera de Madrid",
+          "en": "Madrid road"
+        }
       },
       "description": {
         "es": "Mural ubicado en la zona de la carretera hacia Madrid.",
         "en": "Mural located in the Madrid highway area."
       },
-      "coordinates": [40.95002255663563, -5.629455943072232],
+      "coordinates": [
+        40.95002255663563,
+        -5.629455943072232
+      ],
       "order": 16,
       "audio": {
         "normal": {
@@ -674,8 +943,22 @@
     {
       "id": 17,
       "title": {
-        "es": "Daniel Martín. Artista",
-        "en": "Daniel Martín"
+        "normal": {
+          "es": "Daniel Martín",
+          "en": "Daniel Martín"
+        },
+        "descriptive": {
+          "es": "AD- Daniel Martín",
+          "en": "Daniel Martín"
+        },
+        "easy": {
+          "es": "LF- Daniel Martín",
+          "en": "Daniel Martín"
+        },
+        "sign": {
+          "es": "LSE- Daniel Martín",
+          "en": "Daniel Martín"
+        }
       },
       "description": {
         "es": "Información sobre el artista Daniel Martín y su obra en Santa Marta.",
@@ -715,8 +998,22 @@
     {
       "id": 18,
       "title": {
-        "es": "Caín Ferreras. Artista",
-        "en": "Caín Ferreras"
+        "normal": {
+          "es": "Caín Ferreras",
+          "en": "Caín Ferreras"
+        },
+        "descriptive": {
+          "es": "AD- Caín Ferreras",
+          "en": "Caín Ferreras"
+        },
+        "easy": {
+          "es": "LF- Caín Ferreras",
+          "en": "Caín Ferreras"
+        },
+        "sign": {
+          "es": "LSE- Caín Ferreras",
+          "en": "Caín Ferreras"
+        }
       },
       "description": {
         "es": "Información sobre el artista Caín Ferreras y su contribución al arte urbano.",
@@ -756,8 +1053,22 @@
     {
       "id": 19,
       "title": {
-        "es": "Rober Bece. Artista",
-        "en": "Rober Bece"
+        "normal": {
+          "es": "Rober Bece",
+          "en": "Rober Bece"
+        },
+        "descriptive": {
+          "es": "AD- Rober Bece",
+          "en": "Rober Bece"
+        },
+        "easy": {
+          "es": "LF- Rober Bece",
+          "en": "Rober Bece"
+        },
+        "sign": {
+          "es": "LSE- Rober Bece",
+          "en": "Rober Bece"
+        }
       },
       "description": {
         "es": "Información sobre el artista Rober Bece y su estilo único.",
@@ -797,8 +1108,22 @@
     {
       "id": 20,
       "title": {
-        "es": "Llegamos al Final",
-        "en": "We've Reached the End"
+        "normal": {
+          "es": "Llegamos al final",
+          "en": "We've reached the end"
+        },
+        "descriptive": {
+          "es": "AD- Llegamos al final",
+          "en": "We've reached the end"
+        },
+        "easy": {
+          "es": "LF- Llegamos al final",
+          "en": "We've reached the end"
+        },
+        "sign": {
+          "es": "LSE- Llegamos al final",
+          "en": "We've reached the end"
+        }
       },
       "description": {
         "es": "Punto final del recorrido por los murales de Santa Marta de Tormes.",
@@ -846,21 +1171,66 @@
       "en": "Accessible tour through the main murals of Santa Marta de Tormes"
     },
     "waypoints": [
-      [40.950624059703735, -5.637681861162018],
-      [40.9522547832176, -5.632777086840274],
-      [40.950508174347085, -5.630577903555368],
-      [40.94939751212852, -5.63064640156047],
-      [40.94908236429532, -5.6300556081211734],
-      [40.94974059181188, -5.629269464039794],
-      [40.94957657272803, -5.628866434815848],
-      [40.94920000175988, -5.628841258158136],
-      [40.94539824049695, -5.625584241181644],
-      [40.947689703673745, -5.627101412120439],
-      [40.949723546303495, -5.627586438509093],
-      [40.95020894913536, -5.622374450977097],
-      [40.950626401984, -5.624583814823785],
-      [40.95066936931654, -5.628456314268188],
-      [40.95002255663563, -5.629455943072232]
+      [
+        40.950624059703735,
+        -5.637681861162018
+      ],
+      [
+        40.9522547832176,
+        -5.632777086840274
+      ],
+      [
+        40.950508174347085,
+        -5.630577903555368
+      ],
+      [
+        40.94939751212852,
+        -5.63064640156047
+      ],
+      [
+        40.94908236429532,
+        -5.6300556081211734
+      ],
+      [
+        40.94974059181188,
+        -5.629269464039794
+      ],
+      [
+        40.94957657272803,
+        -5.628866434815848
+      ],
+      [
+        40.94920000175988,
+        -5.628841258158136
+      ],
+      [
+        40.94539824049695,
+        -5.625584241181644
+      ],
+      [
+        40.947689703673745,
+        -5.627101412120439
+      ],
+      [
+        40.949723546303495,
+        -5.627586438509093
+      ],
+      [
+        40.95020894913536,
+        -5.622374450977097
+      ],
+      [
+        40.950626401984,
+        -5.624583814823785
+      ],
+      [
+        40.95066936931654,
+        -5.628456314268188
+      ],
+      [
+        40.95002255663563,
+        -5.629455943072232
+      ]
     ],
     "totalDistance": "3.2 km",
     "estimatedTime": "2.5 horas",
@@ -885,8 +1255,16 @@
     "lastUpdated": "2025-01-30",
     "version": "2.0",
     "totalMurals": 20,
-    "languages": ["es", "en"],
-    "audioguideTypes": ["normal", "descriptive", "easy", "sign"],
+    "languages": [
+      "es",
+      "en"
+    ],
+    "audioguideTypes": [
+      "normal",
+      "descriptive",
+      "easy",
+      "sign"
+    ],
     "city": "Santa Marta de Tormes",
     "province": "Salamanca",
     "country": "España"
