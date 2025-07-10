@@ -318,7 +318,7 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, language = '
               {content.map.title}
             </h3>
             <p className="text-sm text-slate-600 dark:text-slate-400">
-              {language === 'en' ? "Total Route" : "Recorrido Total"} • {route?.totalDistance} • {language === 'en' ? "Total Duration" : "Duración total:"} {route?.estimatedTime}
+              {language === 'en' ? "Total Route: " : "Recorrido Total: "} {route?.totalDistance} • {language === 'en' ? "Total Duration: " : "Duración total: "} {route?.estimatedTime}
             </p>
           </div>
           <div className="flex items-center space-x-2">
@@ -389,7 +389,6 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, language = '
           </div>
           {!scrollZoomEnabled && (
             <div className="text-xs text-slate-500 dark:text-slate-400 flex items-center">
-              <span className="mr-1">💡</span>
               <span>{content.map.scrollLockMessage}</span>
             </div>
           )}

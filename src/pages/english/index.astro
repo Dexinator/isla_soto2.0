@@ -3,6 +3,7 @@ import Layout from '../../components/ui/Layout.astro';
 import Header from '../../components/ui/Header.astro';
 import Footer from '../../components/ui/Footer.astro';
 import AudioguideContainer from '../../components/react/AudioguideContainer.jsx';
+import ArtistsSection from '../../components/ui/ArtistsSection.astro';
 
 // Importar datos
 import muralsData from '../../data/murals.json';
@@ -20,82 +21,87 @@ const pageDescription = content.audioguide_types.normal.description;
 ---
 
 <Layout 
-  title={pageTitle}
-  description={pageDescription}
-  lang={lang}
+title={pageTitle}
+description={pageDescription}
+lang={lang}
 >
-  <Header lang={lang} />
+<Header lang={lang} />
+
+<main class="min-h-screen bg-slate-50 dark:bg-slate-900">
+  <!-- Skip link -->
+  <a href="#main-content" class="skip-link">
+    {content.accessibility.skipToContent}
+  </a>
   
-  <main class="min-h-screen bg-slate-50 dark:bg-slate-900">
-    <!-- Skip link -->
-    <a href="#main-content" class="skip-link">
-      {content.accessibility.skipToContent}
-    </a>
-
-    <!-- Hero section simplificado y directo -->
-    <section class="bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700">
-      <div class="container mx-auto px-4 py-6">
-        <div class="max-w-4xl mx-auto text-center">
-
-          <!-- Título directo -->
-          <h1 class="text-fluid-xl font-bold mb-6 text-slate-900 dark:text-slate-100">
-            🎧 {content.audioguide_types.normal.title}
-          </h1>
-
-          <!-- Botón principal súper prominente -->
-          <div class="mb-8">
-            <button
-              id="start-tour-btn"
-              onclick="window.startAudioguide && window.startAudioguide()"
-              class="group relative bg-gradient-to-r from-SM-blue to-blue-700 hover:from-blue-700 hover:to-SM-blue text-white font-bold text-xl px-12 py-6 rounded-2xl shadow-2xl transition-all duration-300 hover:shadow-3xl hover:scale-110 focus:outline-none focus:ring-4 focus:ring-SM-blue/50 transform hover:-translate-y-1"
-            >
-              <span class="flex items-center justify-center space-x-3">
-                <span>{content.audioguide_page.startTour}</span>
-                <span class="text-2xl group-hover:animate-bounce">▶️</span>
-              </span>
-
-              <!-- Efecto de brillo -->
-              <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform -skew-x-12"></div>
-            </button>
-
-            <!-- Texto de ayuda sutil -->
-            <p class="text-sm text-slate-500 dark:text-slate-400 mt-3">
-              {content.audioguide_page.clickToStart}
-            </p>
-            <br>
-            <p class="text-sm text-slate-500 dark:text-slate-400 mt-3">
-              To complement the experience, <a href="/ruta-de-los-murales.pdf" class="text-SM-blue hover:underline">download</a> the brochure with photos and information.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contenido principal -->
-    <div id="main-content" class="container mx-auto px-4 py-8">
-      <div class="max-w-6xl mx-auto">
-
-        <!-- Componente contenedor con toda la funcionalidad -->
-        <AudioguideContainer
-          muralsData={murals}
-          routeData={route}
-          audioType={audioType}
-          language={lang}
-          client:load
-        />
+  <!-- Hero section simplificado y directo -->
+  <section class="bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700">
+    <div class="container mx-auto px-4 py-6">
+      <div class="max-w-4xl mx-auto text-center">
+        
+        <!-- Título directo -->
+        <h1 class="text-fluid-xl font-bold mb-6 text-slate-900 dark:text-slate-100">
+          🎧 {content.audioguide_types.normal.title}
+        </h1>
+        
+        <!-- Botón principal súper prominente -->
+        <div class="mb-8">
+          <button
+          id="start-tour-btn"
+          onclick="window.startAudioguide && window.startAudioguide()"
+          class="group relative bg-gradient-to-r from-SM-blue to-blue-700 hover:from-blue-700 hover:to-SM-blue text-white font-bold text-xl px-12 py-6 rounded-2xl shadow-2xl transition-all duration-300 hover:shadow-3xl hover:scale-110 focus:outline-none focus:ring-4 focus:ring-SM-blue/50 transform hover:-translate-y-1"
+          >
+          <span class="flex items-center justify-center space-x-3">
+            <span>{content.audioguide_page.startTour}</span>
+            <span class="text-2xl group-hover:animate-bounce">▶️</span>
+          </span>
+          
+          <!-- Efecto de brillo -->
+          <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform -skew-x-12"></div>
+        </button>
+        
+        <!-- Texto de ayuda sutil -->
+        <p class="text-sm text-slate-500 dark:text-slate-400 mt-3">
+          {content.audioguide_page.clickToStart}
+        </p>
+        <br>
+        <p class="text-sm text-slate-500 dark:text-slate-400 mt-3">
+          To complement the experience, <a href="/ruta-de-los-murales.pdf" class="text-SM-blue hover:underline">download</a> the brochure with photos and information.
+        </p>
       </div>
     </div>
-  </main>
+  </div>
+</section>
 
-  <Footer lang={lang} />
+<!-- Contenido principal -->
+<div id="main-content" class="container mx-auto px-4 py-8">
+  <div class="max-w-6xl mx-auto">
+    
+    <!-- Componente contenedor con toda la funcionalidad -->
+    <AudioguideContainer
+    muralsData={murals}
+    routeData={route}
+    audioType={audioType}
+    language={lang}
+    client:load
+    />
+    <!-- Sección de artistas -->
+<div class="mt-8">
+  <ArtistsSection language={lang} />
+</div>
+  </div>
+</div>
+</main>
 
-  <!-- Script para funcionalidad básica -->
-  <script>
-    // El componente AudioguideContainer maneja toda la funcionalidad
-    // Solo necesitamos asegurar que el botón de inicio funcione
-    document.addEventListener('DOMContentLoaded', () => {
-      // El botón ya tiene onclick="window.startAudioguide && window.startAudioguide()"
-      // La función startAudioguide se expone desde AudioguideContainer
-    });
-  </script>
+
+<Footer lang={lang} />
+
+<!-- Script para funcionalidad básica -->
+<script>
+  // El componente AudioguideContainer maneja toda la funcionalidad
+  // Solo necesitamos asegurar que el botón de inicio funcione
+  document.addEventListener('DOMContentLoaded', () => {
+    // El botón ya tiene onclick="window.startAudioguide && window.startAudioguide()"
+    // La función startAudioguide se expone desde AudioguideContainer
+  });
+</script>
 </Layout>

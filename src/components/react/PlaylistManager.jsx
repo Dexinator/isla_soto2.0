@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import MuralImage from './MuralImageOptimized.jsx';
+import contentEs from '../../data/content-es.json';
+import contentEn from '../../data/content-en.json';
 
 const PlaylistManager = ({ 
   murals, 
@@ -11,6 +13,9 @@ const PlaylistManager = ({
   className = "" 
 }) => {
   const [inProgressMurals, setInProgressMurals] = useState(new Set());
+  
+  // Obtener el contenido según el idioma
+  const content = language === 'es' ? contentEs : contentEn;
 
   // Ordenar murales por orden recomendado
   const sortedMurals = [...murals].sort((a, b) => a.order - b.order);
@@ -94,17 +99,21 @@ const PlaylistManager = ({
         <div className="flex items-center justify-between mb-4">
           <div>
             <h3 className="font-semibold text-lg text-slate-900 dark:text-slate-100">
-              🏷️ {audioType === 'normal' ? 'Audioguía Normativa' :
-                    audioType === 'descriptive' ? 'Audioguía Descriptiva' :
-                    audioType === 'easy' ? 'Audioguía Fácil' : 'Signoguía'}
+              🏷️ {content.audioguidePages?.[audioType]?.title || 
+                    content.audioguide_types?.[audioType]?.title || 
+                    content.playlist?.header?.types?.[audioType] ||
+                    content.audioguidePages?.normal?.title || 
+                    content.audioguide_types?.normal?.title ||
+                    content.playlist?.header?.types?.normal ||
+                    'Audio Guide'}
             </h3>
           </div>
           <div className="text-right">
             <div className="text-sm font-medium text-slate-900 dark:text-slate-100">
-              {completedMurals.size} de {murals.length}
+              {completedMurals.size} {content.playlist.header.counter} {murals.length}
             </div>
             <div className="text-xs text-slate-500 dark:text-slate-400">
-              {getTotalProgress()}% completado
+              {getTotalProgress()}{content.playlist.header.progress}
             </div>
           </div>
         </div>
@@ -127,7 +136,7 @@ const PlaylistManager = ({
                 </div>
                 <div>
                   <p className="text-sm font-bold text-SM-blue">
-                    🎯 Comenzar aquí
+                    {content.playlist.item.startHere}
                   </p>
                   <p className="text-xs text-slate-600 dark:text-slate-400">
                     {getNextRecommended().title[language]}
@@ -138,7 +147,7 @@ const PlaylistManager = ({
                 onClick={() => handleMuralClick(getNextRecommended())}
                 className="bg-SM-blue text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors shadow-md"
               >
-                ▶️ Empezar
+                {content.playlist.item.start}
               </button>
             </div>
           </div>
@@ -149,7 +158,7 @@ const PlaylistManager = ({
           <div className="mt-4 p-4 bg-SM-yellow text-SM-black rounded-lg shadow-md">
             <div className="text-center">
               <p className="font-bold text-lg">
-                Reproduciendo ahora
+                {content.playlist.item.playingNow}
               </p>
               <p className="text-base mt-1 font-medium">
                 {currentMural.title[language]}
@@ -212,7 +221,7 @@ const PlaylistManager = ({
                     <div className="space-y-1">
                       <div className="flex items-center text-slate-600 dark:text-slate-400">
                         <span className="text-xs mr-1">🎨</span>
-                        <span className="text-sm">{mural.artist || 'Artista desconocido'}</span>
+                        <span className="text-sm">{mural.artist || content.playlist.defaults.unknownArtist}</span>
                       </div>
                       <div className="flex items-center text-slate-600 dark:text-slate-400">
                         <span className="text-xs mr-1">
@@ -220,8 +229,8 @@ const PlaylistManager = ({
                         </span>
                         <span className="text-sm">
                           {mural.coordinates && !(mural.coordinates[0] === 0 && mural.coordinates[1] === 0) 
-                            ? (mural.location?.[language] || 'Ubicación no disponible')
-                            : 'Pista informativa'}
+                            ? (mural.location?.[language] || content.playlist.defaults.unknownLocation)
+                            : (content.playlist.item.informationTrack || 'Information track')}
                         </span>
                       </div>
                     </div>
@@ -252,7 +261,7 @@ const PlaylistManager = ({
       <div className="p-4 bg-slate-50 dark:bg-slate-700/50 border-t border-slate-200 dark:border-slate-700">
         <div className="text-center">
           <span className="text-slate-600 dark:text-slate-400 text-sm">
-            ⏱️ Tiempo total de la audioguía: ~{murals.length * (audioType === 'easy' ? 5 : audioType === 'descriptive' ? 10 : 7)} min
+            {content.playlist.footer.totalTime}{murals.length * (audioType === 'easy' ? 5 : audioType === 'descriptive' ? 10 : 7)} {content.playlist.footer.minutes}
           </span>
         </div>
       </div>

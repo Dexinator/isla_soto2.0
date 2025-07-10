@@ -100,17 +100,30 @@
     }
   },
   "playlist": {
-    "muralXofY": "Mural",
-    "of": "of",
-    "percentCompleted": "% completed",
-    "startHere": "🎯 Start here",
-    "start": "▶️ Start",
-    "playingNow": "Playing now",
-    "totalTime": "⏱️ Total audio guide time: ~",
-    "minutes": "min",
+    "header": {
+      "emoji": "🏷️",
+      "types": {
+        "normal": "Audio Guide",
+        "descriptive": "Descriptive Audio Guide",
+        "easy": "Easy Audio Guide",
+        "sign": "Sign Language Guide"
+      },
+      "counter": "of",
+      "progress": "% completed"
+    },
+    "item": {
+      "startHere": "🎯 Start here",
+      "start": "▶️ Start",
+      "playingNow": "Playing now",
+      "informationTrack": "Information track"
+    },
     "defaults": {
       "unknownArtist": "Unknown artist",
       "unknownLocation": "Location unavailable"
+    },
+    "footer": {
+      "totalTime": "⏱️ Total audio guide time: ~",
+      "minutes": "min"
     }
   },
   "messages": {

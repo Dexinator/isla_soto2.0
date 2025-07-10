@@ -93,7 +93,7 @@ const t = content[lang as keyof typeof content];
       <!-- Navegación Desktop -->
       <div class="hidden lg:flex items-center space-x-6">
         <a 
-          href={lang === "es" ? "/" : "/english"} 
+          href="/"
           class={`text-base md:text-lg font-medium transition-colors hover:text-SM-blue focus-visible ${
             currentPage === "home" ? "text-SM-blue" : "text-slate-600 dark:text-slate-300"
           }`}

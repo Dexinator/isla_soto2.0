@@ -66,7 +66,7 @@
       "downloadBrochure": "Para complementar la experiencia, descarga el folleto con fotos e información."
     },
     "easy": {
-      "title": "Audioguía Fácil",
+      "title": "Audioguía Lectura Fácil",
       "description": "Audio adaptado para discapacidad intelectual con lenguaje claro y simple",
       "emoji": "📖",
       "startButton": "Comenzar Ruta de los Murales",
@@ -145,9 +145,9 @@
     "header": {
       "emoji": "🏷️",
       "types": {
-        "normal": "Audioguía Normativa",
+        "normal": "Audioguía",
         "descriptive": "Audioguía Descriptiva",
-        "easy": "Audioguía Fácil",
+        "easy": "Audioguía Lectura Fácil",
         "sign": "Signoguía"
       },
       "counter": "de",
@@ -156,7 +156,8 @@
     "item": {
       "startHere": "🎯 Comenzar aquí",
       "start": "▶️ Empezar",
-      "playingNow": "Reproduciendo ahora"
+      "playingNow": "Reproduciendo ahora",
+      "informationTrack": "Pista informativa"
     },
     "defaults": {
       "unknownArtist": "Artista desconocido",

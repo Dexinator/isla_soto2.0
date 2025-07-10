@@ -6,7 +6,6 @@ import Layout from '../components/ui/Layout.astro';
 import Header from '../components/ui/Header.astro';
 import Footer from '../components/ui/Footer.astro';
 import Card from '../components/ui/Card.astro';
-import MapCard from '../components/ui/MapCard.astro';
 import '../styles/global.css';
 
 // Importar imágenes de iconos para optimización
@@ -14,10 +13,8 @@ import iconAudioguiaNormativa from '../assets/images/icons/audioguia-normativa.j
 import iconAudioguiaFacil from '../assets/images/icons/audioguia-facil.jpg';
 import iconAudioguiaDescriptiva from '../assets/images/icons/audioguia-descriptiva.jpg';
 import iconSignoguia from '../assets/images/icons/signoguia.jpg';
-
-// Importar datos para el mapa
-import muralsData from '../data/murals.json';
-const { murals, route } = muralsData;
+import iconAudioguiaEnglish from '../assets/images/icons/audioguia-english.jpg';
+import iconFolleto from '../assets/images/icons/informativepdf.jpg';
 ---
 
 <Layout
@@ -90,12 +87,30 @@ const { murals, route } = muralsData;
             className="order-4"
           />
 
-          <!-- Mapa de la Ruta (tarjeta ancha) -->
-          <MapCard
-            muralsData={murals}
-            routeData={route}
-            language="es"
+          <!-- Audio Guide English -->
+          <Card
+            variant="square"
+            title="Audio Guide"
+            description=""
+            href="/english"
+            image={iconAudioguiaEnglish}
+            imageAlt="English audio guide icon"
+            badge="English"
+            badgeColor="yellow"
             className="order-5"
+          />
+
+          <!-- Folleto -->
+          <Card
+            variant="square"
+            title="Folleto"
+            description=""
+            href="/"
+            image={iconFolleto}
+            imageAlt="Icono del folleto informativo"
+            badge="Descargar"
+            badgeColor="yellow"
+            className="order-6"
           />
         </div>
       </div>
