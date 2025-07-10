@@ -17,9 +17,9 @@ import mural13 from '../assets/images/murals/13- Mural La Llegada de las Llaves.
 import mural14 from '../assets/images/murals/14- Mural Sueña. Audioguía. Santa Marta de Tormes.jpg';
 import mural15 from '../assets/images/murals/15- Mural Océano. Audioguía. Santa Marta de Tormes.jpg';
 import mural16 from '../assets/images/murals/16- Mural Carretera Madrid. Audioguía. Santa Marta de Tormes.jpg';
-import mural17 from '../assets/images/murals/17- Daniel Martín. Artista. Audioguía. Santa Marta de Tormes.jpg';
-import mural18 from '../assets/images/murals/18- Caín Ferreras. Artista. Audioguía. Santa Marta de Tormes.jpg';
-import mural19 from '../assets/images/murals/19- Rober Bece. Artista. Audioguía. Santa Marta de Tormes.jpg';
+import mural17 from '../assets/images/artists/Daniel Martín.jpg';
+import mural18 from '../assets/images/artists/Caín Ferreras.jpg';
+import mural19 from '../assets/images/artists/Rober Bece.jpg';
 import mural20 from '../assets/images/murals/20- Llegamos al Final. Audioguía. Santa Marta de Tormes.png';
 
 // Mapa de imágenes por ID de mural
