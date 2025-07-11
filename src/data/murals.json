@@ -42,8 +42,8 @@
         "en": "Start of the murals route in Santa Marta de Tormes"
       },
       "location": {
-        "es": "Punto de partida",
-        "en": "Starting point"
+        "es": "Bienvenida",
+        "en": "Welcome"
       },
       "artist": "Introducción",
       "year": 2024,
@@ -101,8 +101,8 @@
         "en": "Riverside walk mural along the Tormes river"
       },
       "location": {
-        "es": "Paseo Fluvial",
-        "en": "Riverside Walk"
+        "es": "Cruce Av. de Madrid y Pº del río Tormes",
+        "en": "Junction of Av. de Madrid and Pº del río Tormes"
       },
       "artist": "Caín Ferreras",
       "year": 2024,
@@ -160,8 +160,8 @@
         "en": "Mural at the Soto Island Interpretation Center"
       },
       "location": {
-        "es": "Centro de Interpretación - Isla del Soto",
-        "en": "Interpretation Center - Soto Island"
+        "es": "Centro de Interpretación de la Isla del Soto",
+        "en": "Soto Island Interpretation Center"
       },
       "artist": "Caín Ferreras",
       "year": 2024,
@@ -219,8 +219,8 @@
         "en": "Colorful mural representing the arrival of digital color to Santa Marta"
       },
       "location": {
-        "es": "Dr. Torres Villarroel, 1",
-        "en": "Dr. Torres Villarroel, 1"
+        "es": "Plaza de la Iglesia y Av. de Madrid",
+        "en": "Church Square and Av. de Madrid"
       },
       "artist": "Daniel Martín",
       "year": 2024,
@@ -278,8 +278,8 @@
         "en": "Forest mural connecting nature and city"
       },
       "location": {
-        "es": "Zona verde urbana",
-        "en": "Urban green area"
+        "es": "Plaza de España",
+        "en": "Spain Square"
       },
       "artist": "Daniel Martín",
       "year": 2024,
@@ -337,8 +337,8 @@
         "en": "Mural representing women's role in local history"
       },
       "location": {
-        "es": "Plaza de las Mujeres",
-        "en": "Women's Square"
+        "es": "C. Ricardo Marcos junto a Plaza de España",
+        "en": "Ricardo Marcos St. next to Spain Square"
       },
       "artist": "Rober Bece",
       "year": 2024,
@@ -396,8 +396,8 @@
         "en": "Mural of Doctor Torres Villarroel, illustrious historical figure"
       },
       "location": {
-        "es": "Calle Dr. Torres Villarroel",
-        "en": "Dr. Torres Villarroel Street"
+        "es": "Cruce de la Av. Enrique de Sena y la C. Dr. Torres Villarroel",
+        "en": "Junction of Av. Enrique de Sena and Dr. Torres Villarroel St."
       },
       "artist": "Caín Ferreras",
       "year": 2024,
@@ -455,8 +455,8 @@
         "en": "Mural of Sandra and Gustavo's special corner"
       },
       "location": {
-        "es": "Rincón especial",
-        "en": "Special corner"
+        "es": "C. Dr. Torres Villarroel",
+        "en": "Dr. Torres Villarroel St."
       },
       "artist": "Rober Bece",
       "year": 2024,
@@ -514,8 +514,8 @@
         "en": "Urban Art Festival murals, editions 1 and 2"
       },
       "location": {
-        "es": "Zona del festival",
-        "en": "Festival area"
+        "es": "Zona Festivales",
+        "en": "Festivals Area"
       },
       "artist": "Varias/os autoras/es",
       "year": 2024,
@@ -573,8 +573,8 @@
         "en": "Millennial generation mural with contemporary elements"
       },
       "location": {
-        "es": "Zona juvenil",
-        "en": "Youth area"
+        "es": "Pº Profesor Enrique Tierno Galván en la fachada del Campo Municipal de Fútbol Alfonso San Casto",
+        "en": "Professor Enrique Tierno Galván Walk at Alfonso San Casto Municipal Football Field"
       },
       "artist": "Rober Bece",
       "year": 2024,
@@ -632,8 +632,8 @@
         "en": "Mural on Mayor José Sánchez walk"
       },
       "location": {
-        "es": "Paseo Alcalde José Sánchez",
-        "en": "Mayor José Sánchez Walk"
+        "es": "Frontón de las Nieves en el Pº Alcalde José Sánchez",
+        "en": "Las Nieves Fronton at Mayor José Sánchez Walk"
       },
       "artist": "Caín Ferreras",
       "year": 2024,
@@ -691,8 +691,8 @@
         "en": "Breathe mural inviting calm and reflection"
       },
       "location": {
-        "es": "Zona de descanso",
-        "en": "Rest area"
+        "es": "C. Villalar junto a la Av. de Madrid",
+        "en": "Villalar St. next to Av. de Madrid"
       },
       "artist": "Rober Bece",
       "year": 2024,
@@ -750,8 +750,8 @@
         "en": "Keys mural symbolizing new opportunities"
       },
       "location": {
-        "es": "Entrada principal",
-        "en": "Main entrance"
+        "es": "C. Virgen del Carmen junto a la Av. de Madrid",
+        "en": "Virgen del Carmen St. next to Av. de Madrid"
       },
       "artist": "Rober Bece",
       "year": 2024,
@@ -809,8 +809,8 @@
         "en": "Dream mural with inspiring elements"
       },
       "location": {
-        "es": "Zona inspiracional",
-        "en": "Inspirational area"
+        "es": "Ctra. de Naharros junto C. Pablo Iglesias",
+        "en": "Naharros Road next to Pablo Iglesias St."
       },
       "artist": "Rober Bece",
       "year": 2024,
@@ -868,8 +868,8 @@
         "en": "Ocean mural with marine elements"
       },
       "location": {
-        "es": "Zona acuática",
-        "en": "Aquatic area"
+        "es": "Pasaje Santiago Mirat",
+        "en": "Santiago Mirat Passage"
       },
       "artist": "Rober Bece",
       "year": 2024,
@@ -927,8 +927,8 @@
         "en": "Mural in the Madrid highway area"
       },
       "location": {
-        "es": "Carretera Madrid",
-        "en": "Madrid Highway"
+        "es": "Av. de Madrid nº 64",
+        "en": "Av. de Madrid No. 64"
       },
       "artist": "Daniel Martín",
       "year": 2024,
@@ -982,8 +982,8 @@
         "en": "Information about artist Daniel Martín"
       },
       "location": {
-        "es": "Zona de artistas",
-        "en": "Artists area"
+        "es": "Para saber más",
+        "en": "Learn more"
       },
       "artist": "Daniel Martín",
       "year": 2024,
@@ -1037,8 +1037,8 @@
         "en": "Information about artist Caín Ferreras"
       },
       "location": {
-        "es": "Zona de artistas",
-        "en": "Artists area"
+        "es": "Para saber más",
+        "en": "Learn more"
       },
       "artist": "Caín Ferreras",
       "year": 2024,
@@ -1092,8 +1092,8 @@
         "en": "Information about artist Rober Bece"
       },
       "location": {
-        "es": "Zona de artistas",
-        "en": "Artists area"
+        "es": "Para saber más",
+        "en": "Learn more"
       },
       "artist": "Rober Bece",
       "year": 2024,
@@ -1147,8 +1147,8 @@
         "en": "End of the murals tour in Santa Marta de Tormes"
       },
       "location": {
-        "es": "Punto final",
-        "en": "End point"
+        "es": "Despedida",
+        "en": "Farewell"
       },
       "artist": "Cierre",
       "year": 2024,
