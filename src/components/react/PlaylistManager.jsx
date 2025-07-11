@@ -261,7 +261,15 @@ const PlaylistManager = ({
       <div className="p-4 bg-slate-50 dark:bg-slate-700/50 border-t border-slate-200 dark:border-slate-700">
         <div className="text-center">
           <span className="text-slate-600 dark:text-slate-400 text-sm">
-            {content.playlist.footer.totalTime}{murals.length * (audioType === 'easy' ? 5 : audioType === 'descriptive' ? 10 : 7)} {content.playlist.footer.minutes}
+            {content.playlist.footer.totalTime}{(() => {
+              switch(audioType) {
+                case 'normal': return language === 'en' ? '39:23' : '40:25';
+                case 'easy': return '34:22';
+                case 'descriptive': return '50:22';
+                case 'sign': return '40:28';
+                default: return '40:25';
+              }
+            })()}
           </span>
         </div>
       </div>
