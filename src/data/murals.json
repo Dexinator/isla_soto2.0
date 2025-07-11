@@ -45,14 +45,14 @@
         "es": "Punto de partida",
         "en": "Starting point"
       },
-      "artist": "Información general",
+      "artist": "Introducción",
       "year": 2024,
       "duration": {
-        "normal": "3 min",
-        "descriptive": "5 min",
-        "easy": "2 min",
-        "sign": "3 min",
-        "english": "2 min"
+        "normal": "0:01:47",
+        "descriptive": "0:01:41",
+        "easy": "0:01:41",
+        "sign": "0:01:45",
+        "english": "0:01:39"
       }
     },
     {
@@ -107,11 +107,11 @@
       "artist": "Caín Ferreras",
       "year": 2024,
       "duration": {
-        "normal": "5 min",
-        "descriptive": "8 min",
-        "easy": "3 min",
-        "sign": "5 min",
-        "english": "2 min"
+        "normal": "0:02:07",
+        "descriptive": "0:02:18",
+        "easy": "0:02:02",
+        "sign": "0:02:08",
+        "english": "0:01:48"
       }
     },
     {
@@ -166,11 +166,11 @@
       "artist": "Caín Ferreras",
       "year": 2024,
       "duration": {
-        "normal": "6 min",
-        "descriptive": "9 min",
-        "easy": "4 min",
-        "sign": "6 min",
-        "english": "2 min"
+        "normal": "0:01:57",
+        "descriptive": "0:02:51",
+        "easy": "0:01:58",
+        "sign": "0:01:57",
+        "english": "0:02:02"
       }
     },
     {
@@ -225,11 +225,11 @@
       "artist": "Daniel Martín",
       "year": 2024,
       "duration": {
-        "normal": "8 min",
-        "descriptive": "12 min",
-        "easy": "5 min",
-        "sign": "7 min",
-        "english": "2 min"
+        "normal": "0:02:01",
+        "descriptive": "0:03:06",
+        "easy": "0:02:07",
+        "sign": "0:02:01",
+        "english": "0:02:03"
       }
     },
     {
@@ -284,11 +284,11 @@
       "artist": "Daniel Martín",
       "year": 2024,
       "duration": {
-        "normal": "7 min",
-        "descriptive": "10 min",
-        "easy": "4 min",
-        "sign": "6 min",
-        "english": "2 min"
+        "normal": "0:01:39",
+        "descriptive": "0:02:12",
+        "easy": "0:01:39",
+        "sign": "0:01:39",
+        "english": "0:01:46"
       }
     },
     {
@@ -343,11 +343,11 @@
       "artist": "Rober Bece",
       "year": 2024,
       "duration": {
-        "normal": "9 min",
-        "descriptive": "13 min",
-        "easy": "5 min",
-        "sign": "8 min",
-        "english": "2 min"
+        "normal": "0:01:42",
+        "descriptive": "0:02:44",
+        "easy": "0:01:42",
+        "sign": "0:01:45",
+        "english": "0:02:00"
       }
     },
     {
@@ -402,11 +402,11 @@
       "artist": "Caín Ferreras",
       "year": 2024,
       "duration": {
-        "normal": "10 min",
-        "descriptive": "15 min",
-        "easy": "6 min",
-        "sign": "9 min",
-        "english": "2 min"
+        "normal": "0:01:42",
+        "descriptive": "0:01:58",
+        "easy": "0:02:10",
+        "sign": "0:01:45",
+        "english": "0:01:59"
       }
     },
     {
@@ -461,11 +461,11 @@
       "artist": "Rober Bece",
       "year": 2024,
       "duration": {
-        "normal": "6 min",
-        "descriptive": "9 min",
-        "easy": "4 min",
-        "sign": "5 min",
-        "english": "1 min"
+        "normal": "0:01:15",
+        "descriptive": "0:01:57",
+        "easy": "0:01:28",
+        "sign": "0:01:19",
+        "english": "0:01:28"
       }
     },
     {
@@ -520,11 +520,11 @@
       "artist": "Varias/os autoras/es",
       "year": 2024,
       "duration": {
-        "normal": "12 min",
-        "descriptive": "18 min",
-        "easy": "7 min",
-        "sign": "10 min",
-        "english": "2 min"
+        "normal": "0:01:52",
+        "descriptive": "0:01:50",
+        "easy": "0:01:56",
+        "sign": "0:01:55",
+        "english": "0:02:15"
       }
     },
     {
@@ -579,11 +579,11 @@
       "artist": "Rober Bece",
       "year": 2024,
       "duration": {
-        "normal": "8 min",
-        "descriptive": "11 min",
-        "easy": "5 min",
-        "sign": "7 min",
-        "english": "2 min"
+        "normal": "0:01:38",
+        "descriptive": "0:03:23",
+        "easy": "0:01:36",
+        "sign": "0:01:39",
+        "english": "0:01:47"
       }
     },
     {
@@ -638,11 +638,11 @@
       "artist": "Caín Ferreras",
       "year": 2024,
       "duration": {
-        "normal": "7 min",
-        "descriptive": "10 min",
-        "easy": "4 min",
-        "sign": "6 min",
-        "english": "2 min"
+        "normal": "0:01:46",
+        "descriptive": "0:02:14",
+        "easy": "0:01:46",
+        "sign": "0:01:47",
+        "english": "0:02:05"
       }
     },
     {
@@ -697,11 +697,11 @@
       "artist": "Rober Bece",
       "year": 2024,
       "duration": {
-        "normal": "5 min",
-        "descriptive": "8 min",
-        "easy": "3 min",
-        "sign": "4 min",
-        "english": "2 min"
+        "normal": "0:02:09",
+        "descriptive": "0:02:29",
+        "easy": "0:01:30",
+        "sign": "0:02:10",
+        "english": "0:02:19"
       }
     },
     {
@@ -756,11 +756,11 @@
       "artist": "Rober Bece",
       "year": 2024,
       "duration": {
-        "normal": "6 min",
-        "descriptive": "9 min",
-        "easy": "4 min",
-        "sign": "5 min",
-        "english": "2 min"
+        "normal": "0:01:46",
+        "descriptive": "0:02:15",
+        "easy": "0:01:42",
+        "sign": "0:01:47",
+        "english": "0:01:48"
       }
     },
     {
@@ -815,11 +815,11 @@
       "artist": "Rober Bece",
       "year": 2024,
       "duration": {
-        "normal": "5 min",
-        "descriptive": "7 min",
-        "easy": "3 min",
-        "sign": "4 min",
-        "english": "2 min"
+        "normal": "0:02:05",
+        "descriptive": "0:02:30",
+        "easy": "0:01:51",
+        "sign": "0:02:09",
+        "english": "0:02:08"
       }
     },
     {
@@ -874,11 +874,11 @@
       "artist": "Rober Bece",
       "year": 2024,
       "duration": {
-        "normal": "8 min",
-        "descriptive": "12 min",
-        "easy": "5 min",
-        "sign": "7 min",
-        "english": "2 min"
+        "normal": "0:01:35",
+        "descriptive": "0:02:59",
+        "easy": "0:01:29",
+        "sign": "0:01:35",
+        "english": "0:01:48"
       }
     },
     {
@@ -933,11 +933,11 @@
       "artist": "Daniel Martín",
       "year": 2024,
       "duration": {
-        "normal": "6 min",
-        "descriptive": "9 min",
-        "easy": "4 min",
-        "sign": "5 min",
-        "english": "1 min"
+        "normal": "0:01:16",
+        "descriptive": "0:02:22",
+        "easy": "0:01:32",
+        "sign": "0:01:18",
+        "english": "0:01:28"
       }
     },
     {
@@ -988,11 +988,11 @@
       "artist": "Daniel Martín",
       "year": 2024,
       "duration": {
-        "normal": "10 min",
-        "descriptive": "15 min",
-        "easy": "6 min",
-        "sign": "8 min",
-        "english": "2 min"
+        "normal": "0:03:22",
+        "descriptive": "0:03:22",
+        "easy": "0:01:37",
+        "sign": "0:03:17",
+        "english": "0:02:15"
       }
     },
     {
@@ -1043,11 +1043,11 @@
       "artist": "Caín Ferreras",
       "year": 2024,
       "duration": {
-        "normal": "9 min",
-        "descriptive": "13 min",
-        "easy": "5 min",
-        "sign": "7 min",
-        "english": "2 min"
+        "normal": "0:03:46",
+        "descriptive": "0:03:46",
+        "easy": "0:01:27",
+        "sign": "0:03:42",
+        "english": "0:02:15"
       }
     },
     {
@@ -1098,11 +1098,11 @@
       "artist": "Rober Bece",
       "year": 2024,
       "duration": {
-        "normal": "8 min",
-        "descriptive": "11 min",
-        "easy": "5 min",
-        "sign": "6 min",
-        "english": "2 min"
+        "normal": "0:03:12",
+        "descriptive": "0:03:12",
+        "easy": "0:01:20",
+        "sign": "0:03:08",
+        "english": "0:02:15"
       }
     },
     {
@@ -1150,14 +1150,14 @@
         "es": "Punto final",
         "en": "End point"
       },
-      "artist": "Información general",
+      "artist": "Cierre",
       "year": 2024,
       "duration": {
-        "normal": "4 min",
-        "descriptive": "6 min",
-        "easy": "3 min",
-        "sign": "4 min",
-        "english": "2 min"
+        "normal": "0:01:48",
+        "descriptive": "0:01:13",
+        "easy": "0:01:49",
+        "sign": "0:01:42",
+        "english": "0:02:15"
       }
     }
   ],
