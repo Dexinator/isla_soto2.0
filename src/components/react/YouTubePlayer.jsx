@@ -143,7 +143,7 @@ const YouTubePlayer = ({
           fs: 0,
           iv_load_policy: 3,
           cc_lang_pref: 'es',
-          cc_load_policy: 1, // Mostrar subtítulos por defecto
+          cc_load_policy: 3, // Desactivar subtítulos por defecto
           playsinline: 1,
           enablejsapi: 1,
           origin: window.location.origin
