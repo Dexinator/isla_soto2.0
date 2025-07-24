@@ -318,7 +318,7 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, audioType = 
               {content.map.title}
             </h3>
             <p className="text-sm text-slate-600 dark:text-slate-400">
-              {language === 'en' ? "Total Route: " : "Recorrido Total: "} {route?.totalDistance} • {language === 'en' ? "Total Duration: " : "Duración total: "} {route?.estimatedTime}
+              {language === 'en' ? "Total Route: " : "Recorrido Total: "} {route?.[audioType]?.totalDistance} • {language === 'en' ? "Total Duration: " : "Duración total: "} {route?.[audioType]?.estimatedTime}
             </p>
           </div>
           <div className="flex items-center space-x-2">
@@ -333,16 +333,6 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, audioType = 
             >
               {scrollZoomEnabled ? content.map.lockMap : content.map.unlockMap}
             </button>
-            {muralsWithCoordinates.length > 0 && (
-              <a
-                href={`https://maps.google.com/maps?daddr=${muralsWithCoordinates[0]?.coordinates[0]},${muralsWithCoordinates[0]?.coordinates[1]}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-SM-yellow text-SM-black px-3 py-2 rounded-lg text-sm font-medium hover:bg-yellow-500 transition-colors"
-              >
-                {content.map.openInGoogleMaps}
-              </a>
-            )}
           </div>
         </div>
       </div>
@@ -366,6 +356,20 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, audioType = 
             zIndex: 1
           }}
         />
+        {/* Botón central de desbloquear mapa */}
+        {!scrollZoomEnabled && !isLoading && (
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
+            <button
+              onClick={toggleScrollZoom}
+              className="pointer-events-auto bg-white dark:bg-slate-800 border-2 border-SM-blue px-6 py-3 rounded-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center space-x-2"
+            >
+              <span className="text-2xl">🔓</span>
+              <span className="font-semibold text-SM-blue dark:text-SM-yellow">
+                {content.map.unlockMap.replace('🔓 ', '')}
+              </span>
+            </button>
+          </div>
+        )}
       </div>
 
       {/* Leyenda */}

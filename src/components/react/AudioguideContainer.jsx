@@ -168,7 +168,10 @@ const AudioguideContainer = ({
       } else {
         // Si no hay mural, seleccionar el primero
         setCurrentMural(sortedMurals[0]);
-        setIsPlaying(true);
+        // Esperar un poco para que el reproductor se inicialice
+        setTimeout(() => {
+          setIsPlaying(true);
+        }, 500);
       }
 
       setAutoPlay(true);
@@ -238,6 +241,8 @@ const AudioguideContainer = ({
             onPlayStateChange={setIsPlaying}
             audioType={audioType}
             language={language}
+            isPlaying={isPlaying}
+            autoPlay={autoPlay}
             className="h-fit"
           />
         </section>

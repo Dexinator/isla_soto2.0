@@ -162,9 +162,12 @@ const SignoguideContainer = ({
       if (currentMural) {
         setIsPlaying(true);
       } else {
-        // Si no hay mural, seleccionar el primero
+        // Si no hay mural, seleccionar el primero y luego iniciar
         setCurrentMural(sortedMurals[0]);
-        setIsPlaying(true);
+        // Esperar a que el player se inicialice antes de reproducir
+        setTimeout(() => {
+          setIsPlaying(true);
+        }, 1000);
       }
 
       setAutoPlay(true);

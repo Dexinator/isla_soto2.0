@@ -1,0 +1,88 @@
+ID,Tipo,Propiedad,Ubicación,Contexto,Texto Español,Texto Inglés,Observaciones
+aria-1,aria-label,Navigation,Header.astro,Navegación principal,Navegación principal,Main navigation,
+aria-2,aria-label,Menu Button,Header.astro,Botón menú móvil,Menú,Menu,Dinámico según idioma
+aria-3,aria-label,Language Switch,Header.astro,Cambio de idioma,Cambiar idioma,Change language,Dinámico según idioma
+aria-4,aria-label,Light Mode,Header.astro,Activar tema claro,Activar modo claro,Switch to light mode,
+aria-5,aria-label,Dark Mode,Header.astro,Activar tema oscuro,Activar modo oscuro,Switch to dark mode,
+aria-6,aria-label,High Contrast,Header.astro,Alto contraste toggle,Activar/desactivar alto contraste,Enable/disable high contrast,Dinámico según idioma
+aria-7,aria-label,Font Increase,Header.astro,Aumentar fuente,Aumentar tamaño de texto,Increase font size,
+aria-8,aria-label,Font Decrease,Header.astro,Disminuir fuente,Disminuir tamaño de texto,Decrease font size,
+aria-9,aria-label,Card Link,Card.astro,Enlaces de tarjetas,[Título]: [Descripción],[Title]: [Description],Dinámico según contenido
+aria-10,aria-label,Previous Audio,AudioguideContainer.jsx,Botón anterior audio,Anterior,Previous,
+aria-11,aria-label,Play/Pause Audio,AudioguideContainer.jsx,Reproducir/pausar audio,Reproducir/Pausar,Play/Pause,Cambia según estado
+aria-12,aria-label,Next Audio,AudioguideContainer.jsx,Botón siguiente audio,Siguiente,Next,
+aria-13,aria-label,Previous Video,SignoguideContainer.jsx,Botón anterior video,Anterior,Previous,
+aria-14,aria-label,Play/Pause Video,SignoguideContainer.jsx,Reproducir/pausar video,Reproducir/Pausar,Play/Pause,Cambia según estado
+aria-15,aria-label,Next Video,SignoguideContainer.jsx,Botón siguiente video,Siguiente,Next,
+aria-16,aria-label,Mute/Unmute,YouTubePlayer.jsx,Silenciar/activar sonido,Silenciar/Activar sonido,Mute/Unmute,Cambia según estado
+aria-17,aria-label,Volume Control,YouTubePlayer.jsx,Control de volumen,Control de volumen,Volume control,
+aria-18,aria-label,Fullscreen,YouTubePlayer.jsx,Pantalla completa,Pantalla completa/Salir de pantalla completa,Fullscreen/Exit fullscreen,Cambia según estado
+aria-19,aria-label,Previous Track,AudioPlayer.jsx,Pista anterior,Pista anterior,Previous track,
+aria-20,aria-label,Next Track,AudioPlayer.jsx,Pista siguiente,Pista siguiente,Next track,
+aria-21,aria-label,Previous Partner,PartnersSlider.jsx,Colaborador anterior,Colaborador anterior,Previous partner,
+aria-22,aria-label,Next Partner,PartnersSlider.jsx,Siguiente colaborador,Siguiente colaborador,Next partner,
+aria-23,aria-label,Play/Pause Slider,PartnersSlider.jsx,Pausar/reanudar carrusel,Pausar presentación/Reanudar presentación,Pause/Resume presentation,Cambia según estado
+aria-24,aria-label,Instagram Link,ArtistsSection.astro,Enlaces Instagram artistas,Síguenos en Instagram: [Nombre],Follow us on Instagram: [Name],Dinámico según artista
+aria-25,aria-label,Dot Navigation,PartnersSlider.jsx,Navegación por puntos,Ir al colaborador [número],Go to partner [number],Dinámico según índice
+expanded-1,aria-expanded,Mobile Menu,Header.astro,Estado menú móvil,false/true,false/true,Cambia al abrir/cerrar
+hidden-1,aria-hidden,Instagram Icon,ArtistsSection.astro,Icono decorativo Instagram,true,true,Evita lectura redundante
+labelledby-1,aria-labelledby,Artists Section,audioguias/*.astro,Sección artistas,artists-title,artists-title,
+labelledby-2,aria-labelledby,Map Section,audioguias/*.astro,Sección mapa,map-title,map-title,
+labelledby-3,aria-labelledby,Player Section,audioguias/*.astro,Sección reproductor,player-title,player-title,
+labelledby-4,aria-labelledby,Playlist Section,audioguias/*.astro,Sección lista reproducción,playlist-title,playlist-title,
+role-1,role,Navigation,Header.astro,Rol navegación,navigation,navigation,
+sr-1,sr-only,Map Title,AudioguideContainer.jsx,Título mapa oculto,Mapa interactivo de la ruta,Interactive route map,Solo para lectores
+sr-2,sr-only,Audio Player Title,AudioguideContainer.jsx,Título reproductor oculto,Reproductor de audio,Audio player,Solo para lectores
+sr-3,sr-only,Video Player Title,SignoguideContainer.jsx,Título video oculto,Reproductor de video,Video player,Solo para lectores
+sr-4,sr-only,Playlist Title,AudioguideContainer.jsx,Título lista oculto,Lista de reproducción,Playlist,Solo para lectores
+skip-1,skip-link,Skip to Content,Layout.astro,Saltar al contenido,Saltar al contenido principal,Skip to main content,Enlace de salto
+focus-1,focus-visible,All Interactive,Global CSS,Elementos interactivos,Anillo de enfoque azul,Blue focus ring,Estilo CSS personalizado
+contrast-1,high-contrast,High Contrast Mode,Global CSS,Modo alto contraste,Clase .high-contrast,Class .high-contrast,Ajustes visuales
+motion-1,reduce-motion,Reduced Motion,Global CSS,Movimiento reducido,Clase .reduce-motion,Class .reduce-motion,Respeta preferencias
+theme-1,theme-color,Theme Color Meta,Layout.astro,Color tema móvil,#0072c0,#0072c0,Color de barra móvil
+nav-1,text-label,Logo Principal,Header.astro,Logo Ruta Murales,Texto implícito del alt,Implicit alt text,Falta aria-label explícito
+nav-2,text-label,Logo Turismo,Header.astro,Logo externo Turismo,Texto implícito del alt,Implicit alt text,Falta indicación enlace externo
+nav-3,text-label,Inicio,Header.astro,Enlace inicio,Inicio,Home,Solo texto como etiqueta
+nav-4,FALTA,Dropdown Audioguías,Header.astro,Botón desplegable,Audioguías,Audio guides,Falta aria-expanded y aria-haspopup
+nav-5,text-label,Audioguía Normativa,Header.astro,Enlace menú desplegable,Audioguía,Audio Guide,Solo texto como etiqueta
+nav-6,text-label,Audioguía Descriptiva,Header.astro,Enlace menú desplegable,Audioguía Descriptiva,Descriptive Audio Guide,Solo texto como etiqueta
+nav-7,text-label,Audioguía Lectura Fácil,Header.astro,Enlace menú desplegable,Audioguía Lectura Fácil,Easy Reading Audio Guide,Solo texto como etiqueta
+nav-8,text-label,Signoguía,Header.astro,Enlace signoguía,Signoguía,Sign Language Guide,Solo texto como etiqueta
+nav-9,text-label,Teléfono,Footer.astro,Enlace teléfono,+34 923 200 005,+34 923 200 005,Sin aria-label
+nav-10,text-label,Email,Footer.astro,Enlace email,turismodesantamarta@gmail.com,turismodesantamarta@gmail.com,Sin aria-label
+nav-11,text-label,Instagram Footer,Footer.astro,Enlace Instagram,@turismosantamartadetormes,@turismosantamartadetormes,Sin aria-label enlace externo
+missing-1,aria-current,Página activa,Navegación,Indicador página actual,FALTA,MISSING,No implementado
+missing-2,aria-haspopup,Dropdown menú,Header.astro,Indicador desplegable,FALTA,MISSING,Necesario para dropdown
+missing-3,aria-controls,Dropdown control,Header.astro,Control desplegable,FALTA,MISSING,Referencia al menú
+missing-4,role=menu,Menú desplegable,Header.astro,Rol del dropdown,FALTA,MISSING,Semántica del menú
+missing-5,role=menuitem,Items menú,Header.astro,Items del dropdown,FALTA,MISSING,Items del menú
+progress-1,FALTA aria-value,Progress Audio,SoundCloudPlayer.jsx,Barra progreso audio,FALTA aria-valuenow/min/max,MISSING aria-valuenow/min/max,Necesario para lectores
+progress-2,FALTA aria-value,Progress Video,YouTubePlayer.jsx,Barra progreso video,FALTA aria-valuenow/min/max,MISSING aria-valuenow/min/max,Necesario para lectores
+progress-3,FALTA aria-value,Progress Playlist,PlaylistManager.jsx,Progreso lista reproducción,X% completado,X% completed,Sin atributos ARIA
+volume-1,range input,Volume Audio,SoundCloudPlayer.jsx,Control volumen audio,Solo aria-label,Only aria-label,Falta aria-valuenow
+volume-2,range input,Volume Video,YouTubePlayer.jsx,Control volumen video,Control de volumen,Volume control,Falta aria-valuenow
+volume-3,range input,Volume Player,AudioPlayer.jsx,Control volumen reproductor,Solo aria-label,Only aria-label,Falta aria-valuenow
+pdf-1,download link,Folleto Español,audioguias/*.astro,Descarga PDF español,/brochure/spanish.pdf,/brochure/spanish.pdf,Sin indicación tipo/tamaño
+pdf-2,download link,Folleto Inglés,audioguia-normativa.astro,Descarga PDF inglés,/brochure/english.pdf,/brochure/english.pdf,Sin indicación tipo/tamaño
+loading-1,loading state,Cargando Mapa,MapComponent.jsx,Estado carga mapa,Cargando mapa...,Loading map...,Sin aria-busy
+loading-2,loading state,Cargando Audio,SoundCloudPlayer.jsx,Estado carga audio,Cargando...,Loading...,Sin aria-busy
+loading-3,loading state,Cargando Video,YouTubePlayer.jsx,Estado carga video,Cargando reproductor...,Loading player...,Sin aria-busy
+popup-1,map popup,Popup Marcador,MapComponent.jsx,Ventana emergente mapa,Contenido dinámico,Dynamic content,Sin gestión foco
+maplock-1,button,Bloquear Mapa,MapComponent.jsx,Control interacción mapa,Mapa bloqueado/Desbloquear mapa,Map locked/Unlock map,Solo texto sin aria
+error-1,error message,Error Audio,SoundCloudPlayer.jsx,Error carga audio,Error al cargar,Error loading,Sin role=alert
+error-2,error message,Error Video,YouTubePlayer.jsx,Error carga video,Error al cargar,Error loading,Sin role=alert
+error-3,error message,Error Mapa,MapComponent.jsx,Error carga mapa,Error al cargar,Error loading,Sin role=alert
+form-1,input,Nombre,showroom.astro,Campo nombre formulario,placeholder: Tu nombre,placeholder: Your name,Campo obsoleto
+form-2,input,Email,showroom.astro,Campo email formulario,placeholder: tu@email.com,placeholder: your@email.com,Campo obsoleto
+form-3,textarea,Mensaje,showroom.astro,Campo mensaje formulario,placeholder: Tu mensaje,placeholder: Your message,Campo obsoleto
+form-4,checkbox,Términos,showroom.astro,Aceptar términos,Acepto los términos,I accept the terms,Campo obsoleto
+time-1,duration,Duración Min,PlaylistManager.jsx,Formato duración,X min,X min,Sin etiqueta <time>
+time-2,time format,Tiempo MM:SS,Audio/Video players,Formato tiempo,MM:SS,MM:SS,Sin etiqueta <time>
+iframe-1,hidden iframe,SoundCloud Widget,SoundCloudPlayer.jsx,Iframe oculto audio,aria-hidden=true,aria-hidden=true,Correctamente oculto
+iframe-2,hidden iframe,YouTube Player,YouTubePlayer.jsx,Iframe oculto video,aria-hidden=true,aria-hidden=true,Correctamente oculto
+missing-6,cookie banner,Aviso Cookies,No existe,Banner cookies GA4,NO IMPLEMENTADO,NOT IMPLEMENTED,Usa Google Analytics
+missing-7,breadcrumbs,Migas de pan,No existe,Navegación jerárquica,NO IMPLEMENTADO,NOT IMPLEMENTED,Ayuda navegación
+missing-8,skip links,Enlaces salto,Layout.astro,Saltar navegación,CSS listo pero NO USADO,CSS ready but NOT USED,Implementación pendiente
+missing-9,search,Búsqueda,No existe,Función búsqueda,NO IMPLEMENTADO,NOT IMPLEMENTED,No hay búsqueda
+missing-10,share,Compartir,No existe,Botones compartir,NO IMPLEMENTADO,NOT IMPLEMENTED,No hay compartir
+missing-11,print,Imprimir,No existe,Estilos impresión,NO IMPLEMENTADO,NOT IMPLEMENTED,Sin CSS print

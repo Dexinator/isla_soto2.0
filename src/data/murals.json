@@ -1232,8 +1232,22 @@
         -5.629455943072232
       ]
     ],
-    "totalDistance": "3.2 km",
-    "estimatedTime": "2.5 horas",
+    "normal": {
+      "totalDistance": "4,1 km",
+      "estimatedTime": "1h 35min"
+    },
+    "easy": {
+      "totalDistance": "4,1 km",
+      "estimatedTime": "1h 30min"
+    },
+    "descriptive": {
+      "totalDistance": "4,1 km",
+      "estimatedTime": "1h 45min"
+    },
+    "sign": {
+      "totalDistance": "4,1 km",
+      "estimatedTime": "1h 35min"
+    },
     "difficulty": {
       "es": "Fácil",
       "en": "Easy"

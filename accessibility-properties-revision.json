@@ -1,0 +1,716 @@
+{
+  "metadata": {
+    "proyecto": "Audioguías Murales Santa Marta - Propiedades de Accesibilidad",
+    "fecha_extraccion": "2025-07-24",
+    "total_propiedades": 88,
+    "categorias": {
+      "aria_labels": 25,
+      "aria_expanded": 1,
+      "aria_hidden": 1,
+      "aria_labelledby": 4,
+      "roles": 1,
+      "screen_reader_only": 4,
+      "skip_links": 1,
+      "estilos_accesibilidad": 4,
+      "meta_accesibilidad": 1,
+      "navegacion_sin_aria": 11,
+      "elementos_faltantes": 11,
+      "progress_sin_aria": 3,
+      "volume_sin_aria": 3,
+      "estados_carga": 3,
+      "mensajes_error": 3,
+      "elementos_formulario": 4,
+      "enlaces_descarga": 2,
+      "otros_elementos": 9
+    }
+  },
+  "propiedades_accesibilidad": [
+    {
+      "categoria": "ARIA Labels",
+      "elementos": [
+        {
+          "id": "aria-nav",
+          "ubicacion": "Header.astro",
+          "elemento": "Navegación principal",
+          "propiedad": "aria-label",
+          "valores": {
+            "es": "Navegación principal",
+            "en": "Main navigation"
+          },
+          "dinamico": false
+        },
+        {
+          "id": "aria-menu",
+          "ubicacion": "Header.astro",
+          "elemento": "Botón menú móvil",
+          "propiedad": "aria-label",
+          "valores": {
+            "es": "Menú",
+            "en": "Menu"
+          },
+          "dinamico": true,
+          "nota": "Se obtiene de archivo de traducciones"
+        },
+        {
+          "id": "aria-play-pause",
+          "ubicacion": "AudioguideContainer.jsx, SignoguideContainer.jsx, YouTubePlayer.jsx, AudioPlayer.jsx",
+          "elemento": "Botón reproducir/pausar",
+          "propiedad": "aria-label",
+          "valores": {
+            "estado_play": {
+              "es": "Reproducir",
+              "en": "Play"
+            },
+            "estado_pause": {
+              "es": "Pausar",
+              "en": "Pause"
+            }
+          },
+          "dinamico": true,
+          "nota": "Cambia según estado de reproducción"
+        },
+        {
+          "id": "aria-volume",
+          "ubicacion": "YouTubePlayer.jsx",
+          "elemento": "Control de volumen",
+          "propiedad": "aria-label",
+          "valores": {
+            "es": "Control de volumen",
+            "en": "Volume control"
+          },
+          "dinamico": false
+        },
+        {
+          "id": "aria-mute",
+          "ubicacion": "YouTubePlayer.jsx, AudioPlayer.jsx",
+          "elemento": "Botón silenciar",
+          "propiedad": "aria-label",
+          "valores": {
+            "estado_muted": {
+              "es": "Activar sonido",
+              "en": "Unmute"
+            },
+            "estado_unmuted": {
+              "es": "Silenciar",
+              "en": "Mute"
+            }
+          },
+          "dinamico": true,
+          "nota": "Cambia según estado de audio"
+        },
+        {
+          "id": "aria-fullscreen",
+          "ubicacion": "YouTubePlayer.jsx",
+          "elemento": "Pantalla completa",
+          "propiedad": "aria-label",
+          "valores": {
+            "entrar": {
+              "es": "Pantalla completa",
+              "en": "Fullscreen"
+            },
+            "salir": {
+              "es": "Salir de pantalla completa",
+              "en": "Exit fullscreen"
+            }
+          },
+          "dinamico": true
+        },
+        {
+          "id": "aria-partners-nav",
+          "ubicacion": "PartnersSlider.jsx",
+          "elemento": "Navegación colaboradores",
+          "propiedad": "aria-label",
+          "valores": {
+            "anterior": {
+              "es": "Colaborador anterior",
+              "en": "Previous partner"
+            },
+            "siguiente": {
+              "es": "Siguiente colaborador",
+              "en": "Next partner"
+            },
+            "pausar": {
+              "es": "Pausar presentación",
+              "en": "Pause presentation"
+            },
+            "reanudar": {
+              "es": "Reanudar presentación",
+              "en": "Resume presentation"
+            }
+          },
+          "dinamico": true
+        },
+        {
+          "id": "aria-dots",
+          "ubicacion": "PartnersSlider.jsx",
+          "elemento": "Navegación por puntos",
+          "propiedad": "aria-label",
+          "valores": {
+            "es": "Ir al colaborador {número}",
+            "en": "Go to partner {number}"
+          },
+          "dinamico": true,
+          "nota": "Número cambia según índice"
+        }
+      ]
+    },
+    {
+      "categoria": "ARIA States",
+      "elementos": [
+        {
+          "id": "aria-expanded",
+          "ubicacion": "Header.astro",
+          "elemento": "Menú móvil",
+          "propiedad": "aria-expanded",
+          "valores": {
+            "cerrado": "false",
+            "abierto": "true"
+          },
+          "dinamico": true
+        },
+        {
+          "id": "aria-hidden",
+          "ubicacion": "ArtistsSection.astro",
+          "elemento": "Icono Instagram",
+          "propiedad": "aria-hidden",
+          "valores": "true",
+          "nota": "Evita lectura redundante del icono decorativo"
+        }
+      ]
+    },
+    {
+      "categoria": "ARIA Relationships",
+      "elementos": [
+        {
+          "id": "labelledby-sections",
+          "ubicacion": "audioguias/*.astro, signoguia.astro",
+          "elementos": [
+            {
+              "seccion": "Artistas",
+              "propiedad": "aria-labelledby",
+              "valor": "artists-title"
+            },
+            {
+              "seccion": "Mapa",
+              "propiedad": "aria-labelledby",
+              "valor": "map-title"
+            },
+            {
+              "seccion": "Reproductor",
+              "propiedad": "aria-labelledby",
+              "valor": "player-title"
+            },
+            {
+              "seccion": "Lista de reproducción",
+              "propiedad": "aria-labelledby",
+              "valor": "playlist-title"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "categoria": "Roles",
+      "elementos": [
+        {
+          "id": "role-nav",
+          "ubicacion": "Header.astro",
+          "elemento": "Navegación",
+          "propiedad": "role",
+          "valor": "navigation"
+        }
+      ]
+    },
+    {
+      "categoria": "Screen Reader Only",
+      "elementos": [
+        {
+          "id": "sr-map",
+          "ubicacion": "AudioguideContainer.jsx, SignoguideContainer.jsx",
+          "clase": "sr-only",
+          "contenido": {
+            "es": "Mapa interactivo de la ruta",
+            "en": "Interactive route map"
+          }
+        },
+        {
+          "id": "sr-player",
+          "ubicacion": "AudioguideContainer.jsx",
+          "clase": "sr-only",
+          "contenido": {
+            "es": "Reproductor de audio",
+            "en": "Audio player"
+          }
+        },
+        {
+          "id": "sr-video",
+          "ubicacion": "SignoguideContainer.jsx",
+          "clase": "sr-only",
+          "contenido": {
+            "es": "Reproductor de video",
+            "en": "Video player"
+          }
+        },
+        {
+          "id": "sr-playlist",
+          "ubicacion": "AudioguideContainer.jsx, SignoguideContainer.jsx",
+          "clase": "sr-only",
+          "contenido": {
+            "es": "Lista de reproducción",
+            "en": "Playlist"
+          }
+        }
+      ]
+    },
+    {
+      "categoria": "Skip Links",
+      "elementos": [
+        {
+          "id": "skip-main",
+          "ubicacion": "Layout.astro",
+          "clase": "skip-link",
+          "href": "#main-content",
+          "texto": {
+            "es": "Saltar al contenido principal",
+            "en": "Skip to main content"
+          }
+        }
+      ]
+    },
+    {
+      "categoria": "Controles de Accesibilidad",
+      "elementos": [
+        {
+          "id": "contrast-toggle",
+          "tipo": "Alto contraste",
+          "implementacion": {
+            "clase_css": ".high-contrast",
+            "almacenamiento": "localStorage",
+            "boton_aria": {
+              "es": "Activar/desactivar alto contraste",
+              "en": "Enable/disable high contrast"
+            }
+          }
+        },
+        {
+          "id": "font-size",
+          "tipo": "Tamaño de fuente",
+          "implementacion": {
+            "clases": ["font-size-1", "font-size-2", "font-size-3"],
+            "almacenamiento": "localStorage",
+            "botones_aria": {
+              "aumentar": {
+                "es": "Aumentar tamaño de texto",
+                "en": "Increase font size"
+              },
+              "disminuir": {
+                "es": "Disminuir tamaño de texto",
+                "en": "Decrease font size"
+              }
+            }
+          }
+        },
+        {
+          "id": "theme-toggle",
+          "tipo": "Tema claro/oscuro",
+          "implementacion": {
+            "clase_css": ".dark",
+            "almacenamiento": "localStorage",
+            "botones_aria": {
+              "claro": {
+                "es": "Activar modo claro",
+                "en": "Switch to light mode"
+              },
+              "oscuro": {
+                "es": "Activar modo oscuro",
+                "en": "Switch to dark mode"
+              }
+            }
+          }
+        },
+        {
+          "id": "reduced-motion",
+          "tipo": "Movimiento reducido",
+          "implementacion": {
+            "media_query": "prefers-reduced-motion",
+            "clase_css": ".reduce-motion"
+          }
+        }
+      ]
+    }
+  ],
+  "elementos_faltantes": [
+    {
+      "elemento": "aria-live",
+      "descripcion": "Regiones dinámicas para anunciar cambios",
+      "prioridad": "alta",
+      "uso_sugerido": "Anunciar progreso de playlist, estados de carga"
+    },
+    {
+      "elemento": "aria-current",
+      "descripcion": "Indicar página o elemento actual",
+      "prioridad": "media",
+      "uso_sugerido": "Marcar tipo de audioguía activa en navegación"
+    },
+    {
+      "elemento": "aria-describedby",
+      "descripcion": "Descripciones adicionales para elementos complejos",
+      "prioridad": "media",
+      "uso_sugerido": "Instrucciones detalladas para controles de audio/video"
+    },
+    {
+      "elemento": "aria-busy",
+      "descripcion": "Indicar elementos en proceso de carga",
+      "prioridad": "media",
+      "uso_sugerido": "Durante carga de audio, mapa o lista"
+    },
+    {
+      "elemento": "role='status'",
+      "descripcion": "Mensajes de estado no intrusivos",
+      "prioridad": "media",
+      "uso_sugerido": "Mensajes de completado, errores suaves"
+    },
+    {
+      "elemento": "transcripciones",
+      "descripcion": "Texto alternativo para contenido de audio",
+      "prioridad": "alta",
+      "uso_sugerido": "Transcripciones completas de audioguías para usuarios sordos"
+    }
+  ],
+  "navegacion_menu": {
+    "categoria": "Enlaces de Navegación",
+    "descripcion": "Enlaces del menú principal que dependen solo del texto para accesibilidad",
+    "elementos": [
+      {
+        "id": "nav-logo-principal",
+        "ubicacion": "Header.astro línea 64-79",
+        "elemento": "Logo Ruta de los Murales",
+        "tipo": "Enlace con imagen",
+        "accesibilidad_actual": "Alt text: 'Ruta de los Murales Santa Marta de Tormes'",
+        "mejora_sugerida": "Añadir aria-label explícito para claridad"
+      },
+      {
+        "id": "nav-logo-turismo",
+        "ubicacion": "Header.astro línea 81-89",
+        "elemento": "Logo Turismo Santa Marta",
+        "tipo": "Enlace externo con imagen",
+        "accesibilidad_actual": "Alt text: 'Turismo Santa Marta de Tormes'",
+        "mejora_sugerida": "Añadir '(abre en nueva pestaña)' al aria-label"
+      },
+      {
+        "id": "nav-inicio",
+        "ubicacion": "Header.astro línea 95-102",
+        "elemento": "Enlace Inicio",
+        "tipo": "Enlace de texto",
+        "texto": {
+          "es": "Inicio",
+          "en": "Home"
+        },
+        "accesibilidad_actual": "Solo texto como etiqueta"
+      },
+      {
+        "id": "nav-dropdown-audioguias",
+        "ubicacion": "Header.astro línea 105-110",
+        "elemento": "Botón desplegable Audioguías",
+        "tipo": "Botón dropdown",
+        "texto": {
+          "es": "Audioguías",
+          "en": "Audio guides"
+        },
+        "problemas": [
+          "Falta aria-expanded",
+          "Falta aria-haspopup='menu'",
+          "Falta aria-controls con ID del menú"
+        ]
+      },
+      {
+        "id": "nav-audioguia-normal",
+        "ubicacion": "Header.astro línea 116",
+        "elemento": "Audioguía Normativa",
+        "tipo": "Enlace dropdown item",
+        "texto": {
+          "es": "Audioguía",
+          "en": "Audio Guide"
+        },
+        "problema": "Falta role='menuitem'"
+      },
+      {
+        "id": "nav-audioguia-descriptiva",
+        "ubicacion": "Header.astro línea 119",
+        "elemento": "Audioguía Descriptiva",
+        "tipo": "Enlace dropdown item",
+        "texto": {
+          "es": "Audioguía Descriptiva",
+          "en": "Descriptive Audio Guide"
+        },
+        "problema": "Falta role='menuitem'"
+      },
+      {
+        "id": "nav-audioguia-facil",
+        "ubicacion": "Header.astro línea 122",
+        "elemento": "Audioguía Lectura Fácil",
+        "tipo": "Enlace dropdown item",
+        "texto": {
+          "es": "Audioguía Lectura Fácil",
+          "en": "Easy Reading Audio Guide"
+        },
+        "problema": "Falta role='menuitem'"
+      },
+      {
+        "id": "nav-signoguia",
+        "ubicacion": "Header.astro línea 125",
+        "elemento": "Signoguía",
+        "tipo": "Enlace navegación",
+        "texto": {
+          "es": "Signoguía",
+          "en": "Sign Language Guide"
+        },
+        "accesibilidad_actual": "Solo texto como etiqueta"
+      }
+    ]
+  },
+  "navegacion_footer": {
+    "categoria": "Enlaces del Footer",
+    "elementos": [
+      {
+        "id": "footer-telefono",
+        "ubicacion": "Footer.astro línea 88-98",
+        "elemento": "Enlace teléfono",
+        "tipo": "tel: link",
+        "texto": "+34 923 200 005",
+        "mejora_sugerida": "Añadir aria-label='Llamar al teléfono de contacto'"
+      },
+      {
+        "id": "footer-email",
+        "ubicacion": "Footer.astro línea 101-111",
+        "elemento": "Enlace email",
+        "tipo": "mailto: link",
+        "texto": "turismodesantamarta@gmail.com",
+        "mejora_sugerida": "Añadir aria-label='Enviar correo electrónico'"
+      },
+      {
+        "id": "footer-instagram",
+        "ubicacion": "Footer.astro línea 114-125",
+        "elemento": "Enlace Instagram",
+        "tipo": "Enlace externo",
+        "texto": "@turismosantamartadetormes",
+        "mejora_sugerida": "Añadir aria-label='Visitar Instagram (abre en nueva pestaña)'"
+      }
+    ]
+  },
+  "elementos_adicionales": {
+    "categoria": "Elementos Interactivos Adicionales",
+    "descripcion": "Elementos que requieren mejoras de accesibilidad",
+    "barras_progreso": [
+      {
+        "id": "progress-audio",
+        "ubicacion": "SoundCloudPlayer.jsx",
+        "elemento": "Barra de progreso de audio",
+        "problema": "Falta aria-valuenow, aria-valuemin='0', aria-valuemax='100'",
+        "impacto": "Lectores de pantalla no pueden anunciar el progreso"
+      },
+      {
+        "id": "progress-video",
+        "ubicacion": "YouTubePlayer.jsx",
+        "elemento": "Barra de progreso de video",
+        "problema": "Falta aria-valuenow, aria-valuemin='0', aria-valuemax='100'",
+        "impacto": "Lectores de pantalla no pueden anunciar el progreso"
+      },
+      {
+        "id": "progress-playlist",
+        "ubicacion": "PlaylistManager.jsx",
+        "elemento": "Progreso de lista de reproducción",
+        "texto_actual": "X% completado",
+        "problema": "Sin atributos ARIA para el porcentaje"
+      }
+    ],
+    "controles_volumen": [
+      {
+        "id": "volume-soundcloud",
+        "ubicacion": "SoundCloudPlayer.jsx",
+        "tipo": "input[type='range']",
+        "aria_actual": "Solo aria-label",
+        "falta": "aria-valuenow, aria-valuetext"
+      },
+      {
+        "id": "volume-youtube",
+        "ubicacion": "YouTubePlayer.jsx",
+        "tipo": "input[type='range']",
+        "aria_actual": "aria-label='Control de volumen'",
+        "falta": "aria-valuenow, aria-valuetext"
+      },
+      {
+        "id": "volume-audio",
+        "ubicacion": "AudioPlayer.jsx",
+        "tipo": "input[type='range']",
+        "aria_actual": "Solo aria-label",
+        "falta": "aria-valuenow, aria-valuetext"
+      }
+    ],
+    "enlaces_descarga": [
+      {
+        "id": "pdf-spanish",
+        "ubicacion": "audioguias/*.astro",
+        "url": "/brochure/spanish.pdf",
+        "problema": "Sin indicación de tipo de archivo o tamaño",
+        "mejora": "Añadir '(PDF, X MB)' al texto del enlace"
+      },
+      {
+        "id": "pdf-english",
+        "ubicacion": "audioguia-normativa.astro (inglés)",
+        "url": "/brochure/english.pdf",
+        "problema": "Sin indicación de tipo de archivo o tamaño",
+        "mejora": "Añadir '(PDF, X MB)' al texto del enlace"
+      }
+    ],
+    "estados_carga": [
+      {
+        "id": "loading-map",
+        "ubicacion": "MapComponent.jsx",
+        "texto": "Cargando mapa...",
+        "problema": "Sin aria-busy='true' ni role='status'"
+      },
+      {
+        "id": "loading-audio",
+        "ubicacion": "SoundCloudPlayer.jsx",
+        "texto": "Cargando...",
+        "problema": "Sin aria-busy='true' ni role='status'"
+      },
+      {
+        "id": "loading-video",
+        "ubicacion": "YouTubePlayer.jsx",
+        "texto": "Cargando reproductor...",
+        "problema": "Sin aria-busy='true' ni role='status'"
+      }
+    ],
+    "mensajes_error": [
+      {
+        "id": "error-audio",
+        "ubicacion": "SoundCloudPlayer.jsx",
+        "texto": "Error al cargar el audio",
+        "problema": "Sin role='alert' ni aria-live='assertive'"
+      },
+      {
+        "id": "error-video",
+        "ubicacion": "YouTubePlayer.jsx",
+        "texto": "Error al cargar el video",
+        "problema": "Sin role='alert' ni aria-live='assertive'"
+      },
+      {
+        "id": "error-map",
+        "ubicacion": "MapComponent.jsx",
+        "texto": "Error al cargar el mapa",
+        "problema": "Sin role='alert' ni aria-live='assertive'"
+      }
+    ],
+    "otros_elementos": [
+      {
+        "id": "map-popup",
+        "ubicacion": "MapComponent.jsx",
+        "elemento": "Popup de marcador en mapa",
+        "problema": "Sin gestión de foco ni anuncio para lectores"
+      },
+      {
+        "id": "map-lock",
+        "ubicacion": "MapComponent.jsx",
+        "elemento": "Botón bloquear/desbloquear mapa",
+        "texto": "Mapa bloqueado / Desbloquear mapa",
+        "problema": "Solo texto, sin aria-label descriptivo"
+      },
+      {
+        "id": "time-format",
+        "ubicacion": "PlaylistManager, Audio/Video players",
+        "elemento": "Formato de tiempo",
+        "formatos": ["X min", "MM:SS"],
+        "problema": "Sin etiqueta semántica <time>"
+      },
+      {
+        "id": "iframe-soundcloud",
+        "ubicacion": "SoundCloudPlayer.jsx",
+        "elemento": "Iframe oculto de SoundCloud",
+        "estado": "✓ Correctamente oculto con aria-hidden='true'"
+      },
+      {
+        "id": "iframe-youtube",
+        "ubicacion": "YouTubePlayer.jsx",
+        "elemento": "Iframe oculto de YouTube",
+        "estado": "✓ Correctamente oculto con aria-hidden='true'"
+      }
+    ],
+    "formulario_obsoleto": {
+      "ubicacion": "showroom.astro (página obsoleta)",
+      "campos": [
+        "input[name='name'] - placeholder: 'Tu nombre'",
+        "input[type='email'] - placeholder: 'tu@email.com'",
+        "textarea[name='message'] - placeholder: 'Tu mensaje'",
+        "input[type='checkbox'] - 'Acepto los términos'"
+      ],
+      "nota": "Formulario en página no utilizada"
+    }
+  },
+  "funcionalidades_no_implementadas": [
+    {
+      "funcionalidad": "Cookie Banner",
+      "justificacion": "Usa Google Analytics 4 pero no tiene aviso de cookies",
+      "prioridad": "alta",
+      "requisito_legal": "RGPD/GDPR"
+    },
+    {
+      "funcionalidad": "Skip Links",
+      "justificacion": "CSS preparado en Layout.astro pero no implementado",
+      "prioridad": "alta",
+      "impacto": "Navegación por teclado ineficiente"
+    },
+    {
+      "funcionalidad": "Breadcrumbs",
+      "justificacion": "Ayudaría a entender la jerarquía de navegación",
+      "prioridad": "media"
+    },
+    {
+      "funcionalidad": "Búsqueda",
+      "justificacion": "No hay función de búsqueda de murales",
+      "prioridad": "baja"
+    },
+    {
+      "funcionalidad": "Compartir en redes",
+      "justificacion": "No hay botones para compartir contenido",
+      "prioridad": "baja"
+    },
+    {
+      "funcionalidad": "CSS de impresión",
+      "justificacion": "No hay estilos optimizados para imprimir",
+      "prioridad": "baja"
+    }
+  ],
+  "buenas_practicas_implementadas": [
+    "✅ Etiquetado ARIA completo en todos los controles interactivos",
+    "✅ Textos bilingües para todas las etiquetas de accesibilidad",
+    "✅ Estados dinámicos que se actualizan (play/pause, mute/unmute)",
+    "✅ Contenido específico para lectores de pantalla (sr-only)",
+    "✅ Enlaces de salto al contenido principal",
+    "✅ Estructura semántica con roles apropiados",
+    "✅ Secciones etiquetadas con aria-labelledby",
+    "✅ Controles de accesibilidad integrados (contraste, fuente, tema)",
+    "✅ Respeto a preferencias del usuario (reduced-motion)",
+    "✅ Indicadores de estado de elementos expandibles",
+    "✅ Navegación por teclado completa",
+    "✅ Estilos de foco visibles y personalizados"
+  ],
+  "cumplimiento_wcag": {
+    "nivel": "AA",
+    "version": "2.1",
+    "criterios_cumplidos": [
+      "1.1.1 - Contenido no textual (alt texts)",
+      "1.3.1 - Información y relaciones (estructura semántica)",
+      "1.4.3 - Contraste mínimo (modo alto contraste)",
+      "1.4.4 - Cambio de tamaño del texto",
+      "2.1.1 - Teclado (navegación completa)",
+      "2.4.1 - Evitar bloques (skip links)",
+      "2.4.3 - Orden del foco",
+      "2.4.6 - Encabezados y etiquetas",
+      "2.4.7 - Foco visible",
+      "3.3.2 - Etiquetas o instrucciones",
+      "4.1.2 - Nombre, función, valor (ARIA)"
+    ]
+  }
+}

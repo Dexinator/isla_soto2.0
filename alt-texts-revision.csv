@@ -1,0 +1,35 @@
+ID,Tipo,Ubicación,Contexto,Alt Text Español,Alt Text Inglés,Observaciones
+1,Mural,murals.json,Mural - Comenzamos la ruta,Inicio de la ruta de murales en Santa Marta de Tormes,Start of the murals route in Santa Marta de Tormes,
+2,Mural,murals.json,Mural - Paseo fluvial,Mural del paseo fluvial junto al río Tormes,Riverside walk mural along the Tormes river,
+3,Mural,murals.json,Mural - Centro de interpretación,Mural en el Centro de Interpretación de la Isla del Soto,Mural at the Soto Island Interpretation Center,
+4,Mural,murals.json,Mural - La llegada del color,Mural colorido que representa la llegada del color digital a Santa Marta,Colorful mural representing the arrival of digital color to Santa Marta,
+5,Mural,murals.json,Mural - Bosque,Mural del bosque que conecta naturaleza y ciudad,Forest mural connecting nature and city,
+6,Mural,murals.json,Mural - Mujer historia y pueblo,Mural que representa el papel de la mujer en la historia local,Mural representing women's role in local history,
+7,Mural,murals.json,Mural - Doctor Torres Villarroel,Mural del Doctor Torres Villarroel ilustre figura histórica,Mural of Doctor Torres Villarroel illustrious historical figure,
+8,Mural,murals.json,Mural - El rincón de Sandra y Gustavo,Mural del rincón especial de Sandra y Gustavo,Mural of Sandra and Gustavo's special corner,
+9,Mural,murals.json,Mural - Festival de arte urbano,Murales del Festival de Arte Urbano ediciones 1 y 2,Urban Art Festival murals editions 1 and 2,
+10,Mural,murals.json,Mural - Generación millennial,Mural de la generación millennial con elementos contemporáneos,Millennial generation mural with contemporary elements,
+11,Mural,murals.json,Mural - Paseo alcalde José Sánchez,Mural en el paseo del Alcalde José Sánchez,Mural on Mayor José Sánchez walk,
+12,Mural,murals.json,Mural - Respira,Mural Respira que invita a la calma y reflexión,Breathe mural inviting calm and reflection,
+13,Mural,murals.json,Mural - La llegada de las llaves,Mural de las llaves simbolizando nuevas oportunidades,Keys mural symbolizing new opportunities,
+14,Mural,murals.json,Mural - Sueña,Mural Sueña con elementos inspiradores,Dream mural with inspiring elements,
+15,Mural,murals.json,Mural - Océano,Mural del océano con elementos marinos,Ocean mural with marine elements,
+16,Mural,murals.json,Mural - Carretera de Madrid,Mural en la zona de la carretera hacia Madrid,Mural in the Madrid highway area,
+17,Mural,murals.json,Artista - Daniel Martín,Información sobre el artista Daniel Martín,Information about artist Daniel Martín,
+18,Mural,murals.json,Artista - Caín Ferreras,Información sobre el artista Caín Ferreras,Information about artist Caín Ferreras,
+19,Mural,murals.json,Artista - Rober Bece,Información sobre el artista Rober Bece,Information about artist Rober Bece,
+20,Mural,murals.json,Mural - Llegamos al final,Final del recorrido de murales en Santa Marta de Tormes,End of the murals tour in Santa Marta de Tormes,
+header-1,Logo,Header.astro,Logo principal (tema claro),Ruta de los Murales Santa Marta de Tormes,Ruta de los Murales Santa Marta de Tormes,Mismo texto en ambos idiomas
+header-2,Logo,Header.astro,Logo principal (tema oscuro),Ruta de los Murales Santa Marta de Tormes,Ruta de los Murales Santa Marta de Tormes,Mismo texto en ambos idiomas
+header-3,Logo,Header.astro,Logo turismo,Turismo Santa Marta de Tormes,Turismo Santa Marta de Tormes,Mismo texto en ambos idiomas
+footer-1,Logo,Footer.astro,Logo Ayuntamiento,Ayuntamiento Santa Marta de Tormes,Ayuntamiento Santa Marta de Tormes,Mismo texto en ambos idiomas
+footer-2,Logo,Footer.astro,Logo Turismo,Turismo Santa Marta de Tormes,Turismo Santa Marta de Tormes,Mismo texto en ambos idiomas
+footer-3,Logo,Footer.astro,Logo Audacetics,Audacetics,Audacetics,Mismo texto en ambos idiomas
+footer-4,Logo,Footer.astro,Logo ASPRODES,ASPRODES,ASPRODES,Mismo texto en ambos idiomas
+footer-5,Logo,Footer.astro,Logo ASPAS,ASPAS,ASPAS,Mismo texto en ambos idiomas
+icon-1,Icono,index.astro,Audioguía normativa,Icono de la audioguía normativa - Ruta de los Murales Santa Marta,Icono de la audioguía normativa - Ruta de los Murales Santa Marta,Solo existe versión en español
+icon-2,Icono,index.astro,Audioguía lectura fácil,Icono de la audioguía de lectura fácil - Accesible para discapacidad intelectual,Icono de la audioguía de lectura fácil - Accesible para discapacidad intelectual,Solo existe versión en español
+icon-3,Icono,index.astro,Audioguía descriptiva,Icono de la audioguía descriptiva con información detallada sobre los murales,Icono de la audioguía descriptiva con información detallada sobre los murales,Solo existe versión en español
+icon-4,Icono,index.astro,Signoguía,Icono de la signoguía en lengua de signos española (LSE),Icono de la signoguía en lengua de signos española (LSE),Solo existe versión en español
+icon-5,Icono,index.astro,Audio Guide English,English audio guide icon,English audio guide icon,Solo existe versión en inglés
+icon-6,Icono,index.astro,Folleto,Icono del folleto informativo,Icono del folleto informativo,Solo existe versión en español

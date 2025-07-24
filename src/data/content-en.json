@@ -83,7 +83,6 @@
     "title": "🗺️ Route Map",
     "listenAudioguide": "🎧 Listen to audio guide",
     "getDirections": "🗺️ Get directions",
-    "openInGoogleMaps": "Open in Google Maps",
     "loading": "Loading map...",
     "error": "Error loading map",
     "tryAgain": "Try again",

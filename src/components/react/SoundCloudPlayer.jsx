@@ -9,6 +9,8 @@ const SoundCloudPlayer = forwardRef(({
   onPlayStateChange,
   audioType = 'normal',
   language = 'es',
+  isPlaying: isPlayingProp = false,
+  autoPlay = false,
   className = ""
 }, ref) => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -200,6 +202,28 @@ const SoundCloudPlayer = forwardRef(({
     setTimeout(initializeWidget, 1500);
 
   }, [currentMural, audioType, language, onPlayStateChange]);
+
+  // Efecto para sincronizar el estado de reproducción con el prop del padre
+  useEffect(() => {
+    if (!widgetRef.current || !widgetReady) return;
+
+    // Si el padre quiere reproducir y el widget no está reproduciendo
+    if (isPlayingProp && !isPlaying) {
+      try {
+        widgetRef.current.play();
+      } catch (err) {
+        console.error('Error starting playback:', err);
+      }
+    }
+    // Si el padre quiere pausar y el widget está reproduciendo
+    else if (!isPlayingProp && isPlaying) {
+      try {
+        widgetRef.current.pause();
+      } catch (err) {
+        console.error('Error pausing playback:', err);
+      }
+    }
+  }, [isPlayingProp, isPlaying, widgetReady]);
 
   // Controles de reproducción
   const handlePlayPause = () => {
