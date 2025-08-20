@@ -76,7 +76,7 @@ const cardGradient = gradient ? 'custom' : 'blue';
       <div class="h-full flex flex-col">
         <!-- Imagen o área de gradiente -->
         <div class={`
-          relative ${image ? 'flex-shrink-0 h-[45%] md:h-[65%]' : 'flex-1'} min-h-[100px] md:min-h-[120px]
+          relative ${image ? 'flex-shrink-0 h-[70%] md:h-[75%]' : 'flex-1'} min-h-[100px] md:min-h-[120px]
           ${image ? 'bg-slate-100 dark:bg-slate-700' : `bg-gradient-to-br ${gradients[cardGradient]}`}
         `}>
           {image ? (
@@ -125,8 +125,8 @@ const cardGradient = gradient ? 'custom' : 'blue';
         
         <!-- Contenido de texto (si hay imagen) -->
         {image && (
-          <div class="p-3 md:p-5 flex-grow flex flex-col justify-center">
-            <h3 class="font-semibold text-sm md:text-lg text-slate-900 dark:text-slate-100 mb-0.5 md:mb-1 group-hover:text-SM-blue transition-colors leading-snug md:leading-tight break-words">
+          <div class="p-2 md:p-3 flex-grow flex flex-col justify-center">
+            <h3 class="font-semibold text-xs md:text-base text-slate-900 dark:text-slate-100 mb-0.5 md:mb-0.5 group-hover:text-SM-blue transition-colors leading-tight md:leading-tight break-words">
               {title}
             </h3>
             {description && (
@@ -144,7 +144,7 @@ const cardGradient = gradient ? 'custom' : 'blue';
       <div class="h-full flex flex-col">
         <!-- Imagen o área de gradiente -->
         <div class={`
-          relative ${image ? 'flex-shrink-0 h-[45%] md:h-[65%]' : 'flex-1'} min-h-[100px] md:min-h-[120px]
+          relative ${image ? 'flex-shrink-0 h-[70%] md:h-[75%]' : 'flex-1'} min-h-[100px] md:min-h-[120px]
           ${image ? 'bg-slate-100 dark:bg-slate-700' : `bg-gradient-to-br ${gradients[cardGradient]}`}
         `}>
           {image ? (
@@ -192,8 +192,8 @@ const cardGradient = gradient ? 'custom' : 'blue';
         
         <!-- Contenido de texto (si hay imagen) -->
         {image && (
-          <div class="p-3 md:p-5 flex-grow flex flex-col justify-center">
-            <h3 class="font-semibold text-sm md:text-lg text-slate-900 dark:text-slate-100 mb-0.5 md:mb-1 group-hover:text-SM-blue transition-colors leading-snug md:leading-tight break-words">
+          <div class="p-2 md:p-3 flex-grow flex flex-col justify-center">
+            <h3 class="font-semibold text-xs md:text-base text-slate-900 dark:text-slate-100 mb-0.5 md:mb-0.5 group-hover:text-SM-blue transition-colors leading-tight md:leading-tight break-words">
               {title}
             </h3>
             {description && (
