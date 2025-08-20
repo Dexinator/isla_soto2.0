@@ -383,6 +383,8 @@ const AudioPlayer = ({
                   />
                   <a
                     href="https://audio.com/jorge-badillo"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     style={{
                       textAlign: 'center',
                       display: 'block',

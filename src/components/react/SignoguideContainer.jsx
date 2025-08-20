@@ -3,6 +3,8 @@ import MapComponent from './MapComponent.jsx';
 import YouTubePlayer from './YouTubePlayer.jsx';
 import PlaylistManager from './PlaylistManager.jsx';
 import MuralImage from './MuralImageOptimized.jsx';
+import contentEs from '../../data/content-es.json';
+import contentEn from '../../data/content-en.json';
 
 const SignoguideContainer = ({ 
   muralsData, 
@@ -277,7 +279,7 @@ const SignoguideContainer = ({
                     {currentMural.title[audioType][language]}
                   </h3>
                   <p className="text-xs text-slate-600 dark:text-slate-400">
-                    Mural {currentMural.order} de {sortedMurals.length}
+                    Mural {currentMural.order} {language === 'es' ? contentEs.playlist.header.counter : contentEn.playlist.header.counter} {sortedMurals.length}
                   </p>
                 </div>
               </div>

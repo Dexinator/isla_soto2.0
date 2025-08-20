@@ -202,7 +202,7 @@ const PlaylistManager = ({
                       />
                     </div>
                     {/* Número superpuesto en el centro de la imagen */}
-                    <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${statusColor} border-2 border-slate-200 dark:border-slate-600 shadow-lg`}>
+                    <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${statusColor} border-2 border-slate-200 dark:border-slate-600 shadow-lg ${status === 'completed' ? 'opacity-30' : ''}`}>
                       {mural.order}
                     </div>
                   </div>

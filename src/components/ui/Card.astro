@@ -59,6 +59,10 @@ const gradients = {
 };
 
 const cardGradient = gradient ? 'custom' : 'blue';
+
+// Check if the link is external (PDF, external URL, etc.)
+const isExternal = href && (href.endsWith('.pdf') || href.startsWith('http'));
+const linkAttributes = isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {};
 ---
 
 <!-- Card Container -->
@@ -70,6 +74,7 @@ const cardGradient = gradient ? 'custom' : 'blue';
   {href ? (
     <a 
       href={href}
+      {...linkAttributes}
       class="group block h-full bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 overflow-hidden hover:shadow-xl hover:scale-[1.02] transition-all duration-300 focus-visible"
       aria-label={`${title}${description ? ': ' + description : ''}`}
     >

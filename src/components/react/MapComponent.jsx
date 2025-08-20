@@ -375,20 +375,18 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, audioType = 
       {/* Leyenda */}
       <div className="p-4 bg-slate-50 dark:bg-slate-700/50">
         <div className="flex flex-col space-y-3">
-          <div className="flex items-center justify-between text-sm">
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center">
-                <div className="w-4 h-4 bg-SM-blue rounded-full mr-2"></div>
-                <span className="text-slate-600 dark:text-slate-400">{content.map.legend.currentMural}</span>
-              </div>
-              <div className="flex items-center">
-                <div className="w-4 h-4 bg-SM-yellow rounded-full mr-2"></div>
-                <span className="text-slate-600 dark:text-slate-400">{content.map.legend.playing}</span>
-              </div>
-              <div className="flex items-center">
-                <div className="w-4 h-1 bg-SM-blue mr-2"></div>
-                <span className="text-slate-600 dark:text-slate-400">{content.map.legend.recommendedRoute}</span>
-              </div>
+          <div className="flex flex-wrap gap-4 text-sm">
+            <div className="flex items-center">
+              <div className="w-4 h-4 bg-SM-blue rounded-full mr-2 flex-shrink-0"></div>
+              <span className="text-slate-600 dark:text-slate-400 whitespace-nowrap">{content.map.legend.currentMural}</span>
+            </div>
+            <div className="flex items-center">
+              <div className="w-4 h-4 bg-SM-yellow rounded-full mr-2 flex-shrink-0"></div>
+              <span className="text-slate-600 dark:text-slate-400 whitespace-nowrap">{content.map.legend.playing}</span>
+            </div>
+            <div className="flex items-center">
+              <div className="w-4 h-1 bg-SM-blue mr-2 flex-shrink-0"></div>
+              <span className="text-slate-600 dark:text-slate-400 whitespace-nowrap">{content.map.legend.recommendedRoute}</span>
             </div>
           </div>
           {!scrollZoomEnabled && (

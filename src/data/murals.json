@@ -8,7 +8,7 @@
           "en": "Welcome to the mural route"
         },
         "descriptive": {
-          "es": "AD- Comenzamos la ruta de los murales-descriptiva",
+          "es": "AD- Comenzamos la ruta de los murales",
           "en": "Welcome to the mural route"
         },
         "easy": {
@@ -45,7 +45,7 @@
         "es": "Bienvenida",
         "en": "Welcome"
       },
-      "artist": "Introducción",
+      "artist": "Introduction",
       "year": 2024,
       "duration": {
         "normal": "01:47",
@@ -63,7 +63,7 @@
           "en": "Riverside promenade"
         },
         "descriptive": {
-          "es": "AD- Paseo fluvial-descriptiva",
+          "es": "AD- Paseo fluvial",
           "en": "Riverside promenade"
         },
         "easy": {
@@ -102,7 +102,7 @@
       },
       "location": {
         "es": "Cruce Av. de Madrid y Pº del río Tormes",
-        "en": "Junction of Av. de Madrid and Pº del río Tormes"
+        "en": "Av. de Madrid and Pº del río Tormes corner"
       },
       "artist": "Caín Ferreras",
       "year": 2024,
@@ -118,20 +118,20 @@
       "id": 3,
       "title": {
         "normal": {
-          "es": "Centro de interpretación. Isla del Soto",
-          "en": "Interpretation centre. Soto island"
+          "es": "Centro de Interpretación. Isla del Soto",
+          "en": "Interpretation Centre. Soto Island"
         },
         "descriptive": {
-          "es": "AD- Centro de interpretación. Isla del Soto-descriptiva",
-          "en": "Interpretation centre. Soto island"
+          "es": "AD- Centro de Interpretación. Isla del Soto",
+          "en": "Interpretation Centre. Soto Island"
         },
         "easy": {
-          "es": "LF- Centro de interpretación. Isla del Soto",
-          "en": "Interpretation centre. Soto island"
+          "es": "LF- Centro de Interpretación. Isla del Soto",
+          "en": "Interpretation Centre. Soto Island"
         },
         "sign": {
-          "es": "LSE- Centro de interpretación. Isla del Soto",
-          "en": "Interpretation centre. Soto island"
+          "es": "LSE- Centro de Interpretación. Isla del Soto",
+          "en": "Interpretation Centre. Soto Island"
         }
       },
       "description": {
@@ -220,7 +220,7 @@
       },
       "location": {
         "es": "Plaza de la Iglesia y Av. de Madrid",
-        "en": "Church Square and Av. de Madrid"
+        "en": "Plaza de la Iglesia and Av. de Madrid"
       },
       "artist": "Daniel Martín",
       "year": 2024,
@@ -279,7 +279,7 @@
       },
       "location": {
         "es": "Plaza de España",
-        "en": "Spain Square"
+        "en": "Plaza de España"
       },
       "artist": "Daniel Martín",
       "year": 2024,
@@ -338,7 +338,7 @@
       },
       "location": {
         "es": "C. Ricardo Marcos junto a Plaza de España",
-        "en": "Ricardo Marcos St. next to Spain Square"
+        "en": "C. Ricardo Marcos next to Plaza de España"
       },
       "artist": "Rober Bece",
       "year": 2024,
@@ -397,7 +397,7 @@
       },
       "location": {
         "es": "Cruce de la Av. Enrique de Sena y la C. Dr. Torres Villarroel",
-        "en": "Junction of Av. Enrique de Sena and Dr. Torres Villarroel St."
+        "en": "Av. Enrique de Sena and Dr. Torres Villarroel corner"
       },
       "artist": "Caín Ferreras",
       "year": 2024,
@@ -456,7 +456,7 @@
       },
       "location": {
         "es": "C. Dr. Torres Villarroel",
-        "en": "Dr. Torres Villarroel St."
+        "en": "C. Dr. Torres Villarroel"
       },
       "artist": "Rober Bece",
       "year": 2024,
@@ -480,7 +480,7 @@
           "en": "Santa Marta urban art festival. Editions I and II"
         },
         "easy": {
-          "es": "LF- Festival de arte urbano de Santa Marta. Ediciones 1 y 2",
+          "es": "LF- Festival de arte urbano de Santa Marta. Ediciones I y II",
           "en": "Santa Marta urban art festival. Editions I and II"
         },
         "sign": {
@@ -517,7 +517,7 @@
         "es": "Zona Festivales",
         "en": "Festivals Area"
       },
-      "artist": "Varias/os autoras/es",
+      "artist": "Different artists",
       "year": 2024,
       "duration": {
         "normal": "01:52",
@@ -574,7 +574,7 @@
       },
       "location": {
         "es": "Pº Profesor Enrique Tierno Galván en la fachada del Campo Municipal de Fútbol Alfonso San Casto",
-        "en": "Professor Enrique Tierno Galván Walk at Alfonso San Casto Municipal Football Field"
+        "en": "Alfonso San Casto Municipal Football Field at Pº Profesor Enrique Tierno Galván"
       },
       "artist": "Rober Bece",
       "year": 2024,
@@ -633,7 +633,7 @@
       },
       "location": {
         "es": "Frontón de las Nieves en el Pº Alcalde José Sánchez",
-        "en": "Las Nieves Fronton at Mayor José Sánchez Walk"
+        "en": "Frontón de las Nieves at Pº Alcalde José Sánchez"
       },
       "artist": "Caín Ferreras",
       "year": 2024,
@@ -692,7 +692,7 @@
       },
       "location": {
         "es": "C. Villalar junto a la Av. de Madrid",
-        "en": "Villalar St. next to Av. de Madrid"
+        "en": "C. Villalar next to Av. de Madrid"
       },
       "artist": "Rober Bece",
       "year": 2024,
@@ -751,7 +751,7 @@
       },
       "location": {
         "es": "C. Virgen del Carmen junto a la Av. de Madrid",
-        "en": "Virgen del Carmen St. next to Av. de Madrid"
+        "en": "C. Virgen del Carmen next to Av. de Madrid"
       },
       "artist": "Rober Bece",
       "year": 2024,
@@ -810,7 +810,7 @@
       },
       "location": {
         "es": "Ctra. de Naharros junto C. Pablo Iglesias",
-        "en": "Naharros Road next to Pablo Iglesias St."
+        "en": "Ctra. de Naharros next to C. Pablo Iglesias"
       },
       "artist": "Rober Bece",
       "year": 2024,
@@ -869,7 +869,7 @@
       },
       "location": {
         "es": "Pasaje Santiago Mirat",
-        "en": "Santiago Mirat Passage"
+        "en": "Pasaje Santiago Mirat"
       },
       "artist": "Rober Bece",
       "year": 2024,
@@ -1150,7 +1150,7 @@
         "es": "Despedida",
         "en": "Farewell"
       },
-      "artist": "Cierre",
+      "artist": "Goodbye",
       "year": 2024,
       "duration": {
         "normal": "01:48",

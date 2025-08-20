@@ -55,7 +55,7 @@
       "startButton": "Comenzar Ruta de los Murales",
       "clickToStart": "👆 Haz clic para comenzar la experiencia",
       "downloadBrochure1": "Para complementar la experiencia ",
-      "downloadBrochure2": " el folleto con fotos e información."
+      "downloadBrochure2": " con fotos e información."
     },
     "descriptive": {
       "title": "Audioguía Descriptiva",
@@ -63,7 +63,7 @@
       "emoji": "👁️",
       "startButton": "Comenzar Ruta de los Murales",
       "clickToStart": "👆 Haz clic para comenzar la experiencia",
-      "downloadBrochure": "Para complementar la experiencia, descarga el folleto con fotos e información."
+      "downloadBrochure": "Para complementar la experiencia, descarga con fotos e información."
     },
     "easy": {
       "title": "Audioguía Lectura Fácil",
@@ -71,7 +71,7 @@
       "emoji": "📖",
       "startButton": "Comenzar Ruta de los Murales",
       "clickToStart": "👆 Haz clic para comenzar la experiencia",
-      "downloadBrochure": "Para complementar la experiencia, descarga el folleto con fotos e información."
+      "downloadBrochure": "Para complementar la experiencia, descarga con fotos e información."
     },
     "sign": {
       "title": "Signoguía",
@@ -80,7 +80,7 @@
       "emoji": "🤟",
       "startButton": "Comenzar Ruta de los Murales",
       "clickToStart": "👆 Haz clic para comenzar la experiencia",
-      "downloadBrochure": "Para complementar la experiencia, descarga el folleto con fotos e información."
+      "downloadBrochure": "Para complementar la experiencia, descarga con fotos e información."
     }
   },
   "audioguideContainer": {
