@@ -83,7 +83,7 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, audioType = 
           }).addTo(map);
 
           // Crear iconos personalizados más grandes y prominentes
-          const createCustomIcon = (isActive = false) => {
+          const createCustomIcon = (isActive = false, muralTitle = '') => {
             return L.divIcon({
               className: 'custom-marker',
               html: `
@@ -91,8 +91,10 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, audioType = 
                   isActive 
                     ? 'bg-SM-yellow animate-pulse shadow-yellow-400/50' 
                     : 'bg-SM-blue hover:bg-blue-700 shadow-blue-500/50'
-                } transition-all duration-300 transform hover:scale-110">
-                  🎨
+                } transition-all duration-300 transform hover:scale-110"
+                role="button"
+                aria-label="${language === 'es' ? 'Mural: ' : 'Mural: '}${muralTitle}. ${language === 'es' ? 'Haz clic para ver opciones' : 'Click to see options'}">
+                  <span aria-hidden="true">🎨</span>
                 </div>
               `,
               iconSize: [48, 48],
@@ -104,8 +106,10 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, audioType = 
           // Añadir markers solo para murales con coordenadas válidas
           markersRef.current = muralsWithCoordinates.map((mural, index) => {
             const isActive = currentMural && currentMural.id === mural.id;
+            const muralTitle = mural.title[audioType][language];
             const marker = L.marker(mural.coordinates, {
-              icon: createCustomIcon(isActive)
+              icon: createCustomIcon(isActive, muralTitle),
+              alt: muralTitle
             }).addTo(map);
 
             // Popup con información del mural
@@ -136,12 +140,8 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, audioType = 
               className: 'custom-popup'
             });
 
-            // Event listener para seleccionar mural
-            marker.on('click', () => {
-              if (onMuralSelect) {
-                onMuralSelect(mural);
-              }
-            });
+            // No añadimos event listener aquí para permitir que el popup se muestre en el primer clic
+            // La selección del mural se hace desde el botón dentro del popup
 
             return { marker, mural };
           });
@@ -206,6 +206,7 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, audioType = 
       if (L) {
         markersRef.current.forEach(({ marker, mural }) => {
           const isActive = currentMural && currentMural.id === mural.id;
+          const muralTitle = mural.title[audioType][language];
           const newIcon = L.divIcon({
             className: 'custom-marker',
             html: `
@@ -213,8 +214,10 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, audioType = 
                 isActive 
                   ? 'bg-SM-yellow animate-pulse shadow-yellow-400/50' 
                   : 'bg-SM-blue hover:bg-blue-700 shadow-blue-500/50'
-              } transition-all duration-300 transform hover:scale-110">
-                🎨
+              } transition-all duration-300 transform hover:scale-110"
+              role="button"
+              aria-label="${language === 'es' ? 'Mural: ' : 'Mural: '}${muralTitle}. ${language === 'es' ? 'Haz clic para ver opciones' : 'Click to see options'}">
+                <span aria-hidden="true">🎨</span>
               </div>
             `,
             iconSize: [48, 48],
@@ -355,6 +358,8 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, audioType = 
             position: 'relative',
             zIndex: 1
           }}
+          role="application"
+          aria-label={language === 'es' ? `Mapa interactivo con ${muralsWithCoordinates.length} murales. Usa el botón de desbloquear para interactuar con el mapa` : `Interactive map with ${muralsWithCoordinates.length} murals. Use the unlock button to interact with the map`}
         />
         {/* Botón central de desbloquear mapa */}
         {!scrollZoomEnabled && !isLoading && (
@@ -363,7 +368,7 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, audioType = 
               onClick={toggleScrollZoom}
               className="pointer-events-auto bg-white dark:bg-slate-800 border-2 border-SM-blue px-6 py-3 rounded-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center space-x-2"
             >
-              <span className="text-2xl">🔓</span>
+              <span className="text-2xl" aria-hidden="true">🔓</span>
               <span className="font-semibold text-SM-blue dark:text-SM-yellow">
                 {content.map.unlockMap.replace('🔓 ', '')}
               </span>

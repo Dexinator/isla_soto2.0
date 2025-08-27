@@ -51,9 +51,9 @@ const AudioguideContainer = ({
   };
 
   // Función para seleccionar un mural
-  const handleMuralSelect = (mural) => {
+  const handleMuralSelect = (mural, autoPlay = true) => {
     setCurrentMural(mural);
-    setIsPlaying(false); // Pausar el audio actual al cambiar
+    setIsPlaying(autoPlay); // Auto-reproducir por defecto cuando se selecciona una pista
     
     // Hacer scroll al reproductor en móvil
     setTimeout(() => {
@@ -66,7 +66,8 @@ const AudioguideContainer = ({
         'mural_id': mural.id,
         'audio_type': audioType,
         'language': language,
-        'source': 'manual_selection'
+        'source': 'manual_selection',
+        'auto_play': autoPlay
       });
     }
   };
@@ -79,7 +80,8 @@ const AudioguideContainer = ({
       const nextMural = sortedMurals[nextIndex];
       
       setCurrentMural(nextMural);
-      setIsPlaying(false);
+      // Si autoPlay está activo, mantener reproducción automática
+      setIsPlaying(autoPlay);
       
       // Hacer scroll al reproductor en móvil
       setTimeout(() => {
@@ -106,7 +108,8 @@ const AudioguideContainer = ({
       const prevMural = sortedMurals[prevIndex];
       
       setCurrentMural(prevMural);
-      setIsPlaying(false);
+      // Si autoPlay está activo, mantener reproducción automática
+      setIsPlaying(autoPlay);
       
       // Hacer scroll al reproductor en móvil
       setTimeout(() => {
@@ -134,8 +137,6 @@ const AudioguideContainer = ({
 
   // Función cuando termina un track
   const handleTrackEnd = () => {
-    setIsPlaying(false);
-    
     // Marcar el mural actual como completado
     if (currentMural) {
       handleTrackComplete(currentMural.id);
@@ -145,9 +146,19 @@ const AudioguideContainer = ({
     if (currentMural && sortedMurals.length > 0) {
       const currentIndex = sortedMurals.findIndex(m => m.id === currentMural.id);
       if (currentIndex < sortedMurals.length - 1) {
-        setTimeout(() => {
-          handleNext();
-        }, 2000); // Esperar 2 segundos antes de avanzar
+        // Si autoPlay está activo, avanzar automáticamente
+        if (autoPlay) {
+          setTimeout(() => {
+            handleNext();
+          }, 2000); // Esperar 2 segundos antes de avanzar
+        } else {
+          // Si no hay autoPlay, simplemente pausar
+          setIsPlaying(false);
+        }
+      } else {
+        // Es el último mural, siempre pausar
+        setIsPlaying(false);
+        setAutoPlay(false); // Desactivar autoPlay al terminar el tour
       }
     }
     
@@ -259,6 +270,10 @@ const AudioguideContainer = ({
             audioType={audioType}
             language={language}
             completedMurals={completedMurals}
+            isPlaying={isPlaying}
+            onPlayPause={handlePlayPause}
+            onNext={sortedMurals.length > 1 ? handleNext : null}
+            onPrevious={sortedMurals.length > 1 ? handlePrevious : null}
             className="h-fit"
           />
         </section>

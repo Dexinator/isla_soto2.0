@@ -10,7 +10,11 @@ const PlaylistManager = ({
   audioType = 'normal',
   language = 'es',
   completedMurals = new Set(),
-  className = "" 
+  className = "",
+  isPlaying = false,
+  onPlayPause = null,
+  onNext = null,
+  onPrevious = null
 }) => {
   const [inProgressMurals, setInProgressMurals] = useState(new Set());
   
@@ -183,9 +187,17 @@ const PlaylistManager = ({
                 isActive ? 'bg-SM-yellow/10 dark:bg-SM-yellow/20' : 'hover:bg-slate-50 dark:hover:bg-slate-700/50'
               }`}
             >
-              <button
+              <div
                 onClick={() => handleMuralClick(mural)}
-                className="w-full p-4 text-left focus:outline-none focus:ring-2 focus:ring-SM-blue focus:ring-inset"
+                className="w-full p-4 text-left focus:outline-none focus:ring-2 focus:ring-SM-blue focus:ring-inset cursor-pointer"
+                role="button"
+                tabIndex={0}
+                onKeyPress={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    handleMuralClick(mural);
+                  }
+                }}
               >
                 <div className="flex items-center space-x-4">
                   {/* Imagen del mural con número superpuesto */}
@@ -221,7 +233,11 @@ const PlaylistManager = ({
                     <div className="space-y-1">
                       <div className="flex items-center text-slate-600 dark:text-slate-400">
                         <span className="text-xs mr-1">🎨</span>
-                        <span className="text-sm">{mural.artist || content.playlist.defaults.unknownArtist}</span>
+                        <span className="text-sm">
+                          {typeof mural.artist === 'object' 
+                            ? (mural.artist[language] || mural.artist.es || content.playlist.defaults.unknownArtist)
+                            : (mural.artist || content.playlist.defaults.unknownArtist)}
+                        </span>
                       </div>
                       <div className="flex items-center text-slate-600 dark:text-slate-400">
                         <span className="text-xs mr-1">
@@ -244,14 +260,74 @@ const PlaylistManager = ({
                     </div>
                   </div>
 
-                  {/* Icono de estado */}
-                  <div className="flex-shrink-0">
+                  {/* Icono de estado y controles */}
+                  <div className="flex-shrink-0 flex items-center space-x-2">
+                    {/* Mini controles solo para la pista activa */}
+                    {isActive && onPlayPause && (
+                      <div className="flex items-center space-x-1">
+                        {/* Botón anterior */}
+                        {onPrevious && (
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              onPrevious();
+                            }}
+                            className="p-1.5 bg-slate-600 hover:bg-slate-700 text-white rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500"
+                            aria-label="Pista anterior"
+                          >
+                            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                    d="M12.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0019 16V8a1 1 0 00-1.6-.8l-5.334 4zM4.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0011 16V8a1 1 0 00-1.6-.8l-5.334 4z"/>
+                            </svg>
+                          </button>
+                        )}
+                        
+                        {/* Botón play/pause */}
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            onPlayPause();
+                          }}
+                          className="p-2 bg-SM-blue hover:bg-blue-700 text-white rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-SM-blue"
+                          aria-label={isPlaying ? "Pausar" : "Reproducir"}
+                        >
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            {isPlaying ? (
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                    d="M10 9v6m4-6v6"/>
+                            ) : (
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                    d="M8 18V6l8 6-8 6Z"/>
+                            )}
+                          </svg>
+                        </button>
+                        
+                        {/* Botón siguiente */}
+                        {onNext && (
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              onNext();
+                            }}
+                            className="p-1.5 bg-slate-600 hover:bg-slate-700 text-white rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500"
+                            aria-label="Pista siguiente"
+                          >
+                            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                    d="M11.933 12.8a1 1 0 000-1.6L6.6 7.2A1 1 0 005 8v8a1 1 0 001.6.8l5.333-4zM19.933 12.8a1 1 0 000-1.6l-5.333-4A1 1 0 0013 8v8a1 1 0 001.6.8l5.333-4z"/>
+                            </svg>
+                          </button>
+                        )}
+                      </div>
+                    )}
+                    
+                    {/* Icono de estado */}
                     <span className="text-2xl">
                       {status === 'completed' ? '✅' : '▶️'}
                     </span>
                   </div>
                 </div>
-              </button>
+              </div>
             </div>
           );
         })}

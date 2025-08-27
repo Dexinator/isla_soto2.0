@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import MapComponent from './MapComponent.jsx';
-import YouTubePlayer from './YouTubePlayer.jsx';
+import VimeoPlayer from './VimeoPlayer.jsx';
 import PlaylistManager from './PlaylistManager.jsx';
 import MuralImage from './MuralImageOptimized.jsx';
 import contentEs from '../../data/content-es.json';
@@ -42,10 +42,15 @@ const SignoguideContainer = ({
     }
   };
 
+  // Función para controlar play/pause desde el PlaylistManager
+  const handlePlayPause = () => {
+    setIsPlaying(prev => !prev);
+  };
+
   // Función para seleccionar un mural
-  const handleMuralSelect = (mural) => {
+  const handleMuralSelect = (mural, autoPlay = true) => {
     setCurrentMural(mural);
-    setIsPlaying(false); // Pausar el video actual al cambiar
+    setIsPlaying(autoPlay); // Auto-reproducir por defecto cuando se selecciona una pista
     
     // Hacer scroll al reproductor en móvil
     setTimeout(() => {
@@ -58,7 +63,8 @@ const SignoguideContainer = ({
         'mural_id': mural.id,
         'audio_type': audioType,
         'language': language,
-        'source': 'manual_selection'
+        'source': 'manual_selection',
+        'auto_play': autoPlay
       });
     }
   };
@@ -71,7 +77,8 @@ const SignoguideContainer = ({
       const nextMural = sortedMurals[nextIndex];
       
       setCurrentMural(nextMural);
-      setIsPlaying(false);
+      // Si autoPlay está activo, mantener reproducción automática
+      setIsPlaying(autoPlay);
       
       // Hacer scroll al reproductor en móvil
       setTimeout(() => {
@@ -98,7 +105,8 @@ const SignoguideContainer = ({
       const prevMural = sortedMurals[prevIndex];
       
       setCurrentMural(prevMural);
-      setIsPlaying(false);
+      // Si autoPlay está activo, mantener reproducción automática
+      setIsPlaying(autoPlay);
       
       // Hacer scroll al reproductor en móvil
       setTimeout(() => {
@@ -126,8 +134,6 @@ const SignoguideContainer = ({
 
   // Función cuando termina un video
   const handleVideoEnd = () => {
-    setIsPlaying(false);
-    
     // Marcar el mural actual como completado
     if (currentMural) {
       handleTrackComplete(currentMural.id);
@@ -137,13 +143,19 @@ const SignoguideContainer = ({
     if (currentMural && sortedMurals.length > 0) {
       const currentIndex = sortedMurals.findIndex(m => m.id === currentMural.id);
       if (currentIndex < sortedMurals.length - 1) {
-        setTimeout(() => {
-          handleNext();
-          // Si autoPlay está activo, reproducir automáticamente el siguiente
-          if (autoPlay) {
-            setTimeout(() => setIsPlaying(true), 500);
-          }
-        }, 2000); // Esperar 2 segundos antes de avanzar
+        // Si autoPlay está activo, avanzar automáticamente
+        if (autoPlay) {
+          setTimeout(() => {
+            handleNext(); // handleNext ya maneja autoPlay correctamente
+          }, 2000); // Esperar 2 segundos antes de avanzar
+        } else {
+          // Si no hay autoPlay, simplemente pausar
+          setIsPlaying(false);
+        }
+      } else {
+        // Es el último mural, siempre pausar
+        setIsPlaying(false);
+        setAutoPlay(false); // Desactivar autoPlay al terminar el tour
       }
     }
     
@@ -230,13 +242,14 @@ const SignoguideContainer = ({
         {/* Reproductor de video (columna izquierda) */}
         <section aria-labelledby="player-title" ref={playerSectionRef}>
           <h2 id="player-title" className="sr-only">Reproductor de video</h2>
-          <YouTubePlayer
+          <VimeoPlayer
             currentMural={currentMural}
             onNext={sortedMurals.length > 1 ? handleNext : null}
             onPrevious={sortedMurals.length > 1 ? handlePrevious : null}
             onVideoEnd={handleVideoEnd}
             isPlaying={isPlaying}
             setIsPlaying={setIsPlaying}
+            audioType={audioType}
             language={language}
             className="h-fit"
           />
@@ -252,6 +265,10 @@ const SignoguideContainer = ({
             audioType={audioType}
             language={language}
             completedMurals={completedMurals}
+            isPlaying={isPlaying}
+            onPlayPause={handlePlayPause}
+            onNext={sortedMurals.length > 1 ? handleNext : null}
+            onPrevious={sortedMurals.length > 1 ? handlePrevious : null}
             className="h-fit"
           />
         </section>

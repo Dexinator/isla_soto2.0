@@ -369,7 +369,11 @@ const SoundCloudPlayer = forwardRef(({
         <div className="space-y-2 mb-4">
           <div className="flex items-center justify-center text-slate-600 dark:text-slate-400">
             <span className="text-base mr-2">🎨</span>
-            <span className="text-sm font-medium">{currentMural.artist || 'Artista desconocido'}</span>
+            <span className="text-sm font-medium">
+              {typeof currentMural.artist === 'object' 
+                ? (currentMural.artist[language] || currentMural.artist.es || 'Artista desconocido')
+                : (currentMural.artist || 'Artista desconocido')}
+            </span>
           </div>
           <div className="flex items-center justify-center text-slate-600 dark:text-slate-400">
             <span className="text-base mr-2">📍</span>

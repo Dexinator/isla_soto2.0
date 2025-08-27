@@ -103,7 +103,7 @@ const linkAttributes = isExternal ? { target: '_blank', rel: 'noopener noreferre
           <!-- Badge -->
           {badge && (
             <div class="absolute top-4 left-4">
-              <span class={`px-3 py-1 text-sm font-medium rounded-full ${badgeClasses[badgeColor]}`}>
+              <span class={`px-3 py-1.5 text-sm md:text-base font-medium rounded-full ${badgeClasses[badgeColor]}`}>
                 {badge}
               </span>
             </div>
@@ -131,11 +131,11 @@ const linkAttributes = isExternal ? { target: '_blank', rel: 'noopener noreferre
         <!-- Contenido de texto (si hay imagen) -->
         {image && (
           <div class="p-2 md:p-3 flex-grow flex flex-col justify-center">
-            <h3 class="font-semibold text-xs md:text-base text-slate-900 dark:text-slate-100 mb-0.5 md:mb-0.5 group-hover:text-SM-blue transition-colors leading-tight md:leading-tight break-words">
+            <h3 class="font-semibold text-sm md:text-lg text-slate-900 dark:text-slate-100 mb-0.5 md:mb-0.5 group-hover:text-SM-blue transition-colors leading-tight md:leading-tight break-words">
               {title}
             </h3>
             {description && (
-              <p class="text-slate-600 dark:text-slate-300 text-xs md:text-base leading-snug md:leading-relaxed break-words">
+              <p class="text-slate-600 dark:text-slate-300 text-sm md:text-base leading-snug md:leading-relaxed break-words">
                 {description}
               </p>
             )}
@@ -170,7 +170,7 @@ const linkAttributes = isExternal ? { target: '_blank', rel: 'noopener noreferre
           <!-- Badge -->
           {badge && (
             <div class="absolute top-4 left-4">
-              <span class={`px-3 py-1 text-sm font-medium rounded-full ${badgeClasses[badgeColor]}`}>
+              <span class={`px-3 py-1.5 text-sm md:text-base font-medium rounded-full ${badgeClasses[badgeColor]}`}>
                 {badge}
               </span>
             </div>
@@ -198,11 +198,11 @@ const linkAttributes = isExternal ? { target: '_blank', rel: 'noopener noreferre
         <!-- Contenido de texto (si hay imagen) -->
         {image && (
           <div class="p-2 md:p-3 flex-grow flex flex-col justify-center">
-            <h3 class="font-semibold text-xs md:text-base text-slate-900 dark:text-slate-100 mb-0.5 md:mb-0.5 group-hover:text-SM-blue transition-colors leading-tight md:leading-tight break-words">
+            <h3 class="font-semibold text-sm md:text-lg text-slate-900 dark:text-slate-100 mb-0.5 md:mb-0.5 group-hover:text-SM-blue transition-colors leading-tight md:leading-tight break-words">
               {title}
             </h3>
             {description && (
-              <p class="text-slate-600 dark:text-slate-300 text-xs md:text-base leading-snug md:leading-relaxed break-words">
+              <p class="text-slate-600 dark:text-slate-300 text-sm md:text-base leading-snug md:leading-relaxed break-words">
                 {description}
               </p>
             )}

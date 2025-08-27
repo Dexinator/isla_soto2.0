@@ -34,7 +34,7 @@
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606264%3Fsecret_token%3Ds-q499Tanjp7Q"
       },
       "video": {
-        "sign": "1105891403"
+        "sign": "SNhprKwJSh0"
       },
       "image": "/images/murals/1- Empieza La Ruta de los Murales. Audioguía. Santa Marta de Tormes.png",
       "alt": {
@@ -45,10 +45,7 @@
         "es": "Bienvenida",
         "en": "Welcome"
       },
-      "artist": {
-        "es": "Introducción",
-        "en": "Introduction"
-      },
+      "artist": "Introduction",
       "year": 2024,
       "duration": {
         "normal": "01:47",
@@ -96,7 +93,7 @@
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606282%3Fsecret_token%3Ds-rKEyQ9aCtwP"
       },
       "video": {
-        "sign": "https://vimeo.com/1110092681/67ea3cc9e0"
+        "sign": "wgV-F-ZRTtc"
       },
       "image": "/images/murals/2- Mural Paseo Fluvial. Audioguía. Santa Marta de Tormes.jpg",
       "alt": {
@@ -155,7 +152,7 @@
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606267%3Fsecret_token%3Ds-oqSa4mcIIQM"
       },
       "video": {
-        "sign": "https://vimeo.com/1110092940/f19c9503d1"
+        "sign": "HDa9qDHhp5o"
       },
       "image": "/images/murals/3- Mural Centro de Interpretación. Isla del Soto. Audioguía. Santa Marta de Tormes.jpg",
       "alt": {
@@ -214,7 +211,7 @@
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606252%3Fsecret_token%3Ds-vMvclTiolRi"
       },
       "video": {
-        "sign": "https://vimeo.com/1110093064/7733e3c08c"
+        "sign": "4T_ZRRaUxXE"
       },
       "image": "/images/murals/4- Mural La Llegada del Color. Audioguía. Santa Marta de Tormes.jpg",
       "alt": {
@@ -273,7 +270,7 @@
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606261%3Fsecret_token%3Ds-sWPPE3X2vRF"
       },
       "video": {
-        "sign": "https://vimeo.com/1110093260/adb0644156"
+        "sign": "Z36yEWq06wM"
       },
       "image": "/images/murals/5- Mural La Bosque. Audioguía. Santa Marta de Tormes.jpg",
       "alt": {
@@ -332,7 +329,7 @@
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606273%3Fsecret_token%3Ds-EPrOEuqAnqy"
       },
       "video": {
-        "sign": "https://vimeo.com/1110093452/2f413bd16d"
+        "sign": "qZKjo4taEHE"
       },
       "image": "/images/murals/6- Mural Mujer, historia y pueblo. Audioguía. Santa Marta de Tormes.jpg",
       "alt": {
@@ -391,7 +388,7 @@
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606240%3Fsecret_token%3Ds-UY320WegVND"
       },
       "video": {
-        "sign": "https://vimeo.com/1110100805/973e9214c4"
+        "sign": "EdjckksV_XQ"
       },
       "image": "/images/murals/7- Mural Doctor Torres Villarroel. Audioguía. Santa Marta de Tormes.jpg",
       "alt": {
@@ -450,7 +447,7 @@
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606234%3Fsecret_token%3Ds-kv8Ev7K56Vb"
       },
       "video": {
-        "sign": "https://vimeo.com/1110100950/494141380a"
+        "sign": "3vn6dQOstAM"
       },
       "image": "/images/murals/8- Mural El Rincón de Sandra y Gustavo. Audioguía. Santa Marta de Tormes.jpg",
       "alt": {
@@ -509,7 +506,7 @@
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606243%3Fsecret_token%3Ds-ptDZvmHsZtt"
       },
       "video": {
-        "sign": "https://vimeo.com/1110101022/ae9f8d8bec"
+        "sign": "mikp_UayS-I"
       },
       "image": "/images/murals/9- Murales Festival de Arte Urbano. Ediciones 1 y 2. Audioguía. Santa Marta de Tormes.jpg",
       "alt": {
@@ -568,7 +565,7 @@
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606228%3Fsecret_token%3Ds-vHlxxQiUZG2"
       },
       "video": {
-        "sign": "https://vimeo.com/1105892174/427931d8bd"
+        "sign": "1ObALWa76bg"
       },
       "image": "/images/murals/10- Mural Generación Millennial. Audioguía. Santa Marta de Tormes.jpg",
       "alt": {
@@ -627,7 +624,7 @@
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606237%3Fsecret_token%3Ds-53MygvXCYd1"
       },
       "video": {
-        "sign": "https://vimeo.com/1110101408/b547d59d96"
+        "sign": "AXuL3EYPz2w"
       },
       "image": "/images/murals/11- Mural Paseo Alcalde José Sánchez. Audioguía. Santa Marta de Tormes.jpg",
       "alt": {
@@ -686,7 +683,7 @@
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606231%3Fsecret_token%3Ds-UXjku1CQafg"
       },
       "video": {
-        "sign": "https://vimeo.com/1110101523/f7cfbd38c1"
+        "sign": "kHvLiZ2kLGE"
       },
       "image": "/images/murals/12- Mural Respira. Audioguía. Santa Marta de Tormes.jpg",
       "alt": {
@@ -745,7 +742,7 @@
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606279%3Fsecret_token%3Ds-KgFWiJsJ2Co"
       },
       "video": {
-        "sign": "https://vimeo.com/1110101600/dcb21d5182"
+        "sign": "-A3CXPpNEuY"
       },
       "image": "/images/murals/13- Mural La Llegada de las Llaves. Audioguía. Santa Marta de Tormes.jpg",
       "alt": {
@@ -804,7 +801,7 @@
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606276%3Fsecret_token%3Ds-fHIwEixbk5L"
       },
       "video": {
-        "sign": "https://vimeo.com/1110101653/cce0402742"
+        "sign": "NO_pBJWg6_s"
       },
       "image": "/images/murals/14- Mural Sueña. Audioguía. Santa Marta de Tormes.jpg",
       "alt": {
@@ -863,7 +860,7 @@
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606270%3Fsecret_token%3Ds-YbnRcbM3Mol"
       },
       "video": {
-        "sign": "https://vimeo.com/1110101718/e8264996b5"
+        "sign": "T59Zg1own3o"
       },
       "image": "/images/murals/15- Mural Océano. Audioguía. Santa Marta de Tormes.jpg",
       "alt": {
@@ -922,7 +919,7 @@
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606255%3Fsecret_token%3Ds-mjXOhc6gMUU"
       },
       "video": {
-        "sign": "https://vimeo.com/1110101775/f7c5f26f8f"
+        "sign": "o-imTL_b_Hg"
       },
       "image": "/images/murals/16- Mural Carretera Madrid. Audioguía. Santa Marta de Tormes.jpg",
       "alt": {
@@ -977,7 +974,7 @@
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606285%3Fsecret_token%3Ds-52uOC51dwlF"
       },
       "video": {
-        "sign": "https://vimeo.com/1105892537/3b3c494140"
+        "sign": "2zxWytqmzaU"
       },
       "image": "/images/artists/Daniel Martín.jpg",
       "alt": {
@@ -1032,7 +1029,7 @@
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606246%3Fsecret_token%3Ds-dX4agNf2tTG"
       },
       "video": {
-        "sign": "https://vimeo.com/1110101832/69377f0c6c"
+        "sign": "b2KKGMbTICo"
       },
       "image": "/images/artists/Caín Ferreras.jpg",
       "alt": {
@@ -1087,7 +1084,7 @@
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606249%3Fsecret_token%3Ds-1dHfam95PMv"
       },
       "video": {
-        "sign": "https://vimeo.com/1110101964/925233ecd4"
+        "sign": "v9Fi4IjlFLs"
       },
       "image": "/images/artists/Rober Bece.jpg",
       "alt": {
@@ -1142,7 +1139,7 @@
         "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606258%3Fsecret_token%3Ds-17HxIwk5eeY"
       },
       "video": {
-        "sign": "https://vimeo.com/1110102052/5f21dc467f"
+        "sign": "aZl-edRS3fM"
       },
       "image": "/images/murals/20- Llegamos al Final. Audioguía. Santa Marta de Tormes.png",
       "alt": {
@@ -1153,10 +1150,7 @@
         "es": "Despedida",
         "en": "Farewell"
       },
-      "artist": {
-        "es": "Despedida",
-        "en": "Goodbye"
-      },
+      "artist": "Goodbye",
       "year": 2024,
       "duration": {
         "normal": "01:48",

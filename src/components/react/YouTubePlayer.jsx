@@ -345,7 +345,9 @@ const YouTubePlayer = ({
             </h3>
             <div className={`flex items-center justify-center space-x-4 text-sm ${isFullscreen ? 'text-gray-300' : 'text-slate-600 dark:text-slate-400'}`}>
               <span className="flex items-center">
-                <span className="mr-1">🎨</span> {currentMural.artist}
+                <span className="mr-1">🎨</span> {typeof currentMural.artist === 'object' 
+                  ? (currentMural.artist[language] || currentMural.artist.es || 'Artista desconocido')
+                  : (currentMural.artist || 'Artista desconocido')}
               </span>
               <span className="flex items-center">
                 <span className="mr-1">📍</span> {currentMural.location[language]}
