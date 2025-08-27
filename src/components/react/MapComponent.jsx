@@ -93,7 +93,7 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, audioType = 
                     : 'bg-SM-blue hover:bg-blue-700 shadow-blue-500/50'
                 } transition-all duration-300 transform hover:scale-110"
                 role="button"
-                aria-label="${language === 'es' ? 'Mural: ' : 'Mural: '}${muralTitle}. ${language === 'es' ? 'Haz clic para ver opciones' : 'Click to see options'}">
+                aria-label="${language === 'es' ? 'Ubicación ' : 'Location '}${muralTitle}. ${language === 'es' ? 'Haz clic para ver opciones' : 'Click to see options'}">
                   <span aria-hidden="true">🎨</span>
                 </div>
               `,
@@ -234,7 +234,7 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, audioType = 
     return (
       <div className={`bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700 ${className}`}>
         <div className="text-center">
-          <div className="text-red-500 text-4xl mb-4">⚠️</div>
+          <div className="text-red-500 text-4xl mb-4" aria-hidden="true">⚠️</div>
           <h3 className="font-semibold text-lg mb-2">{content.map.error}</h3>
           <p className="text-slate-600 dark:text-slate-400 mb-4">{error}</p>
           <button 
@@ -378,24 +378,24 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, audioType = 
       </div>
 
       {/* Leyenda */}
-      <div className="p-4 bg-slate-50 dark:bg-slate-700/50">
+      <div className="p-4 bg-slate-50 dark:bg-slate-700/50" role="region" aria-label={language === 'es' ? 'Leyenda del mapa' : 'Map legend'}>
         <div className="flex flex-col space-y-3">
           <div className="flex flex-wrap gap-4 text-sm">
             <div className="flex items-center">
-              <div className="w-4 h-4 bg-SM-blue rounded-full mr-2 flex-shrink-0"></div>
+              <div className="w-4 h-4 bg-SM-blue rounded-full mr-2 flex-shrink-0" aria-hidden="true"></div>
               <span className="text-slate-600 dark:text-slate-400 whitespace-nowrap">{content.map.legend.currentMural}</span>
             </div>
             <div className="flex items-center">
-              <div className="w-4 h-4 bg-SM-yellow rounded-full mr-2 flex-shrink-0"></div>
+              <div className="w-4 h-4 bg-SM-yellow rounded-full mr-2 flex-shrink-0" aria-hidden="true"></div>
               <span className="text-slate-600 dark:text-slate-400 whitespace-nowrap">{content.map.legend.playing}</span>
             </div>
             <div className="flex items-center">
-              <div className="w-4 h-1 bg-SM-blue mr-2 flex-shrink-0"></div>
+              <div className="w-4 h-1 bg-SM-blue mr-2 flex-shrink-0" aria-hidden="true"></div>
               <span className="text-slate-600 dark:text-slate-400 whitespace-nowrap">{content.map.legend.recommendedRoute}</span>
             </div>
           </div>
           {!scrollZoomEnabled && (
-            <div className="text-xs text-slate-500 dark:text-slate-400 flex items-center">
+            <div className="text-xs text-slate-500 dark:text-slate-400 flex items-center" role="status" aria-live="polite">
               <span>{content.map.scrollLockMessage}</span>
             </div>
           )}

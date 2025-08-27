@@ -25,9 +25,12 @@ const content = {
     sign: "Signoguía",
     map: "Mapa",
     download: "Descargar PDF",
-    menu: "Menú",
-    darkMode: "Cambiar modo oscuro/claro",
-    highContrast: "Activar/desactivar alto contraste",
+    menu: "Menú Botón",
+    menuExpanded: "Menú Botón Expandido",
+    menuCollapsed: "Menú Botón Contraído",
+    lightMode: "Activar modo claro",
+    darkMode: "Activar modo oscuro",
+    highContrast: "Activar / desactivar Alto contraste",
     increaseFontSize: "Aumentar tamaño de texto",
     decreaseFontSize: "Disminuir tamaño de texto",
     language: "Cambiar idioma"
@@ -41,9 +44,12 @@ const content = {
     sign: "Sign Guide",
     map: "Map", 
     download: "Download PDF",
-    menu: "Menu",
-    darkMode: "Toggle dark/light mode",
-    highContrast: "Toggle high contrast",
+    menu: "Menu Button",
+    menuExpanded: "Expanded Menu Button",
+    menuCollapsed: "Collapsed Menu Button",
+    lightMode: "Switch to light mode",
+    darkMode: "Switch to dark mode",
+    highContrast: "High contrast Button",
     increaseFontSize: "Increase text size",
     decreaseFontSize: "Decrease text size",
     language: "Change language"
@@ -64,14 +70,14 @@ const t = content[lang as keyof typeof content];
           <a href="/" class="focus-visible">
             <Image 
               src={rutaMuralesLight}
-              alt="Ruta de los Murales Santa Marta de Tormes" 
+              alt="Logotipo Ruta de los Murales Santa Marta de Tormes ir a página principal" 
               class="h-14 sm:h-16 md:h-20 w-auto object-contain dark:hidden"
               loading="eager"
               quality={90}
             />
             <Image 
               src={rutaMuralesDark}
-              alt="Ruta de los Murales Santa Marta de Tormes" 
+              alt="Logotipo Ruta de los Murales Santa Marta de Tormes ir a página principal" 
               class="h-14 sm:h-16 md:h-20 w-auto object-contain hidden dark:block"
               loading="eager"
               quality={90}
@@ -81,7 +87,7 @@ const t = content[lang as keyof typeof content];
           <a href="https://www.turismosantamartadetormes.com/" target="_blank" rel="noopener noreferrer" class="focus-visible">
             <Image 
               src={turismoSantaMarta}
-              alt="Turismo Santa Marta de Tormes" 
+              alt="Logotipo Turismo Santa Marta de Tormes ir a página Turismo Santa Marta de Tormes" 
               class="h-12 sm:h-14 md:h-16 w-auto object-contain"
               loading="eager"
               quality={90}
@@ -191,7 +197,7 @@ const t = content[lang as keyof typeof content];
           <button 
             onclick="setLightMode()" 
             class="flex-1 px-2 py-2 rounded-lg bg-white dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 focus-visible shadow-sm h-10 flex items-center justify-center"
-            aria-label="Activar modo claro"
+            aria-label={t.lightMode}
           >
             <span class="text-base leading-none">🔆</span>
           </button>
@@ -200,7 +206,7 @@ const t = content[lang as keyof typeof content];
           <button 
             onclick="setDarkMode()" 
             class="flex-1 px-2 py-2 rounded-lg bg-white dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 focus-visible shadow-sm h-10 flex items-center justify-center"
-            aria-label="Activar modo oscuro"
+            aria-label={t.darkMode}
           >
             <span class="text-base leading-none">🌙</span>
           </button>

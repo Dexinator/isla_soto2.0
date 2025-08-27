@@ -311,7 +311,7 @@ const AudioguideContainer = ({
                   onClick={handlePrevious}
                   disabled={!handlePrevious}
                   className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors disabled:opacity-50"
-                  aria-label="Anterior"
+                  aria-label={language === 'es' ? `Mural anterior` : `Previous mural`}
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
@@ -322,7 +322,7 @@ const AudioguideContainer = ({
                 <button
                   onClick={handlePlayPause}
                   className="p-2 bg-SM-blue text-white rounded-lg hover:bg-blue-700 transition-colors"
-                  aria-label={isPlaying ? "Pausar" : "Reproducir"}
+                  aria-label={isPlaying ? (language === 'es' ? 'Pausar audio' : 'Pause audio') : (language === 'es' ? 'Reproducir audio' : 'Play audio')}
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     {isPlaying ? (
@@ -339,7 +339,7 @@ const AudioguideContainer = ({
                   onClick={handleNext}
                   disabled={!handleNext}
                   className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors disabled:opacity-50"
-                  aria-label="Siguiente"
+                  aria-label={language === 'es' ? `Siguiente mural` : `Next mural`}
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}

@@ -329,7 +329,10 @@ const SoundCloudPlayer = forwardRef(({
   return (
     <div className={`bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 overflow-hidden ${className}`}>
       {/* Audio iframe oculto para Widget API */}
-      <div style={{ position: 'absolute', left: '-9999px', top: '-9999px', width: '300px', height: '166px' }}>
+      <div 
+        style={{ position: 'absolute', left: '-9999px', top: '-9999px', width: '300px', height: '166px' }}
+        aria-hidden="true"
+      >
         <iframe
           ref={iframeRef}
           width="300"
@@ -338,6 +341,8 @@ const SoundCloudPlayer = forwardRef(({
           allow="autoplay"
           src={embedUrl}
           title={`Audio: ${currentMural.title[audioType][language]}`}
+          aria-hidden="true"
+          tabIndex="-1"
         />
       </div>
 

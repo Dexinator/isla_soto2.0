@@ -21,7 +21,6 @@ const VimeoPlayer = ({
   const [volume, setVolume] = useState(75);
   const [isMuted, setIsMuted] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
-  const [isTheaterMode, setIsTheaterMode] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [showMobileFullscreenPrompt, setShowMobileFullscreenPrompt] = useState(false);
   const [error, setError] = useState(false);
@@ -394,21 +393,18 @@ const VimeoPlayer = ({
     <div 
       ref={containerRef}
       className={`bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 overflow-hidden transition-all duration-300 ${className} ${
-        isFullscreen ? 'fixed inset-0 z-[100] rounded-none bg-black' : 
-        isTheaterMode ? 'fixed inset-4 z-50 lg:inset-8' : ''
+        isFullscreen ? 'fixed inset-0 z-[100] rounded-none bg-black' : ''
       }`}
     >
-      <div className={`flex ${isFullscreen ? 'h-full' : isTheaterMode ? 'flex-row h-full' : 'flex-col'} ${isTheaterMode ? 'bg-black' : ''}`}>
+      <div className={`flex ${isFullscreen ? 'h-full' : 'flex-col'}`}>
         {/* Video container optimizado para móvil */}
         <div className={`relative ${
-          isFullscreen ? 'w-full h-full bg-black' : 
-          isTheaterMode ? 'h-full flex-1 bg-black' :
-          'w-full bg-black'
+          isFullscreen ? 'w-full h-full bg-black' : 'w-full bg-black'
         }`} style={{ 
-          paddingBottom: isFullscreen || isTheaterMode ? '0' : '56.25%',
-          height: isFullscreen || isTheaterMode ? '100%' : '0'
+          paddingBottom: isFullscreen ? '0' : '56.25%',
+          height: isFullscreen ? '100%' : '0'
         }}>
-          <div className={`${isFullscreen || isTheaterMode ? 'h-full w-full' : 'absolute inset-0 w-full h-full'} flex items-center justify-center`}>
+          <div className={`${isFullscreen ? 'h-full w-full' : 'absolute inset-0 w-full h-full'} flex items-center justify-center`}>
             {error ? (
               <div className="flex items-center justify-center h-full bg-slate-900">
                 <div className="text-center p-6">
@@ -505,10 +501,7 @@ const VimeoPlayer = ({
 
         {/* Información del mural y controles (ocultos en pantalla completa) */}
         {!isFullscreen && (
-          <div className={`${
-            isTheaterMode ? 'w-80 bg-black bg-opacity-95 overflow-y-auto' :
-            'flex-grow'
-          } p-6 transition-all duration-300`}>
+          <div className={`flex-grow p-6 transition-all duration-300`}>
           <div className={`text-center ${isFullscreen ? 'mb-4' : 'mb-6'}`}>
             <h3 className={`${isFullscreen ? 'text-xl text-white' : 'text-2xl text-slate-900 dark:text-slate-100'} font-bold mb-2`}>
               {currentMural.title[audioType][language]}
@@ -641,35 +634,12 @@ const VimeoPlayer = ({
               </span>
             </div>
 
-            {/* Botones de vista */}
-            <div className="flex items-center space-x-2">
-              {/* Botón modo teatro (solo desktop) */}
-              {!isFullscreen && !isMobile && (
-                <button
-                  onClick={() => setIsTheaterMode(!isTheaterMode)}
-                  className={`p-3 rounded-lg transition-all ${
-                    isTheaterMode 
-                      ? 'bg-blue-600 text-white hover:bg-blue-700' 
-                      : 'bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600'
-                  }`}
-                  aria-label={isTheaterMode ? "Salir de modo teatro" : "Modo teatro"}
-                  title={isTheaterMode ? "Salir de modo teatro" : "Modo teatro (vista ampliada)"}
-                >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                          d="M7 4v16M17 4v16M3 8h4m10 0h4M3 16h4m10 0h4"/>
-                  </svg>
-                </button>
-              )}
-              
-              {/* Botón pantalla completa */}
+            {/* Botón pantalla completa */
               <button
                 onClick={toggleFullscreen}
                 className={`p-3 rounded-lg transition-all ${
                   isFullscreen 
                     ? 'bg-red-600 hover:bg-red-700 text-white fixed top-4 right-4 z-[110] shadow-lg' 
-                    : isTheaterMode
-                    ? 'bg-gray-800 hover:bg-gray-700 text-white'
                     : 'bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600'
                 }`}
                 aria-label={isFullscreen ? "Salir de pantalla completa" : "Pantalla completa"}
@@ -685,9 +655,8 @@ const VimeoPlayer = ({
                   )}
                 </svg>
               </button>
-            </div>
+          }</div>
           </div>
-        </div>
         )}
       </div>
       

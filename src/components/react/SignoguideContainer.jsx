@@ -306,7 +306,7 @@ const SignoguideContainer = ({
                   onClick={handlePrevious}
                   disabled={!handlePrevious}
                   className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors disabled:opacity-50"
-                  aria-label="Anterior"
+                  aria-label={language === 'es' ? `Vídeo anterior` : `Previous video`}
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
@@ -317,7 +317,7 @@ const SignoguideContainer = ({
                 <button
                   onClick={() => setIsPlaying(!isPlaying)}
                   className="p-2 bg-SM-blue text-white rounded-lg hover:bg-blue-700 transition-colors"
-                  aria-label={isPlaying ? "Pausar" : "Reproducir"}
+                  aria-label={isPlaying ? (language === 'es' ? 'Pausar vídeo' : 'Pause video') : (language === 'es' ? 'Reproducir vídeo' : 'Play video')}
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     {isPlaying ? (
@@ -334,7 +334,7 @@ const SignoguideContainer = ({
                   onClick={handleNext}
                   disabled={!handleNext}
                   className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors disabled:opacity-50"
-                  aria-label="Siguiente"
+                  aria-label={language === 'es' ? `Siguiente vídeo` : `Next video`}
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}

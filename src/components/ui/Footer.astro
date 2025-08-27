@@ -18,12 +18,12 @@ const partners = [
   [
     {
       src: ayuntamientoLogo.src,
-      alt: "Ayuntamiento Santa Marta de Tormes",
+      alt: "Logotipo Ayuntamiento de Santa Marta de Tormes",
       name: "Ayuntamiento"
     },
     {
       src: turismoColaboradorLogo.src,
-      alt: "Turismo Santa Marta de Tormes",
+      alt: "Logotipo Turismo de Santa Marta de Tormes, Salamanca",
       name: "Turismo Santa Marta"
     }
   ],
@@ -31,17 +31,17 @@ const partners = [
   [
     {
       src: audaceticsLogo.src,
-      alt: "Audacetics",
+      alt: "Logotipo Audacetics",
       name: "Audacetics"
     },
     {
       src: asprodesLogo.src,
-      alt: "ASPRODES",
+      alt: "Logotipo ASPRODES, Plena inclusión, Castilla y León",
       name: "ASPRODES"
     },
     {
       src: aspasLogo.src,
-      alt: "ASPAS",
+      alt: "Logotipo ASPAS, Asociación de Padres de Niños Sordos, Salamanca",
       name: "ASPAS"
     }
   ]
@@ -75,20 +75,21 @@ const footerContent = content.footer;
     <div class="max-w-xl mx-auto text-center mb-8">
       <div class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
         <p class="inline-flex items-center gap-2">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 64 64">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 64 64" aria-hidden="true">
             <path d="M32,0C18.746,0,8,10.746,8,24c0,5.219,1.711,10.008,4.555,13.93c0.051,0.094,0.059,0.199,0.117,0.289l16,24
             C29.414,63.332,30.664,64,32,64s2.586-0.668,3.328-1.781l16-24c0.059-0.09,0.066-0.195,0.117-0.289C54.289,34.008,56,29.219,56,24
             C56,10.746,45.254,0,32,0z M32,32c-4.418,0-8-3.582-8-8s3.582-8,8-8s8,3.582,8,8S36.418,32,32,32z"/>
           </svg>
-
-        
-          {footerContent.contact.address}
+          <span aria-label={lang === "es" ? "Ubicación Plaza España, sin número - Santa Marta de Tormes (Salamanca)" : "Location Plaza España, no number - Santa Marta de Tormes (Salamanca)"}>
+            {footerContent.contact.address}
+          </span>
         </p>
         <p>
           <a 
           href={`tel:${footerContent.contact.phone.replace(/\s/g, '')}`} 
           target="_blank" 
           rel="noopener noreferrer"
+          aria-label={lang === "es" ? "Teléfono +34 923 200 005" : "Phone number +34 923 200 005 Link"}
           class="inline-flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-SM-blue transition-colors underline decoration-slate-400 decoration-dotted underline-offset-2 hover:decoration-solid hover:decoration-SM-blue"
           >
             <svg class="w-5 h-5 scale-x-[-1]" fill="currentColor" viewBox="0 0 24 24">
@@ -102,6 +103,7 @@ const footerContent = content.footer;
           href={`mailto:${footerContent.contact.email}`} 
           target="_blank" 
           rel="noopener noreferrer"
+          aria-label={lang === "es" ? "correo info@turismosantamartadetormes.com" : "email info@turismosantamartadetormes.com link"}
           class="inline-flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-SM-blue transition-colors underline decoration-slate-400 decoration-dotted underline-offset-2 hover:decoration-solid hover:decoration-SM-blue"
           >
             <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentcolor">
@@ -115,6 +117,7 @@ const footerContent = content.footer;
             href="https://www.instagram.com/turismosantamartadetormes/" 
             target="_blank" 
             rel="noopener noreferrer"
+            aria-label={lang === "es" ? "Instagram @turismosantamartadetormes" : "Instagram @turismosantamartadetormes link"}
             class="inline-flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-SM-blue transition-colors underline decoration-slate-400 decoration-dotted underline-offset-2 hover:decoration-solid hover:decoration-SM-blue"
           >
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -132,7 +135,7 @@ const footerContent = content.footer;
     
     <!-- Información técnica -->
     <div class="mt-4 text-center">
-      <p class="text-xs text-slate-500 dark:text-slate-400">
+      <p class="text-xs text-slate-500 dark:text-slate-400" aria-label={lang === "es" ? "Desarrollado con Astro + Tailwind CSS. Hecho con amor para la accesibilidad" : "Built with Astro + Tailwind CSS • Made with love for accessibility"}>
         {footerContent.technical.poweredBy} <span class="text-SM-blue font-medium">Astro</span> + 
         <span class="text-SM-blue font-medium">Tailwind CSS</span> • 
         {footerContent.technical.madeWith}
