@@ -14,7 +14,7 @@
   "audioguide_types": {
     "normal": {
       "title": "Audio Guide",
-      "description": "Standard audio with complete information about the murals and their historical context",
+      "description": "Standard audio with complete information about Isla del Soto and its natural environment",
       "name": "Standard Audio Guide"
     },
     "descriptive": {
@@ -57,14 +57,14 @@
     "decreaseFontSize": "Decrease font size"
   },
   "audioguide_page": {
-    "startTour": "Start Murals Route",
+    "startTour": "Start Isla del Soto Route",
     "clickToStart": "👆 Click to begin the experience",
     "downloadBrochure": "To complement the experience, download the brochure with photos and information."
   },
   "player": {
     "welcome": {
-      "title": "Discover the Murals!",
-      "subtitle": "Click \"Start Tour\" to explore Santa Marta's urban art",
+      "title": "Discover Isla del Soto!",
+      "subtitle": "Click \"Start Tour\" to explore the natural heritage of Santa Marta",
       "hint": "Use the blue button above"
     },
     "loading": "Loading audio...",
@@ -92,10 +92,10 @@
     "mapUnlockedTitle": "Map free - Click to lock",
     "scrollLockMessage": "💡 Map scrolling locked. Click the 'Unlock Map' button to navigate.",
     "legend": {
-      "currentMural": "Mural",
+      "currentMural": "Point of Interest",
       "playing": "Now playing",
       "recommendedRoute": "Recommended route",
-      "muralsCount": "murals"
+      "muralsCount": "points of interest"
     }
   },
   "playlist": {
@@ -146,7 +146,7 @@
       "instagram": "@turismosantamartadetormes"
     },
     "legal": {
-      "copyright": "© 2025 Santa Marta Murals Audio Guides. All rights reserved.",
+      "copyright": "© 2025 Isla del Soto Audio Guides. All rights reserved.",
       "privacy": "Privacy Policy",
       "terms": "Terms of Use",
       "cookies": "Cookie Policy"

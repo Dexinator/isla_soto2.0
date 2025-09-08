@@ -1,0 +1,159 @@
+{
+  "navigation": {
+    "home": "Home",
+    "audioguides": "Audio Guides",
+    "normative": "Standard",
+    "descriptive": "Descriptive",
+    "easy": "Easy",
+    "sign": "Sign Language",
+    "map": "Map",
+    "download": "Download PDF",
+    "language": "Language",
+    "accessibility": "Accessibility"
+  },
+  "audioguide_types": {
+    "normal": {
+      "title": "Audio Guide",
+      "description": "Standard audio with complete information about the murals and their historical context",
+      "name": "Standard Audio Guide"
+    },
+    "descriptive": {
+      "title": "Descriptive Audio Guide",
+      "description": "Audio with detailed descriptions of visual elements for people with visual disabilities",
+      "name": "Descriptive Audio Guide"
+    },
+    "easy": {
+      "title": "Easy Audio Guide",
+      "description": "Audio adapted for intellectual disabilities with clear and simple language",
+      "name": "Easy Audio Guide"
+    },
+    "sign": {
+      "title": "Sign Language Guide",
+      "description": "Videos in Spanish Sign Language for people with hearing disabilities",
+      "name": "Sign Language Guide"
+    }
+  },
+  "controls": {
+    "play": "Play",
+    "pause": "Pause",
+    "stop": "Stop",
+    "previous": "Previous",
+    "next": "Next",
+    "previousTrack": "Previous track",
+    "nextTrack": "Next track",
+    "volume": "Volume",
+    "mute": "Mute",
+    "unmute": "Unmute",
+    "fullscreen": "Fullscreen",
+    "exitFullscreen": "Exit fullscreen"
+  },
+  "accessibility": {
+    "skipToContent": "Skip to main content",
+    "darkMode": "Switch to dark mode",
+    "lightMode": "Switch to light mode",
+    "highContrast": "Enable high contrast",
+    "normalContrast": "Disable high contrast",
+    "increaseFontSize": "Increase font size",
+    "decreaseFontSize": "Decrease font size"
+  },
+  "audioguide_page": {
+    "startTour": "Start Murals Route",
+    "clickToStart": "👆 Click to begin the experience",
+    "downloadBrochure": "To complement the experience, download the brochure with photos and information."
+  },
+  "player": {
+    "welcome": {
+      "title": "Discover the Murals!",
+      "subtitle": "Click \"Start Tour\" to explore Santa Marta's urban art",
+      "hint": "Use the blue button above"
+    },
+    "loading": "Loading audio...",
+    "error": "Error controlling playback",
+    "defaults": {
+      "unknownArtist": "Unknown artist",
+      "unknownLocation": "Location unavailable"
+    },
+    "srOnly": {
+      "audioPlayer": "Audio player",
+      "interactiveMap": "Interactive route map",
+      "playlist": "Playlist"
+    }
+  },
+  "map": {
+    "title": "🗺️ Route Map",
+    "listenAudioguide": "🎧 Listen to audio guide",
+    "getDirections": "🗺️ Get directions",
+    "loading": "Loading map...",
+    "error": "Error loading map",
+    "tryAgain": "Try again",
+    "lockMap": "🔒 Lock Map",
+    "unlockMap": "🔓 Unlock Map",
+    "mapLockedTitle": "Map locked - Click to unlock interaction",
+    "mapUnlockedTitle": "Map free - Click to lock",
+    "scrollLockMessage": "💡 Map scrolling locked. Click the 'Unlock Map' button to navigate.",
+    "legend": {
+      "currentMural": "Mural",
+      "playing": "Now playing",
+      "recommendedRoute": "Recommended route",
+      "muralsCount": "murals"
+    }
+  },
+  "playlist": {
+    "header": {
+      "emoji": "🏷️",
+      "types": {
+        "normal": "Audio Guide",
+        "descriptive": "Descriptive Audio Guide",
+        "easy": "Easy Audio Guide",
+        "sign": "Sign Language Guide"
+      },
+      "counter": "of",
+      "progress": "% completed"
+    },
+    "item": {
+      "startHere": "🎯 Start here",
+      "start": "▶️ Start",
+      "playingNow": "Playing now",
+      "informationTrack": "Information track"
+    },
+    "defaults": {
+      "unknownArtist": "Unknown artist",
+      "unknownLocation": "Location unavailable"
+    },
+    "footer": {
+      "totalTime": "⏱️ Total audio guide time: ~",
+      "minutes": "min"
+    }
+  },
+  "messages": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "tryAgain": "Try again"
+  },
+  "footer": {
+    "partners": {
+      "asprodes": "ASPRODES",
+      "aspas": "ASPAS Salamanca",
+      "audacetics": "Audacetics",
+      "ayuntamiento": "Santa Marta City Council",
+      "turismo": "Santa Marta Tourism"
+    },
+    "contact": {
+      "title": "SANTA MARTA DE TORMES TOURISM",
+      "address": "Plaza España, s/n - Santa Marta de Tormes (Salamanca)",
+      "phone": "+34 923 200 005",
+      "email": "info@turismosantamartadetormes.com",
+      "instagram": "@turismosantamartadetormes"
+    },
+    "legal": {
+      "copyright": "© 2025 Santa Marta Murals Audio Guides. All rights reserved.",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Use",
+      "cookies": "Cookie Policy"
+    },
+    "technical": {
+      "poweredBy": "Built with",
+      "madeWith": "Made with ❤️ for accessibility"
+    }
+  }
+}

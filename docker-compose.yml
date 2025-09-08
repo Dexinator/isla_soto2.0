@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: isla-soto-web
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    networks:
+      - isla-network
+
+  # Development service (optional)
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: isla-soto-dev
+    ports:
+      - "4321:4321"
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    networks:
+      - isla-network
+    profiles:
+      - dev
+    command: npm run dev -- --host 0.0.0.0
+
+networks:
+  isla-network:
+    driver: bridge

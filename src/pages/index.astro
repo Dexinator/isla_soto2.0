@@ -1,5 +1,5 @@
 ---
-// Página principal - Audioguías Murales Santa Marta
+// Página principal - Audioguías Isla del Soto
 // Navegación directa con tarjetas - Mobile First
 
 import Layout from '../components/ui/Layout.astro';
@@ -9,17 +9,17 @@ import Card from '../components/ui/Card.astro';
 import '../styles/global.css';
 
 // Importar imágenes de iconos para optimización
-import iconAudioguiaNormativa from '../assets/images/icons/audioguia-normativa.jpg';
-import iconAudioguiaFacil from '../assets/images/icons/audioguia-facil.jpg';
-import iconAudioguiaDescriptiva from '../assets/images/icons/audioguia-descriptiva.jpg';
-import iconSignoguia from '../assets/images/icons/signoguia.jpg';
-import iconAudioguiaEnglish from '../assets/images/icons/audioguia-english.jpg';
-import iconFolleto from '../assets/images/icons/informativepdf.jpg';
+import iconAudioguiaNormativa from '../assets/images/icons/audioguia-normativa.png';
+import iconAudioguiaFacil from '../assets/images/icons/audioguia-facil.png';
+import iconAudioguiaDescriptiva from '../assets/images/icons/audioguia-descriptiva.png';
+import iconSignoguia from '../assets/images/icons/signoguia.png';
+import iconAudioguiaEnglish from '../assets/images/icons/audioguia-english.png';
+import iconFolleto from '../assets/images/icons/informativepdf.png';
 ---
 
 <Layout
-  title="Audioguías Murales Santa Marta | Descubre el arte urbano accesible"
-  description="Explora los murales de Santa Marta con audioguías accesibles. Versiones normativa, descriptiva, fácil y signoguía disponibles."
+  title="Audioguías Isla del Soto | Descubre el patrimonio natural accesible"
+  description="Explora la Isla del Soto en Santa Marta con audioguías accesibles. Versiones normativa, descriptiva, fácil y signoguía disponibles."
   lang="es"
 >
   <Header currentPage="home" lang="es" />
@@ -41,7 +41,7 @@ import iconFolleto from '../assets/images/icons/informativepdf.jpg';
             description=""
             href="/audioguia-normativa"
             image={iconAudioguiaNormativa}
-            imageAlt="Audioguía en español - Ruta de los Murales Santa Marta"
+            imageAlt="Audioguía en español - Ruta Isla del Soto"
             badge="Español"
             badgeColor="yellow"
             className="order-1"
@@ -54,7 +54,7 @@ import iconFolleto from '../assets/images/icons/informativepdf.jpg';
             description=""
             href="/audioguia-facil"
             image={iconAudioguiaFacil}
-            imageAlt="Audioguía de Lectura Fácil - Ruta de los Murales Santa Marta"
+            imageAlt="Audioguía de Lectura Fácil - Ruta Isla del Soto"
             badge="LF"
             badgeColor="yellow"
             priority={true}
@@ -68,7 +68,7 @@ import iconFolleto from '../assets/images/icons/informativepdf.jpg';
             description=""
             href="/audioguia-descriptiva"
             image={iconAudioguiaDescriptiva}
-            imageAlt="Audioguía Descriptiva y detallada - Ruta de los Murales Santa Marta"
+            imageAlt="Audioguía Descriptiva y detallada - Ruta Isla del Soto"
             badge="Detallada"
             badgeColor="yellow"
             className="order-3"
@@ -81,7 +81,7 @@ import iconFolleto from '../assets/images/icons/informativepdf.jpg';
             description=""
             href="/signoguia"
             image={iconSignoguia}
-            imageAlt="Signoguía en lengua de signos española con subtítulos - Ruta de los Murales Santa Marta"
+            imageAlt="Signoguía en lengua de signos española con subtítulos - Ruta Isla del Soto"
             badge="Subtitulada"
             badgeColor="yellow"
             className="order-4"
@@ -94,7 +94,7 @@ import iconFolleto from '../assets/images/icons/informativepdf.jpg';
             description=""
             href="/english"
             image={iconAudioguiaEnglish}
-            imageAlt="Audioguía en Inglés - Santa Marta Murals Route"
+            imageAlt="Audioguía en Inglés - Isla del Soto Route"
             badge="English"
             badgeColor="yellow"
             className="order-5"
@@ -107,7 +107,7 @@ import iconFolleto from '../assets/images/icons/informativepdf.jpg';
             description=""
             href="/brochure/spanish.pdf"
             image={iconFolleto}
-            imageAlt="Descargar folleto - Ruta de los Murales Santa Marta"
+            imageAlt="Descargar folleto - Ruta Isla del Soto"
             badge="Descargar"
             badgeColor="yellow"
             className="order-6"

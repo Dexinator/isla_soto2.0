@@ -3,7 +3,7 @@ import Layout from '../../components/ui/Layout.astro';
 import Header from '../../components/ui/Header.astro';
 import Footer from '../../components/ui/Footer.astro';
 import AudioguideContainer from '../../components/react/AudioguideContainer.jsx';
-import ArtistsSection from '../../components/ui/ArtistsSection.astro';
+import RoutesSection from '../../components/ui/RoutesSection.astro';
 
 // Importar datos
 import muralsData from '../../data/murals.json';
@@ -16,7 +16,7 @@ const { murals, route } = muralsData;
 const content = contentEn;
 
 // SEO y metadatos
-const pageTitle = `${content.audioguide_types.normal.title} | Santa Marta Murals Audio Guides`;
+const pageTitle = `${content.audioguide_types.normal.title} | Isla del Soto Audio Guides`;
 const pageDescription = content.audioguide_types.normal.description;
 ---
 
@@ -66,7 +66,7 @@ lang={lang}
         <br>
         <p class="text-sm text-slate-500 dark:text-slate-400 mt-3">
           To complement the experience,<br>
-          <a href="/brochure/english.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download english brochure – Santa Marta Murals Route" class="inline-block mt-2 px-4 py-2 bg-SM-yellow text-SM-black font-semibold rounded-lg hover:bg-yellow-500 transition-colors duration-200">
+          <a href="/brochure/english.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download english brochure – Isla del Soto Route" class="inline-block mt-2 px-4 py-2 bg-SM-yellow text-SM-black font-semibold rounded-lg hover:bg-yellow-500 transition-colors duration-200">
             📥 Download brochure
           </a><br>
           with photos and information.
@@ -88,9 +88,9 @@ lang={lang}
     language={lang}
     client:load
     />
-    <!-- Sección de artistas -->
+    <!-- Sección de rutas -->
 <div class="mt-8">
-  <ArtistsSection language={lang} />
+  <RoutesSection language={lang} />
 </div>
   </div>
 </div>

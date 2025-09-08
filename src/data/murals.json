@@ -4,1277 +4,710 @@
       "id": 1,
       "title": {
         "normal": {
-          "es": "Comenzamos la ruta de los murales",
-          "en": "Welcome to the mural route"
+          "es": "Comenzamos el paseo por la Isla del Soto",
+          "en": "We begin our walk through the Soto"
         },
         "descriptive": {
-          "es": "AD- Comenzamos la ruta de los murales",
-          "en": "Welcome to the mural route"
+          "es": "AD - Comenzamos el paseo por la Isla del Soto",
+          "en": "We begin our walk through the Soto"
         },
         "easy": {
-          "es": "LF- Empieza la ruta de los murales",
-          "en": "Welcome to the mural route"
+          "es": "LF - Comenzamos el paseo por la Isla del Soto",
+          "en": "We begin our walk through the Soto"
         },
         "sign": {
-          "es": "LSE- Comenzamos la ruta de los murales",
-          "en": "Welcome to the mural route"
+          "es": "LSE - Comenzamos el paseo por la Isla del Soto",
+          "en": "We begin our walk through the Soto"
         }
       },
       "description": {
-        "es": "Punto de inicio del recorrido por los murales de Santa Marta de Tormes.",
-        "en": "Starting point of the Santa Marta de Tormes murals tour."
+        "es": "Imagen de la pasarela que une la Isla del Soto con la Aldehuela de los Guzmanes en Salamanca.",
+        "en": "Image of the footbridge La Aldehuela de los Guzmanes in Salamanca to Isla del Soto."
       },
+      "coordinates": [
+        [40.95321544876704, -5.638468969490337],
+        [40.95293230755688, -5.635195377875577],
+        [40.95179705186017, -5.6309736805210795]
+      ],
       "order": 1,
       "audio": {
         "normal": {
-          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960961%3Fsecret_token%3Ds-aWKFzmbhl8y",
-          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807329%3Fsecret_token%3Ds-UeTvuPhcc34"
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149552602",
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2157093711"
         },
-        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023547%3Fsecret_token%3Ds-BWOsYK9houq",
-        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606264%3Fsecret_token%3Ds-q499Tanjp7Q"
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149581114",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2153328051"
       },
       "video": {
-        "sign": "1105891403"
+        "sign": "1110102557"
       },
-      "image": "/images/murals/1- Empieza La Ruta de los Murales. Audioguía. Santa Marta de Tormes.png",
+      "image": "/images/sites/isla-soto-comenzamos-paseo-santa-marta-tormes.png",
       "alt": {
-        "es": "Inicio de la ruta de murales en Santa Marta de Tormes",
-        "en": "Start of the murals route in Santa Marta de Tormes"
+        "es": "Inicio del paseo por la Isla del Soto",
+        "en": "Start of the walk through Isla del Soto"
       },
       "location": {
-        "es": "Bienvenida",
-        "en": "Welcome"
+        "es": "Isla del Soto",
+        "en": "Isla del Soto"
       },
       "artist": {
-        "es": "Introducción",
-        "en": "Introduction"
+        "es": "Naturaleza",
+        "en": "Nature"
       },
       "year": 2024,
       "duration": {
-        "normal": "01:47",
-        "descriptive": "01:41",
-        "easy": "01:41",
-        "sign": "01:45",
-        "english": "01:39"
+        "normal": "02:15",
+        "descriptive": "01:44",
+        "easy": "02:13",
+        "sign": "02:15",
+        "english": "02:15"
       }
     },
     {
       "id": 2,
       "title": {
         "normal": {
-          "es": "Paseo fluvial",
-          "en": "Riverside promenade"
+          "es": "Origen de la isla",
+          "en": "Origins of the island"
         },
         "descriptive": {
-          "es": "AD- Paseo fluvial",
-          "en": "Riverside promenade"
+          "es": "AD - Origen de la isla",
+          "en": "Origins of the island"
         },
         "easy": {
-          "es": "LF- Paseo fluvial",
-          "en": "Riverside promenade"
+          "es": "LF - Origen de la isla",
+          "en": "Origins of the island"
         },
         "sign": {
-          "es": "LSE- Paseo fluvial",
-          "en": "Riverside promenade"
+          "es": "LSE - Origen de la isla",
+          "en": "Origins of the island"
         }
       },
       "description": {
-        "es": "Mural que representa el paseo fluvial de Santa Marta junto al río Tormes.",
-        "en": "Mural representing Santa Marta's riverside walk along the Tormes river."
+        "es": "Vista aérea de una parte de la Isla del Soto.",
+        "en": "Aerial view of part of Isla del Soto."
       },
-      "coordinates": [
-        40.950624059703735,
-        -5.637681861162018
-      ],
       "order": 2,
       "audio": {
         "normal": {
-          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960997%3Fsecret_token%3Ds-4htsSn5ECt6",
-          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807341%3Fsecret_token%3Ds-XzyoJZcopoJ"
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149552587",
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2157093714"
         },
-        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023520%3Fsecret_token%3Ds-DxSGINScIle",
-        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606282%3Fsecret_token%3Ds-rKEyQ9aCtwP"
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149581099",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2153328048"
       },
       "video": {
-        "sign": "https://vimeo.com/1110092681/67ea3cc9e0"
+        "sign": "1110102618"
       },
-      "image": "/images/murals/2- Mural Paseo Fluvial. Audioguía. Santa Marta de Tormes.jpg",
+      "image": "/images/sites/isla-soto-origen-islas-rio-tormes.png",
       "alt": {
-        "es": "Mural del paseo fluvial junto al río Tormes",
-        "en": "Riverside walk mural along the Tormes river"
+        "es": "Origen de las islas del río Tormes",
+        "en": "Origin of the Tormes River islands"
       },
       "location": {
-        "es": "Cruce Av. de Madrid y Pº del río Tormes",
-        "en": "Av. de Madrid and Pº del río Tormes corner"
+        "es": "Isla del Soto",
+        "en": "Isla del Soto"
       },
-      "artist": "Caín Ferreras",
+      "artist": {
+        "es": "Naturaleza",
+        "en": "Nature"
+      },
       "year": 2024,
       "duration": {
-        "normal": "02:07",
-        "descriptive": "02:18",
-        "easy": "02:02",
-        "sign": "02:08",
-        "english": "01:48"
+        "normal": "02:08",
+        "descriptive": "02:09",
+        "easy": "01:57",
+        "sign": "02:12",
+        "english": "02:02"
       }
     },
     {
       "id": 3,
       "title": {
         "normal": {
-          "es": "Centro de Interpretación. Isla del Soto",
-          "en": "Interpretation Centre. Soto Island"
+          "es": "Flora",
+          "en": "Flora"
         },
         "descriptive": {
-          "es": "AD- Centro de Interpretación. Isla del Soto",
-          "en": "Interpretation Centre. Soto Island"
+          "es": "AD - Flora",
+          "en": "Flora"
         },
         "easy": {
-          "es": "LF- Centro de Interpretación. Isla del Soto",
-          "en": "Interpretation Centre. Soto Island"
+          "es": "LF - Plantas y árboles del Soto",
+          "en": "Flora"
         },
         "sign": {
-          "es": "LSE- Centro de Interpretación. Isla del Soto",
-          "en": "Interpretation Centre. Soto Island"
+          "es": "LSE - Flora",
+          "en": "Flora"
         }
       },
       "description": {
-        "es": "Mural ubicado en el Centro de Interpretación de la Isla del Soto.",
-        "en": "Mural located at the Soto Island Interpretation Center."
+        "es": "Imagen del río Tormes desde la Isla del Soto con la pasarela de la Aldehuela al fondo.",
+        "en": "Image of the River Tormes from Isla del Soto, with the Aldehuela footbridge in the distance."
       },
-      "coordinates": [
-        40.9522547832176,
-        -5.632777086840274
-      ],
       "order": 3,
       "audio": {
         "normal": {
-          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960988%3Fsecret_token%3Ds-1HB817uvUxI",
-          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807335%3Fsecret_token%3Ds-yIgmJodRtfX"
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149552578",
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2157093705"
         },
-        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023550%3Fsecret_token%3Ds-yP755oKyZUn",
-        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606267%3Fsecret_token%3Ds-oqSa4mcIIQM"
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149581111",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2153328072"
       },
       "video": {
-        "sign": "https://vimeo.com/1110092940/f19c9503d1"
+        "sign": "1110102676"
       },
-      "image": "/images/murals/3- Mural Centro de Interpretación. Isla del Soto. Audioguía. Santa Marta de Tormes.jpg",
+      "image": "/images/sites/isla-soto-flora-vegetacion-caracteristica.png",
       "alt": {
-        "es": "Mural en el Centro de Interpretación de la Isla del Soto",
-        "en": "Mural at the Soto Island Interpretation Center"
+        "es": "Flora de la Isla del Soto",
+        "en": "Flora of Isla del Soto"
       },
       "location": {
-        "es": "Centro de Interpretación de la Isla del Soto",
-        "en": "Soto Island Interpretation Center"
+        "es": "Isla del Soto",
+        "en": "Isla del Soto"
       },
-      "artist": "Caín Ferreras",
+      "artist": {
+        "es": "Naturaleza",
+        "en": "Nature"
+      },
       "year": 2024,
       "duration": {
-        "normal": "01:57",
-        "descriptive": "02:51",
-        "easy": "01:58",
-        "sign": "01:57",
-        "english": "02:02"
+        "normal": "02:36",
+        "descriptive": "02:36",
+        "easy": "02:13",
+        "sign": "02:40",
+        "english": "02:16"
       }
     },
     {
       "id": 4,
       "title": {
         "normal": {
-          "es": "La llegada del color",
-          "en": "The arrival of colour"
+          "es": "Fauna",
+          "en": "Fauna"
         },
         "descriptive": {
-          "es": "AD- La llegada del color",
-          "en": "The arrival of colour"
+          "es": "AD - Fauna",
+          "en": "Fauna"
         },
         "easy": {
-          "es": "LF- La llegada del color",
-          "en": "The arrival of colour"
+          "es": "LF - Los animales del Soto",
+          "en": "Fauna"
         },
         "sign": {
-          "es": "LSE- La llegada del color",
-          "en": "The arrival of colour"
+          "es": "LSE - Fauna",
+          "en": "Fauna"
         }
       },
       "description": {
-        "es": "Mural inspirado en la transformación urbana a través del arte y el color digital.",
-        "en": "Mural inspired by urban transformation through art and digital color."
+        "es": "Imagen del río desde la Isla del Soto.",
+        "en": "View of the river from Isla del Soto."
       },
-      "coordinates": [
-        40.950508174347085,
-        -5.630577903555368
-      ],
       "order": 4,
       "audio": {
         "normal": {
-          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960970%3Fsecret_token%3Ds-ZZfGZRY29D4",
-          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807338%3Fsecret_token%3Ds-EpPgyGFZu51"
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149552593",
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2157093687"
         },
-        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023535%3Fsecret_token%3Ds-Ipo9wFHuETP",
-        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606252%3Fsecret_token%3Ds-vMvclTiolRi"
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149581105",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2153328066"
       },
       "video": {
-        "sign": "https://vimeo.com/1110093064/7733e3c08c"
+        "sign": "1110102776"
       },
-      "image": "/images/murals/4- Mural La Llegada del Color. Audioguía. Santa Marta de Tormes.jpg",
+      "image": "/images/sites/isla-soto-fauna-animales-habitat.png",
       "alt": {
-        "es": "Mural colorido que representa la llegada del color digital a Santa Marta",
-        "en": "Colorful mural representing the arrival of digital color to Santa Marta"
+        "es": "Fauna de la Isla del Soto",
+        "en": "Fauna of Isla del Soto"
       },
       "location": {
-        "es": "Plaza de la Iglesia y Av. de Madrid",
-        "en": "Plaza de la Iglesia and Av. de Madrid"
+        "es": "Isla del Soto",
+        "en": "Isla del Soto"
       },
-      "artist": "Daniel Martín",
+      "artist": {
+        "es": "Naturaleza",
+        "en": "Nature"
+      },
       "year": 2024,
       "duration": {
-        "normal": "02:01",
+        "normal": "03:10",
         "descriptive": "03:06",
-        "easy": "02:07",
-        "sign": "02:01",
-        "english": "02:03"
+        "easy": "03:09",
+        "sign": "03:11",
+        "english": "03:07"
       }
     },
     {
       "id": 5,
       "title": {
         "normal": {
-          "es": "Bosque",
-          "en": "Forest"
+          "es": "Avifauna del río y del bosque de ribera",
+          "en": "Avifauna of the river and riparian forest"
         },
         "descriptive": {
-          "es": "AD- Bosque",
-          "en": "Forest"
+          "es": "AD - Avifauna del río y del bosque de ribera",
+          "en": "Avifauna of the river and riparian forest"
         },
         "easy": {
-          "es": "LF- Bosque",
-          "en": "Forest"
+          "es": "LF - Aves del río y del Soto",
+          "en": "Avifauna of the river and riparian forest"
         },
         "sign": {
-          "es": "LSE- Bosque",
-          "en": "Forest"
+          "es": "LSE - Avifauna del río y del bosque de ribera",
+          "en": "Avifauna of the river and riparian forest"
         }
       },
       "description": {
-        "es": "Mural que representa la conexión entre la naturaleza y la vida urbana.",
-        "en": "Mural representing the connection between nature and urban life."
+        "es": "Vista del río Tormes.",
+        "en": "View of the River Tormes."
       },
-      "coordinates": [
-        40.94939751212852,
-        -5.63064640156047
-      ],
+      "coordinates": [[40.954758495882956, -5.639159696500225]],
       "order": 5,
       "audio": {
         "normal": {
-          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960964%3Fsecret_token%3Ds-EMPcpJZWhf8",
-          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807386%3Fsecret_token%3Ds-dqJq1vKk7to"
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149552575",
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2157093696"
         },
-        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023556%3Fsecret_token%3Ds-1Y9yCNvJ63X",
-        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606261%3Fsecret_token%3Ds-sWPPE3X2vRF"
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149581102",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2153328069"
       },
       "video": {
-        "sign": "https://vimeo.com/1110093260/adb0644156"
+        "sign": "1110102895"
       },
-      "image": "/images/murals/5- Mural La Bosque. Audioguía. Santa Marta de Tormes.jpg",
+      "image": "/images/sites/isla-soto-avifauna-rio-bosque-ribera.png",
       "alt": {
-        "es": "Mural del bosque que conecta naturaleza y ciudad",
-        "en": "Forest mural connecting nature and city"
+        "es": "Aves del río y bosque de ribera",
+        "en": "River and riparian forest birds"
       },
       "location": {
-        "es": "Plaza de España",
-        "en": "Plaza de España"
+        "es": "Isla del Soto",
+        "en": "Isla del Soto"
       },
-      "artist": "Daniel Martín",
+      "artist": {
+        "es": "Naturaleza",
+        "en": "Nature"
+      },
       "year": 2024,
       "duration": {
-        "normal": "01:39",
-        "descriptive": "02:12",
-        "easy": "01:39",
-        "sign": "01:39",
-        "english": "01:46"
+        "normal": "03:08",
+        "descriptive": "03:03",
+        "easy": "02:32",
+        "sign": "03:12",
+        "english": "02:55"
       }
     },
     {
       "id": 6,
       "title": {
         "normal": {
-          "es": "Mujer, historia y pueblo",
-          "en": "Woman, history and community"
+          "es": "Especies introducidas",
+          "en": "Introduced species"
         },
         "descriptive": {
-          "es": "AD- Mujer, historia y pueblo",
-          "en": "Woman, history and community"
+          "es": "AD - Especies introducidas",
+          "en": "Introduced species"
         },
         "easy": {
-          "es": "LF- Mujer, historia y pueblo",
-          "en": "Woman, history and community"
+          "es": "LF - Especies introducidas",
+          "en": "Introduced species"
         },
         "sign": {
-          "es": "LSE- Mujer, historia y pueblo",
-          "en": "Woman, history and community"
+          "es": "LSE - Especies introducidas",
+          "en": "Introduced species"
         }
       },
       "description": {
-        "es": "Mural dedicado al papel de la mujer en la historia de Santa Marta de Tormes.",
-        "en": "Mural dedicated to women's role in Santa Marta de Tormes' history."
+        "es": "Imagen del tramo final de la pasarela que une la Aldehuela desde Salamanca con la Isla del Soto.",
+        "en": "Image of the end of the footbridge from La Aldehuela de los Guzmanes in Salamanca to Isla del Soto."
       },
-      "coordinates": [
-        40.94908236429532,
-        -5.6300556081211734
-      ],
       "order": 6,
       "audio": {
         "normal": {
-          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960955%3Fsecret_token%3Ds-MpqEy9apYYp",
-          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807356%3Fsecret_token%3Ds-usq50t2bjfC"
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149552599",
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2157093702"
         },
-        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023568%3Fsecret_token%3Ds-Bw2t3ydyf8r",
-        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606273%3Fsecret_token%3Ds-EPrOEuqAnqy"
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149581093",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2153328054"
       },
       "video": {
-        "sign": "https://vimeo.com/1110093452/2f413bd16d"
+        "sign": "1110103017"
       },
-      "image": "/images/murals/6- Mural Mujer, historia y pueblo. Audioguía. Santa Marta de Tormes.jpg",
+      "image": "/images/sites/isla-soto-especies-introducidas-no-autoctonas.png",
       "alt": {
-        "es": "Mural que representa el papel de la mujer en la historia local",
-        "en": "Mural representing women's role in local history"
+        "es": "Especies introducidas en la Isla del Soto",
+        "en": "Introduced species on Isla del Soto"
       },
       "location": {
-        "es": "C. Ricardo Marcos junto a Plaza de España",
-        "en": "C. Ricardo Marcos next to Plaza de España"
+        "es": "Isla del Soto",
+        "en": "Isla del Soto"
       },
-      "artist": "Rober Bece",
+      "artist": {
+        "es": "Naturaleza",
+        "en": "Nature"
+      },
       "year": 2024,
       "duration": {
-        "normal": "01:42",
-        "descriptive": "02:44",
-        "easy": "01:42",
-        "sign": "01:45",
-        "english": "02:00"
+        "normal": "02:36",
+        "descriptive": "03:12",
+        "easy": "02:22",
+        "sign": "02:38",
+        "english": "02:30"
       }
     },
     {
       "id": 7,
       "title": {
         "normal": {
-          "es": "Doctor Torres Villarroel",
-          "en": "Doctor Torres Villarroel"
+          "es": "Centro Interpretación Isla del Soto",
+          "en": "Isla del Soto Interpretation Centre"
         },
         "descriptive": {
-          "es": "AD- Doctor Torres Villarroel",
-          "en": "Doctor Torres Villarroel"
+          "es": "AD - Centro Interpretación Isla del Soto",
+          "en": "Isla del Soto Interpretation Centre"
         },
         "easy": {
-          "es": "LF- Doctor Torres Villarroel",
-          "en": "Doctor Torres Villarroel"
+          "es": "LF - Centro Interpretación Isla del Soto",
+          "en": "Isla del Soto Interpretation Centre"
         },
         "sign": {
-          "es": "LSE- Doctor Torres Villarroel",
-          "en": "Doctor Torres Villarroel"
+          "es": "LSE - Centro Interpretación Isla del Soto",
+          "en": "Isla del Soto Interpretation Centre"
         }
       },
       "description": {
-        "es": "Mural dedicado al famoso escritor y matemático Diego de Torres Villarroel.",
-        "en": "Mural dedicated to the famous writer and mathematician Diego de Torres Villarroel."
+        "es": "Fachada posterior del Centro de Interpretación de la Isla del Soto.",
+        "en": "Rear façade of the Interpretation Centre of Isla del Soto."
       },
-      "coordinates": [
-        40.94974059181188,
-        -5.629269464039794
-      ],
+      "coordinates": [[40.95224503410455, -5.632701721974376]],
       "order": 7,
       "audio": {
         "normal": {
-          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117961000%3Fsecret_token%3Ds-WKK5dwwTkWW",
-          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807359%3Fsecret_token%3Ds-TnmaHOsyNxV"
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149552584",
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2157093693"
         },
-        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023553%3Fsecret_token%3Ds-fCpYMsadex7",
-        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606240%3Fsecret_token%3Ds-UY320WegVND"
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149581108",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2153328045"
       },
       "video": {
-        "sign": "https://vimeo.com/1110100805/973e9214c4"
+        "sign": "1110103017"
       },
-      "image": "/images/murals/7- Mural Doctor Torres Villarroel. Audioguía. Santa Marta de Tormes.jpg",
+      "image": "/images/sites/isla-soto-centro-interpretacion-naturaleza.png",
       "alt": {
-        "es": "Mural del Doctor Torres Villarroel, ilustre figura histórica",
-        "en": "Mural of Doctor Torres Villarroel, illustrious historical figure"
+        "es": "Centro de interpretación de la Isla del Soto",
+        "en": "Isla del Soto Interpretation Center"
       },
       "location": {
-        "es": "Cruce de la Av. Enrique de Sena y la C. Dr. Torres Villarroel",
-        "en": "Av. Enrique de Sena and Dr. Torres Villarroel corner"
+        "es": "Centro de Interpretación",
+        "en": "Interpretation Center"
       },
-      "artist": "Caín Ferreras",
+      "artist": {
+        "es": "Naturaleza",
+        "en": "Nature"
+      },
       "year": 2024,
       "duration": {
-        "normal": "01:42",
-        "descriptive": "01:58",
-        "easy": "02:10",
-        "sign": "01:45",
-        "english": "01:59"
+        "normal": "02:16",
+        "descriptive": "02:32",
+        "easy": "01:28",
+        "sign": "02:17",
+        "english": "02:01"
       }
     },
     {
       "id": 8,
       "title": {
         "normal": {
-          "es": "El rincón de Sandra y Gustavo",
-          "en": "Sandra and Gustavo's corner"
+          "es": "Zonas y usos de la isla",
+          "en": "Zones and uses of the island"
         },
         "descriptive": {
-          "es": "AD- El rincón de Sandra y Gustavo",
-          "en": "Sandra and Gustavo's corner"
+          "es": "AD - Zonas y usos de la isla",
+          "en": "Zones and uses of the island"
         },
         "easy": {
-          "es": "LF- El rincón de Sandra y Gustavo",
-          "en": "Sandra and Gustavo's corner"
+          "es": "LF - Zonas y usos de la isla",
+          "en": "Zones and uses of the island"
         },
         "sign": {
-          "es": "LSE- El rincón de Sandra y Gustavo",
-          "en": "Sandra and Gustavo's corner"
+          "es": "LSE - Zonas y usos de la isla",
+          "en": "Zones and uses of the island"
         }
       },
       "description": {
-        "es": "Mural que representa un espacio especial dedicado a Sandra y Gustavo.",
-        "en": "Mural representing a special space dedicated to Sandra and Gustavo."
+        "es": "Cartel promocional de la Isla del Soto, del Centro de Interpretación y de los Museos de la Moto histórica y el Museo de Arte Contenporáneo José Fuentes.",
+        "en": "Promotional poster for Isla del Soto, the Interpretation Centre, the Historic Motorcycle Museum and the José Fuentes Museum of Contemporary Art."
       },
-      "coordinates": [
-        40.94957657272803,
-        -5.628866434815848
-      ],
       "order": 8,
       "audio": {
         "normal": {
-          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960952%3Fsecret_token%3Ds-Qrzetuo2mmM",
-          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807362%3Fsecret_token%3Ds-LMjMGzxHJca"
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149552581",
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2157093708"
         },
-        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023511%3Fsecret_token%3Ds-fJVQXydUQxu",
-        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606234%3Fsecret_token%3Ds-kv8Ev7K56Vb"
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149581096",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2153328057"
       },
       "video": {
-        "sign": "https://vimeo.com/1110100950/494141380a"
+        "sign": "1110103357"
       },
-      "image": "/images/murals/8- Mural El Rincón de Sandra y Gustavo. Audioguía. Santa Marta de Tormes.jpg",
+      "image": "/images/sites/isla-soto-zonas-usos-actividades.png",
       "alt": {
-        "es": "Mural del rincón especial de Sandra y Gustavo",
-        "en": "Mural of Sandra and Gustavo's special corner"
+        "es": "Zonas y usos de la Isla del Soto",
+        "en": "Zones and uses of Isla del Soto"
       },
       "location": {
-        "es": "C. Dr. Torres Villarroel",
-        "en": "C. Dr. Torres Villarroel"
+        "es": "Isla del Soto",
+        "en": "Isla del Soto"
       },
-      "artist": "Rober Bece",
+      "artist": {
+        "es": "Naturaleza",
+        "en": "Nature"
+      },
       "year": 2024,
+      "coordinates": [
+        {
+          "name": {
+            "es": "Puesto pescadores",
+            "en": "Fishing posts"
+          },
+          "points": [
+            [40.95308182530833, -5.635703166716398],
+            [40.952909778822956, -5.635315227631543],
+            [40.95272410438441, -5.634381467225767],
+            [40.953090406931054, -5.629937560798211]
+          ]
+        },
+        {
+          "name": {
+            "es": "Parque de perros",
+            "en": "Dog park"
+          },
+          "points": [[40.95353653558633, -5.638182264269154]]
+        },
+        {
+          "name": {
+            "es": "Circuito trial",
+            "en": "Trial circuit"
+          },
+          "points": [[40.954585041814916, -5.638884009317278]]
+        },
+        {
+          "name": {
+            "es": "Observatorio de aves",
+            "en": "Bird observatory"
+          },
+          "points": [[40.95472482675104, -5.639185154298867]]
+        },
+        {
+          "name": {
+            "es": "Parque infantil",
+            "en": "Children's playground"
+          },
+          "points": [[40.952370317558746, -5.63134035224229]]
+        },
+        {
+          "name": {
+            "es": "Parque biosaludable",
+            "en": "Bio-healthy park"
+          },
+          "points": [[40.952519289300746, -5.631736743326188]]
+        },
+        {
+          "name": {
+            "es": "Plataforma espectáculos",
+            "en": "Show platform"
+          },
+          "points": [[40.95309935557791, -5.636684633418328]]
+        },
+        {
+          "name": {
+            "es": "Merenderos pic nic",
+            "en": "Picnic areas"
+          },
+          "points": [
+            [40.95241124435147, -5.633353090886228],
+            [40.95242998225343, -5.630750290103624]
+          ]
+        }
+      ],
       "duration": {
-        "normal": "01:15",
-        "descriptive": "01:57",
-        "easy": "01:28",
-        "sign": "01:19",
-        "english": "01:28"
+        "normal": "02:55",
+        "descriptive": "02:42",
+        "easy": "02:02",
+        "sign": "02:58",
+        "english": "02:39"
       }
     },
     {
       "id": 9,
       "title": {
         "normal": {
-          "es": "Festival de arte urbano de Santa Marta. Ediciones I y II",
-          "en": "Santa Marta urban art festival. Editions I and II"
+          "es": "Rutas de Santa Marta de Tormes",
+          "en": "Routes of Santa Marta de Tormes"
         },
         "descriptive": {
-          "es": "AD- Festival de arte urbano de Santa Marta. Ediciones I y II",
-          "en": "Santa Marta urban art festival. Editions I and II"
+          "es": "AD - Rutas de Santa Marta de Tormes",
+          "en": "Routes of Santa Marta de Tormes"
         },
         "easy": {
-          "es": "LF- Festival de arte urbano de Santa Marta. Ediciones I y II",
-          "en": "Santa Marta urban art festival. Editions I and II"
+          "es": "LF - Rutas de Santa Marta de Tormes",
+          "en": "Routes of Santa Marta de Tormes"
         },
         "sign": {
-          "es": "LSE- Festival de arte urbano de Santa Marta. Ediciones I y II",
-          "en": "Santa Marta urban art festival. Editions I and II"
+          "es": "LSE - Rutas de Santa Marta de Tormes",
+          "en": "Routes of Santa Marta de Tormes"
         }
       },
       "description": {
-        "es": "Murales creados durante las primeras dos ediciones del Festival de Arte Urbano.",
-        "en": "Murals created during the first two editions of the Urban Art Festival."
+        "es": "Emblema de la Ruta de los Lápices de Santa Marta de Tormes, con 5 lápices negros y amarillos; una goma blanca Milan realizados con madera.",
+        "en": "Emblem of the Pencil Route in Santa Marta de Tormes, showing five black-and-yellow pencils and a white Milan eraser, all made of wood."
       },
-      "coordinates": [
-        40.94920000175988,
-        -5.628841258158136
-      ],
       "order": 9,
       "audio": {
         "normal": {
-          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960973%3Fsecret_token%3Ds-4WGsLuhg5Yb",
-          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807380%3Fsecret_token%3Ds-lTmgc3w6vBl"
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149552590",
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2157093690"
         },
-        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023523%3Fsecret_token%3Ds-aj22LGi3KB2",
-        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606243%3Fsecret_token%3Ds-ptDZvmHsZtt"
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149581120",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2153328060"
       },
       "video": {
-        "sign": "https://vimeo.com/1110101022/ae9f8d8bec"
+        "sign": "1110103560"
       },
-      "image": "/images/murals/9- Murales Festival de Arte Urbano. Ediciones 1 y 2. Audioguía. Santa Marta de Tormes.jpg",
+      "image": "/images/sites/isla-soto-rutas-senderos-santa-marta-tormes.png",
       "alt": {
-        "es": "Murales del Festival de Arte Urbano, ediciones 1 y 2",
-        "en": "Urban Art Festival murals, editions 1 and 2"
+        "es": "Rutas de Santa Marta de Tormes",
+        "en": "Santa Marta de Tormes routes"
       },
       "location": {
-        "es": "Zona Festivales",
-        "en": "Festivals Area"
+        "es": "Santa Marta de Tormes",
+        "en": "Santa Marta de Tormes"
       },
-      "artist": "Different artists",
+      "artist": {
+        "es": "Naturaleza",
+        "en": "Nature"
+      },
       "year": 2024,
+      "coordinates": [
+        {
+          "name": {
+            "es": "Ruta Arte Emboscado",
+            "en": "Ambushed Art Route"
+          },
+          "points": [
+            [40.95170508713264, -5.638200189827272],
+            [40.95240852941758, -5.635221008202152],
+            [40.95212084097284, -5.633594337973941],
+            [40.952154910022, -5.631614044149215]
+          ]
+        },
+        {
+          "name": {
+            "es": "Ruta de los Lápices",
+            "en": "Pencils Route"
+          },
+          "points": [
+            [40.952164587746715, -5.631380836385952],
+            [40.95236348330626, -5.634726149356212],
+            [40.95322909406052, -5.6379418121171305]
+          ]
+        },
+        {
+          "name": {
+            "es": "Ruta de los Bichos",
+            "en": "Bugs Route"
+          },
+          "points": [[40.952249617673324, -5.632878304574222]]
+        },
+        {
+          "name": {
+            "es": "Ruta Batalla de los Arapiles",
+            "en": "Battle of Arapiles Route"
+          },
+          "points": [[40.95262907603817, -5.634451357686636]]
+        },
+        {
+          "name": {
+            "es": "Ruta de los Murales",
+            "en": "Murals Route"
+          },
+          "points": [
+            [40.952233926587105, -5.632580290715561],
+            [40.952851620612655, -5.635275019864475]
+          ]
+        }
+      ],
       "duration": {
-        "normal": "01:52",
-        "descriptive": "01:50",
-        "easy": "01:56",
-        "sign": "01:55",
-        "english": "02:15"
+        "normal": "04:03",
+        "descriptive": "03:48",
+        "easy": "02:42",
+        "sign": "04:06",
+        "english": "03:51"
       }
     },
     {
       "id": 10,
       "title": {
         "normal": {
-          "es": "Generación millennial",
-          "en": "Millennial generation"
+          "es": "Llegamos al final del paseo",
+          "en": "Here ends the walk"
         },
         "descriptive": {
-          "es": "AD- Generación millennial",
-          "en": "Millennial generation"
+          "es": "AD - Llegamos al final del paseo",
+          "en": "Here ends the walk"
         },
         "easy": {
-          "es": "LF- Generación millennial",
-          "en": "Millennial generation"
+          "es": "LF - Llegamos al final del paseo",
+          "en": "Here ends the walk"
         },
         "sign": {
-          "es": "LSE- Generación millennial",
-          "en": "Millennial generation"
+          "es": "LSE - Llegamos al final del paseo",
+          "en": "Here ends the walk"
         }
       },
       "description": {
-        "es": "Mural que representa la cultura y valores de la generación millennial.",
-        "en": "Mural representing millennial generation culture and values."
+        "es": "Pasarela que une la Isla del Soto con la plaza de la Iglesia de Santa Marta de Tormes.",
+        "en": "Footbridge connecting Isla del Soto with Plaza de la Iglesia in Santa Marta de Tormes."
       },
-      "coordinates": [
-        40.94539824049695,
-        -5.625584241181644
-      ],
+      "coordinates": [[40.952293884400994, -5.640773413509443]],
       "order": 10,
       "audio": {
         "normal": {
-          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960958%3Fsecret_token%3Ds-XL9ZWY43zp9",
-          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807332%3Fsecret_token%3Ds-OPlbtonX7Uw"
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149552596",
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2157093699"
         },
-        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023544%3Fsecret_token%3Ds-KAcWT9Tb4mW",
-        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606228%3Fsecret_token%3Ds-vHlxxQiUZG2"
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149581117",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2153328063"
       },
       "video": {
-        "sign": "https://vimeo.com/1105892174/427931d8bd"
+        "sign": "1110103803"
       },
-      "image": "/images/murals/10- Mural Generación Millennial. Audioguía. Santa Marta de Tormes.jpg",
+      "image": "/images/sites/isla-soto-final-paseo-despedida.png",
       "alt": {
-        "es": "Mural de la generación millennial con elementos contemporáneos",
-        "en": "Millennial generation mural with contemporary elements"
-      },
-      "location": {
-        "es": "Pº Profesor Enrique Tierno Galván en la fachada del Campo Municipal de Fútbol Alfonso San Casto",
-        "en": "Alfonso San Casto Municipal Football Field at Pº Profesor Enrique Tierno Galván"
-      },
-      "artist": "Rober Bece",
-      "year": 2024,
-      "duration": {
-        "normal": "01:38",
-        "descriptive": "03:23",
-        "easy": "01:36",
-        "sign": "01:39",
-        "english": "01:47"
-      }
-    },
-    {
-      "id": 11,
-      "title": {
-        "normal": {
-          "es": "Paseo alcalde José Sánchez",
-          "en": "Mayor José Sánchez's walk"
-        },
-        "descriptive": {
-          "es": "AD- Paseo alcalde José Sánchez",
-          "en": "Mayor José Sánchez's walk"
-        },
-        "easy": {
-          "es": "LF- Paseo alcalde José Sánchez",
-          "en": "Mayor José Sánchez's walk"
-        },
-        "sign": {
-          "es": "LSE- Paseo alcalde José Sánchez",
-          "en": "Mayor José Sánchez's walk"
-        }
-      },
-      "description": {
-        "es": "Mural ubicado en el paseo dedicado al Alcalde José Sánchez.",
-        "en": "Mural located on the walk dedicated to Mayor José Sánchez."
-      },
-      "coordinates": [
-        40.947689703673745,
-        -5.627101412120439
-      ],
-      "order": 11,
-      "audio": {
-        "normal": {
-          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960982%3Fsecret_token%3Ds-KRWlwSVzwPM",
-          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807353%3Fsecret_token%3Ds-swZYK5p8X2F"
-        },
-        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023559%3Fsecret_token%3Ds-OHR26jjn1zO",
-        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606237%3Fsecret_token%3Ds-53MygvXCYd1"
-      },
-      "video": {
-        "sign": "https://vimeo.com/1110101408/b547d59d96"
-      },
-      "image": "/images/murals/11- Mural Paseo Alcalde José Sánchez. Audioguía. Santa Marta de Tormes.jpg",
-      "alt": {
-        "es": "Mural en el paseo del Alcalde José Sánchez",
-        "en": "Mural on Mayor José Sánchez walk"
-      },
-      "location": {
-        "es": "Frontón de las Nieves en el Pº Alcalde José Sánchez",
-        "en": "Frontón de las Nieves at Pº Alcalde José Sánchez"
-      },
-      "artist": "Caín Ferreras",
-      "year": 2024,
-      "duration": {
-        "normal": "01:46",
-        "descriptive": "02:14",
-        "easy": "01:46",
-        "sign": "01:47",
-        "english": "02:05"
-      }
-    },
-    {
-      "id": 12,
-      "title": {
-        "normal": {
-          "es": "Respira",
-          "en": "Breathe"
-        },
-        "descriptive": {
-          "es": "AD- Respira",
-            "en": "Breathe"
-        },
-        "easy": {
-          "es": "LF- Respira",
-          "en": "Breathe"
-        },
-        "sign": {
-          "es": "LSE- Respira",
-          "en": "Breathe"
-        }
-      },
-      "description": {
-        "es": "Mural que invita a la reflexión y al bienestar personal.",
-        "en": "Mural that invites reflection and personal well-being."
-      },
-      "coordinates": [
-        40.949723546303495,
-        -5.627586438509093
-      ],
-      "order": 12,
-      "audio": {
-        "normal": {
-          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960994%3Fsecret_token%3Ds-Stz02SFTS8g",
-          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807371%3Fsecret_token%3Ds-nfp8FhNEnUG"
-        },
-        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023514%3Fsecret_token%3Ds-uyq3LAfho8n",
-        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606231%3Fsecret_token%3Ds-UXjku1CQafg"
-      },
-      "video": {
-        "sign": "https://vimeo.com/1110101523/f7cfbd38c1"
-      },
-      "image": "/images/murals/12- Mural Respira. Audioguía. Santa Marta de Tormes.jpg",
-      "alt": {
-        "es": "Mural Respira que invita a la calma y reflexión",
-        "en": "Breathe mural inviting calm and reflection"
-      },
-      "location": {
-        "es": "C. Villalar junto a la Av. de Madrid",
-        "en": "C. Villalar next to Av. de Madrid"
-      },
-      "artist": "Rober Bece",
-      "year": 2024,
-      "duration": {
-        "normal": "02:09",
-        "descriptive": "02:29",
-        "easy": "01:30",
-        "sign": "02:10",
-        "english": "02:19"
-      }
-    },
-    {
-      "id": 13,
-      "title": {
-        "normal": {
-          "es": "La llegada de las llaves",
-          "en": "The arrival of the keys"
-        },
-        "descriptive": {
-          "es": "AD- La llegada de las llaves",
-          "en": "The arrival of the keys"
-        },
-        "easy": {
-          "es": "LF- La llegada de las llaves",
-          "en": "The arrival of the keys"
-        },
-        "sign": {
-          "es": "LSE- La llegada de las llaves",
-          "en": "The arrival of the keys"
-        }
-      },
-      "description": {
-        "es": "Mural simbólico sobre las llaves como símbolo de nuevas oportunidades.",
-        "en": "Symbolic mural about keys as a symbol of new opportunities."
-      },
-      "coordinates": [
-        40.95020894913536,
-        -5.622374450977097
-      ],
-      "order": 13,
-      "audio": {
-        "normal": {
-          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960946%3Fsecret_token%3Ds-qTvhQ7oRYnP",
-          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807368%3Fsecret_token%3Ds-tgCmzuC5dDD"
-        },
-        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023562%3Fsecret_token%3Ds-6gXiIE1iDdS",
-        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606279%3Fsecret_token%3Ds-KgFWiJsJ2Co"
-      },
-      "video": {
-        "sign": "https://vimeo.com/1110101600/dcb21d5182"
-      },
-      "image": "/images/murals/13- Mural La Llegada de las Llaves. Audioguía. Santa Marta de Tormes.jpg",
-      "alt": {
-        "es": "Mural de las llaves simbolizando nuevas oportunidades",
-        "en": "Keys mural symbolizing new opportunities"
-      },
-      "location": {
-        "es": "C. Virgen del Carmen junto a la Av. de Madrid",
-        "en": "C. Virgen del Carmen next to Av. de Madrid"
-      },
-      "artist": "Rober Bece",
-      "year": 2024,
-      "duration": {
-        "normal": "01:46",
-        "descriptive": "02:15",
-        "easy": "01:42",
-        "sign": "01:47",
-        "english": "01:48"
-      }
-    },
-    {
-      "id": 14,
-      "title": {
-        "normal": {
-          "es": "Sueña",
-          "en": "Dream"
-        },
-        "descriptive": {
-          "es": "AD- Sueña",
-          "en": "Dream"
-        },
-        "easy": {
-          "es": "LF- Sueña",
-          "en": "Dream"
-        },
-        "sign": {
-          "es": "LSE- Sueña",
-          "en": "Dream"
-        }
-      },
-      "description": {
-        "es": "Mural inspirador que invita a soñar y perseguir los objetivos.",
-        "en": "Inspiring mural that invites to dream and pursue goals."
-      },
-      "coordinates": [
-        40.950626401984,
-        -5.624583814823785
-      ],
-      "order": 14,
-      "audio": {
-        "normal": {
-          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960967%3Fsecret_token%3Ds-A0GXmKTZx7S",
-          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807374%3Fsecret_token%3Ds-vjFoKhgEfUq"
-        },
-        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023538%3Fsecret_token%3Ds-kn9EzoeoXtu",
-        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606276%3Fsecret_token%3Ds-fHIwEixbk5L"
-      },
-      "video": {
-        "sign": "https://vimeo.com/1110101653/cce0402742"
-      },
-      "image": "/images/murals/14- Mural Sueña. Audioguía. Santa Marta de Tormes.jpg",
-      "alt": {
-        "es": "Mural Sueña con elementos inspiradores",
-        "en": "Dream mural with inspiring elements"
-      },
-      "location": {
-        "es": "Ctra. de Naharros junto C. Pablo Iglesias",
-        "en": "Ctra. de Naharros next to C. Pablo Iglesias"
-      },
-      "artist": "Rober Bece",
-      "year": 2024,
-      "duration": {
-        "normal": "02:05",
-        "descriptive": "02:30",
-        "easy": "01:51",
-        "sign": "02:09",
-        "english": "02:08"
-      }
-    },
-    {
-      "id": 15,
-      "title": {
-        "normal": {
-          "es": "Océano",
-          "en": "Ocean"
-        },
-        "descriptive": {
-          "es": "AD- Océano",
-          "en": "Ocean"
-        },
-        "easy": {
-          "es": "LF- Océano",
-          "en": "Ocean"
-        },
-        "sign": {
-          "es": "LSE- Océano",
-          "en": "Ocean"
-        }
-      },
-      "description": {
-        "es": "Mural que representa la vastedad y belleza del océano.",
-        "en": "Mural representing the vastness and beauty of the ocean."
-      },
-      "coordinates": [
-        40.95066936931654,
-        -5.628456314268188
-      ],
-      "order": 15,
-      "audio": {
-        "normal": {
-          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960991%3Fsecret_token%3Ds-ix42CNZjTKv",
-          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807377%3Fsecret_token%3Ds-97ZhrvEwSak"
-        },
-        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023517%3Fsecret_token%3Ds-m4gWqnAquX3",
-        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606270%3Fsecret_token%3Ds-YbnRcbM3Mol"
-      },
-      "video": {
-        "sign": "https://vimeo.com/1110101718/e8264996b5"
-      },
-      "image": "/images/murals/15- Mural Océano. Audioguía. Santa Marta de Tormes.jpg",
-      "alt": {
-        "es": "Mural del océano con elementos marinos",
-        "en": "Ocean mural with marine elements"
-      },
-      "location": {
-        "es": "Pasaje Santiago Mirat",
-        "en": "Pasaje Santiago Mirat"
-      },
-      "artist": "Rober Bece",
-      "year": 2024,
-      "duration": {
-        "normal": "01:35",
-        "descriptive": "02:59",
-        "easy": "01:29",
-        "sign": "01:35",
-        "english": "01:48"
-      }
-    },
-    {
-      "id": 16,
-      "title": {
-        "normal": {
-          "es": "Carretera de Madrid",
-          "en": "Madrid road"
-        },
-        "descriptive": {
-          "es": "AD- Carretera de Madrid",
-          "en": "Madrid road"
-        },
-        "easy": {
-          "es": "LF- Carretera de Madrid",
-          "en": "Madrid road"
-        },
-        "sign": {
-          "es": "LSE- Carretera de Madrid",
-          "en": "Madrid road"
-        }
-      },
-      "description": {
-        "es": "Mural ubicado en la zona de la carretera hacia Madrid.",
-        "en": "Mural located in the Madrid highway area."
-      },
-      "coordinates": [
-        40.95002255663563,
-        -5.629455943072232
-      ],
-      "order": 16,
-      "audio": {
-        "normal": {
-          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960949%3Fsecret_token%3Ds-FT8nH19KbFp",
-          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807365%3Fsecret_token%3Ds-aBOPt8hR0R4"
-        },
-        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023532%3Fsecret_token%3Ds-E9IY0Kw9Tom",
-        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606255%3Fsecret_token%3Ds-mjXOhc6gMUU"
-      },
-      "video": {
-        "sign": "https://vimeo.com/1110101775/f7c5f26f8f"
-      },
-      "image": "/images/murals/16- Mural Carretera Madrid. Audioguía. Santa Marta de Tormes.jpg",
-      "alt": {
-        "es": "Mural en la zona de la carretera hacia Madrid",
-        "en": "Mural in the Madrid highway area"
-      },
-      "location": {
-        "es": "Av. de Madrid nº 64",
-        "en": "Av. de Madrid No. 64"
-      },
-      "artist": "Daniel Martín",
-      "year": 2024,
-      "duration": {
-        "normal": "01:16",
-        "descriptive": "02:22",
-        "easy": "01:32",
-        "sign": "01:18",
-        "english": "01:28"
-      }
-    },
-    {
-      "id": 17,
-      "title": {
-        "normal": {
-          "es": "Daniel Martín",
-          "en": "Daniel Martín"
-        },
-        "descriptive": {
-          "es": "AD- Daniel Martín",
-          "en": "Daniel Martín"
-        },
-        "easy": {
-          "es": "LF- Daniel Martín",
-          "en": "Daniel Martín"
-        },
-        "sign": {
-          "es": "LSE- Daniel Martín",
-          "en": "Daniel Martín"
-        }
-      },
-      "description": {
-        "es": "Información sobre el artista Daniel Martín y su obra en Santa Marta.",
-        "en": "Information about artist Daniel Martín and his work in Santa Marta."
-      },
-      "order": 17,
-      "audio": {
-        "normal": {
-          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960976%3Fsecret_token%3Ds-6PQXSHRVxnY",
-          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807383%3Fsecret_token%3Ds-4MtKZPQ2AR6"
-        },
-        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023526%3Fsecret_token%3Ds-Ara5iFM9yvm",
-        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606285%3Fsecret_token%3Ds-52uOC51dwlF"
-      },
-      "video": {
-        "sign": "https://vimeo.com/1105892537/3b3c494140"
-      },
-      "image": "/images/artists/Daniel Martín.jpg",
-      "alt": {
-        "es": "Información sobre el artista Daniel Martín",
-        "en": "Information about artist Daniel Martín"
-      },
-      "location": {
-        "es": "Para saber más",
-        "en": "Learn more"
-      },
-      "artist": "Daniel Martín",
-      "year": 2024,
-      "duration": {
-        "normal": "03:22",
-        "descriptive": "03:22",
-        "easy": "01:37",
-        "sign": "03:17",
-        "english": "02:15"
-      }
-    },
-    {
-      "id": 18,
-      "title": {
-        "normal": {
-          "es": "Caín Ferreras",
-          "en": "Caín Ferreras"
-        },
-        "descriptive": {
-          "es": "AD- Caín Ferreras",
-          "en": "Caín Ferreras"
-        },
-        "easy": {
-          "es": "LF- Caín Ferreras",
-          "en": "Caín Ferreras"
-        },
-        "sign": {
-          "es": "LSE- Caín Ferreras",
-          "en": "Caín Ferreras"
-        }
-      },
-      "description": {
-        "es": "Información sobre el artista Caín Ferreras y su contribución al arte urbano.",
-        "en": "Information about artist Caín Ferreras and his contribution to urban art."
-      },
-      "order": 18,
-      "audio": {
-        "normal": {
-          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960985%3Fsecret_token%3Ds-PYkFEOA1jE9",
-          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807350%3Fsecret_token%3Ds-HOnqXxoOtDB"
-        },
-        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023529%3Fsecret_token%3Ds-rsPVdZDprQx",
-        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606246%3Fsecret_token%3Ds-dX4agNf2tTG"
-      },
-      "video": {
-        "sign": "https://vimeo.com/1110101832/69377f0c6c"
-      },
-      "image": "/images/artists/Caín Ferreras.jpg",
-      "alt": {
-        "es": "Información sobre el artista Caín Ferreras",
-        "en": "Information about artist Caín Ferreras"
-      },
-      "location": {
-        "es": "Para saber más",
-        "en": "Learn more"
-      },
-      "artist": "Caín Ferreras",
-      "year": 2024,
-      "duration": {
-        "normal": "03:46",
-        "descriptive": "03:46",
-        "easy": "01:27",
-        "sign": "03:42",
-        "english": "02:15"
-      }
-    },
-    {
-      "id": 19,
-      "title": {
-        "normal": {
-          "es": "Rober Bece",
-          "en": "Rober Bece"
-        },
-        "descriptive": {
-          "es": "AD- Rober Bece",
-          "en": "Rober Bece"
-        },
-        "easy": {
-          "es": "LF- Rober Bece",
-          "en": "Rober Bece"
-        },
-        "sign": {
-          "es": "LSE- Rober Bece",
-          "en": "Rober Bece"
-        }
-      },
-      "description": {
-        "es": "Información sobre el artista Rober Bece y su estilo único.",
-        "en": "Information about artist Rober Bece and his unique style."
-      },
-      "order": 19,
-      "audio": {
-        "normal": {
-          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960979%3Fsecret_token%3Ds-ueLAk2Wwz6h",
-          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807344%3Fsecret_token%3Ds-S63rAK5dYKt"
-        },
-        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023565%3Fsecret_token%3Ds-RAbJDFIJmUa",
-        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606249%3Fsecret_token%3Ds-1dHfam95PMv"
-      },
-      "video": {
-        "sign": "https://vimeo.com/1110101964/925233ecd4"
-      },
-      "image": "/images/artists/Rober Bece.jpg",
-      "alt": {
-        "es": "Información sobre el artista Rober Bece",
-        "en": "Information about artist Rober Bece"
-      },
-      "location": {
-        "es": "Para saber más",
-        "en": "Learn more"
-      },
-      "artist": "Rober Bece",
-      "year": 2024,
-      "duration": {
-        "normal": "03:12",
-        "descriptive": "03:12",
-        "easy": "01:20",
-        "sign": "03:08",
-        "english": "02:15"
-      }
-    },
-    {
-      "id": 20,
-      "title": {
-        "normal": {
-          "es": "Llegamos al final",
-          "en": "We've reached the end"
-        },
-        "descriptive": {
-          "es": "AD- Llegamos al final",
-          "en": "We've reached the end"
-        },
-        "easy": {
-          "es": "LF- Llegamos al final",
-          "en": "We've reached the end"
-        },
-        "sign": {
-          "es": "LSE- Llegamos al final",
-          "en": "We've reached the end"
-        }
-      },
-      "description": {
-        "es": "Punto final del recorrido por los murales de Santa Marta de Tormes.",
-        "en": "Final point of the Santa Marta de Tormes murals tour."
-      },
-      "order": 20,
-      "audio": {
-        "normal": {
-          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2117960943%3Fsecret_token%3Ds-i2TvU5iIOEO",
-          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2125807347%3Fsecret_token%3Ds-0lRDba8LJn9"
-        },
-        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118023541%3Fsecret_token%3Ds-UW6daPDpttB",
-        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2118606258%3Fsecret_token%3Ds-17HxIwk5eeY"
-      },
-      "video": {
-        "sign": "https://vimeo.com/1110102052/5f21dc467f"
-      },
-      "image": "/images/murals/20- Llegamos al Final. Audioguía. Santa Marta de Tormes.png",
-      "alt": {
-        "es": "Final del recorrido de murales en Santa Marta de Tormes",
-        "en": "End of the murals tour in Santa Marta de Tormes"
+        "es": "Final del paseo por la Isla del Soto",
+        "en": "End of the walk through Isla del Soto"
       },
       "location": {
         "es": "Despedida",
         "en": "Farewell"
       },
       "artist": {
-        "es": "Despedida",
-        "en": "Goodbye"
+        "es": "Naturaleza",
+        "en": "Nature"
       },
       "year": 2024,
       "duration": {
-        "normal": "01:48",
-        "descriptive": "01:13",
-        "easy": "01:49",
-        "sign": "01:42",
-        "english": "02:15"
+        "normal": "01:46",
+        "descriptive": "01:09",
+        "easy": "01:43",
+        "sign": "01:48",
+        "english": "01:56"
       }
     }
   ],
-  "route": {
-    "name": {
-      "es": "Ruta de Murales Santa Marta",
-      "en": "Santa Marta Murals Route"
-    },
-    "description": {
-      "es": "Recorrido accesible por los principales murales de Santa Marta de Tormes",
-      "en": "Accessible tour through the main murals of Santa Marta de Tormes"
-    },
-    "waypoints": [
-      [
-        40.950624059703735,
-        -5.637681861162018
-      ],
-      [
-        40.9522547832176,
-        -5.632777086840274
-      ],
-      [
-        40.950508174347085,
-        -5.630577903555368
-      ],
-      [
-        40.94939751212852,
-        -5.63064640156047
-      ],
-      [
-        40.94908236429532,
-        -5.6300556081211734
-      ],
-      [
-        40.94974059181188,
-        -5.629269464039794
-      ],
-      [
-        40.94957657272803,
-        -5.628866434815848
-      ],
-      [
-        40.94920000175988,
-        -5.628841258158136
-      ],
-      [
-        40.94539824049695,
-        -5.625584241181644
-      ],
-      [
-        40.947689703673745,
-        -5.627101412120439
-      ],
-      [
-        40.949723546303495,
-        -5.627586438509093
-      ],
-      [
-        40.95020894913536,
-        -5.622374450977097
-      ],
-      [
-        40.950626401984,
-        -5.624583814823785
-      ],
-      [
-        40.95066936931654,
-        -5.628456314268188
-      ],
-      [
-        40.95002255663563,
-        -5.629455943072232
-      ]
-    ],
-    "normal": {
-      "totalDistance": "4,1 km",
-      "estimatedTime": "1h 35min"
-    },
-    "easy": {
-      "totalDistance": "4,1 km",
-      "estimatedTime": "1h 30min"
-    },
-    "descriptive": {
-      "totalDistance": "4,1 km",
-      "estimatedTime": "1h 45min"
-    },
-    "sign": {
-      "totalDistance": "4,1 km",
-      "estimatedTime": "1h 35min"
-    },
-    "difficulty": {
-      "es": "Fácil",
-      "en": "Easy"
-    },
-    "accessibility": {
-      "es": "Ruta completamente accesible para sillas de ruedas",
-      "en": "Fully wheelchair accessible route"
-    },
-    "startPoint": {
-      "es": "Punto de partida de la ruta",
-      "en": "Route starting point"
-    },
-    "endPoint": {
-      "es": "Punto final de la ruta",
-      "en": "Route end point"
-    }
-  },
   "metadata": {
-    "lastUpdated": "2025-01-30",
-    "version": "2.0",
-    "totalMurals": 20,
+    "lastUpdated": "2025-01-08",
+    "version": "3.0",
+    "totalMurals": 10,
     "languages": [
       "es",
       "en"
@@ -1287,6 +720,7 @@
     ],
     "city": "Santa Marta de Tormes",
     "province": "Salamanca",
-    "country": "España"
+    "country": "España",
+    "projectName": "Audioguía Isla del Soto"
   }
 }

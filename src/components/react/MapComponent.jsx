@@ -13,11 +13,31 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, audioType = 
   // Seleccionar el contenido según el idioma
   const content = language === 'en' ? contentEn : contentEs;
 
-  // Filtrar murales que tienen coordenadas válidas (no [0,0])
-  const muralsWithCoordinates = murals.filter(
-    mural => mural.coordinates && 
-    !(mural.coordinates[0] === 0 && mural.coordinates[1] === 0)
-  );
+  // Filtrar murales que tienen coordenadas válidas
+  const muralsWithCoordinates = murals.filter(mural => {
+    if (!mural.coordinates || !Array.isArray(mural.coordinates)) return false;
+    if (mural.coordinates.length === 0) return false;
+    
+    // Verificar el tipo de estructura de coordenadas
+    const firstItem = mural.coordinates[0];
+    
+    // Si es un objeto con nombre y puntos (nueva estructura)
+    if (firstItem && typeof firstItem === 'object' && 'points' in firstItem) {
+      return mural.coordinates.some(loc => 
+        loc.points && loc.points.length > 0
+      );
+    }
+    
+    // Si es array de arrays (múltiples coordenadas)
+    if (Array.isArray(firstItem)) {
+      return mural.coordinates.some(coord => 
+        coord[0] !== 0 || coord[1] !== 0
+      );
+    }
+    
+    // Si es array simple (coordenada única legacy)
+    return !(mural.coordinates[0] === 0 && mural.coordinates[1] === 0);
+  });
 
   // Configuración del mapa
   const mapConfig = {
@@ -104,46 +124,135 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, audioType = 
           };
 
           // Añadir markers solo para murales con coordenadas válidas
-          markersRef.current = muralsWithCoordinates.map((mural, index) => {
+          markersRef.current = muralsWithCoordinates.flatMap((mural, index) => {
             const isActive = currentMural && currentMural.id === mural.id;
             const muralTitle = mural.title[audioType][language];
-            const marker = L.marker(mural.coordinates, {
-              icon: createCustomIcon(isActive, muralTitle),
-              alt: muralTitle
-            }).addTo(map);
+            
+            // Determinar el tipo de estructura de coordenadas
+            const firstItem = mural.coordinates[0];
+            let markersList = [];
+            
+            // Si es estructura con nombres de ubicación
+            if (firstItem && typeof firstItem === 'object' && 'points' in firstItem) {
+              mural.coordinates.forEach(location => {
+                const locationName = location.name[language] || location.name.es;
+                location.points.forEach((coords, pointIndex) => {
+                  const marker = L.marker(coords, {
+                    icon: createCustomIcon(isActive, muralTitle),
+                    alt: `${muralTitle} - ${locationName}`
+                  }).addTo(map);
 
-            // Popup con información del mural
-            const popupContent = `
-              <div class="p-2 min-w-48">
-                <h3 class="font-semibold text-SM-blue mb-2">${mural.title[audioType][language]}</h3>
-                <p class="text-sm text-slate-600 mb-3">${mural.description[language]}</p>
-                <div class="flex flex-col space-y-2">
-                  <button 
-                    onclick="window.selectMural(${mural.id})" 
-                    class="bg-SM-blue text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors"
-                  >
-                    ${content.map.listenAudioguide}
-                  </button>
-                  <a 
-                    href="https://maps.google.com/maps?daddr=${mural.coordinates[0]},${mural.coordinates[1]}" 
-                    target="_blank"
-                    class="bg-SM-yellow text-SM-black px-3 py-1 rounded text-sm text-center hover:bg-yellow-500 transition-colors"
-                  >
-                    ${content.map.getDirections}
-                  </a>
+                  const popupContent = `
+                    <div class="p-2 min-w-48">
+                      <h3 class="font-semibold text-SM-blue mb-1">${mural.title[audioType][language]}</h3>
+                      <p class="text-sm font-medium text-slate-700 mb-2">${locationName}</p>
+                      ${location.points.length > 1 ? `<p class="text-xs text-slate-500 mb-1">Punto ${pointIndex + 1} de ${location.points.length}</p>` : ''}
+                      <p class="text-sm text-slate-600 mb-3">${mural.description[language]}</p>
+                      <div class="flex flex-col space-y-2">
+                        <button 
+                          onclick="window.selectMural(${mural.id})" 
+                          class="bg-SM-blue text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors"
+                        >
+                          ${content.map.listenAudioguide}
+                        </button>
+                        <a 
+                          href="https://maps.google.com/maps?daddr=${coords[0]},${coords[1]}" 
+                          target="_blank"
+                          class="bg-SM-yellow text-SM-black px-3 py-1 rounded text-sm text-center hover:bg-yellow-500 transition-colors"
+                        >
+                          ${content.map.getDirections}
+                        </a>
+                      </div>
+                    </div>
+                  `;
+
+                  marker.bindPopup(popupContent, {
+                    maxWidth: 250,
+                    className: 'custom-popup'
+                  });
+
+                  markersList.push({ marker, mural });
+                });
+              });
+            } 
+            // Si es array de arrays (múltiples coordenadas sin nombre)
+            else if (Array.isArray(firstItem)) {
+              mural.coordinates.forEach((coords, coordIndex) => {
+                const marker = L.marker(coords, {
+                  icon: createCustomIcon(isActive, muralTitle),
+                  alt: muralTitle
+                }).addTo(map);
+
+                const popupContent = `
+                  <div class="p-2 min-w-48">
+                    <h3 class="font-semibold text-SM-blue mb-2">${mural.title[audioType][language]}</h3>
+                    ${mural.coordinates.length > 1 ? `<p class="text-xs text-slate-500 mb-1">Punto ${coordIndex + 1} de ${mural.coordinates.length}</p>` : ''}
+                    <p class="text-sm text-slate-600 mb-3">${mural.description[language]}</p>
+                    <div class="flex flex-col space-y-2">
+                      <button 
+                        onclick="window.selectMural(${mural.id})" 
+                        class="bg-SM-blue text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors"
+                      >
+                        ${content.map.listenAudioguide}
+                      </button>
+                      <a 
+                        href="https://maps.google.com/maps?daddr=${coords[0]},${coords[1]}" 
+                        target="_blank"
+                        class="bg-SM-yellow text-SM-black px-3 py-1 rounded text-sm text-center hover:bg-yellow-500 transition-colors"
+                      >
+                        ${content.map.getDirections}
+                      </a>
+                    </div>
+                  </div>
+                `;
+
+                marker.bindPopup(popupContent, {
+                  maxWidth: 250,
+                  className: 'custom-popup'
+                });
+
+                markersList.push({ marker, mural });
+              });
+            }
+            // Si es coordenada simple (legacy)
+            else {
+              const coords = mural.coordinates;
+              const marker = L.marker(coords, {
+                icon: createCustomIcon(isActive, muralTitle),
+                alt: muralTitle
+              }).addTo(map);
+
+              const popupContent = `
+                <div class="p-2 min-w-48">
+                  <h3 class="font-semibold text-SM-blue mb-2">${mural.title[audioType][language]}</h3>
+                  <p class="text-sm text-slate-600 mb-3">${mural.description[language]}</p>
+                  <div class="flex flex-col space-y-2">
+                    <button 
+                      onclick="window.selectMural(${mural.id})" 
+                      class="bg-SM-blue text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors"
+                    >
+                      ${content.map.listenAudioguide}
+                    </button>
+                    <a 
+                      href="https://maps.google.com/maps?daddr=${coords[0]},${coords[1]}" 
+                      target="_blank"
+                      class="bg-SM-yellow text-SM-black px-3 py-1 rounded text-sm text-center hover:bg-yellow-500 transition-colors"
+                    >
+                      ${content.map.getDirections}
+                    </a>
+                  </div>
                 </div>
-              </div>
-            `;
+              `;
 
-            marker.bindPopup(popupContent, {
-              maxWidth: 250,
-              className: 'custom-popup'
-            });
+              marker.bindPopup(popupContent, {
+                maxWidth: 250,
+                className: 'custom-popup'
+              });
 
-            // No añadimos event listener aquí para permitir que el popup se muestre en el primer clic
-            // La selección del mural se hace desde el botón dentro del popup
-
-            return { marker, mural };
+              markersList.push({ marker, mural });
+            }
+            
+            return markersList;
           });
 
           // Añadir ruta si está disponible (filtrando waypoints [0,0])

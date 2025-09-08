@@ -1,0 +1,113 @@
+---
+import { Image } from 'astro:assets';
+import emboscadoImg from '../../assets/images/routes/emboscado_1.png';
+import lapicesImg from '../../assets/images/routes/lapices_2.png';
+import bichosImg from '../../assets/images/routes/bichos_3.png';
+import arapilesImg from '../../assets/images/routes/arapiles_4.png';
+import muralesImg from '../../assets/images/routes/murales_5.png';
+
+interface Props {
+  language?: 'es' | 'en';
+}
+
+const { language = 'es' } = Astro.props;
+
+const routes = [
+  {
+    id: 'arte-emboscado',
+    name: {
+      es: 'Ruta del Arte Emboscado',
+      en: 'Hidden Art Route'
+    },
+    url: 'https://www.turismosantamartadetormes.com/arte-emboscado',
+    image: emboscadoImg
+  },
+  {
+    id: 'ruta-lapices',
+    name: {
+      es: 'Ruta de los Lápices',
+      en: 'Pencils Route'
+    },
+    url: 'https://www.turismosantamartadetormes.com/ruta-lapices',
+    image: lapicesImg
+  },
+  {
+    id: 'bichos-soto',
+    name: {
+      es: 'Ruta de los Bichos del Soto',
+      en: 'Soto Creatures Route'
+    },
+    url: 'https://www.turismosantamartadetormes.com/ruta-bichos-soto',
+    image: bichosImg
+  },
+  {
+    id: 'batalla-arapiles',
+    name: {
+      es: 'Ruta ciclista de la Batalla de los Arapiles',
+      en: 'Battle of Arapiles Cycling Route'
+    },
+    url: 'https://www.rutabatallalosarapiles.es/',
+    image: arapilesImg
+  },
+  {
+    id: 'ruta-murales',
+    name: {
+      es: 'Ruta de los Murales',
+      en: 'Murals Route'
+    },
+    url: 'https://www.turismosantamartadetormes.com/ruta-murales',
+    image: muralesImg
+  }
+];
+
+const content = {
+  es: {
+    title: 'Conoce las Rutas',
+    visitRoute: 'Visitar ruta'
+  },
+  en: {
+    title: 'Discover the Routes',
+    visitRoute: 'Visit route'
+  }
+};
+---
+
+<section class="w-full" aria-labelledby="routes-title">
+  <div class="card bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-6 sm:p-8">
+    <h2 id="routes-title" class="text-2xl font-bold mb-8 text-center text-gray-900 dark:text-gray-100">
+      {content[language].title}
+    </h2>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {routes.map((route) => (
+        <a
+          href={route.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group block transform transition-all duration-300 hover:scale-105"
+          aria-label={`${content[language].visitRoute}: ${route.name[language]}`}
+        >
+          <div class="bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+            <div class="aspect-[16/10] overflow-hidden bg-gradient-to-br from-SM-blue to-blue-700">
+              <Image
+                src={route.image}
+                alt={route.name[language]}
+                width={400}
+                height={250}
+                quality={85}
+                format="webp"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold text-base text-gray-900 dark:text-gray-100 text-center group-hover:text-SM-blue dark:group-hover:text-blue-400 transition-colors">
+                {route.name[language]}
+              </h3>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

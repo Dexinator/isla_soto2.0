@@ -1,10 +1,10 @@
 ---
 // Header principal con navegación y controles de accesibilidad
-// Audioguías Murales Santa Marta
+// Audioguías Isla del Soto
 
 import { Image } from 'astro:assets';
-import rutaMuralesLight from '../../assets/images/ruta-murales-light.jpg';
-import rutaMuralesDark from '../../assets/images/ruta-murales-dark.png';
+import rutaMuralesLight from '../../assets/images/isla-solo-logo.png';
+import rutaMuralesDark from '../../assets/images/isla-solo-logo.png';
 import turismoSantaMarta from '../../assets/images/turismo-santa-marta.png';
 
 export interface Props {
@@ -66,18 +66,18 @@ const t = content[lang as keyof typeof content];
       <!-- Logos -->
       <div class="flex-shrink-0">
         <div class="flex items-center space-x-2 md:space-x-3">
-          <!-- Logo Ruta de los Murales (principal) - cambia según tema -->
+          <!-- Logo Isla del Soto (principal) - cambia según tema -->
           <a href="/" class="focus-visible">
             <Image 
               src={rutaMuralesLight}
-              alt="Logotipo Ruta de los Murales Santa Marta de Tormes ir a página principal" 
+              alt="Logotipo Isla del Soto Santa Marta de Tormes ir a página principal" 
               class="h-14 sm:h-16 md:h-20 w-auto object-contain dark:hidden"
               loading="eager"
               quality={90}
             />
             <Image 
               src={rutaMuralesDark}
-              alt="Logotipo Ruta de los Murales Santa Marta de Tormes ir a página principal" 
+              alt="Logotipo Isla del Soto Santa Marta de Tormes ir a página principal" 
               class="h-14 sm:h-16 md:h-20 w-auto object-contain hidden dark:block"
               loading="eager"
               quality={90}

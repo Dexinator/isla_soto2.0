@@ -1,0 +1,603 @@
+{
+  "murals": [
+    {
+      "id": 1,
+      "title": {
+        "normal": {
+          "es": "Comenzamos el paseo por el Soto",
+          "en": "We begin the walk through the Soto"
+        },
+        "descriptive": {
+          "es": "AD- Comenzamos el paseo por el Soto",
+          "en": "We begin the walk through the Soto"
+        },
+        "easy": {
+          "es": "LF- Comenzamos el paseo por el Soto",
+          "en": "We begin the walk through the Soto"
+        },
+        "sign": {
+          "es": "LSE- Comenzamos el paseo por el Soto",
+          "en": "We begin the walk through the Soto"
+        }
+      },
+      "description": {
+        "es": "Punto de inicio del recorrido por la Isla del Soto.",
+        "en": "Starting point of the Isla del Soto tour."
+      },
+      "order": 1,
+      "audio": {
+        "normal": {
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149552602",
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2157093711"
+        },
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149581114",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2153328051"
+      },
+      "video": {
+        "sign": "1110102557"
+      },
+      "image": "/images/sites/isla-soto-comenzamos-paseo-santa-marta-tormes.png",
+      "alt": {
+        "es": "Inicio del paseo por la Isla del Soto",
+        "en": "Start of the walk through Isla del Soto"
+      },
+      "location": {
+        "es": "Entrada Isla del Soto",
+        "en": "Isla del Soto Entrance"
+      },
+      "artist": {
+        "es": "Naturaleza",
+        "en": "Nature"
+      },
+      "year": 2024,
+      "duration": {
+        "normal": "",
+        "descriptive": "",
+        "easy": "",
+        "sign": "",
+        "english": ""
+      }
+    },
+    {
+      "id": 2,
+      "title": {
+        "normal": {
+          "es": "Origen de las isla",
+          "en": "Origin of the islands"
+        },
+        "descriptive": {
+          "es": "AD- Origen de las isla",
+          "en": "Origin of the islands"
+        },
+        "easy": {
+          "es": "LF- Origen de las isla",
+          "en": "Origin of the islands"
+        },
+        "sign": {
+          "es": "LSE- Origen de las isla",
+          "en": "Origin of the islands"
+        }
+      },
+      "description": {
+        "es": "Historia y formación de las islas del río Tormes.",
+        "en": "History and formation of the Tormes River islands."
+      },
+      "order": 2,
+      "audio": {
+        "normal": {
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149552587",
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2157093714"
+        },
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149581099",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2153328048"
+      },
+      "video": {
+        "sign": "1110102618"
+      },
+      "image": "/images/sites/isla-soto-origen-islas-rio-tormes.png",
+      "alt": {
+        "es": "Origen de las islas del río Tormes",
+        "en": "Origin of the Tormes River islands"
+      },
+      "location": {
+        "es": "Isla del Soto",
+        "en": "Isla del Soto"
+      },
+      "artist": {
+        "es": "Naturaleza",
+        "en": "Nature"
+      },
+      "year": 2024,
+      "duration": {
+        "normal": "",
+        "descriptive": "",
+        "easy": "",
+        "sign": "",
+        "english": ""
+      }
+    },
+    {
+      "id": 3,
+      "title": {
+        "normal": {
+          "es": "Flora",
+          "en": "Flora"
+        },
+        "descriptive": {
+          "es": "AD- Flora",
+          "en": "Flora"
+        },
+        "easy": {
+          "es": "LF- Flora",
+          "en": "Flora"
+        },
+        "sign": {
+          "es": "LSE- Flora",
+          "en": "Flora"
+        }
+      },
+      "description": {
+        "es": "Vegetación característica de la Isla del Soto.",
+        "en": "Characteristic vegetation of Isla del Soto."
+      },
+      "order": 3,
+      "audio": {
+        "normal": {
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149552578",
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2157093705"
+        },
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149581111",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2153328072"
+      },
+      "video": {
+        "sign": "1110102676"
+      },
+      "image": "/images/sites/isla-soto-flora-vegetacion-caracteristica.png",
+      "alt": {
+        "es": "Flora de la Isla del Soto",
+        "en": "Flora of Isla del Soto"
+      },
+      "location": {
+        "es": "Isla del Soto",
+        "en": "Isla del Soto"
+      },
+      "artist": {
+        "es": "Naturaleza",
+        "en": "Nature"
+      },
+      "year": 2024,
+      "duration": {
+        "normal": "",
+        "descriptive": "",
+        "easy": "",
+        "sign": "",
+        "english": ""
+      }
+    },
+    {
+      "id": 4,
+      "title": {
+        "normal": {
+          "es": "Fauna",
+          "en": "Fauna"
+        },
+        "descriptive": {
+          "es": "AD- Fauna",
+          "en": "Fauna"
+        },
+        "easy": {
+          "es": "LF- Fauna",
+          "en": "Fauna"
+        },
+        "sign": {
+          "es": "LSE- Fauna",
+          "en": "Fauna"
+        }
+      },
+      "description": {
+        "es": "Animales que habitan en la Isla del Soto.",
+        "en": "Animals that inhabit Isla del Soto."
+      },
+      "order": 4,
+      "audio": {
+        "normal": {
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149552593",
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2157093687"
+        },
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149581105",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2153328066"
+      },
+      "video": {
+        "sign": "1110102776"
+      },
+      "image": "/images/sites/isla-soto-fauna-animales-habitat.png",
+      "alt": {
+        "es": "Fauna de la Isla del Soto",
+        "en": "Fauna of Isla del Soto"
+      },
+      "location": {
+        "es": "Isla del Soto",
+        "en": "Isla del Soto"
+      },
+      "artist": {
+        "es": "Naturaleza",
+        "en": "Nature"
+      },
+      "year": 2024,
+      "duration": {
+        "normal": "",
+        "descriptive": "",
+        "easy": "",
+        "sign": "",
+        "english": ""
+      }
+    },
+    {
+      "id": 5,
+      "title": {
+        "normal": {
+          "es": "Avifauna del río y del bosque de ribera",
+          "en": "River and riparian forest birdlife"
+        },
+        "descriptive": {
+          "es": "AD- Avifauna del río y del bosque de ribera",
+          "en": "River and riparian forest birdlife"
+        },
+        "easy": {
+          "es": "LF- Avifauna del río y del bosque de ribera",
+          "en": "River and riparian forest birdlife"
+        },
+        "sign": {
+          "es": "LSE- Avifauna del río y del bosque de ribera",
+          "en": "River and riparian forest birdlife"
+        }
+      },
+      "description": {
+        "es": "Aves características del río Tormes y su bosque de ribera.",
+        "en": "Characteristic birds of the Tormes River and its riparian forest."
+      },
+      "order": 5,
+      "audio": {
+        "normal": {
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149552575",
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2157093696"
+        },
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149581102",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2153328069"
+      },
+      "video": {
+        "sign": "1110102895"
+      },
+      "image": "/images/sites/isla-soto-avifauna-rio-bosque-ribera.png",
+      "alt": {
+        "es": "Aves del río y bosque de ribera",
+        "en": "River and riparian forest birds"
+      },
+      "location": {
+        "es": "Isla del Soto",
+        "en": "Isla del Soto"
+      },
+      "artist": {
+        "es": "Naturaleza",
+        "en": "Nature"
+      },
+      "year": 2024,
+      "duration": {
+        "normal": "",
+        "descriptive": "",
+        "easy": "",
+        "sign": "",
+        "english": ""
+      }
+    },
+    {
+      "id": 6,
+      "title": {
+        "normal": {
+          "es": "Especies introducidas",
+          "en": "Introduced species"
+        },
+        "descriptive": {
+          "es": "AD- Especies introducidas",
+          "en": "Introduced species"
+        },
+        "easy": {
+          "es": "LF- Especies introducidas",
+          "en": "Introduced species"
+        },
+        "sign": {
+          "es": "LSE- Especies introducidas",
+          "en": "Introduced species"
+        }
+      },
+      "description": {
+        "es": "Especies no autóctonas presentes en la Isla del Soto.",
+        "en": "Non-native species present on Isla del Soto."
+      },
+      "order": 6,
+      "audio": {
+        "normal": {
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149552599",
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2157093702"
+        },
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149581093",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2153328054"
+      },
+      "video": {
+        "sign": "1110103017"
+      },
+      "image": "/images/sites/isla-soto-especies-introducidas-no-autoctonas.png",
+      "alt": {
+        "es": "Especies introducidas en la Isla del Soto",
+        "en": "Introduced species on Isla del Soto"
+      },
+      "location": {
+        "es": "Isla del Soto",
+        "en": "Isla del Soto"
+      },
+      "artist": {
+        "es": "Naturaleza",
+        "en": "Nature"
+      },
+      "year": 2024,
+      "duration": {
+        "normal": "",
+        "descriptive": "",
+        "easy": "",
+        "sign": "",
+        "english": ""
+      }
+    },
+    {
+      "id": 7,
+      "title": {
+        "normal": {
+          "es": "Centro interpretación Isla del Soto",
+          "en": "Isla del Soto Interpretation Center"
+        },
+        "descriptive": {
+          "es": "AD- Centro interpretación Isla del Soto",
+          "en": "Isla del Soto Interpretation Center"
+        },
+        "easy": {
+          "es": "LF- Centro interpretación Isla del Soto",
+          "en": "Isla del Soto Interpretation Center"
+        },
+        "sign": {
+          "es": "LSE- Centro interpretación Isla del Soto",
+          "en": "Isla del Soto Interpretation Center"
+        }
+      },
+      "description": {
+        "es": "Centro de visitantes e interpretación de la naturaleza.",
+        "en": "Nature interpretation and visitor center."
+      },
+      "order": 7,
+      "audio": {
+        "normal": {
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149552584",
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2157093693"
+        },
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149581108",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2153328045"
+      },
+      "video": {
+        "sign": "1110103017"
+      },
+      "image": "/images/sites/isla-soto-centro-interpretacion-naturaleza.png",
+      "alt": {
+        "es": "Centro de interpretación de la Isla del Soto",
+        "en": "Isla del Soto Interpretation Center"
+      },
+      "location": {
+        "es": "Centro de Interpretación",
+        "en": "Interpretation Center"
+      },
+      "artist": {
+        "es": "Naturaleza",
+        "en": "Nature"
+      },
+      "year": 2024,
+      "duration": {
+        "normal": "",
+        "descriptive": "",
+        "easy": "",
+        "sign": "",
+        "english": ""
+      }
+    },
+    {
+      "id": 8,
+      "title": {
+        "normal": {
+          "es": "Zonas y usos de la isla",
+          "en": "Island zones and uses"
+        },
+        "descriptive": {
+          "es": "AD- Zonas y usos de la isla",
+          "en": "Island zones and uses"
+        },
+        "easy": {
+          "es": "LF- Zonas y usos de la isla",
+          "en": "Island zones and uses"
+        },
+        "sign": {
+          "es": "LSE- Zonas y usos de la isla",
+          "en": "Island zones and uses"
+        }
+      },
+      "description": {
+        "es": "Diferentes áreas y actividades permitidas en la Isla del Soto.",
+        "en": "Different areas and permitted activities on Isla del Soto."
+      },
+      "order": 8,
+      "audio": {
+        "normal": {
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149552581",
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2157093708"
+        },
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149581096",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2153328057"
+      },
+      "video": {
+        "sign": "1110103357"
+      },
+      "image": "/images/sites/isla-soto-zonas-usos-actividades.png",
+      "alt": {
+        "es": "Zonas y usos de la Isla del Soto",
+        "en": "Zones and uses of Isla del Soto"
+      },
+      "location": {
+        "es": "Isla del Soto",
+        "en": "Isla del Soto"
+      },
+      "artist": {
+        "es": "Naturaleza",
+        "en": "Nature"
+      },
+      "year": 2024,
+      "duration": {
+        "normal": "",
+        "descriptive": "",
+        "easy": "",
+        "sign": "",
+        "english": ""
+      }
+    },
+    {
+      "id": 9,
+      "title": {
+        "normal": {
+          "es": "Rutas de Santa Marta de Tormes",
+          "en": "Santa Marta de Tormes routes"
+        },
+        "descriptive": {
+          "es": "AD- Rutas de Santa Marta de Tormes",
+          "en": "Santa Marta de Tormes routes"
+        },
+        "easy": {
+          "es": "LF- Rutas de Santa Marta de Tormes",
+          "en": "Santa Marta de Tormes routes"
+        },
+        "sign": {
+          "es": "LSE- Rutas de Santa Marta de Tormes",
+          "en": "Santa Marta de Tormes routes"
+        }
+      },
+      "description": {
+        "es": "Diferentes rutas y senderos disponibles en Santa Marta de Tormes.",
+        "en": "Different routes and trails available in Santa Marta de Tormes."
+      },
+      "order": 9,
+      "audio": {
+        "normal": {
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149552590",
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2157093690"
+        },
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149581120",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2153328060"
+      },
+      "video": {
+        "sign": "1110103560"
+      },
+      "image": "/images/sites/isla-soto-rutas-senderos-santa-marta-tormes.png",
+      "alt": {
+        "es": "Rutas de Santa Marta de Tormes",
+        "en": "Santa Marta de Tormes routes"
+      },
+      "location": {
+        "es": "Santa Marta de Tormes",
+        "en": "Santa Marta de Tormes"
+      },
+      "artist": {
+        "es": "Naturaleza",
+        "en": "Nature"
+      },
+      "year": 2024,
+      "duration": {
+        "normal": "",
+        "descriptive": "",
+        "easy": "",
+        "sign": "",
+        "english": ""
+      }
+    },
+    {
+      "id": 10,
+      "title": {
+        "normal": {
+          "es": "Llegamos al final del paseo",
+          "en": "We reach the end of the walk"
+        },
+        "descriptive": {
+          "es": "AD- Llegamos al final del paseo",
+          "en": "We reach the end of the walk"
+        },
+        "easy": {
+          "es": "LF- Llegamos al final del paseo",
+          "en": "We reach the end of the walk"
+        },
+        "sign": {
+          "es": "LSE- Llegamos al final del paseo",
+          "en": "We reach the end of the walk"
+        }
+      },
+      "description": {
+        "es": "Punto final del recorrido por la Isla del Soto.",
+        "en": "End point of the Isla del Soto tour."
+      },
+      "order": 10,
+      "audio": {
+        "normal": {
+          "es": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149552596",
+          "en": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2157093699"
+        },
+        "descriptive": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2149581117",
+        "easy": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2153328063"
+      },
+      "video": {
+        "sign": "1110103803"
+      },
+      "image": "/images/sites/isla-soto-final-paseo-despedida.png",
+      "alt": {
+        "es": "Final del paseo por la Isla del Soto",
+        "en": "End of the walk through Isla del Soto"
+      },
+      "location": {
+        "es": "Despedida",
+        "en": "Farewell"
+      },
+      "artist": {
+        "es": "Naturaleza",
+        "en": "Nature"
+      },
+      "year": 2024,
+      "duration": {
+        "normal": "",
+        "descriptive": "",
+        "easy": "",
+        "sign": "",
+        "english": ""
+      }
+    }
+  ],
+  "metadata": {
+    "lastUpdated": "2025-08-13",
+    "version": "3.0",
+    "totalMurals": 10,
+    "languages": [
+      "es",
+      "en"
+    ],
+    "audioguideTypes": [
+      "normal",
+      "descriptive",
+      "easy",
+      "sign"
+    ],
+    "city": "Santa Marta de Tormes",
+    "province": "Salamanca",
+    "country": "España",
+    "projectName": "Audioguía Isla del Soto"
+  }
+}

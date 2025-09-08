@@ -1,0 +1,178 @@
+{
+  "header": {
+    "navigation": {
+      "home": "Inicio",
+      "audioguides": "Audioguías",
+      "normative": "Normativa",
+      "descriptive": "Descriptiva",
+      "easy": "Fácil",
+      "sign": "Signoguía",
+      "map": "Mapa",
+      "download": "Descargar PDF"
+    },
+    "accessibility": {
+      "menu": "Menú",
+      "darkMode": "Cambiar modo oscuro/claro",
+      "lightMode": "Activar modo claro",
+      "darkModeButton": "Activar modo oscuro",
+      "highContrast": "Activar/desactivar alto contraste",
+      "increaseFontSize": "Aumentar tamaño de texto",
+      "decreaseFontSize": "Disminuir tamaño de texto",
+      "language": "Cambiar idioma"
+    }
+  },
+  "footer": {
+    "partners": {
+      "asprodes": "ASPRODES",
+      "aspas": "ASPAS",
+      "audacetics": "Audacetics",
+      "ayuntamiento": "Ayuntamiento",
+      "turismo": "Turismo Santa Marta"
+    },
+    "contact": {
+      "title": "TURISMO SANTA MARTA DE TORMES",
+      "address": "Plaza España, s/n - Santa Marta de Tormes (Salamanca)",
+      "phone": "+34 923 200 005",
+      "email": "info@turismosantamartadetormes.com",
+      "instagram": "@turismosantamartadetormes"
+    },
+    "legal": {
+      "copyright": "© 2025 Audioguías Murales Santa Marta. Todos los derechos reservados.",
+      "privacy": "Política de privacidad",
+      "terms": "Términos de uso",
+      "cookies": "Política de cookies"
+    },
+    "technical": {
+      "poweredBy": "Desarrollado con",
+      "madeWith": "Hecho con ❤️ para la accesibilidad"
+    }
+  },
+  "audioguidePages": {
+    "normal": {
+      "title": "Audioguía",
+      "description": "Audio estándar con información completa sobre los murales y su contexto histórico",
+      "emoji": "🎧",
+      "startButton": "Comenzar Ruta de los Murales",
+      "clickToStart": "👆 Haz clic para comenzar la experiencia",
+      "downloadBrochure1": "Para complementar la experiencia ",
+      "downloadBrochure2": " con fotos e información."
+    },
+    "descriptive": {
+      "title": "Audioguía Descriptiva",
+      "description": "Audio con descripciones detalladas de los elementos visuales para personas con discapacidad visual",
+      "emoji": "👁️",
+      "startButton": "Comenzar Ruta de los Murales",
+      "clickToStart": "👆 Haz clic para comenzar la experiencia",
+      "downloadBrochure": "Para complementar la experiencia, descarga con fotos e información."
+    },
+    "easy": {
+      "title": "Audioguía Lectura Fácil",
+      "description": "Audio adaptado para discapacidad intelectual con lenguaje claro y simple",
+      "emoji": "📖",
+      "startButton": "Comenzar Ruta de los Murales",
+      "clickToStart": "👆 Haz clic para comenzar la experiencia",
+      "downloadBrochure": "Para complementar la experiencia, descarga con fotos e información."
+    },
+    "sign": {
+      "title": "Signoguía",
+      "titleSuffix": "LSE",
+      "description": "Videos en lengua de signos española para personas con discapacidad auditiva",
+      "emoji": "🤟",
+      "startButton": "Comenzar Ruta de los Murales",
+      "clickToStart": "👆 Haz clic para comenzar la experiencia",
+      "downloadBrochure": "Para complementar la experiencia, descarga con fotos e información."
+    }
+  },
+  "audioguideContainer": {
+    "srOnly": {
+      "interactiveMap": "Mapa interactivo de la ruta",
+      "audioPlayer": "Reproductor de audio",
+      "playlist": "Lista de reproducción"
+    },
+    "navigation": {
+      "muralXofY": "Mural",
+      "of": "de",
+      "previous": "Anterior",
+      "pause": "Pausar",
+      "play": "Reproducir",
+      "next": "Siguiente"
+    }
+  },
+  "player": {
+    "welcome": {
+      "title": "¡Descubre los Murales!",
+      "subtitle": "Haz clic en \"Comenzar Tour\" para explorar el arte urbano de Santa Marta",
+      "hint": "Usa el botón azul de arriba"
+    },
+    "errors": {
+      "controlError": "Error al controlar la reproducción"
+    },
+    "defaults": {
+      "unknownArtist": "Artista desconocido",
+      "unknownLocation": "Ubicación no disponible"
+    },
+    "controls": {
+      "previousTrack": "Pista anterior",
+      "pause": "Pausar",
+      "play": "Reproducir",
+      "nextTrack": "Pista siguiente",
+      "mute": "Silenciar",
+      "unmute": "Activar sonido"
+    },
+    "loading": "Cargando audio..."
+  },
+  "map": {
+    "title": "🗺️ Mapa de la Ruta",
+    "listenAudioguide": "🎧 Escuchar audioguía",
+    "getDirections": "🗺️ Cómo llegar",
+    "loading": "Cargando mapa...",
+    "error": "Error al cargar el mapa",
+    "tryAgain": "Intentar de nuevo",
+    "lockMap": "🔒 Bloquear Mapa",
+    "unlockMap": "🔓 Desbloquear Mapa",
+    "mapLockedTitle": "Mapa bloqueado - Click para liberar interacción",
+    "mapUnlockedTitle": "Mapa libre - Click para bloquear",
+    "scrollLockMessage": "💡 Desplazamiento del mapa bloqueado. Haz clic en el botón 'Desbloquear mapa' para navegar por él.",
+    "legend": {
+      "currentMural": "Mural",
+      "playing": "Reproduciendo",
+      "recommendedRoute": "Ruta recomendada",
+      "muralsCount": "murales"
+    }
+  },
+  "playlist": {
+    "header": {
+      "emoji": "🏷️",
+      "types": {
+        "normal": "Audioguía",
+        "descriptive": "Audioguía Descriptiva",
+        "easy": "Audioguía Lectura Fácil",
+        "sign": "Signoguía"
+      },
+      "counter": "de",
+      "progress": "% completado"
+    },
+    "item": {
+      "startHere": "🎯 Comenzar aquí",
+      "start": "▶️ Empezar",
+      "playingNow": "Reproduciendo ahora",
+      "informationTrack": "Pista informativa"
+    },
+    "defaults": {
+      "unknownArtist": "Artista desconocido",
+      "unknownLocation": "Ubicación no disponible"
+    },
+    "footer": {
+      "totalTime": "⏱️ Tiempo total de la audioguía: ~",
+      "minutes": "min"
+    }
+  },
+  "accessibility": {
+    "skipToContent": "Saltar al contenido principal"
+  },
+  "seo": {
+    "pageTitles": {
+      "suffix": "| Audioguías Murales Santa Marta"
+    }
+  }
+}

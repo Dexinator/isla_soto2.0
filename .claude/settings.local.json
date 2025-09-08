@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//mnt/c/coding/isla_soto/public/**)",
+      "Read(//mnt/c/coding/isla_soto/src/assets/images/sites/**)",
+      "Read(//mnt/c/coding/isla_soto/src/components/ui/**)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
