@@ -399,12 +399,15 @@ const VimeoPlayer = ({
       <div className={`flex ${isFullscreen ? 'h-full' : 'flex-col'}`}>
         {/* Video container optimizado para móvil */}
         <div className={`relative ${
-          isFullscreen ? 'w-full h-full bg-black' : 'w-full bg-black'
+          isFullscreen ? 'w-full h-full bg-black flex items-center justify-center' : 'w-full bg-black'
         }`} style={{ 
           paddingBottom: isFullscreen ? '0' : '56.25%',
           height: isFullscreen ? '100%' : '0'
         }}>
-          <div className={`${isFullscreen ? 'h-full w-full' : 'absolute inset-0 w-full h-full'} flex items-center justify-center`}>
+          <div className={`${isFullscreen ? 'h-full flex items-center justify-center' : 'absolute inset-0 w-full h-full flex items-center justify-center'}`} style={{
+            maxWidth: isFullscreen ? '100%' : undefined,
+            aspectRatio: isFullscreen ? '16/9' : undefined
+          }}>
             {error ? (
               <div className="flex items-center justify-center h-full bg-slate-900">
                 <div className="text-center p-6">
@@ -687,6 +690,7 @@ const VimeoPlayer = ({
           position: relative !important;
         }
         
+        /* En modo normal */
         .vimeo-container iframe {
           position: absolute !important;
           top: 0 !important;
@@ -701,6 +705,22 @@ const VimeoPlayer = ({
           left: 0 !important;
           width: 100% !important;
           height: 100% !important;
+        }
+        
+        /* En pantalla completa, mantener aspect ratio */
+        @media (orientation: landscape) {
+          .fixed.inset-0 .vimeo-container {
+            max-width: 100% !important;
+            max-height: 100% !important;
+            aspect-ratio: 16/9 !important;
+          }
+          
+          .fixed.inset-0 .vimeo-container iframe,
+          .fixed.inset-0 .vimeo-container > div {
+            object-fit: contain !important;
+            max-width: 100% !important;
+            max-height: 100% !important;
+          }
         }
       `}} />
     </div>

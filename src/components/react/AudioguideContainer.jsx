@@ -32,14 +32,20 @@ const AudioguideContainer = ({
   const scrollToPlayer = () => {
     // Solo hacer scroll en móvil (viewport < 768px)
     if (window.innerWidth < 768 && playerSectionRef.current) {
-      // Obtener posición del reproductor con un margen de 30px desde el top
-      const playerPosition = playerSectionRef.current.offsetTop - 30;
+      // Usar getBoundingClientRect para obtener la posición relativa al viewport
+      const rect = playerSectionRef.current.getBoundingClientRect();
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       
-      // Scroll suave hacia el reproductor
-      window.scrollTo({
-        top: playerPosition,
-        behavior: 'smooth'
-      });
+      // Calcular la posición absoluta con un margen de 80px desde el top
+      const playerPosition = rect.top + scrollTop - 80;
+      
+      // Solo hacer scroll si el elemento no está ya visible
+      if (rect.top < 0 || rect.bottom > window.innerHeight) {
+        window.scrollTo({
+          top: playerPosition,
+          behavior: 'smooth'
+        });
+      }
     }
   };
 
@@ -52,8 +58,21 @@ const AudioguideContainer = ({
 
   // Función para seleccionar un mural
   const handleMuralSelect = (mural, autoPlay = true) => {
-    setCurrentMural(mural);
-    setIsPlaying(autoPlay); // Auto-reproducir por defecto cuando se selecciona una pista
+    // Si es el mismo mural y solo queremos cambiar el estado de reproducción
+    if (currentMural && currentMural.id === mural.id) {
+      setIsPlaying(!isPlaying); // Toggle play/pause si es el mismo mural
+    } else {
+      // Si es un mural diferente
+      setCurrentMural(mural);
+      // Siempre establecer autoPlay cuando se selecciona un nuevo mural
+      if (autoPlay) {
+        setIsPlaying(true);
+        setAutoPlay(true);
+      } else {
+        setIsPlaying(false);
+        setAutoPlay(false);
+      }
+    }
     
     // Hacer scroll al reproductor en móvil
     setTimeout(() => {
@@ -189,16 +208,18 @@ const AudioguideContainer = ({
 
       setAutoPlay(true);
 
-      // Scroll suave al reproductor
-      setTimeout(() => {
-        const playerSection = document.querySelector('[aria-labelledby="player-title"]');
-        if (playerSection) {
-          playerSection.scrollIntoView({
-            behavior: 'smooth',
-            block: 'center'
-          });
-        }
-      }, 300);
+      // Scroll suave al reproductor (solo en móvil)
+      if (window.innerWidth < 768) {
+        setTimeout(() => {
+          const playerSection = document.querySelector('[aria-labelledby="player-title"]');
+          if (playerSection) {
+            playerSection.scrollIntoView({
+              behavior: 'smooth',
+              block: 'center'
+            });
+          }
+        }, 300);
+      }
 
       // Analytics tracking
       if (typeof gtag !== 'undefined') {
@@ -214,11 +235,30 @@ const AudioguideContainer = ({
 
   // Exponer función startTour globalmente para el botón de inicio
   useEffect(() => {
+    // Indicar que el componente está listo
     window.startAudioguide = startTour;
+    window.audioguideReady = true;
+    
+    // Habilitar el botón si existe
+    const button = document.getElementById('start-tour-button');
+    if (button) {
+      button.disabled = false;
+      button.classList.remove('opacity-50', 'cursor-not-allowed');
+      button.classList.add('cursor-pointer');
+      
+      // Cambiar el texto del botón si estaba mostrando "Cargando..."
+      const buttonText = button.querySelector('.button-text');
+      if (buttonText && buttonText.dataset.originalText) {
+        buttonText.textContent = buttonText.dataset.originalText;
+      }
+    }
     
     return () => {
       if (window.startAudioguide) {
         delete window.startAudioguide;
+      }
+      if (window.audioguideReady) {
+        delete window.audioguideReady;
       }
     };
   }, [sortedMurals]);

@@ -46,12 +46,13 @@ const pageDescription = content.audioguidePages.descriptive.description;
           <!-- Botón principal súper prominente -->
           <div class="mb-8">
             <button
-              id="start-tour-btn"
+              id="start-tour-button"
               onclick="window.startAudioguide && window.startAudioguide()"
-              class="group relative bg-gradient-to-r from-SM-blue to-blue-700 hover:from-blue-700 hover:to-SM-blue text-white font-bold text-xl px-12 py-6 rounded-2xl shadow-2xl transition-all duration-300 hover:shadow-3xl hover:scale-110 focus:outline-none focus:ring-4 focus:ring-SM-blue/50 transform hover:-translate-y-1"
+              disabled
+              class="group relative bg-gradient-to-r from-SM-blue to-blue-700 hover:from-blue-700 hover:to-SM-blue text-white font-bold text-xl px-12 py-6 rounded-2xl shadow-2xl transition-all duration-300 hover:shadow-3xl hover:scale-110 focus:outline-none focus:ring-4 focus:ring-SM-blue/50 transform hover:-translate-y-1 opacity-50 cursor-not-allowed disabled:hover:scale-100 disabled:hover:shadow-2xl"
             >
               <span class="flex items-center justify-center space-x-3">
-                <span>{content.audioguidePages.descriptive.startButton}</span>
+                <span class="button-text" data-original-text={content.audioguidePages.descriptive.startButton}>Cargando...</span>
                 <span class="text-2xl group-hover:animate-bounce">▶️</span>
               </span>
 

@@ -211,11 +211,30 @@ const SignoguideContainer = ({
 
   // Exponer función startTour globalmente para el botón de inicio
   useEffect(() => {
+    // Indicar que el componente está listo
     window.startAudioguide = startTour;
+    window.audioguideReady = true;
+    
+    // Habilitar el botón si existe
+    const button = document.getElementById('start-tour-button');
+    if (button) {
+      button.disabled = false;
+      button.classList.remove('opacity-50', 'cursor-not-allowed');
+      button.classList.add('cursor-pointer');
+      
+      // Cambiar el texto del botón si estaba mostrando "Cargando..."
+      const buttonText = button.querySelector('.button-text');
+      if (buttonText && buttonText.dataset.originalText) {
+        buttonText.textContent = buttonText.dataset.originalText;
+      }
+    }
     
     return () => {
       if (window.startAudioguide) {
         delete window.startAudioguide;
+      }
+      if (window.audioguideReady) {
+        delete window.audioguideReady;
       }
     };
   }, [sortedMurals, currentMural]);

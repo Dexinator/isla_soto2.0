@@ -229,28 +229,6 @@ const PlaylistManager = ({
                       </h4>
                     </div>
                     
-                    {/* Artista y ubicación */}
-                    <div className="space-y-1">
-                      <div className="flex items-center text-slate-600 dark:text-slate-400">
-                        <span className="text-xs mr-1">🎨</span>
-                        <span className="text-sm">
-                          {typeof mural.artist === 'object' 
-                            ? (mural.artist[language] || mural.artist.es || content.playlist.defaults.unknownArtist)
-                            : (mural.artist || content.playlist.defaults.unknownArtist)}
-                        </span>
-                      </div>
-                      <div className="flex items-center text-slate-600 dark:text-slate-400">
-                        <span className="text-xs mr-1">
-                          {mural.coordinates && !(mural.coordinates[0] === 0 && mural.coordinates[1] === 0) ? '📍' : 'ℹ️'}
-                        </span>
-                        <span className="text-sm">
-                          {mural.coordinates && !(mural.coordinates[0] === 0 && mural.coordinates[1] === 0) 
-                            ? (mural.location?.[language] || content.playlist.defaults.unknownLocation)
-                            : (content.playlist.item.informationTrack || 'Information track')}
-                        </span>
-                      </div>
-                    </div>
-                    
                     {/* Solo tiempo de duración */}
                     <div className="mt-2 text-xs text-slate-500 dark:text-slate-400">
                       <span className="flex items-center">

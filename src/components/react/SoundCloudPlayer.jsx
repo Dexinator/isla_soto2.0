@@ -40,34 +40,46 @@ const SoundCloudPlayer = forwardRef(({
     return audioUrl;
   };
 
+  // Extraer la URL real del track desde una URL de embed o devolver la URL original
+  const getTrackUrl = (url) => {
+    if (!url) return null;
+    
+    // Si es una URL de embed, extraer la URL del track
+    if (url.includes('w.soundcloud.com/player')) {
+      const urlMatch = url.match(/url=([^&]+)/);
+      if (urlMatch) {
+        return decodeURIComponent(urlMatch[1]);
+      }
+    }
+    
+    // Si no es embed, devolver la URL tal cual
+    return url;
+  };
+
   // Convertir URL de audio a formato de embed
   const getSoundCloudEmbedUrl = (url) => {
     if (!url) return null;
+    
+    // Primero extraer la URL real del track (por si viene como embed)
+    const trackUrl = getTrackUrl(url);
 
-    // Si ya es una URL de embed, devolverla (pero aplicar nuestros parámetros)
-    if (url.includes('w.soundcloud.com/player')) {
-      // Extraer la URL del track de los parámetros
-      const urlMatch = url.match(/url=([^&]+)/);
-      if (urlMatch) {
-        const trackUrl = decodeURIComponent(urlMatch[1]);
-        // Crear embed con nuestros parámetros personalizados
-        return `https://w.soundcloud.com/player/?url=${encodeURIComponent(trackUrl)}&color=%230072c0&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false`;
-      }
-      return url;
+    // Si ya es una URL de embed correcta y no necesita modificación
+    if (url.includes('w.soundcloud.com/player') && !url.includes('url=https://w.soundcloud.com')) {
+      // Extraer la URL del track y recrear con nuestros parámetros
+      return `https://w.soundcloud.com/player/?url=${encodeURIComponent(trackUrl)}&color=%230072c0&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false`;
     }
 //<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2107850961%3Fsecret_token%3Ds-aPi7bGa9jHU&color=%2378766c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/jorge-badillo-222916125" title="Jorge Badillo" target="_blank" style="color: #cccccc; text-decoration: none;">Jorge Badillo</a> · <a href="https://soundcloud.com/jorge-badillo-222916125/la-tierra-de-la-aventura/s-aPi7bGa9jHU" title="La Tierra de la Aventura" target="_blank" style="color: #cccccc; text-decoration: none;">La Tierra de la Aventura</a></div>
     // Si es una URL de la API de SoundCloud (api.soundcloud.com)
-    if (url.includes('api.soundcloud.com/tracks/')) {
-      return `https://w.soundcloud.com/player/?url=${encodeURIComponent(url)}&color=%230072c0&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false`;
+    if (trackUrl.includes('api.soundcloud.com/tracks/')) {
+      return `https://w.soundcloud.com/player/?url=${encodeURIComponent(trackUrl)}&color=%230072c0&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false`;
     }
 
     // Convertir URL pública de SoundCloud a embed
-    if (url.includes('soundcloud.com/')) {
-      const encodedUrl = encodeURIComponent(url);
-      return `https://w.soundcloud.com/player/?url=${encodedUrl}&color=%230072c0&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false`;
+    if (trackUrl.includes('soundcloud.com/')) {
+      return `https://w.soundcloud.com/player/?url=${encodeURIComponent(trackUrl)}&color=%230072c0&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false`;
     }
 
-    return url;
+    return trackUrl;
   };
 
   // Formatear tiempo en mm:ss
@@ -110,6 +122,28 @@ const SoundCloudPlayer = forwardRef(({
       return;
     }
 
+    // Si ya tenemos un widget y solo cambiamos la URL, usar load en lugar de reinicializar
+    if (widgetRef.current && widgetReady) {
+      setIsLoading(true);
+      // widget.load() necesita la URL del track original, no la URL del embed
+      const trackUrl = getTrackUrl(audioUrl);
+      
+      widgetRef.current.load(trackUrl, {
+        auto_play: isPlayingProp,
+        callback: () => {
+          setIsLoading(false);
+          // Si isPlayingProp es true, reproducir
+          if (isPlayingProp) {
+            setTimeout(() => {
+              widgetRef.current.play();
+            }, 100);
+          }
+        }
+      });
+      return;
+    }
+
+    // Si no hay widget, inicializar todo desde cero
     setIsLoading(true);
     setError(null);
     setWidgetReady(false);
@@ -153,6 +187,13 @@ const SoundCloudPlayer = forwardRef(({
 
           // Configurar volumen inicial
           widgetRef.current.setVolume(volume);
+          
+          // Si isPlayingProp es true cuando el widget está listo, reproducir automáticamente
+          if (isPlayingProp) {
+            setTimeout(() => {
+              widgetRef.current.play();
+            }, 200);
+          }
         });
 
         widgetRef.current.bind(window.SC.Widget.Events.PLAY, () => {
@@ -185,12 +226,19 @@ const SoundCloudPlayer = forwardRef(({
         });
 
         // Timeout de seguridad para detectar si el widget no se inicializa
-        setTimeout(() => {
+        const timeoutId = setTimeout(() => {
           if (!widgetReady && !error) {
-            console.warn('Audio Widget no se inicializó en tiempo esperado');
+            console.warn('Audio Widget no se inicializó en tiempo esperado, reintentando...');
             setIsLoading(false);
+            // Reintentar la inicialización
+            setTimeout(initializeWidget, 1000);
           }
-        }, 10000); // 10 segundos de timeout
+        }, 5000); // 5 segundos de timeout
+
+        // Limpiar timeout si el widget se inicializa
+        widgetRef.current.bind(window.SC.Widget.Events.READY, () => {
+          clearTimeout(timeoutId);
+        });
 
       } catch (err) {
         console.error('Error initializing audio widget:', err);
@@ -224,6 +272,20 @@ const SoundCloudPlayer = forwardRef(({
       }
     }
   }, [isPlayingProp, isPlaying, widgetReady]);
+
+  // Efecto para reproducir automáticamente cuando el widget esté listo si isPlayingProp es true
+  useEffect(() => {
+    if (widgetReady && isPlayingProp && !isPlaying && widgetRef.current) {
+      // Pequeño delay para asegurar que el widget esté completamente listo
+      setTimeout(() => {
+        try {
+          widgetRef.current.play();
+        } catch (err) {
+          console.error('Error auto-starting playback:', err);
+        }
+      }, 100);
+    }
+  }, [widgetReady]);
 
   // Controles de reproducción
   const handlePlayPause = () => {

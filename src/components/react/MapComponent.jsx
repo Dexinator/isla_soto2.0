@@ -9,9 +9,21 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, audioType = 
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [scrollZoomEnabled, setScrollZoomEnabled] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const openPopupsRef = useRef([]);
 
   // Seleccionar el contenido según el idioma
   const content = language === 'en' ? contentEn : contentEs;
+
+  // Detectar si es dispositivo móvil
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // Filtrar murales que tienen coordenadas válidas
   const muralsWithCoordinates = murals.filter(mural => {
@@ -143,32 +155,58 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, audioType = 
                   }).addTo(map);
 
                   const popupContent = `
-                    <div class="p-2 min-w-48">
-                      <h3 class="font-semibold text-SM-blue mb-1">${mural.title[audioType][language]}</h3>
-                      <p class="text-sm font-medium text-slate-700 mb-2">${locationName}</p>
-                      ${location.points.length > 1 ? `<p class="text-xs text-slate-500 mb-1">Punto ${pointIndex + 1} de ${location.points.length}</p>` : ''}
-                      <p class="text-sm text-slate-600 mb-3">${mural.description[language]}</p>
-                      <div class="flex flex-col space-y-2">
-                        <button 
-                          onclick="window.selectMural(${mural.id})" 
-                          class="bg-SM-blue text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors"
-                        >
-                          ${content.map.listenAudioguide}
-                        </button>
-                        <a 
-                          href="https://maps.google.com/maps?daddr=${coords[0]},${coords[1]}" 
-                          target="_blank"
-                          class="bg-SM-yellow text-SM-black px-3 py-1 rounded text-sm text-center hover:bg-yellow-500 transition-colors"
-                        >
-                          ${content.map.getDirections}
-                        </a>
+                    <div class="relative">
+                      <button 
+                        onclick="window.closeAllPopups()" 
+                        class="absolute -top-2 -right-2 w-8 h-8 bg-red-500 text-white rounded-full flex items-center justify-center hover:bg-red-600 transition-colors shadow-lg z-50"
+                        aria-label="${language === 'es' ? 'Cerrar' : 'Close'}"
+                      >
+                        ✕
+                      </button>
+                      <div class="p-2 ${isMobile ? 'max-w-[85vw]' : 'min-w-48'}">
+                        <h3 class="font-semibold text-SM-blue mb-1 text-sm ${isMobile ? 'pr-6' : ''}">${mural.title[audioType][language]}</h3>
+                        <p class="text-xs font-medium text-slate-700 mb-1">${locationName}</p>
+                        ${location.points.length > 1 ? `<p class="text-xs text-slate-500 mb-1">Punto ${pointIndex + 1} de ${location.points.length}</p>` : ''}
+                        <p class="text-xs text-slate-600 mb-2 ${isMobile ? 'line-clamp-2' : ''}">${mural.description[language]}</p>
+                        <div class="flex ${isMobile ? 'flex-row gap-2' : 'flex-col space-y-2'}">
+                          <button 
+                            onclick="window.selectMural(${mural.id})" 
+                            class="bg-SM-blue text-white px-2 py-1 rounded text-xs hover:bg-blue-700 transition-colors flex-1"
+                          >
+                            ${isMobile ? '🎧' : ''} ${content.map.listenAudioguide}
+                          </button>
+                          <a 
+                            href="https://maps.google.com/maps?daddr=${coords[0]},${coords[1]}" 
+                            target="_blank"
+                            class="bg-SM-yellow text-SM-black px-2 py-1 rounded text-xs text-center hover:bg-yellow-500 transition-colors flex-1"
+                          >
+                            ${isMobile ? '📍' : ''} ${content.map.getDirections}
+                          </a>
+                        </div>
                       </div>
                     </div>
                   `;
 
-                  marker.bindPopup(popupContent, {
-                    maxWidth: 250,
-                    className: 'custom-popup'
+                  const popup = L.popup({
+                    maxWidth: isMobile ? window.innerWidth * 0.9 : 250,
+                    className: 'custom-popup',
+                    closeButton: false,
+                    autoPan: true,
+                    autoPanPaddingTopLeft: isMobile ? [10, 80] : [50, 50],
+                    autoPanPaddingBottomRight: isMobile ? [10, 10] : [50, 50]
+                  }).setContent(popupContent);
+                  
+                  marker.bindPopup(popup);
+                  
+                  marker.on('popupopen', function() {
+                    openPopupsRef.current.push(popup);
+                    if (isMobile) {
+                      // En móvil, centrar el mapa en el marcador
+                      map.setView(coords, map.getZoom(), {
+                        animate: true,
+                        duration: 0.5
+                      });
+                    }
                   });
 
                   markersList.push({ marker, mural });
@@ -184,31 +222,57 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, audioType = 
                 }).addTo(map);
 
                 const popupContent = `
-                  <div class="p-2 min-w-48">
-                    <h3 class="font-semibold text-SM-blue mb-2">${mural.title[audioType][language]}</h3>
-                    ${mural.coordinates.length > 1 ? `<p class="text-xs text-slate-500 mb-1">Punto ${coordIndex + 1} de ${mural.coordinates.length}</p>` : ''}
-                    <p class="text-sm text-slate-600 mb-3">${mural.description[language]}</p>
-                    <div class="flex flex-col space-y-2">
-                      <button 
-                        onclick="window.selectMural(${mural.id})" 
-                        class="bg-SM-blue text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors"
-                      >
-                        ${content.map.listenAudioguide}
-                      </button>
-                      <a 
-                        href="https://maps.google.com/maps?daddr=${coords[0]},${coords[1]}" 
-                        target="_blank"
-                        class="bg-SM-yellow text-SM-black px-3 py-1 rounded text-sm text-center hover:bg-yellow-500 transition-colors"
-                      >
-                        ${content.map.getDirections}
-                      </a>
+                  <div class="relative">
+                    <button 
+                      onclick="window.closeAllPopups()" 
+                      class="absolute -top-2 -right-2 w-8 h-8 bg-red-500 text-white rounded-full flex items-center justify-center hover:bg-red-600 transition-colors shadow-lg z-50"
+                      aria-label="${language === 'es' ? 'Cerrar' : 'Close'}"
+                    >
+                      ✕
+                    </button>
+                    <div class="p-2 ${isMobile ? 'max-w-[85vw]' : 'min-w-48'}">
+                      <h3 class="font-semibold text-SM-blue mb-1 text-sm ${isMobile ? 'pr-6' : ''}">${mural.title[audioType][language]}</h3>
+                      ${mural.coordinates.length > 1 ? `<p class="text-xs text-slate-500 mb-1">Punto ${coordIndex + 1} de ${mural.coordinates.length}</p>` : ''}
+                      <p class="text-xs text-slate-600 mb-2 ${isMobile ? 'line-clamp-2' : ''}">${mural.description[language]}</p>
+                      <div class="flex ${isMobile ? 'flex-row gap-2' : 'flex-col space-y-2'}">
+                        <button 
+                          onclick="window.selectMural(${mural.id})" 
+                          class="bg-SM-blue text-white px-2 py-1 rounded text-xs hover:bg-blue-700 transition-colors flex-1"
+                        >
+                          ${isMobile ? '🎧' : ''} ${content.map.listenAudioguide}
+                        </button>
+                        <a 
+                          href="https://maps.google.com/maps?daddr=${coords[0]},${coords[1]}" 
+                          target="_blank"
+                          class="bg-SM-yellow text-SM-black px-2 py-1 rounded text-xs text-center hover:bg-yellow-500 transition-colors flex-1"
+                        >
+                          ${isMobile ? '📍' : ''} ${content.map.getDirections}
+                        </a>
+                      </div>
                     </div>
                   </div>
                 `;
 
-                marker.bindPopup(popupContent, {
-                  maxWidth: 250,
-                  className: 'custom-popup'
+                const popup = L.popup({
+                  maxWidth: isMobile ? window.innerWidth * 0.9 : 250,
+                  className: 'custom-popup',
+                  closeButton: false,
+                  autoPan: true,
+                  autoPanPaddingTopLeft: isMobile ? [10, 80] : [50, 50],
+                  autoPanPaddingBottomRight: isMobile ? [10, 10] : [50, 50]
+                }).setContent(popupContent);
+                
+                marker.bindPopup(popup);
+                
+                marker.on('popupopen', function() {
+                  openPopupsRef.current.push(popup);
+                  if (isMobile) {
+                    // En móvil, centrar el mapa en el marcador
+                    map.setView(coords, map.getZoom(), {
+                      animate: true,
+                      duration: 0.5
+                    });
+                  }
                 });
 
                 markersList.push({ marker, mural });
@@ -223,30 +287,56 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, audioType = 
               }).addTo(map);
 
               const popupContent = `
-                <div class="p-2 min-w-48">
-                  <h3 class="font-semibold text-SM-blue mb-2">${mural.title[audioType][language]}</h3>
-                  <p class="text-sm text-slate-600 mb-3">${mural.description[language]}</p>
-                  <div class="flex flex-col space-y-2">
-                    <button 
-                      onclick="window.selectMural(${mural.id})" 
-                      class="bg-SM-blue text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors"
-                    >
-                      ${content.map.listenAudioguide}
-                    </button>
-                    <a 
-                      href="https://maps.google.com/maps?daddr=${coords[0]},${coords[1]}" 
-                      target="_blank"
-                      class="bg-SM-yellow text-SM-black px-3 py-1 rounded text-sm text-center hover:bg-yellow-500 transition-colors"
-                    >
-                      ${content.map.getDirections}
-                    </a>
+                <div class="relative">
+                  <button 
+                    onclick="window.closeAllPopups()" 
+                    class="absolute -top-2 -right-2 w-8 h-8 bg-red-500 text-white rounded-full flex items-center justify-center hover:bg-red-600 transition-colors shadow-lg z-50"
+                    aria-label="${language === 'es' ? 'Cerrar' : 'Close'}"
+                  >
+                    ✕
+                  </button>
+                  <div class="p-2 ${isMobile ? 'max-w-[85vw]' : 'min-w-48'}">
+                    <h3 class="font-semibold text-SM-blue mb-1 text-sm ${isMobile ? 'pr-6' : ''}">${mural.title[audioType][language]}</h3>
+                    <p class="text-xs text-slate-600 mb-2 ${isMobile ? 'line-clamp-2' : ''}">${mural.description[language]}</p>
+                    <div class="flex ${isMobile ? 'flex-row gap-2' : 'flex-col space-y-2'}">
+                      <button 
+                        onclick="window.selectMural(${mural.id})" 
+                        class="bg-SM-blue text-white px-2 py-1 rounded text-xs hover:bg-blue-700 transition-colors flex-1"
+                      >
+                        ${isMobile ? '🎧' : ''} ${content.map.listenAudioguide}
+                      </button>
+                      <a 
+                        href="https://maps.google.com/maps?daddr=${coords[0]},${coords[1]}" 
+                        target="_blank"
+                        class="bg-SM-yellow text-SM-black px-2 py-1 rounded text-xs text-center hover:bg-yellow-500 transition-colors flex-1"
+                      >
+                        ${isMobile ? '📍' : ''} ${content.map.getDirections}
+                      </a>
+                    </div>
                   </div>
                 </div>
               `;
 
-              marker.bindPopup(popupContent, {
-                maxWidth: 250,
-                className: 'custom-popup'
+              const popup = L.popup({
+                maxWidth: isMobile ? window.innerWidth * 0.9 : 250,
+                className: 'custom-popup',
+                closeButton: false,
+                autoPan: true,
+                autoPanPaddingTopLeft: isMobile ? [10, 80] : [50, 50],
+                autoPanPaddingBottomRight: isMobile ? [10, 10] : [50, 50]
+              }).setContent(popupContent);
+              
+              marker.bindPopup(popup);
+              
+              marker.on('popupopen', function() {
+                openPopupsRef.current.push(popup);
+                if (isMobile) {
+                  // En móvil, centrar el mapa en el marcador
+                  map.setView(coords, map.getZoom(), {
+                    animate: true,
+                    duration: 0.5
+                  });
+                }
               });
 
               markersList.push({ marker, mural });
@@ -285,7 +375,32 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, audioType = 
             if (mural && onMuralSelect) {
               onMuralSelect(mural);
             }
+            // Cerrar popup después de seleccionar
+            window.closeAllPopups();
           };
+          
+          // Función global para cerrar todos los popups
+          window.closeAllPopups = () => {
+            if (mapInstanceRef.current) {
+              mapInstanceRef.current.closePopup();
+            }
+            openPopupsRef.current = [];
+          };
+          
+          // Cerrar popup al hacer clic en el mapa (especialmente útil en móvil)
+          map.on('click', function(e) {
+            // Solo cerrar si el clic no fue en un marcador
+            if (!e.originalEvent.target.closest('.leaflet-marker-icon')) {
+              window.closeAllPopups();
+            }
+          });
+          
+          // En móvil, cerrar popup al empezar a mover el mapa
+          if (isMobile) {
+            map.on('dragstart', function() {
+              window.closeAllPopups();
+            });
+          }
         }
       } catch (err) {
         console.error('Error loading map:', err);
@@ -305,8 +420,11 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, audioType = 
       if (window.selectMural) {
         delete window.selectMural;
       }
+      if (window.closeAllPopups) {
+        delete window.closeAllPopups;
+      }
     };
-  }, [murals, route, language, content]);
+  }, [murals, route, language, content, isMobile]);
 
   // Actualizar markers cuando cambia el mural actual
   useEffect(() => {
@@ -405,6 +523,28 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, audioType = 
         }
         .map-container .leaflet-popup-pane {
           z-index: 5 !important;
+        }
+        .custom-popup .leaflet-popup-content-wrapper {
+          padding: 0 !important;
+          overflow: visible !important;
+        }
+        .custom-popup .leaflet-popup-content {
+          margin: 0 !important;
+          overflow: visible !important;
+        }
+        .custom-popup .leaflet-popup-tip-container {
+          margin-top: -1px !important;
+        }
+        @media (max-width: 768px) {
+          .custom-popup {
+            margin-bottom: 10px !important;
+          }
+          .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+          }
         }
       `;
       document.head.appendChild(style);
