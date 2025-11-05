@@ -326,10 +326,11 @@ const AudioguideContainer = ({
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-3 flex-1 min-w-0">
                 <div className="w-10 h-10 rounded-lg overflow-hidden bg-gradient-to-br from-SM-blue to-blue-700 flex items-center justify-center flex-shrink-0">
-                  <MuralImage 
+                  <MuralImage
                     muralId={currentMural?.id}
                     imagePath={currentMural?.image}
                     alt={currentMural?.alt?.[language] || currentMural?.title[audioType][language]}
+                    size="thumb"
                     className="w-full h-full object-cover"
                     fallbackIcon="🎨"
                     fallbackIconSize="text-sm"

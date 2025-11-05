@@ -203,10 +203,11 @@ const PlaylistManager = ({
                   {/* Imagen del mural con número superpuesto */}
                   <div className="flex-shrink-0 relative">
                     <div className="w-16 h-16 rounded-lg overflow-hidden bg-gradient-to-br from-SM-blue to-blue-700 flex items-center justify-center">
-                      <MuralImage 
+                      <MuralImage
                         muralId={mural.id}
                         imagePath={mural.image}
                         alt={mural.alt?.[language] || mural.title[audioType][language]}
+                        size="thumb"
                         className="w-full h-full object-cover"
                         fallbackIcon="🎨"
                         fallbackIconSize="text-2xl"

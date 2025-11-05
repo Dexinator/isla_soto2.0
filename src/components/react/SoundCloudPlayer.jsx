@@ -412,16 +412,17 @@ const SoundCloudPlayer = forwardRef(({
       <div className="p-6 pb-4">
         <div className="relative">
           <div className="aspect-square w-full rounded-xl overflow-hidden bg-gradient-to-br from-SM-blue to-blue-700 flex items-center justify-center">
-            <MuralImage 
+            <MuralImage
               muralId={currentMural?.id}
               imagePath={currentMural?.image}
               alt={currentMural?.alt?.[language] || currentMural?.title[audioType][language]}
+              size="large"
               className="w-full h-full object-cover"
               fallbackIcon="🎨"
               fallbackIconSize="text-6xl"
             />
           </div>
-          
+
         </div>
       </div>
 
