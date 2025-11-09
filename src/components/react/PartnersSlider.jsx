@@ -45,17 +45,34 @@ const PartnersSlider = ({ partners, autoPlayInterval = 3000, gridLayout = false 
           {partners.map((row, rowIndex) => (
             <div key={rowIndex} className="flex justify-center items-center gap-4 md:gap-8">
               {row.map((partner, index) => (
-                <div 
+                <div
                   key={index}
                   className="flex flex-col items-center"
                 >
                   <div className="bg-white dark:bg-slate-800 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <img
-                      src={partner.src}
-                      alt={partner.alt}
-                      className="h-16 md:h-20 w-auto object-contain"
-                      loading="lazy"
-                    />
+                    {partner.link ? (
+                      <a
+                        href={partner.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Visitar sitio web de ${partner.name || partner.alt} (se abre en nueva pestaña)`}
+                        className="inline-block transition-transform hover:scale-105"
+                      >
+                        <img
+                          src={partner.src}
+                          alt={partner.alt}
+                          className="h-16 md:h-20 w-auto object-contain"
+                          loading="lazy"
+                        />
+                      </a>
+                    ) : (
+                      <img
+                        src={partner.src}
+                        alt={partner.alt}
+                        className="h-16 md:h-20 w-auto object-contain"
+                        loading="lazy"
+                      />
+                    )}
                   </div>
                 </div>
               ))}
