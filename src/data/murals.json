@@ -25,9 +25,27 @@
         "en": "Image of the footbridge La Aldehuela de los Guzmanes in Salamanca to Isla del Soto."
       },
       "coordinates": [
-        [40.95311054, -5.638978636],
-        [40.95375879416656, -5.634675051],
-        [40.95105161298052, -5.63064647]
+        {
+          "name": {
+            "es": "Pasarela de la Fontana a la Isla del Soto",
+            "en": "Walkway from La Fontana to Isla del Soto"
+          },
+          "points": [[40.95311054, -5.638978636]]
+        },
+        {
+          "name": {
+            "es": "Pasarela de la Aldehuela a la Isla del Soto",
+            "en": "Walkway from La Aldehuela to Isla del Soto"
+          },
+          "points": [[40.95375879, -5.634675051]]
+        },
+        {
+          "name": {
+            "es": "Pasarela de la Plaza de la Iglesia a la Isla del Soto",
+            "en": "Walkway from the Church Square to Isla del Soto"
+          },
+          "points": [[40.95105161, -5.63064647]]
+        }
       ],
       "order": 1,
       "audio": {
@@ -378,7 +396,15 @@
         "es": "Fachada posterior del Centro de Interpretación de la Isla del Soto.",
         "en": "Rear façade of the Interpretation Centre of Isla del Soto."
       },
-      "coordinates": [[40.952334133149485, -5.632492488]],
+      "coordinates": [
+        {
+          "name": {
+            "es": "Centro Interpretación Isla del Soto",
+            "en": "Isla del Soto Interpretation Center"
+          },
+          "points": [[40.95233413, -5.632492488]]
+        }
+      ],
       "order": 7,
       "audio": {
         "normal": {
@@ -464,13 +490,39 @@
       },
       "year": 2024,
       "coordinates": [
-        [40.95308182530833, -5.635703167],
-        [40.952909778822956, -5.635315228],
-        [40.95272410438441, -5.634381467],
-        [40.953090406931054, -5.629937561],
-        [40.95353653558633, -5.638182264],
-        [40.954585041814916, -5.638884009],
-        [40.95472482675104, -5.639185154]
+        {
+          "name": {
+            "es": "Puesto pescadores",
+            "en": "Fishing area"
+          },
+          "points": [
+            [40.95308183, -5.635703167],
+            [40.95290978, -5.635315228],
+            [40.9527241, -5.634381467],
+            [40.95309041, -5.629937561]
+          ]
+        },
+        {
+          "name": {
+            "es": "Parque de perros",
+            "en": "Dog park"
+          },
+          "points": [[40.95353654, -5.638182264]]
+        },
+        {
+          "name": {
+            "es": "Circuito trial",
+            "en": "Trial circuit"
+          },
+          "points": [[40.95458504, -5.638884009]]
+        },
+        {
+          "name": {
+            "es": "Observatorio de aves",
+            "en": "Bird observatory"
+          },
+          "points": [[40.95472483, -5.639185154]]
+        }
       ],
       "duration": {
         "normal": "02:55",
@@ -531,18 +583,80 @@
       },
       "year": 2024,
       "coordinates": [
-        [40.950745444940864, -5.637053636],
-        [40.95170508713264, -5.63820019],
-        [40.95240852941758, -5.635221008],
-        [40.95212084097284, -5.633594338],
-        [40.95215491, -5.631614044],
-        [40.952164587746715, -5.631380836],
-        [40.95236348330626, -5.634726149],
-        [40.95322909406052, -5.637941812],
-        [40.952242181626225, -5.632754266],
-        [40.95043951621566, -5.63071707],
-        [40.95233113617346, -5.633047004],
-        [40.952851620612655, -5.63527502]
+        {
+          "name": {
+            "es": "Escultura 'Bandada'. Ruta de Arte Emboscado",
+            "en": "Emboscado Art Route"
+          },
+          "points": [[40.95074544, -5.637053636]]
+        },
+        {
+          "name": {
+            "es": "Escultura 'Martín'. Ruta de Arte Emboscado",
+            "en": "Emboscado Art Route"
+          },
+          "points": [[40.95170509, -5.63820019]]
+        },
+        {
+          "name": {
+            "es": "Escultura 'Adelita'. Ruta de Arte Emboscado",
+            "en": "Emboscado Art Route"
+          },
+          "points": [[40.95240853, -5.635221008]]
+        },
+        {
+          "name": {
+            "es": "Escultura 'Matildas'. Ruta de Arte Emboscado",
+            "en": "Emboscado Art Route"
+          },
+          "points": [[40.95212084, -5.633594338]]
+        },
+        {
+          "name": {
+            "es": "Escultura 'Wenceslao'. Ruta de Arte Emboscado",
+            "en": "Emboscado Art Route"
+          },
+          "points": [[40.95215491, -5.631614044]]
+        },
+        {
+          "name": {
+            "es": "Ruta de los Lápices",
+            "en": "Pencils Route"
+          },
+          "points": [
+            [40.95216459, -5.631380836],
+            [40.95236348, -5.634726149],
+            [40.95322909, -5.637941812]
+          ]
+        },
+        {
+          "name": {
+            "es": "Libélula, Ruta de los Bichos",
+            "en": "Dragonfly, Bugs Route"
+          },
+          "points": [[40.95224218, -5.632754266]]
+        },
+        {
+          "name": {
+            "es": "Panel de información, Ruta Batalla de los Arapiles",
+            "en": "Battle of Salamanca Route"
+          },
+          "points": [[40.95043952, -5.63071707]]
+        },
+        {
+          "name": {
+            "es": "Mural 'Centro de Interpretación Isla del Soto'",
+            "en": "Murals Route"
+          },
+          "points": [[40.95233114, -5.633047004]]
+        },
+        {
+          "name": {
+            "es": "Mural 'La ardilla Ria'",
+            "en": "Murals Route"
+          },
+          "points": [[40.95285162, -5.63527502]]
+        }
       ],
       "duration": {
         "normal": "04:03",
@@ -576,7 +690,15 @@
         "es": "Pasarela que une la Isla del Soto con la plaza de la Iglesia de Santa Marta de Tormes.",
         "en": "Footbridge connecting Isla del Soto with Plaza de la Iglesia in Santa Marta de Tormes."
       },
-      "coordinates": [[40.952293884400994, -5.640773414]],
+      "coordinates": [
+        {
+          "name": {
+            "es": "Photocall Isla del Soto",
+            "en": "Photocall Isla del Soto"
+          },
+          "points": [[40.95229388, -5.640773414]]
+        }
+      ],
       "order": 10,
       "audio": {
         "normal": {

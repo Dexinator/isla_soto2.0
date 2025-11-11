@@ -1,25 +1,25 @@
-ID,Latitud,Longitud
-1,40.95311054,-5.638978636
-1,40.95375879416656,-5.634675051
-1,40.95105161298052,-5.63064647
-7,40.952334133149485,-5.632492488
-8,40.95308182530833,-5.635703167
-8,40.952909778822956,-5.635315228
-8,40.95272410438441,-5.634381467
-8,40.953090406931054,-5.629937561
-8,40.95353653558633,-5.638182264
-8,40.954585041814916,-5.638884009
-8,40.95472482675104,-5.639185154
-9,40.950745444940864,-5.637053636
-9,40.95170508713264,-5.63820019
-9,40.95240852941758,-5.635221008
-9,40.95212084097284,-5.633594338
-9,40.95215491,-5.631614044
-9,40.952164587746715,-5.631380836
-9,40.95236348330626,-5.634726149
-9,40.95322909406052,-5.637941812
-9,40.952242181626225,-5.632754266
-9,40.95043951621566,-5.63071707
-9,40.95233113617346,-5.633047004
-9,40.952851620612655,-5.63527502
-10,40.952293884400994,-5.640773414
+ID,Latitud,Longitud,Tiene Coordenadas,Texto,
+1,40.95311054,-5.638978636,Sí,Pasarela de la Fontana a la Isla del Soto,Walkway from La Fontana to Isla del Soto
+1,40.95375879,-5.634675051,Sí,Pasarela de la Aldehuela a la Isla del Soto,Walkway from La Aldehuela to Isla del Soto
+1,40.95105161,-5.63064647,Sí,Pasarela de la Plaza de la Iglesia a la Isla del Soto,Walkway from the Church Square to Isla del Soto 
+7,40.95233413,-5.632492488,Sí,Centro Interpretación Isla del Soto,Isla del Soto Interpretation Center
+8,40.95308183,-5.635703167,Sí,Puesto pescadores,Fishing area
+8,40.95290978,-5.635315228,Sí,Puesto pescadores,Fishing area
+8,40.9527241,-5.634381467,Sí,Puesto pescadores,Fishing area
+8,40.95309041,-5.629937561,Sí,Puesto pescadores,Fishing area
+8,40.95353654,-5.638182264,Sí,Parque de perros,Dog park
+8,40.95458504,-5.638884009,Sí,Circuito trial,Trial circuit
+8,40.95472483,-5.639185154,Sí,Observatorio de aves,Bird observatory
+9,40.95074544,-5.637053636,Sí,Escultura ‘Bandada’. Ruta de Arte Emboscado,Emboscado Art Route
+9,40.95170509,-5.63820019,Sí,Escultura 'Martín’. Ruta de Arte Emboscado,Emboscado Art Route
+9,40.95240853,-5.635221008,Sí,Escultura ‘Adelita’. Ruta de Arte Emboscado,Emboscado Art Route
+9,40.95212084,-5.633594338,Sí,Escultura 'Matildas’. Ruta de Arte Emboscado,Emboscado Art Route
+9,40.95215491,-5.631614044,Sí,Escultura ‘Wenceslao’. Ruta de Arte Emboscado,Emboscado Art Route
+9,40.95216459,-5.631380836,Sí,Ruta de los Lápices,Pencils Route
+9,40.95236348,-5.634726149,Sí,Ruta de los Lápices,Pencils Route
+9,40.95322909,-5.637941812,Sí,Ruta de los Lápices,Pencils Route
+9,40.95224218,-5.632754266,Sí,"Libélula, Ruta de los Bichos","Dragonfly, Bugs Route"
+9,40.95043952,-5.63071707,Sí,"Panel de información, Ruta Batalla de los Arapiles",Battle of Salamanca Route
+9,40.95233114,-5.633047004,Sí,Mural ‘Centro de Interpretación Isla del Soto’,Murals Route
+9,40.95285162,-5.63527502,Sí,Mural ‘La ardilla Ria’,Murals Route
+10,40.95229388,-5.640773414,Sí,Photocall Isla del Soto,Photocall Isla del Soto

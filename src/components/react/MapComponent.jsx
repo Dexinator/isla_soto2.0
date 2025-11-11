@@ -166,7 +166,6 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, audioType = 
                       <div class="p-2 ${isMobile ? 'max-w-[85vw]' : 'min-w-48'}">
                         <h3 class="font-semibold text-SM-blue mb-1 text-sm ${isMobile ? 'pr-6' : ''}">${mural.title[audioType][language]}</h3>
                         <p class="text-xs font-medium text-slate-700 mb-2">${locationName}</p>
-                        ${location.points.length > 1 ? `<p class="text-xs text-slate-500 mb-2">Punto ${pointIndex + 1} de ${location.points.length}</p>` : ''}
                         <div class="flex ${isMobile ? 'flex-row gap-2' : 'flex-col space-y-2'}">
                           <button
                             onclick="window.selectMural(${mural.id})"
@@ -230,8 +229,7 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, audioType = 
                       ✕
                     </button>
                     <div class="p-2 ${isMobile ? 'max-w-[85vw]' : 'min-w-48'}">
-                      <h3 class="font-semibold text-SM-blue mb-1 text-sm ${isMobile ? 'pr-6' : ''}">${mural.title[audioType][language]}</h3>
-                      ${mural.coordinates.length > 1 ? `<p class="text-xs text-slate-500 mb-2">Punto ${coordIndex + 1} de ${mural.coordinates.length}</p>` : ''}
+                      <h3 class="font-semibold text-SM-blue mb-2 text-sm ${isMobile ? 'pr-6' : ''}">${mural.title[audioType][language]}</h3>
                       <div class="flex ${isMobile ? 'flex-row gap-2' : 'flex-col space-y-2'}">
                         <button
                           onclick="window.selectMural(${mural.id})"
