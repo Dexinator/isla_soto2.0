@@ -25,9 +25,9 @@
         "en": "Image of the footbridge La Aldehuela de los Guzmanes in Salamanca to Isla del Soto."
       },
       "coordinates": [
-        [40.95321544876704, -5.638468969490337],
-        [40.95293230755688, -5.635195377875577],
-        [40.95179705186017, -5.6309736805210795]
+        [40.95311054, -5.638978636],
+        [40.95375879416656, -5.634675051],
+        [40.95105161298052, -5.63064647]
       ],
       "order": 1,
       "audio": {
@@ -378,7 +378,7 @@
         "es": "Fachada posterior del Centro de Interpretación de la Isla del Soto.",
         "en": "Rear façade of the Interpretation Centre of Isla del Soto."
       },
-      "coordinates": [[40.95224503410455, -5.632701721974376]],
+      "coordinates": [[40.952334133149485, -5.632492488]],
       "order": 7,
       "audio": {
         "normal": {
@@ -464,70 +464,13 @@
       },
       "year": 2024,
       "coordinates": [
-        {
-          "name": {
-            "es": "Puesto pescadores",
-            "en": "Fishing posts"
-          },
-          "points": [
-            [40.95308182530833, -5.635703166716398],
-            [40.952909778822956, -5.635315227631543],
-            [40.95272410438441, -5.634381467225767],
-            [40.953090406931054, -5.629937560798211]
-          ]
-        },
-        {
-          "name": {
-            "es": "Parque de perros",
-            "en": "Dog park"
-          },
-          "points": [[40.95353653558633, -5.638182264269154]]
-        },
-        {
-          "name": {
-            "es": "Circuito trial",
-            "en": "Trial circuit"
-          },
-          "points": [[40.954585041814916, -5.638884009317278]]
-        },
-        {
-          "name": {
-            "es": "Observatorio de aves",
-            "en": "Bird observatory"
-          },
-          "points": [[40.95472482675104, -5.639185154298867]]
-        },
-        {
-          "name": {
-            "es": "Parque infantil",
-            "en": "Children's playground"
-          },
-          "points": [[40.952370317558746, -5.63134035224229]]
-        },
-        {
-          "name": {
-            "es": "Parque biosaludable",
-            "en": "Bio-healthy park"
-          },
-          "points": [[40.952519289300746, -5.631736743326188]]
-        },
-        {
-          "name": {
-            "es": "Plataforma espectáculos",
-            "en": "Show platform"
-          },
-          "points": [[40.95309935557791, -5.636684633418328]]
-        },
-        {
-          "name": {
-            "es": "Merenderos pic nic",
-            "en": "Picnic areas"
-          },
-          "points": [
-            [40.95241124435147, -5.633353090886228],
-            [40.95242998225343, -5.630750290103624]
-          ]
-        }
+        [40.95308182530833, -5.635703167],
+        [40.952909778822956, -5.635315228],
+        [40.95272410438441, -5.634381467],
+        [40.953090406931054, -5.629937561],
+        [40.95353653558633, -5.638182264],
+        [40.954585041814916, -5.638884009],
+        [40.95472482675104, -5.639185154]
       ],
       "duration": {
         "normal": "02:55",
@@ -588,53 +531,18 @@
       },
       "year": 2024,
       "coordinates": [
-        {
-          "name": {
-            "es": "Ruta Arte Emboscado",
-            "en": "Ambushed Art Route"
-          },
-          "points": [
-            [40.95170508713264, -5.638200189827272],
-            [40.95240852941758, -5.635221008202152],
-            [40.95212084097284, -5.633594337973941],
-            [40.952154910022, -5.631614044149215]
-          ]
-        },
-        {
-          "name": {
-            "es": "Ruta de los Lápices",
-            "en": "Pencils Route"
-          },
-          "points": [
-            [40.952164587746715, -5.631380836385952],
-            [40.95236348330626, -5.634726149356212],
-            [40.95322909406052, -5.6379418121171305]
-          ]
-        },
-        {
-          "name": {
-            "es": "Ruta de los Bichos",
-            "en": "Bugs Route"
-          },
-          "points": [[40.952249617673324, -5.632878304574222]]
-        },
-        {
-          "name": {
-            "es": "Ruta Batalla de los Arapiles",
-            "en": "Battle of Arapiles Route"
-          },
-          "points": [[40.95262907603817, -5.634451357686636]]
-        },
-        {
-          "name": {
-            "es": "Ruta de los Murales",
-            "en": "Murals Route"
-          },
-          "points": [
-            [40.952233926587105, -5.632580290715561],
-            [40.952851620612655, -5.635275019864475]
-          ]
-        }
+        [40.950745444940864, -5.637053636],
+        [40.95170508713264, -5.63820019],
+        [40.95240852941758, -5.635221008],
+        [40.95212084097284, -5.633594338],
+        [40.95215491, -5.631614044],
+        [40.952164587746715, -5.631380836],
+        [40.95236348330626, -5.634726149],
+        [40.95322909406052, -5.637941812],
+        [40.952242181626225, -5.632754266],
+        [40.95043951621566, -5.63071707],
+        [40.95233113617346, -5.633047004],
+        [40.952851620612655, -5.63527502]
       ],
       "duration": {
         "normal": "04:03",
@@ -668,7 +576,7 @@
         "es": "Pasarela que une la Isla del Soto con la plaza de la Iglesia de Santa Marta de Tormes.",
         "en": "Footbridge connecting Isla del Soto with Plaza de la Iglesia in Santa Marta de Tormes."
       },
-      "coordinates": [[40.952293884400994, -5.640773413509443]],
+      "coordinates": [[40.952293884400994, -5.640773414]],
       "order": 10,
       "audio": {
         "normal": {
@@ -704,6 +612,28 @@
       }
     }
   ],
+  "route": {
+    "normal": {
+      "totalDistance": "2.5 km",
+      "estimatedTime": "57 min"
+    },
+    "descriptive": {
+      "totalDistance": "2.5 km",
+      "estimatedTime": "56 min"
+    },
+    "easy": {
+      "totalDistance": "2.5 km",
+      "estimatedTime": "52 min"
+    },
+    "sign": {
+      "totalDistance": "2.5 km",
+      "estimatedTime": "57 min"
+    },
+    "english": {
+      "totalDistance": "2.5 km",
+      "estimatedTime": "55 min"
+    }
+  },
   "metadata": {
     "lastUpdated": "2025-01-08",
     "version": "3.0",

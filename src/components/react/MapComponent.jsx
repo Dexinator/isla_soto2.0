@@ -156,8 +156,8 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, audioType = 
 
                   const popupContent = `
                     <div class="relative">
-                      <button 
-                        onclick="window.closeAllPopups()" 
+                      <button
+                        onclick="window.closeAllPopups()"
                         class="absolute -top-2 -right-2 w-8 h-8 bg-red-500 text-white rounded-full flex items-center justify-center hover:bg-red-600 transition-colors shadow-lg z-50"
                         aria-label="${language === 'es' ? 'Cerrar' : 'Close'}"
                       >
@@ -165,18 +165,17 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, audioType = 
                       </button>
                       <div class="p-2 ${isMobile ? 'max-w-[85vw]' : 'min-w-48'}">
                         <h3 class="font-semibold text-SM-blue mb-1 text-sm ${isMobile ? 'pr-6' : ''}">${mural.title[audioType][language]}</h3>
-                        <p class="text-xs font-medium text-slate-700 mb-1">${locationName}</p>
-                        ${location.points.length > 1 ? `<p class="text-xs text-slate-500 mb-1">Punto ${pointIndex + 1} de ${location.points.length}</p>` : ''}
-                        <p class="text-xs text-slate-600 mb-2 ${isMobile ? 'line-clamp-2' : ''}">${mural.description[language]}</p>
+                        <p class="text-xs font-medium text-slate-700 mb-2">${locationName}</p>
+                        ${location.points.length > 1 ? `<p class="text-xs text-slate-500 mb-2">Punto ${pointIndex + 1} de ${location.points.length}</p>` : ''}
                         <div class="flex ${isMobile ? 'flex-row gap-2' : 'flex-col space-y-2'}">
-                          <button 
-                            onclick="window.selectMural(${mural.id})" 
+                          <button
+                            onclick="window.selectMural(${mural.id})"
                             class="bg-SM-blue text-white px-2 py-1 rounded text-xs hover:bg-blue-700 transition-colors flex-1"
                           >
                             ${isMobile ? '🎧' : ''} ${content.map.listenAudioguide}
                           </button>
-                          <a 
-                            href="https://maps.google.com/maps?daddr=${coords[0]},${coords[1]}" 
+                          <a
+                            href="https://maps.google.com/maps?daddr=${coords[0]},${coords[1]}"
                             target="_blank"
                             class="bg-SM-yellow text-SM-black px-2 py-1 rounded text-xs text-center hover:bg-yellow-500 transition-colors flex-1"
                           >
@@ -223,8 +222,8 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, audioType = 
 
                 const popupContent = `
                   <div class="relative">
-                    <button 
-                      onclick="window.closeAllPopups()" 
+                    <button
+                      onclick="window.closeAllPopups()"
                       class="absolute -top-2 -right-2 w-8 h-8 bg-red-500 text-white rounded-full flex items-center justify-center hover:bg-red-600 transition-colors shadow-lg z-50"
                       aria-label="${language === 'es' ? 'Cerrar' : 'Close'}"
                     >
@@ -232,17 +231,16 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, audioType = 
                     </button>
                     <div class="p-2 ${isMobile ? 'max-w-[85vw]' : 'min-w-48'}">
                       <h3 class="font-semibold text-SM-blue mb-1 text-sm ${isMobile ? 'pr-6' : ''}">${mural.title[audioType][language]}</h3>
-                      ${mural.coordinates.length > 1 ? `<p class="text-xs text-slate-500 mb-1">Punto ${coordIndex + 1} de ${mural.coordinates.length}</p>` : ''}
-                      <p class="text-xs text-slate-600 mb-2 ${isMobile ? 'line-clamp-2' : ''}">${mural.description[language]}</p>
+                      ${mural.coordinates.length > 1 ? `<p class="text-xs text-slate-500 mb-2">Punto ${coordIndex + 1} de ${mural.coordinates.length}</p>` : ''}
                       <div class="flex ${isMobile ? 'flex-row gap-2' : 'flex-col space-y-2'}">
-                        <button 
-                          onclick="window.selectMural(${mural.id})" 
+                        <button
+                          onclick="window.selectMural(${mural.id})"
                           class="bg-SM-blue text-white px-2 py-1 rounded text-xs hover:bg-blue-700 transition-colors flex-1"
                         >
                           ${isMobile ? '🎧' : ''} ${content.map.listenAudioguide}
                         </button>
-                        <a 
-                          href="https://maps.google.com/maps?daddr=${coords[0]},${coords[1]}" 
+                        <a
+                          href="https://maps.google.com/maps?daddr=${coords[0]},${coords[1]}"
                           target="_blank"
                           class="bg-SM-yellow text-SM-black px-2 py-1 rounded text-xs text-center hover:bg-yellow-500 transition-colors flex-1"
                         >
@@ -288,25 +286,24 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, audioType = 
 
               const popupContent = `
                 <div class="relative">
-                  <button 
-                    onclick="window.closeAllPopups()" 
+                  <button
+                    onclick="window.closeAllPopups()"
                     class="absolute -top-2 -right-2 w-8 h-8 bg-red-500 text-white rounded-full flex items-center justify-center hover:bg-red-600 transition-colors shadow-lg z-50"
                     aria-label="${language === 'es' ? 'Cerrar' : 'Close'}"
                   >
                     ✕
                   </button>
                   <div class="p-2 ${isMobile ? 'max-w-[85vw]' : 'min-w-48'}">
-                    <h3 class="font-semibold text-SM-blue mb-1 text-sm ${isMobile ? 'pr-6' : ''}">${mural.title[audioType][language]}</h3>
-                    <p class="text-xs text-slate-600 mb-2 ${isMobile ? 'line-clamp-2' : ''}">${mural.description[language]}</p>
+                    <h3 class="font-semibold text-SM-blue mb-2 text-sm ${isMobile ? 'pr-6' : ''}">${mural.title[audioType][language]}</h3>
                     <div class="flex ${isMobile ? 'flex-row gap-2' : 'flex-col space-y-2'}">
-                      <button 
-                        onclick="window.selectMural(${mural.id})" 
+                      <button
+                        onclick="window.selectMural(${mural.id})"
                         class="bg-SM-blue text-white px-2 py-1 rounded text-xs hover:bg-blue-700 transition-colors flex-1"
                       >
                         ${isMobile ? '🎧' : ''} ${content.map.listenAudioguide}
                       </button>
-                      <a 
-                        href="https://maps.google.com/maps?daddr=${coords[0]},${coords[1]}" 
+                      <a
+                        href="https://maps.google.com/maps?daddr=${coords[0]},${coords[1]}"
                         target="_blank"
                         class="bg-SM-yellow text-SM-black px-2 py-1 rounded text-xs text-center hover:bg-yellow-500 transition-colors flex-1"
                       >
