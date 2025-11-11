@@ -22,7 +22,6 @@ const VimeoPlayer = ({
   const [isMuted, setIsMuted] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [showMobileFullscreenPrompt, setShowMobileFullscreenPrompt] = useState(false);
   const [error, setError] = useState(false);
   const [isReady, setIsReady] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
