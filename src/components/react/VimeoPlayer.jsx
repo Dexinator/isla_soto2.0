@@ -275,17 +275,11 @@ const VimeoPlayer = ({
     };
   }, [currentMural, vimeoSDKReady]);
 
-  // Control de reproducción y sugerencia de pantalla completa en móvil
+  // Control de reproducción
   useEffect(() => {
     if (!player || !isReady) return;
 
     if (isPlaying) {
-      // En móvil, sugerir pantalla completa al empezar a reproducir
-      if (isMobile && !isFullscreen && !showMobileFullscreenPrompt) {
-        setShowMobileFullscreenPrompt(true);
-        setTimeout(() => setShowMobileFullscreenPrompt(false), 5000); // Auto-ocultar después de 5 segundos
-      }
-      
       player.play().catch(error => {
         console.error('Error al reproducir:', error);
       });
@@ -294,7 +288,7 @@ const VimeoPlayer = ({
         console.error('Error al pausar:', error);
       });
     }
-  }, [isPlaying, player, isReady, isMobile, isFullscreen]);
+  }, [isPlaying, player, isReady]);
 
   // Control de volumen
   useEffect(() => {
@@ -465,37 +459,6 @@ const VimeoPlayer = ({
                             d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15"/>
                     </svg>
                   </button>
-                )}
-                
-                {/* Prompt para pantalla completa en móvil */}
-                {showMobileFullscreenPrompt && isMobile && !isFullscreen && (
-                  <div className="absolute inset-0 bg-black bg-opacity-75 flex items-center justify-center z-30">
-                    <div className="bg-white dark:bg-slate-800 rounded-lg p-6 m-4 max-w-sm">
-                      <h3 className="text-lg font-bold mb-2 text-slate-900 dark:text-white">
-                        Mejor experiencia en pantalla completa
-                      </h3>
-                      <p className="text-sm text-slate-600 dark:text-slate-300 mb-4">
-                        Gira tu dispositivo y toca el botón de pantalla completa para una mejor visualización
-                      </p>
-                      <div className="flex space-x-3">
-                        <button
-                          onClick={() => {
-                            setShowMobileFullscreenPrompt(false);
-                            toggleFullscreen();
-                          }}
-                          className="flex-1 bg-SM-blue text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
-                        >
-                          Pantalla completa
-                        </button>
-                        <button
-                          onClick={() => setShowMobileFullscreenPrompt(false)}
-                          className="flex-1 bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 py-2 px-4 rounded-lg hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors"
-                        >
-                          Continuar así
-                        </button>
-                      </div>
-                    </div>
-                  </div>
                 )}
               </>
             )}
