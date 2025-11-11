@@ -565,7 +565,7 @@ const MapComponent = ({ murals, route, currentMural, onMuralSelect, audioType = 
               {content.map.title}
             </h3>
             <p className="text-sm text-slate-600 dark:text-slate-400">
-              {language === 'en' ? "Total Route: " : "Recorrido Total: "} {route?.[audioType]?.totalDistance} • {language === 'en' ? "Total Duration: " : "Duración total: "} {route?.[audioType]?.estimatedTime}
+              {language === 'en' ? "Total Route: " : "Recorrido Total: "} {(audioType === 'normal' && language === 'en') ? route?.english?.totalDistance : route?.[audioType]?.totalDistance} • {language === 'en' ? "Total Duration: " : "Duración total: "} {(audioType === 'normal' && language === 'en') ? route?.english?.estimatedTime : route?.[audioType]?.estimatedTime}
             </p>
           </div>
           <div className="flex items-center space-x-2">

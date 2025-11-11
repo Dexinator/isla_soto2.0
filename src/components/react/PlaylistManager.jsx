@@ -318,10 +318,10 @@ const PlaylistManager = ({
           <span className="text-slate-600 dark:text-slate-400 text-sm">
             {content.playlist.footer.totalTime}{(() => {
               switch(audioType) {
-                case 'normal': return language === 'en' ? '39:23' : '40:25';
-                case 'easy': return '34:22';
-                case 'descriptive': return '50:22';
-                case 'sign': return '40:28';
+                case 'normal': return language === 'en' ? '25:32' : '26:53';
+                case 'easy': return '22:21';
+                case 'descriptive': return '26:01';
+                case 'sign': return '27:17';
                 default: return '40:25';
               }
             })()}
