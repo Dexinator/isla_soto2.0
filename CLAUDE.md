@@ -10,19 +10,19 @@ This is an Astro-based web application for the Isla del Soto accessible audio gu
 
 ```bash
 # Install dependencies
-npm install
+pnpm install
 
 # Start development server at localhost:4321
-npm run dev
+pnpm dev
 
 # Build production site to ./dist/
-npm run build
+pnpm build
 
 # Preview production build locally
-npm run preview
+pnpm preview
 
 # Run Astro CLI commands
-npm run astro -- --help
+pnpm astro --help
 ```
 
 ## Architecture and Key Components

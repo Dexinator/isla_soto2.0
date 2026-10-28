@@ -2,6 +2,7 @@
 // Layout principal para todas las páginas
 // Audioguías Isla del Soto
 import '../../styles/global.css';
+import Analytics from '@vercel/analytics/astro';
 
 export interface Props {
   title: string;
@@ -72,6 +73,9 @@ const {
   <!-- Accessibility -->
   <meta name="theme-color" content="#0072c0">
   <meta name="color-scheme" content="light dark">
+
+  <!-- Vercel Web Analytics -->
+  <Analytics />
 </head>
 
 <body class="font-sans bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">

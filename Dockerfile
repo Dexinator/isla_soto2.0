@@ -5,16 +5,16 @@ FROM node:20-alpine AS builder
 WORKDIR /app
 
 # Copy package files
-COPY package.json ./
+COPY package.json pnpm-lock.yaml ./
 
 # Install dependencies
-RUN npm install
+RUN npm install -g pnpm@12.15.0 && pnpm install --frozen-lockfile
 
 # Copy all project files
 COPY . .
 
 # Build the Astro application
-RUN npm run build
+RUN pnpm run build
 
 # Production stage
 FROM node:20-alpine AS runner
@@ -22,10 +22,10 @@ FROM node:20-alpine AS runner
 WORKDIR /app
 
 # Copy package files
-COPY package.json ./
+COPY package.json pnpm-lock.yaml ./
 
 # Install only production dependencies
-RUN npm install --omit=dev
+RUN npm install -g pnpm@12.15.0 && pnpm install --prod --frozen-lockfile
 
 # Copy built application from builder stage
 COPY --from=builder /app/dist ./dist
